@@ -4,15 +4,17 @@ import Action from './Action'
 
 export default class ActionList extends Component {
 	render() {
-		// JSX inside here
+	// this maps every action in the actions array to a action element
+	var actionElems = this.props.actions.map( function(action) {
 		return (
-				<div className = "actionList" >
-					<Action />
-					<Action />
-					<Action />
-					<Action />
-					<Action />
-				</div>
-			)
+			<Action content={action}/>
+		);
+	});
+	//  the {} is the equivalent of using a variable in JSX
+	return (
+			<div className = "actionList" >
+				{actionElems}
+			</div>
+		)
 	}
 }

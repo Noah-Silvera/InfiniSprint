@@ -134,8 +134,10 @@ fs.readFile('client_secret.json', function processClientSecrets(err, content) {
   // Authorize a client with the loaded credentials, then call the
   // Google Calendar API.
   authorize(JSON.parse(content), function(content){
-  	
-  	listEvents(content)
+    fs.writeFile('auth.txt',JSON.stringify(content), (err) => {
+      if (err) throw err;
+      else console.log('authorization saved')
+    });
 
 		new WebpackDevServer(webpack(config), {
 		  publicPath: config.output.publicPath,
