@@ -1,8 +1,9 @@
 import React from 'react';
 import {render} from 'react-dom';
-import App from './App';
+import Frame from './Components/Frame';
+
 
 render(
-  <App />,
+  <Frame />, // this line calls app.render() into the root of the Document
   document.getElementById('root')
 );

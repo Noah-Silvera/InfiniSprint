@@ -1,7 +1,3 @@
-/* eslint-disable no-var, strict */
-var webpack = require('webpack');
-var WebpackDevServer = require('webpack-dev-server');
-var config = require('./webpack.config');
 
 var fs = require('fs');
 var readline = require('readline');
@@ -9,14 +5,22 @@ var google = require('googleapis');
 var googleAuth = require('google-auth-library');
 
 // If modifying these scopes, delete your previously saved credentials
-// at ~/.credentials/calendar-nodejs-quickstart.json
-var SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
+// at ~/.credentials/drive-nodejs-quickstart.json
+var SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly'];
 var TOKEN_DIR = (process.env.HOME || process.env.HOMEPATH ||
     process.env.USERPROFILE) + '/.credentials/';
-var TOKEN_PATH = TOKEN_DIR + 'calendar-nodejs-backlog.json';
+var TOKEN_PATH = TOKEN_DIR + 'drive-nodejs-quickstart.json';
 
-
-
+// Load client secrets from a local file.
+fs.readFile('client_secret.json', function processClientSecrets(err, content) {
+  if (err) {
+    console.log('Error loading client secret file: ' + err);
+    return;
+  }
+  // Authorize a client with the loaded credentials, then call the
+  // Drive API.
+  authorize(JSON.parse(content), listFiles);
+});
 
 /**
  * Create an OAuth2 client with the given credentials, and then execute the
@@ -92,63 +96,31 @@ function storeToken(token) {
   console.log('Token stored to ' + TOKEN_PATH);
 }
 
-/*
- * Lists the next 10 events on the user's primary calendar.
+/**
+ * Lists the names and IDs of up to 10 files.
  *
  * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
  */
-function listEvents(auth) {
-  var calendar = google.calendar('v3');
-  calendar.events.list({
+function listFiles(auth) {
+  var service = google.drive('v3');
+  service.files.list({
     auth: auth,
-    calendarId: 'primary',
-    timeMin: (new Date()).toISOString(),
-    maxResults: 10,
-    singleEvents: true,
-    orderBy: 'startTime'
+    pageSize: 10,
+    fields: "nextPageToken, files(id, name)"
   }, function(err, response) {
     if (err) {
       console.log('The API returned an error: ' + err);
       return;
     }
-    var events = response.items;
-    if (events.length == 0) {
-      console.log('No upcoming events found.');
+    var files = response.files;
+    if (files.length == 0) {
+      console.log('No files found.');
     } else {
-      console.log('Upcoming 10 events:');
-      for (var i = 0; i < events.length; i++) {
-        var event = events[i];
-        var start = event.start.dateTime || event.start.date;
-        console.log('%s - %s', start, event.summary);
+      console.log('Files:');
+      for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+        console.log('%s (%s)', file.name, file.id);
       }
     }
   });
 }
-
-// Load client secrets from a local file.
-fs.readFile('client_secret.json', function processClientSecrets(err, content) {
-  if (err) {
-    console.log('Error loading client secret file: ' + err);
-    return;
-  }
-  // Authorize a client with the loaded credentials, then call the
-  // Google Calendar API.
-  authorize(JSON.parse(content), function(content){
-  	
-  	listEvents(content)
-
-		new WebpackDevServer(webpack(config), {
-		  publicPath: config.output.publicPath,
-		  hot: true,
-		  historyApiFallback: true
-		}).listen(5000, 'localhost', function (err) {
-		    if (err) {
-		      console.log(err);
-		    }
-		    console.log('Listening at localhost:5000');
-		  });
-
-  });
-});
-
-

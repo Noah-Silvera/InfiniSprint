@@ -1,0 +1,5 @@
+.Frame {
+    box-sizing : border-box; /*This inludes the padding and border in the boxes size*/
+    margin : 25px;
+    
+ }
