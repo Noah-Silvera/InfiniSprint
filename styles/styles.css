@@ -1,5 +1,49 @@
+/*Allow box sizing inheritance*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/*Main Component CSS classes*/
+
 .frame {
-    box-sizing : border-box; /*This inludes the padding and border in the boxes size*/
-    margin : 25px;
-    
+    box-sizing : border-box; 
+    margin : 10px auto;
+    padding : 5px;
+    border : 5px solid #A7A2A2;
+    border-radius : 7px;
+    background-color : #ECECEC;
+    max-width : 700px;
+
  }
+
+.actionList {
+    margin : 5px auto;
+    padding : 2px;
+    background-color : #B1C1FD;
+    border : 2px solid #3259EB;
+    border-radius : inherit;
+    max-width : 97%;
+}
+
+.action {
+    margin : 10px auto;
+    padding : 10px;
+    background-color : #B1C1FD;
+    border : 2px solid #3259EB;
+    border-radius : 5px;
+    max-width : 97%;
+}
+
+/*Helper elements*/
+
+div.separator {
+	margin : 14px auto;
+	height : 2px;
+	width : 98%;
+	background-color : #444444;
+
+}
