@@ -14,7 +14,7 @@ export default class Frame extends Component {
 			if (err) throw err
 			else this.state = JSON.parse(data)
 		});
-	}
+	}  
   render() {
     console.log(this.state)
   	var actionItems = ['hello','world']
