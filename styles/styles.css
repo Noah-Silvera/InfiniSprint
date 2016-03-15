@@ -20,6 +20,15 @@ html {
 
  }
 
+.header {
+    box-sizing : border-box; 
+    margin : inherit;
+    padding : 0px;
+    border : inherit;
+    border-radius : 7px;
+    max-width : 97%;
+}
+
 .actionList {
     margin : 5px auto;
     padding : 2px;
@@ -27,6 +36,7 @@ html {
     border : 2px solid #3259EB;
     border-radius : inherit;
     max-width : 97%;
+    min-height : 45px;
 }
 
 .action {
@@ -47,3 +57,10 @@ div.separator {
 	background-color : #444444;
 
 }
+
+/*Text*/
+
+h1.title {
+	text-align : center;
+}
+

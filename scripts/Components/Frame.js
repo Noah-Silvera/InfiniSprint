@@ -3,6 +3,7 @@ import './../../styles/styles.css'
 // need this to create a proper react component
 import React, {Component} from 'react';
 import ActionList from './ActionList'
+import Header from './Header'
 
 
 // when Import 'App' is called, this object is exported
@@ -10,26 +11,33 @@ import ActionList from './ActionList'
 export default class Frame extends Component {
 	constructor(props){
 		super(props)
-		fs.readFile('./../../auth.txt', (err,data) => {
-			if (err) throw err
-			else this.state = JSON.parse(data)
-		});
 	}  
   render() {
-    console.log(this.state)
-  	var actionItems = ['hello','world']
-  	var emptyList = []
-
-
+    // console.log(this.state)
     return (
       // Add your component markup and other subcomponent references here.
-
       <div className = "frame" >
-        <ActionList actions={emptyList}/>
+        <Header/>
+        <ActionList actions={Frame.getSprintItems()}/>
         <div className = "separator" />
-        <ActionList actions={actionItems}/>
+        <ActionList actions={Frame.getBacklogItems()}/>
       </div>
 
     );
+  }
+  static getBacklogItems() {
+    return ( [] )
+  }
+  static getSprintItems() {
+    return ( [
+      {
+        content:'hello',
+        key:0
+      },
+      {
+        content:'world',
+        key:1
+      }
+    ] )
   }
 }

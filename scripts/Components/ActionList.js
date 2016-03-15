@@ -7,7 +7,7 @@ export default class ActionList extends Component {
 	// this maps every action in the actions array to a action element
 	var actionElems = this.props.actions.map( function(action) {
 		return (
-			<Action content={action}/>
+			<Action key= {action.key} content={action.content}/>
 		);
 	});
 	//  the {} is the equivalent of using a variable in JSX
