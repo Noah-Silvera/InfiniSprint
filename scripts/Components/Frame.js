@@ -32,11 +32,11 @@ export default class Frame extends Component {
   static getSprintItems() {
     return ( [
       {
-        content:'hello',
+        content:'Be nice to people',
         key:0
       },
       {
-        content:'world',
+        content:'Go outside',
         key:1
       }
     ] )

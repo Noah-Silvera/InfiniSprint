@@ -30,7 +30,6 @@ html {
 }
 
 .heading {
-    box-sizing : border-box; 
     margin : inherit;
     padding : 0px;
     border : inherit;
@@ -65,6 +64,17 @@ div.separator {
 	width : 98%;
 	background-color : #444444;
 
+}
+
+/*prevent user selection*/
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
 }
 
 /*Text*/

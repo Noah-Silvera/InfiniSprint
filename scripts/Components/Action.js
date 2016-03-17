@@ -6,7 +6,7 @@ export default class Action extends Component {
 	render() {
 		// JSX inside here
 		return (
-				<p className = "action">{this.props.content}</p>
+				<div className = "action" draggable = "true" >{this.props.content}</div>
 			)
 	}
 }
