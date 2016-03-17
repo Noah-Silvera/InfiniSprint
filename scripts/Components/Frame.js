@@ -4,6 +4,7 @@ import './../../styles/styles.css'
 import React, {Component} from 'react';
 import ActionList from './ActionList';
 import Header from './Header';
+import Heading from './Heading';
 var globals = require('globals');
 
 // when Import 'App' is called, this object is exported
@@ -16,9 +17,10 @@ export default class Frame extends Component {
     return (
       // Add your component markup and other subcomponent references here.
       <div className = "frame" >
-        <Header/>
+        <Header content="Agile Calendar"/>
+        <Heading content="Current Sprint"/>
         <ActionList actions={Frame.getSprintItems()}/>
-        <div className = "separator" />
+        <Heading content="Backlog"/>
         <ActionList actions={Frame.getBacklogItems()}/>
       </div>
 

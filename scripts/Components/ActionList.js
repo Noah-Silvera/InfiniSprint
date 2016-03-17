@@ -10,7 +10,12 @@ export default class ActionList extends Component {
 			<Action key= {action.key} content={action.content}/>
 		);
 	});
-	//  the {} is the equivalent of using a variable in JSX
+
+	// Placeholder message if no actions
+	if ( actionElems.length == 0 ) {
+		actionElems = ( <p className = "plainText" >You have nothing to do .... </p> );
+	}
+
 	return (
 			<div className = "actionList" >
 				{actionElems}

@@ -29,6 +29,15 @@ html {
     max-width : 97%;
 }
 
+.heading {
+    box-sizing : border-box; 
+    margin : inherit;
+    padding : 0px;
+    border : inherit;
+    border-radius : 7px;
+    max-width : 97%;
+}
+
 .actionList {
     margin : 5px auto;
     padding : 2px;
@@ -62,4 +71,8 @@ div.separator {
 
 .title {
 	text-align : center;
+}
+
+.plainText {
+    margin-left : 13px;
 }
