@@ -2,9 +2,9 @@
 import './../../styles/styles.css'
 // need this to create a proper react component
 import React, {Component} from 'react';
-import ActionList from './ActionList'
-import Header from './Header'
-
+import ActionList from './ActionList';
+import Header from './Header';
+var globals = require('globals');
 
 // when Import 'App' is called, this object is exported
 // it is an object with one function, render() 
@@ -13,7 +13,6 @@ export default class Frame extends Component {
 		super(props)
 	}  
   render() {
-    // console.log(this.state)
     return (
       // Add your component markup and other subcomponent references here.
       <div className = "frame" >
