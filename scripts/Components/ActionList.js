@@ -3,11 +3,26 @@ import React, {Component} from 'react';
 import Action from './Action'
 
 export default class ActionList extends Component {
-	render() {
+	
+	onDragStart = (e) => {
+		e.stopPropagation()
+		console.log('drag started')
+		console.log(e.target)
+	}
+
+	onDragExit = (e) => {
+		e.stopPropagation()
+		console.log('drag ended')
+		console.log(e.target)
+	}
+
+	render = () => {
 	// this maps every action in the actions array to a action element
 	var actionElems = this.props.actions.map( function(action) {
 		return (
-			<Action key= {action.key} content={action.content}/>
+			<div className = "invisibleFrame" key= {action.key} draggable = "false">
+				<Action content={action.content}/>
+			</div>
 		);
 	});
 
@@ -17,7 +32,10 @@ export default class ActionList extends Component {
 	}
 
 	return (
-			<div className = "actionList" >
+			<div className = "actionList" 
+				draggable = "false" 
+				onDragStart = {this.onDragStart}
+				onDragExit = {this.onDragExit} >
 				{actionElems}
 			</div>
 		)

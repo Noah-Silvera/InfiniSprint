@@ -3,10 +3,14 @@ import React, {Component} from 'react';
 
 
 export default class Action extends Component {
-	render() {
-		// JSX inside here
+
+	render = () => {
 		return (
-				<div className = "action" draggable = "true" >{this.props.content}</div>
+				<div className = "action"
+					draggable = "true" 
+					>{this.props.content}</div>
 			)
+
+
 	}
 }

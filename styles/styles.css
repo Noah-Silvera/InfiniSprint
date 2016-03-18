@@ -66,6 +66,13 @@ div.separator {
 
 }
 
+div.invisibleFrame {
+    margin : 0px auto;
+    padding : 0px;
+    border : 2px solid #3259EB; /*For testing purposes*/
+    max-width : 100%;
+}
+
 /*prevent user selection*/
 [draggable] {
   -moz-user-select: none;
