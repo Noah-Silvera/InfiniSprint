@@ -6,6 +6,17 @@ html {
   box-sizing: inherit;
 }
 
+/* Prevent the text contents of draggable elements from being selectable. */
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+
 
 /*Main Component CSS classes*/
 
@@ -55,6 +66,12 @@ html {
     border : 2px solid #3259EB;
     border-radius : 5px;
     max-width : 97%;
+    cursor: move;
+
+}
+
+.action.over {
+  border: 2px dashed #000;
 }
 
 /*Helper elements*/
