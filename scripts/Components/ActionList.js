@@ -4,15 +4,22 @@ import Action from './Action'
 
 export default class ActionList extends Component {
 	
-	onDragStart = (e) => {
-		e.stopPropagation()
-		console.log('drag started')
-		console.log(e.target)
-	}
 
 	onDragExit = (e) => {
 		e.stopPropagation()
 		console.log('drag ended')
+		console.log(e.target)
+	}
+
+	onDragLeave = (e) => {
+		e.stopPropagation()
+		console.log('drag left')
+		console.log(e.target)
+	}
+
+	onDragStart = (e) => {
+		e.stopPropagation()
+		console.log('drag started')
 		console.log(e.target)
 	}
 
