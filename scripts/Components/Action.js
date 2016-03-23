@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 
 
 export default class Action extends Component {
-	render() {
-		// JSX inside here
+
+	render = () => {
 		return (
 				<p className = "action" 
 					draggable = "true" 
@@ -17,6 +17,8 @@ export default class Action extends Component {
 						{this.props.content}
 				</p>
 			)
+
+
 	}
 
 	onDragStart = (e) => {

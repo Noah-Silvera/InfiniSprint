@@ -13,7 +13,7 @@ export default class Frame extends Component {
 	constructor(props){
 		super(props)
 	}  
-  render() {
+  render = () => {
     return (
       // Add your component markup and other subcomponent references here.
       <div className = "frame" >
@@ -27,16 +27,25 @@ export default class Frame extends Component {
     );
   }
   static getBacklogItems() {
-    return ( [] )
+    return ( [
+      {
+        content: "have a great life",
+        key:0
+      },
+      {
+        content : "have fun",
+        key: 1
+      }
+    ] )
   }
   static getSprintItems() {
     return ( [
       {
-        content:'hello',
+        content:'Be nice to people',
         key:0
       },
       {
-        content:'world',
+        content:'Go outside',
         key:1
       }
     ] )
