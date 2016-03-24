@@ -26,28 +26,30 @@ export default class Frame extends Component {
 
     );
   }
+  // fakes a JSON string that was returned from the server
+  // turns it into a Javascript object ( suitable for the interactive state it will be used for )
   static getBacklogItems() {
-    return ( [
-      {
-        content: "have a great life",
-        key:0
-      },
-      {
-        content : "have fun",
-        key: 1
-      }
-    ] )
+    return JSON.parse(
+    '[{\
+        "content": "have a great life",\
+        "key": 0,\
+        "rank": 1\
+      }, {\
+        "content": "have fun",\
+        "key": 1,\
+        "rank": 2\
+      }]')
   }
   static getSprintItems() {
-    return ( [
-      {
-        content:'Be nice to people',
-        key:0
-      },
-      {
-        content:'Go outside',
-        key:1
-      }
-    ] )
+    return JSON.parse(
+    '[{\
+        "content": "fuck bitches",\
+        "key": 0,\
+        "rank": 1\
+      }, {\
+        "content": "get money",\
+        "key": 1,\
+        "rank": 2\
+      }]')
   }
 }
