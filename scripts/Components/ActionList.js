@@ -8,15 +8,18 @@ export default class ActionList extends Component {
 
 	constructor(props) {
 		super(props)
-		this.state = { "actions": this.props.actions }
 	}
 
 
 	render() {
 	// this maps every action in the actions array to a action element
-	var actionElems = this.state["actions"].map( function(action) {
+	// 
+	var sortedActions = this.props.actions.sort( function( one,two ) {
+		return ( one.dataId - two.dataId )
+	});
+	var actionElems = sortedActions.map( function(action) {
 		return (
-			<Action key = {action.key} content={action.content} rank = {action.rank}/>
+			<Action key = {action.dataId} dataId = {action.dataId} content={action.content}  rank = {action.rank}/>
 		);	
 	});
 
@@ -26,7 +29,7 @@ export default class ActionList extends Component {
 	}
 
 	return (
-			<div className = "actionList">
+			<div className = "actionList" data-id = {this.props.dataId} >
 					{actionElems}
 			</div>
 					 			)
