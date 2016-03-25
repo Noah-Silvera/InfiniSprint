@@ -90,6 +90,11 @@ div.invisibleFrame {
     max-width : 100%;
 }
 
+/*Forces element to align side by side*/
+.row {
+    display: inline-block;
+}
+
 /*prevent user selection*/
 /*[draggable] {
   -moz-user-select: none;
