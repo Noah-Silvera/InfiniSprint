@@ -18,28 +18,29 @@ export default class Frame extends Component {
 	constructor(props){
 		super(props);
     console.log('getting sprint items')
-    var socket = io.connect('http://localhost'); // io is imported in index.html
-    console.log(socket)    
-    socket.emit('getSprintItems')
+    this.socket = io.connect('http://localhost'); // io is imported in index.html    
+    if( !this.socket ){
+      console.log("!!! Could not initialize socket !!!")
+    }
     // initial state - no objects in the frame are being dragged
     this.dragItem = null
     // Pull the google calender item's from the server, process them and use them as our state ( test data for now )
     // State should be of the following form
         // { "backlog" : [
-        //                       {
-        //                         "content": "have a great life",
-        //                         "dataId": 0,
-        //                         "rank": 1
-        //                       }, ...
-        //                     ],
-        //                     "sprint" : [
-        //                       {
-        //                         "content": "Love Everyone",
-        //                         "dataId": 2,
-        //                         "rank": 1
-        //                       }, ...
-        //                     ]
-        //                   }
+        //      {
+        //        "content": "have a great life",
+        //        "dataId": 0,
+        //        "rank": 1
+        //      }, ...
+        //    ],
+        //  "sprint" : [
+        //        {
+        //          "content": "Love Everyone",
+        //          "dataId": 2,
+        //          "rank": 1
+        //        }, ...
+        //      ]
+        //    }
         // }
     // Every list of google cal tasks should have unique rank within that list
     // but every single task must have a unique dataID 
@@ -80,6 +81,18 @@ export default class Frame extends Component {
                   }
 
 	}  
+
+  componentDidMount(){
+    this.socket.on('sprintItems', function setSprintItems(content){
+      this.state['sprint'] = content
+    })
+
+    this.socket.emit('getSprintItems')
+
+  }
+
+
+
 
   // Tells the frame what object is being dragged to handle the drop later
   onDragStart = (e) => {
@@ -193,6 +206,8 @@ export default class Frame extends Component {
   // Renders the frame for the backlog and action items using ActionLists and headings
   // binds the dragging event
   render = () => {
+
+
 
     return (
       // Add your component markup and other subcomponent references here.
