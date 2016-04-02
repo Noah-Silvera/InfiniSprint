@@ -16,7 +16,11 @@ var globals = require('globals');
 // PROPS
 export default class Frame extends Component {
 	constructor(props){
-		super(props)
+		super(props);
+    console.log('getting sprint items')
+    var socket = io.connect('http://localhost'); // io is imported in index.html
+    console.log(socket)    
+    socket.emit('getSprintItems')
     // initial state - no objects in the frame are being dragged
     this.dragItem = null
     // Pull the google calender item's from the server, process them and use them as our state ( test data for now )
@@ -74,6 +78,7 @@ export default class Frame extends Component {
                       }
                     ]
                   }
+
 	}  
 
   // Tells the frame what object is being dragged to handle the drop later
@@ -126,8 +131,8 @@ export default class Frame extends Component {
   swapActionItems = (dragItem,dropItem) => {
     // console.log(dragItem.parentNode.getAttribute('class') + " - " + dragItem.parentNode.getAttribute('data-id'))
     var oldState = this.state
-    console.log("old state")
-    console.log(oldState)
+    // console.log("old state")
+    // console.log(oldState)
     // console.log("old state" + JSON.stringify(oldState) )
 
     var targetArray = null; 
@@ -146,8 +151,8 @@ export default class Frame extends Component {
     Frame.setPropByDataId(oldState[targetArray],'rank', dragRank, dropItem.getAttribute('data-id') )
 
     this.setState( oldState )
-    console.log("new state"  )
-    console.log(this.state  )
+    // console.log("new state"  )
+    // console.log(this.state  )
   }
 
   // prevent default behaviour and tell the frame that nothing is being dragged
@@ -188,7 +193,7 @@ export default class Frame extends Component {
   // Renders the frame for the backlog and action items using ActionLists and headings
   // binds the dragging event
   render = () => {
-    console.log("re rendering frame")
+
     return (
       // Add your component markup and other subcomponent references here.
       <div className = "frame" onDragStart = {this.onDragStart} onDragEnter = {this.onDragEnter} onDragEnd = {this.onDragEnd} >
