@@ -1,21 +1,33 @@
+"use strict";
 /* eslint-disable no-var, strict */
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
-var config = require('./webpack.config');
+var config = require('./webpack.config');   
+var socketio = require('socket.io')
 
 var fs = require('fs');
 var readline = require('readline');
 var google = require('googleapis');
 var googleAuth = require('google-auth-library');
 
-// If modifying these scopes, delete your previously saved credentials
+// If modifying these scopes, delete your previously saved credentialsentials
 // at ~/.credentials/calendar-nodejs-quickstart.json
 var SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
 var TOKEN_DIR = (process.env.HOME || process.env.HOMEPATH ||
     process.env.USERPROFILE) + '/.credentials/';
 var TOKEN_PATH = TOKEN_DIR + 'calendar-nodejs-backlog.json';
 
+// console.log(io)
+var io = socketio.listen(80)
+// console.log(io)
 
+io.on('connection', function(socket){
+  socket.on('dragEvent', function() {
+    console.log("recieved dragEvent")
+  });
+
+
+})
 
 
 /**
@@ -125,6 +137,8 @@ function listEvents(auth) {
   });
 }
 
+
+
 // Load client secrets from a local file.
 fs.readFile('client_secret.json', function processClientSecrets(err, content) {
   if (err) {
@@ -139,18 +153,31 @@ fs.readFile('client_secret.json', function processClientSecrets(err, content) {
       else console.log('authorization saved')
     });
 
-		new WebpackDevServer(webpack(config), {
-		  publicPath: config.output.publicPath,
-		  hot: true,
-		  historyApiFallback: true
-		}).listen(5000, 'localhost', function (err) {
-		    if (err) {
-		      console.log(err);
-		    }
-		    console.log('Listening at localhost:5000');
-		  });
+    function startServer (callback) {
+      console.log("Load websockets")
+      while( io == undefined ){
+        console.log("waiting for web sockets....")
+      }
+      callback()
+    }
+
+    startServer( function() {
+  		var server = new WebpackDevServer(webpack(config), {
+  		  publicPath: config.output.publicPath,
+  		  hot: true,
+  		  historyApiFallback: true
+  		}).listen(5000, 'localhost', function (err) {
+  		    if (err) {
+  		      console.log(err);
+  		    }
+  		    console.log('Listening at localhost:5000');
+
+  		  });
+    });
+
 
   });
 });
+
 
 

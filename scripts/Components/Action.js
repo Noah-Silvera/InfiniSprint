@@ -1,11 +1,15 @@
-'use strict'
+"use strict";
 import '../../styles/styles.css'
 import React, {Component} from 'react';
 
 
+// this class renders an action item
+// It is a draggable class, but does not handle drags itself
 // STATELESS
-// this class renders an action item from google calender
-// When dragged over a valid drop target, it emits an onDragEnterEvent
+// PROPS
+// * rank - key for sorting order
+// * Content - Content of div
+// * data-id - unique ID for handling drag events
 export default class Action extends Component {
 
 	render() {
