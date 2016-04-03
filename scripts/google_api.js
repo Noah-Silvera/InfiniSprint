@@ -193,11 +193,39 @@ function updateLocalData (events,carryingCallback) {
 // Syncs the calender events for sprint day + 7 with the local Copy of the events
 module.exports.syncCalendar = function syncCalendar( carryingCallback ) {
 
-  // the current date
+  // the current date - starting at the very begginning of the day
   var startDate = new Date()
+  startDate.setHours(0,0,0,0)
 
-  // a date a week from now
   var endDate = new Date()
+  // calculate a date a week from now
+
+  var newDate = endDate.getDate() + 7
+  var curMonth = endDate.getMonth()
+  if( newDate > (28 + 1) ){
+    if( curMonth = 1 ){
+      endDate.setMonth( curMonth + 1 ) 
+      endDate.setDate( newDate - (28-1) )
+    }
+  }
+  if( newDate > (30 - 1) ){
+    if( [3,5,8,10].filter( (n) => { n === curMonth }).length != 0 ){
+      endDate.setMonth( curMonth + 1 )
+      endDate.setDate( newDate - (30-1) )
+    }
+  }
+  if( newDate > (31 - 1) ){
+    if( [0,2,4,6,7,9,11].filter( (n) => { n === curMonth }).length != 0 ){
+      endDate.setMonth( curMonth + 1 ) 
+      endDate.setDate( newDate - (31-1) )
+    }
+  }
+
+  if( endDate.getMonth() > 11 ){
+    endDate.setMonth(0)
+  }
+
+  endDate.setHours(23,59,59,999)
 
   getEventsForTimeSpan( startDate, endDate, updateLocalData, carryingCallback )
 

@@ -26,7 +26,7 @@ google_api.getAuth()
 //---------------------------------------------------------------------------------------------------//
 
 
-// after waiting for webSockets to initialize, start the WebpackDevServer
+// after waitin  for webSockets to initialize, start the WebpackDevServer
 initializeWebsockets( function startServer() {
   console.log("starting server")
   var server = new WebpackDevServer(webpack(config), {
