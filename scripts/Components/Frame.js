@@ -17,7 +17,6 @@ var globals = require('globals');
 export default class Frame extends Component {
 	constructor(props){
 		super(props);
-    console.log('getting sprint items')
     this.socket = io.connect('http://localhost'); // io is imported in index.html    
     if( !this.socket ){
       console.log("!!! Could not initialize socket !!!")
@@ -83,15 +82,29 @@ export default class Frame extends Component {
 	}  
 
   componentDidMount(){
-    this.socket.on('sprintItems', function setSprintItems(content){
-      this.state['sprint'] = content
+    this.socket.on('eventsUpdated', function updateEvents(content){
+      console.log('processing recieved events...')
+      console.log(content)
+      // this.state['sprint'] = content
     })
 
-    this.socket.emit('getSprintItems')
+    // this.socket.emit('getSprintItems')
 
   }
 
+  onClick = (e) => {
+    var targetClass = e.target.getAttribute('class').toString()
 
+    // handle a user wanting to refresh their lists
+    var refreshRegex = new RegExp("( |^)refreshButton( |$)")
+    if ( refreshRegex.exec(targetClass) != null ){
+      console.log('asking for events...')
+      this.socket.emit('updateEvents')
+    }
+
+    e.preventDefault()
+    e.stopPropagation()
+  }
 
 
   // Tells the frame what object is being dragged to handle the drop later
@@ -211,7 +224,7 @@ export default class Frame extends Component {
 
     return (
       // Add your component markup and other subcomponent references here.
-      <div className = "frame" onDragStart = {this.onDragStart} onDragEnter = {this.onDragEnter} onDragEnd = {this.onDragEnd} >
+      <div className = "frame" onDragStart = {this.onDragStart} onDragEnter = {this.onDragEnter} onDragEnd = {this.onDragEnd} onClick = {this.onClick} >
         <Header content="Agile Calendar"/>
         <Heading content="Current Sprint"/>
         <ActionList actions={this.state['sprint']} dataId = {0}/>

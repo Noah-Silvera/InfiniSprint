@@ -9,7 +9,12 @@ export default class Header extends Component {
 		return (
 				<div className = "header">
 					<h1 className = "title">{this.props.content}</h1>
+					<button className="refreshButton" />
 				</div>
 			)
+	}
+
+	onClick(e){
+
 	}
 }

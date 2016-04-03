@@ -77,7 +77,7 @@ html {
 
 div.separator {
 	margin : 14px auto;
-	height : 50px;
+	height : 2px;
 	width : 98%;
 	background-color : #444444;
 
@@ -88,6 +88,13 @@ div.invisibleFrame {
     padding : 0px;
     border : 2px solid #3259EB; /*For testing purposes*/
     max-width : 100%;
+}
+
+.refreshButton {
+    width : 30px;
+    height : 30px;
+    border : 5px solid black;
+    background: blue;
 }
 
 /*Forces element to align side by side*/
