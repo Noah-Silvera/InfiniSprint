@@ -187,48 +187,63 @@ function updateLocalData (events,carryingCallback) {
 }
 
 
-// TODO TODO TODO TODO TODO
-
-
-// Syncs the calender events for sprint day + 7 with the local Copy of the events
-module.exports.syncCalendar = function syncCalendar( carryingCallback ) {
-
-  // the current date - starting at the very begginning of the day
-  var startDate = new Date()
-  startDate.setHours(0,0,0,0)
-
-  var endDate = new Date()
+function addAWeek(startDate,callback){
+  var endDate = new Date( startDate.toDateString() )
   // calculate a date a week from now
 
   var newDate = endDate.getDate() + 7
   var curMonth = endDate.getMonth()
+
   if( newDate > (28 + 1) ){
-    if( curMonth = 1 ){
+    if( curMonth === 1 ){
       endDate.setMonth( curMonth + 1 ) 
       endDate.setDate( newDate - (28-1) )
+    } else {
+      endDate.setDate(newDate)
     }
-  }
-  if( newDate > (30 - 1) ){
+  } else if( newDate > (30 - 1) ){
     if( [3,5,8,10].filter( (n) => { n === curMonth }).length != 0 ){
       endDate.setMonth( curMonth + 1 )
       endDate.setDate( newDate - (30-1) )
+    } else {
+      endDate.setDate(newDate)
     }
-  }
-  if( newDate > (31 - 1) ){
+  } else if( newDate > (31 - 1) ){
     if( [0,2,4,6,7,9,11].filter( (n) => { n === curMonth }).length != 0 ){
       endDate.setMonth( curMonth + 1 ) 
       endDate.setDate( newDate - (31-1) )
+    } else {
+      endDate.setDate(newDate)
     }
+  } else {
+    endDate.setDate(newDate)
   }
 
   if( endDate.getMonth() > 11 ){
     endDate.setMonth(0)
+    endDate.setMonth( endDate.getMonth() + 1 )
   }
 
-  endDate.setHours(23,59,59,999)
-
-  getEventsForTimeSpan( startDate, endDate, updateLocalData, carryingCallback )
-
+  callback(endDate)
 }
 
+// Syncs the calender events for sprint day + 7 with the local Copy of the events
+module.exports.syncCalendar = function syncCalendar( carryingCallback ) {
 
+
+  // TODO TODO TODO
+  // put this into a clsoure callback
+
+  // the current date - starting at the very begginning of the day
+  var startDate = new Date("2016-01-27")
+  startDate.setHours(0,0,0,0)
+
+  addAWeek( startDate, (function(endDate) {
+      endDate.setHours(23,59,59,999)
+      getEventsForTimeSpan( startDate, endDate, updateLocalData, carryingCallback )
+    })
+  )
+
+
+
+}
