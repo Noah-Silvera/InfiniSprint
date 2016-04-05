@@ -192,25 +192,26 @@ function addAWeek(startDate,callback){
   // calculate a date a week from now
 
   var newDate = endDate.getDate() + 7
+  // console.log("new date " + newDate)
   var curMonth = endDate.getMonth()
 
-  if( newDate > (28 + 1) ){
+  if( newDate > 28 ){
     if( curMonth === 1 ){
-      endDate.setMonth( curMonth + 1 ) 
+      endDate.setMonth( curMonth  ) 
       endDate.setDate( newDate - (28-1) )
     } else {
       endDate.setDate(newDate)
     }
-  } else if( newDate > (30 - 1) ){
+  } else if( newDate > 30 ){
     if( [3,5,8,10].filter( (n) => { n === curMonth }).length != 0 ){
-      endDate.setMonth( curMonth + 1 )
+      endDate.setMonth( curMonth  )
       endDate.setDate( newDate - (30-1) )
     } else {
       endDate.setDate(newDate)
     }
-  } else if( newDate > (31 - 1) ){
+  } else if( newDate > 31 ){
     if( [0,2,4,6,7,9,11].filter( (n) => { n === curMonth }).length != 0 ){
-      endDate.setMonth( curMonth + 1 ) 
+      endDate.setMonth( curMonth  ) 
       endDate.setDate( newDate - (31-1) )
     } else {
       endDate.setDate(newDate)
@@ -227,15 +228,91 @@ function addAWeek(startDate,callback){
   callback(endDate)
 }
 
+function testAddAWeek(){
+
+  // some dates slightly off but I don't care
+  // testing...
+
+  addAWeek( new Date("2016-01-24"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-01-28"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-02-21"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-02-26"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-03-24"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-03-28"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-04-23"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-04-28"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-05-24"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-05-28"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-06-23"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-06-28"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-07-24"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-07-28"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-08-24"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-08-28"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-09-23"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-09-28"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-10-24"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-10-28"), function(endDate){
+    // console.log(endDate)
+  } )
+    addAWeek( new Date("2016-11-23"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-11-28"), function(endDate){
+    // console.log(endDate)
+  } )
+    addAWeek( new Date("2016-12-24"), function(endDate){
+    // console.log(endDate)
+  } )
+  addAWeek( new Date("2016-12-28"), function(endDate){
+    // console.log(endDate)
+  } )
+}
+
 // Syncs the calender events for sprint day + 7 with the local Copy of the events
 module.exports.syncCalendar = function syncCalendar( carryingCallback ) {
 
 
-  // TODO TODO TODO
-  // put this into a clsoure callback
-
   // the current date - starting at the very begginning of the day
-  var startDate = new Date("2016-01-27")
+  var startDate = new Date()
   startDate.setHours(0,0,0,0)
 
   addAWeek( startDate, (function(endDate) {
