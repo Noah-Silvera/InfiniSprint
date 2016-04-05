@@ -1,8 +1,14 @@
 var socketio = require('socket.io')
 var google_api = require('./google_api')
 
-module.exports = initializeWebsockets = function initializeWebsockets(signalCallback){
+// the server should not start until the websockets are initialized, this is a non-blocking callback function
+module.exports = initializeWebsockets = function initializeWebsockets(callback){
 	// create websocket infrastrcture
+	
+	var io = socketio.listen(80)
+	console.log("listening for socket requests on localhost:80")
+	setUpListeners(io)
+	return callback()
 
 	  //----------------------------------------------------------------------------------------------------//
 	 ///////////////////////////// Listener interface /////////////////////////////
@@ -23,29 +29,8 @@ module.exports = initializeWebsockets = function initializeWebsockets(signalCall
 		  socket.on('dragEvent', function(message) {
 		    console.log("drag event received....")
 		  });
-
-
 		});
-
-		callback()
 	};
-
-	  //----------------------------------------------------------------------------------------------------//
-	 ///////////////////////////// Start websocket server /////////////////////////////
-	//---------------------------------------------------------------------------------------------------//
-
-
-	// console.log(io)
-	function startSocketIO(setUpListeners, carryingCallback) {
-		console.log('starting socket io')
-		var io = socketio.listen(80)
-		while( io == undefined || io === null || io == null ){
-			console.log("waiting for socket initialization.....")
-		}
-		setUpListeners(io,carryingCallback)
-	}
-	
-	startSocketIO( setUpListeners, signalCallback )
 }
 
 
