@@ -1,3 +1,6 @@
+// client id 228369885209-1ctbbbaq4adujev2a4936serilu5qd6f.apps.googleusercontent.com
+// client secret Yt-3rRbppo9D_-y3KxJ9ObFg
+
 var google = require('googleapis');
 var googleAuth = require('google-auth-library');
 var fs = require('fs');
