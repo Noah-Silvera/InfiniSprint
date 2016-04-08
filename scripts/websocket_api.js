@@ -48,7 +48,7 @@ function fetchLocalEvents(path,callback) {
   // do some fetching
 	var args = Array.prototype.slice.call(arguments).slice(2)
 	var args = [data].concat(args)
-  callback.apply(this,args)
+  return callback.apply(this,args)
 
 }
 // TODO TODO TODO TODO TODO TODO TODO  

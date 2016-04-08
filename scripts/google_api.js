@@ -124,7 +124,7 @@ function storeToken(token) {
 // goes from 0:00 am on the startDate to 11:59 on the end date
 // and passes this on to another function to get the events, and the events
 // are passed to the callback
-function getEventsForTimeSpan( startDate,endDate, callback,carryingCallback ) {
+function getEventsForTimeSpan( startDate,endDate, callback ) {
 
   var timeMin = startDate
   var timeMax = endDate
@@ -135,7 +135,7 @@ function getEventsForTimeSpan( startDate,endDate, callback,carryingCallback ) {
 
   loadAuth( function (auth) {
     // middleman function allows us to pass the events gathered from list events into a callback
-    listEvents(auth, startDate, endDate, callback,carryingCallback)
+    listEvents(auth, startDate, endDate, callback)
   });
 }
 
@@ -143,7 +143,7 @@ function getEventsForTimeSpan( startDate,endDate, callback,carryingCallback ) {
 
 
 // lists the events for a certain time span, passes the events object onto the callback
-function listEvents(auth, startDate, endDate, callback, carryingCallback) {
+function listEvents(auth, startDate, endDate, callback) {
   var calendar = google.calendar('v3');
   // calendar.events.list({
   //   auth: auth,
@@ -177,20 +177,20 @@ function listEvents(auth, startDate, endDate, callback, carryingCallback) {
   //   }
   // });
   //   temporary standin while API acess broken
-    callback("events go here",carryingCallback)
+   return callback("events go here")
 }
 
 // using an events object, updates the locally stored data in a JSON text file
-function updateLocalData (events,carryingCallback) {
+function updateLocalData (events,callback) {
   // compare the event data to the current data
   // If the UIID exists, check for changed
   // if it doesn't add it to the appropiate list
   // if an event is missing that was present before, delete it from the local data
-  carryingCallback()
+  return callback()
 }
 
 
-function addAWeek(startDate,callback){
+function addAWeek(startDate){
   var endDate = new Date( startDate.toDateString() )
   // calculate a date a week from now
 
@@ -227,26 +227,19 @@ function addAWeek(startDate,callback){
     endDate.setMonth( endDate.getMonth() + 1 )
   }
 
-  callback(endDate)
+  return endDate
 }
 
 // Syncs the calender events for sprint day + 7 with the local Copy of the events
-module.exports.syncCalendar = function syncCalendar( carryingCallback ) {
-
-
-  // TODO TODO TODO
-  // put this into a clsoure callback
+module.exports.syncCalendar = function syncCalendar( callback ) {
 
   // the current date - starting at the very begginning of the day
   var startDate = new Date("2016-01-27")
   startDate.setHours(0,0,0,0)
 
-  addAWeek( startDate, (function(endDate) {
-      endDate.setHours(23,59,59,999)
-      getEventsForTimeSpan( startDate, endDate, updateLocalData, carryingCallback )
-    })
-  )
-
-
+  endDate = addAWeek(startDate)
+  getEventsForTimeSpan( startDate, endDate, function(events,callback){
+    updateLocalData(events,callback)
+  })
 
 }
