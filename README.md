@@ -1,4 +1,4 @@
-# Google Calendar Sprint
+# InfiniSprint
 
 Takes your google calendar all day events and allows you to make a mini sprint, with a backlog, done collumn, and sprint countdown
 ### Usage
