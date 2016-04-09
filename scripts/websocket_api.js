@@ -1,7 +1,7 @@
 var socketio = require('socket.io')
 var google_api = require('./google_api')
 
-// the server should not start until the websockets are initialized, this is a non-blocking callback function
+// Intialize the neccesary socket io server and listeners
 module.exports = initializeWebsockets = function initializeWebsockets(callback){
 	// create websocket infrastrcture
 	
@@ -14,7 +14,7 @@ module.exports = initializeWebsockets = function initializeWebsockets(callback){
 	 ///////////////////////////// Listener interface /////////////////////////////
 	//---------------------------------------------------------------------------------------------------//
 	
-
+	// intialize the listeners for server events like fetching new calender event data
 	function setUpListeners(io,callback){
 		console.log('setting up listeners')
 
@@ -60,11 +60,11 @@ function updateEvents(socket) {
   // syncs the networks google cal events to a local file
    google_api.syncCalendar( 
     // fetched that local file with the changes
-    (function() {
+    function() {
     	fetchLocalEvents('events.txt',  function emitEventData(data,socket) {
         socket.emit('eventsUpdated', data)
         console.log('Sent local event data to client')
       }, socket ) 
-     })
+     }
   );
 }

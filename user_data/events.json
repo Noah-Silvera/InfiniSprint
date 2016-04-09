@@ -1,0 +1,20 @@
+{
+	"sprint" : [
+		{
+			"summary" : "summary_from_google",
+			"id" : "id_from_google",
+			"description" : "description_from_google",
+			"startDate" : "date_from_google",
+		},
+		... // rank of objects is recieved implicity through the order of the sorted array
+	],
+	"backlog" : [
+		{
+			"summary" : "summary_from_google",
+			"id" : "id_from_google",
+			"description" : "description_from_google",
+			"startDate" : "date_from_google",
+		},
+		...
+	]
+}

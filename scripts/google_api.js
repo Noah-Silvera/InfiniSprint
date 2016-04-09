@@ -5,6 +5,7 @@ var google = require('googleapis');
 var googleAuth = require('google-auth-library');
 var fs = require('fs');
 var readline = require('readline');
+var data_manip = require('./data_manip')
 
 // If modifying these scopes, delete your previously saved credentialsentials
 // at ~/.credentials/calendar-nodejs-quickstart.json
@@ -15,32 +16,20 @@ var TOKEN_PATH = TOKEN_DIR + 'calendar-nodejs-backlog.json';
 
 
   //----------------------------------------------------------------------------------------------------//
- ///////////////////////////// GOOGLE CALENDAR FUNCTIONS /////////////////////////////
+ ///////////////////////////// AUTHORIZATION FUNCTIONS /////////////////////////////
 //---------------------------------------------------------------------------------------------------//
-
-module.exports.getAuth = function getAuth() {
+module.exports.getAuth = getAuth
+function getAuth(callback) {
   // Load client secrets from a local file.
-  fs.readFile('client_secret.json', function processClientSecrets(err, auth) {
+  fs.readFile('client_secret.json', function processClientSecrets(err, content) {
     if (err) {
       console.log('Error loading client secret file: ' + err);
       return;
     }
     // Authorize a client with the loaded credentials, then call the
-    // Google Calendar API.
-    authorize(JSON.parse(auth), function(auth){
-      fs.writeFile('auth.txt',JSON.stringify(auth), (err) => {
-        if (err) throw err;
-        else console.log('authorization saved')
-      });
-    });
+    // Drive API.
+    authorize(JSON.parse(content), callback);
   });
-}
-
-// TEST TEST TEST
-// loads the saves 
-function loadAuth(callback) {
-  // Load client secrets from a local file.
-  fs.readFile('auth.txt', callback);
 }
 
 
@@ -124,7 +113,7 @@ function storeToken(token) {
 // goes from 0:00 am on the startDate to 11:59 on the end date
 // and passes this on to another function to get the events, and the events
 // are passed to the callback
-function getEventsForTimeSpan( startDate,endDate, callback ) {
+function getEventsForTimeSpan( startDate, endDate, callback ) {
 
   var timeMin = startDate
   var timeMax = endDate
@@ -132,62 +121,60 @@ function getEventsForTimeSpan( startDate,endDate, callback ) {
   console.log(timeMin)
   console.log("to ->")
   console.log(timeMax)
+  console.log("...")
 
-  loadAuth( function (auth) {
+  getAuth( function (auth) {
     // middleman function allows us to pass the events gathered from list events into a callback
     listEvents(auth, startDate, endDate, callback)
   });
 }
 
-// TODO TODO TODO TODO TODO
+
+
+  //----------------------------------------------------------------------------------------------------//
+ ///////////////////////////// DATA MANIPULATION FUNCTIONS /////////////////////////////
+//---------------------------------------------------------------------------------------------------//
+
 
 
 // lists the events for a certain time span, passes the events object onto the callback
 function listEvents(auth, startDate, endDate, callback) {
   var calendar = google.calendar('v3');
-  // calendar.events.list({
-  //   auth: auth,
-  //   calendarId: 'primary',
-  //   timeMin: startDate.toISOString(),
-  //   timeMax: endDate.toISOString(),
-  //   maxResults: 250, // this is the default value
-  //   singleEvents: true,
-  //   orderBy: 'updated'
-  // }, function(err, response) {
-  //   if (err) {
-  //     console.log('The API returned an error: ' + err);
-  //     return;
-  //   }
-  //   var events = response.items;
-  //   if (events.length == 0) {
-  //     console.log('No upcoming events found.');
-  //   } else {
-  //     console.log('Upcoming 10 events:');
-  //     for (var i = 0; i < events.length; i++) {
-  //       var event = events[i];
-  //       var start = event.start.dateTime || event.start.date;
-  //       console.log('%s - %s', start, event.summary);
-  //     }
-  //   }
-  //   if(events){ 
-  //     callback(events,carryingCallback)
-  //   } else {
-  //     console.log('Could not retrieve events. Possibly authorization problems. Check your client secret')
-  //     return ;
-  //   }
-  // });
-  //   temporary standin while API acess broken
-   return callback("events go here")
+  calendar.events.list({
+    auth: auth,
+    calendarId: 'primary',
+    timeMin: startDate.toISOString(),
+    timeMax: endDate.toISOString(),
+    maxResults: 250, // this is the default value
+    singleEvents: true,
+    orderBy: 'updated'
+  }, function(err, response) {
+    if (err) {
+      console.log('The API returned an error: ' + err);
+      return;
+    }
+    var events = response.items;
+    if (events.length == 0) {
+      console.log('No upcoming events found.');
+    } else {
+      // console.log('Upcoming 10 events:');
+      // for (var i = 0; i < events.length; i++) {
+      //   var event = events[i];
+      //   var start = event.start.dateTime || event.start.date;
+      //   console.log('%s - %s', start, event.summary);
+      // }
+    }
+    if(events){ 
+      console.log('Recieved ' + events.length + " events")
+      return callback(events)
+    } else {
+      console.log('Could not retrieve events. Possibly authorization problems. Check your client secret')
+      return ;
+    }
+  });
 }
 
-// using an events object, updates the locally stored data in a JSON text file
-function updateLocalData (events,callback) {
-  // compare the event data to the current data
-  // If the UIID exists, check for changed
-  // if it doesn't add it to the appropiate list
-  // if an event is missing that was present before, delete it from the local data
-  return callback()
-}
+
 
 
 function addAWeek(startDate){
@@ -234,12 +221,12 @@ function addAWeek(startDate){
 module.exports.syncCalendar = function syncCalendar( callback ) {
 
   // the current date - starting at the very begginning of the day
-  var startDate = new Date("2016-01-27")
+  var startDate = new Date()
   startDate.setHours(0,0,0,0)
 
   endDate = addAWeek(startDate)
-  getEventsForTimeSpan( startDate, endDate, function(events,callback){
-    updateLocalData(events,callback)
+  getEventsForTimeSpan( startDate, endDate, function(events){
+    data_manip.updateLocalData(events,callback)
   })
 
 }
