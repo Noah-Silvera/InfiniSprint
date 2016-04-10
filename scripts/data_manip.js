@@ -5,7 +5,8 @@ var path = require('path')
 var userDataPath = path.join( __dirname, './../user_data/')
 var dataFileName = 'events.json'
   
-
+// UNIMPLEMENTED
+// UNTESTED
 // using an events object, updates the locally stored data in a JSON text file
 // See inside for detailed rules
 module.exports.updateLocalData = updateLocalData
@@ -63,6 +64,7 @@ function updateLocalData (events,callback) {
 
 }
 
+// EDGE CASES UNTESTED
 // using an array of objects, purges all properties of the objects except the properties in keepArr 
 function purgeProperties( objArr, keepArr ){
 
@@ -82,6 +84,7 @@ function purgeProperties( objArr, keepArr ){
   return newObjArr
 }
 
+// UNTESTED
 // ensures data is in a serializable format, then
 // writes 'data' to a new file, then closes file access 
 function writeEventData(data,callback){
@@ -104,6 +107,7 @@ function writeEventData(data,callback){
   });
 }
 
+// UNTESTED
 // If we haven't retrieved event data for the user before, 
 // collect the event data
 // split it into two chunks - current day -> days afterwards
@@ -150,23 +154,32 @@ function createInitialEventData(events){
   return initData
 }
 
+// UNIMPLEMENTED
+// UNTESTED
 // using the google calender event response, this function
 // updates the data referencing that event with the new data from the response
 function updateEvent(eventRef,calEvent){
   return ;
 }
 
+
+// UNIMPLEMENTED
+// UNTESTED
 // deletes the event eventRef from the data referenced by dataRef
 function deleteEvent(eventRef,dataRef){
   return ;
 }
 
+// UNIMPLEMENTED
+// UNTESTED
 // Moves an event to the top of a given list 
 // Check if theres a built in JSON function that already does this
 function moveEventToTop( eventRef,listRef ){
   ;
 }
 
+// UNIMPLEMENTED
+// UNTESTED
 // Moves an event to the top of a given list 
 // Check if theres a built in JSON function that already does this
 function moveEventToBottom( eventRef,listRef ){
