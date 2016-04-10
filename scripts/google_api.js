@@ -147,7 +147,7 @@ function listEvents(auth, startDate, endDate, callback) {
     timeMax: endDate.toISOString(),
     maxResults: 250, // this is the default value
     singleEvents: true,
-    orderBy: 'updated'
+    orderBy: 'startTime'
   }, function(err, response) {
     if (err) {
       console.log('The API returned an error: ' + err);

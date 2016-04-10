@@ -1,5 +1,10 @@
 var fs = require('fs');
+var path = require('path')
 
+
+var userDataPath = path.join( __dirname, './../user_data/')
+var dataFileName = 'events.json'
+  
 
 // using an events object, updates the locally stored data in a JSON text file
 // See inside for detailed rules
@@ -7,11 +12,26 @@ module.exports.updateLocalData = updateLocalData
 function updateLocalData (events,callback) {
   console.log('updating local data....')
 
-  // If file doesn't exist
-    // take events from todays date
-      // add to sprint part of data in order fetched
-    // Take the rest of the events
-      // add to backlog part of data in date order
+  // purge uneccesary data for quick read / writes
+  var propsToKeep = ['summary','description','id','start']
+  events = purgeProperties(events,propsToKeep)
+
+  // see if the event data file already exists
+  fs.access( userDataPath + dataFileName, fs.F_OK, function(err) {
+    if(err) {
+      console.log('event data does not exist')
+
+      // If file doesn't exist
+      // chunk the event data into sprint | backlog 
+      var initData = createInitialEventData(events)
+      // write this to a file
+      writeEventData(initData,callback)
+    } else {
+      console.log('event data already exists')
+      return callback()
+    }
+  });
+
   
   // If file does exist
   // Read file
@@ -41,9 +61,94 @@ function updateLocalData (events,callback) {
       //  On each event in events, add a tag to the event it matches in the Data
       //  at the end, iterate over the JSON objects and delete any events that don't have tags
 
-  return callback()
 }
 
+// using an array of objects, purges all properties of the objects except the properties in keepArr 
+function purgeProperties( objArr, keepArr ){
+
+  // new object to manipulate
+  var newObjArr = []
+
+  for(var i = 0; i < objArr.length; i++){
+    var purgedObj = {}
+    keepArr.forEach( function(curVal,index,array){
+      // pull all the required properties from the old array item into the new
+      purgedObj[curVal] = objArr[i][curVal]
+    });
+    // push this trimmed array item into our new object
+    newObjArr.push(purgedObj)
+  }
+
+  return newObjArr
+}
+
+// ensures data is in a serializable format, then
+// writes 'data' to a new file, then closes file access 
+function writeEventData(data,callback){
+  if( typeof(data) !== typeof("string") ){
+    if( typeof(data) === typeof({ "json":"object "}) ){
+      data = JSON.stringify(data)
+    }
+    else{
+      data = data.toString()
+    }
+  }
+
+  fs.open(userDataPath + dataFileName,'w', function(err,fd){
+    if(err)
+      throw err
+    else
+      fs.write(fd,data,function(err){
+        fs.close(fd,callback)
+      });
+  });
+}
+
+// If we haven't retrieved event data for the user before, 
+// collect the event data
+// split it into two chunks - current day -> days afterwards
+// create a new events.json file with 
+  // sprint = [current day events]
+  // backlog = [current day events]
+function createInitialEventData(events){
+  var initData = {
+    "sprint" : [
+      // ... rank of objects is recieved implicity through the order of the sorted array
+    ],
+    "backlog" : [
+      // ...
+    ]
+  }
+
+  // Victoria is -7h during daylight saving time http://www.timetemperature.com/tzbc/victoria.shtml
+  var timeZoneOffset = "Z-07:00"
+
+  for( var i = 0; i < events.length; i++ ){
+    
+    // this is an all day event
+    if( events[i].start ){
+
+      // events[i].start.date is in ISO string format, which defaults to UTC time
+      var eventDate = new Date(events[i].start.date + timeZoneOffset)
+
+      // take events from todays date
+      if( eventDate.toDateString() !== new Date().toDateString() ){
+          // add to sprint part of data in order fetched
+        initData.sprint = events.slice(0,i)
+        // Take the rest of the events
+          // add to backlog part of data in date order
+        initData.backlog = events.slice(i)
+        break;
+      }
+    }
+    else {
+      // cut out that non all day event
+      events = events.slice(0,i).concat(events.slice(i+1))
+      i--
+    }
+  }
+  return initData
+}
 
 // using the google calender event response, this function
 // updates the data referencing that event with the new data from the response
@@ -66,10 +171,4 @@ function moveEventToTop( eventRef,listRef ){
 // Check if theres a built in JSON function that already does this
 function moveEventToBottom( eventRef,listRef ){
   ;
-}
-
-// compares the dates of the two events
-// functions like the built in javascript cmp
-function compareEventDates( firstEventRef, secondEventRef  ){
-  return ;
 }

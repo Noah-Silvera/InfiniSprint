@@ -1,0 +1,2317 @@
+[
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919728850514000\"",
+    "id": "02ous69h6u6h7halum2va6r3dg",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=MDJvdXM2OWg2dTZoN2hhbHVtMnZhNnIzZGcgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-04-01T21:30:09.000Z",
+    "updated": "2016-04-09T06:17:21.368Z",
+    "summary": "Try exporting log data, into usable format",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "iCalUID": "02ous69h6u6h7halum2va6r3dg@google.com",
+    "sequence": 8,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2915673766775000\"",
+    "id": "0aj8qpmvj1n27d3vubgu1c2ro8",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=MGFqOHFwbXZqMW4yN2QzdnViZ3UxYzJybzggbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-02-14T20:56:44.000Z",
+    "updated": "2016-04-09T06:17:19.001Z",
+    "summary": "Music onto phone",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "0aj8qpmvj1n27d3vubgu1c2ro8@google.com",
+    "sequence": 28,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919325566148000\"",
+    "id": "24734vo522s26jmlq38iipibc4",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=MjQ3MzR2bzUyMnMyNmptbHEzOGlpcGliYzQgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-03-26T18:45:40.000Z",
+    "updated": "2016-04-09T06:17:20.889Z",
+    "summary": "write draft introduction to work term report / set up document with guidelines",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "24734vo522s26jmlq38iipibc4@google.com",
+    "sequence": 10,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919846888057000\"",
+    "id": "2r8htu0dqpd104mp9a3bdgurlo_20160402",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=MnI4aHR1MGRxcGQxMDRtcDlhM2JkZ3VybG9fMjAxNjA0MDIgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2015-02-17T05:44:54.000Z",
+    "updated": "2016-04-09T06:17:24.201Z",
+    "summary": "Message Gillian",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "recurringEventId": "2r8htu0dqpd104mp9a3bdgurlo",
+    "originalStartTime": {
+      "date": "2016-04-02"
+    },
+    "transparency": "transparent",
+    "iCalUID": "2r8htu0dqpd104mp9a3bdgurlo@google.com",
+    "sequence": 7,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919671027891000\"",
+    "id": "3l1mr97gdfr09p3jrtshc86rd0_20160331",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=M2wxbXI5N2dkZnIwOXAzanJ0c2hjODZyZDBfMjAxNjAzMzEgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-02-28T06:16:55.000Z",
+    "updated": "2016-04-09T06:17:21.208Z",
+    "summary": "Message someone from my \"people to keep in touch with\" list",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "recurringEventId": "3l1mr97gdfr09p3jrtshc86rd0",
+    "originalStartTime": {
+      "date": "2016-03-31"
+    },
+    "transparency": "transparent",
+    "iCalUID": "3l1mr97gdfr09p3jrtshc86rd0@google.com",
+    "sequence": 9,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919325548416000\"",
+    "id": "4d3hhpae0ftsqh6ns2dqo86rm4_20160327",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=NGQzaGhwYWUwZnRzcWg2bnMyZHFvODZybTRfMjAxNjAzMjcgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2015-10-11T22:41:18.000Z",
+    "updated": "2016-04-09T06:17:19.997Z",
+    "summary": "Text Zach",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "recurringEventId": "4d3hhpae0ftsqh6ns2dqo86rm4",
+    "originalStartTime": {
+      "date": "2016-03-27"
+    },
+    "iCalUID": "4d3hhpae0ftsqh6ns2dqo86rm4@google.com",
+    "sequence": 10,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2918118881968000\"",
+    "id": "6kk7906qrf6h501vjekd8bs1uo_20160313",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=NmtrNzkwNnFyZjZoNTAxdmpla2Q4YnMxdW9fMjAxNjAzMTMgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2014-11-30T18:21:07.000Z",
+    "updated": "2016-04-09T06:17:18.055Z",
+    "summary": "Backup comp",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "recurringEventId": "6kk7906qrf6h501vjekd8bs1uo_R20151220",
+    "originalStartTime": {
+      "date": "2016-03-13"
+    },
+    "transparency": "transparent",
+    "iCalUID": "6kk7906qrf6h501vjekd8bs1uo_R20151220@google.com",
+    "sequence": 23,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919846887577000\"",
+    "id": "6q1i1rotd1vf9ltrfirabs3pq8_20160402",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=NnExaTFyb3RkMXZmOWx0cmZpcmFiczNwcThfMjAxNjA0MDIgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-01-04T19:03:50.000Z",
+    "updated": "2016-04-09T06:17:24.031Z",
+    "summary": "write a letter for my will",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "recurringEventId": "6q1i1rotd1vf9ltrfirabs3pq8",
+    "originalStartTime": {
+      "date": "2016-04-02"
+    },
+    "transparency": "transparent",
+    "iCalUID": "6q1i1rotd1vf9ltrfirabs3pq8@google.com",
+    "sequence": 7,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2920192496873000\"",
+    "id": "73uqu1pgh2jf8n30t5gijn2pjo_20160406",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=NzN1cXUxcGdoMmpmOG4zMHQ1Z2lqbjJwam9fMjAxNjA0MDYgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-02-11T06:17:13.000Z",
+    "updated": "2016-04-09T06:17:26.057Z",
+    "summary": "ask mom about her job or other things ( Optional )",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "recurringEventId": "73uqu1pgh2jf8n30t5gijn2pjo",
+    "originalStartTime": {
+      "date": "2016-04-06"
+    },
+    "transparency": "transparent",
+    "iCalUID": "73uqu1pgh2jf8n30t5gijn2pjo@google.com",
+    "sequence": 3,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2916820891167000\"",
+    "id": "9ot50jnpn7o4asjmjap6lpsrd4",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=OW90NTBqbnBuN280YXNqbWphcDZscHNyZDQgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-02-28T05:44:11.000Z",
+    "updated": "2016-04-09T06:17:20.149Z",
+    "summary": "Trade books with Kirsten",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "iCalUID": "9ot50jnpn7o4asjmjap6lpsrd4@google.com",
+    "sequence": 15,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919200613851000\"",
+    "id": "ak2mq5m1mcga208tjr9kjvja7s_20160326",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=YWsybXE1bTFtY2dhMjA4dGpyOWtqdmphN3NfMjAxNjAzMjYgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2015-05-17T22:12:45.000Z",
+    "updated": "2016-04-09T06:17:18.240Z",
+    "summary": "clean guitar strings",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "recurringEventId": "ak2mq5m1mcga208tjr9kjvja7s",
+    "originalStartTime": {
+      "date": "2016-03-26"
+    },
+    "transparency": "transparent",
+    "iCalUID": "ak2mq5m1mcga208tjr9kjvja7s@google.com",
+    "sequence": 13,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2915522005266000\"",
+    "id": "bib4knov3oufmnuusqm7797n6o",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=YmliNGtub3Yzb3VmbW51dXNxbTc3OTduNm8gbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-03-01T21:02:16.000Z",
+    "updated": "2016-03-22T14:11:08.273Z",
+    "summary": "Research qtrade and other stock trading options",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "iCalUID": "bib4knov3oufmnuusqm7797n6o@google.com",
+    "sequence": 13,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919200836009000\"",
+    "id": "bqi7juspo2r0ntihfo3p1u5evk",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=YnFpN2p1c3BvMnIwbnRpaGZvM3AxdTVldmsgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-03-26T18:49:48.000Z",
+    "updated": "2016-04-09T06:17:21.967Z",
+    "summary": "WORK TERM REPORT TASKS",
+    "description": "On Monday\n\tASK STEFAN AND JORDAN \n\t\tWhich release he thinks had interesting serious bugs, or bugs that were found after the release and had to be dealt with.\n\t\tWas their a release in which bugs were not found and QA had to change their process to make sure these bugs were covered?\n\t\tCan you remember any critical / Major bugs that fit the following descriptions\n\t\t\tFound AFTER a release in a key part of our software\n\t\t\tFound BEFORE a release in a key part of our software\n\t\t\tImpacted many customers user experience\n\t\t\tImpacted many customers functionality\n\t\t\tFound very close to a release date ( excluding 2.6 )\n\t\t\tNot fixed for a long time even though it impacted many customers\n\t\n\tON JIRA Do some more research into which release had a bunch of criticals & interesting bugs.\n\t\n\tSCHEDULE interview with Dave / Jordan for later in the week.\n\nDouble check with dave when presentation is",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "bqi7juspo2r0ntihfo3p1u5evk@google.com",
+    "sequence": 11,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2910985164379000\"",
+    "id": "cotkdapp0dc6p3379hsm911udo",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=Y290a2RhcHAwZGM2cDMzNzloc205MTF1ZG8gbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2015-12-10T07:06:26.000Z",
+    "updated": "2016-04-09T06:17:18.840Z",
+    "summary": "read kirans book",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "cotkdapp0dc6p3379hsm911udo@google.com",
+    "sequence": 28,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2917680695288000\"",
+    "id": "d6gusouhlt55kt5m38ijht3om8",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=ZDZndXNvdWhsdDU1a3Q1bTM4aWpodDNvbTggbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-03-09T04:34:09.000Z",
+    "updated": "2016-04-09T06:17:22.680Z",
+    "summary": "write own script for syncing songs from a list of filepaths",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "d6gusouhlt55kt5m38ijht3om8@google.com",
+    "sequence": 10,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919760482146000\"",
+    "id": "ettan3s4q74n0ctbscbqnrhdkk_20160401",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=ZXR0YW4zczRxNzRuMGN0YnNjYnFucmhka2tfMjAxNjA0MDEgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-02-17T05:45:21.000Z",
+    "updated": "2016-04-09T06:17:20.448Z",
+    "summary": "study and review others music production club",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "recurringEventId": "ettan3s4q74n0ctbscbqnrhdkk",
+    "originalStartTime": {
+      "date": "2016-04-01"
+    },
+    "transparency": "transparent",
+    "iCalUID": "ettan3s4q74n0ctbscbqnrhdkk@google.com",
+    "sequence": 8,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2917386934448000\"",
+    "id": "h2im8skad0v8l1a71gjf4l9hf8",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=aDJpbThza2FkMHY4bDFhNzFnamY0bDloZjggbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-03-05T18:58:14.000Z",
+    "updated": "2016-04-09T06:17:19.668Z",
+    "summary": "What am I seeking with my overall goals in life",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "iCalUID": "h2im8skad0v8l1a71gjf4l9hf8@google.com",
+    "sequence": 20,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2917675600996000\"",
+    "id": "h2qdtn5ifvroc6oc5il8fthfu0",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=aDJxZHRuNWlmdnJvYzZvYzVpbDhmdGhmdTAgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-03-07T05:30:00.000Z",
+    "updated": "2016-04-09T06:17:23.731Z",
+    "summary": "pay eric back for gas $10",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "h2qdtn5ifvroc6oc5il8fthfu0@google.com",
+    "sequence": 12,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2917400198293000\"",
+    "id": "hmvmshp2b25sq2hu9fi9hjg03g",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=aG12bXNocDJiMjVzcTJodTlmaTloamcwM2cgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-03-05T22:39:14.000Z",
+    "updated": "2016-04-09T06:17:22.131Z",
+    "summary": "research computer parts",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "hmvmshp2b25sq2hu9fi9hjg03g@google.com",
+    "sequence": 16,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919928333576000\"",
+    "id": "htfg1s5m3ph4vehqo6odtv0ak0",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=aHRmZzFzNW0zcGg0dmVocW82b2R0djBhazAgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-04-04T04:54:49.000Z",
+    "updated": "2016-04-09T06:17:24.542Z",
+    "summary": "What are the higher drives than happiness",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "iCalUID": "htfg1s5m3ph4vehqo6odtv0ak0@google.com",
+    "sequence": 5,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2913046388673000\"",
+    "id": "i70onf486k4p295ajeerkulnkc",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=aTcwb25mNDg2azRwMjk1YWplZXJrdWxua2Mgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-02-02T05:02:32.000Z",
+    "updated": "2016-03-22T14:11:07.342Z",
+    "summary": "research stocks - make a list of possibles",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "i70onf486k4p295ajeerkulnkc@google.com",
+    "sequence": 22,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919925644922000\"",
+    "id": "k1id4e3cm2fs6t435t9q8j3774",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=azFpZDRlM2NtMmZzNnQ0MzV0OXE4ajM3NzQgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-04-04T04:10:00.000Z",
+    "updated": "2016-04-09T06:17:24.834Z",
+    "summary": "There is no substance behind sex. What does that mean?",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "iCalUID": "k1id4e3cm2fs6t435t9q8j3774@google.com",
+    "sequence": 5,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2910813356016000\"",
+    "id": "k89uvb4idk2hkhlch2jq4lsq8s",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=azg5dXZiNGlkazJoa2hsY2gyanE0bHNxOHMgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2015-12-10T17:39:36.000Z",
+    "updated": "2016-04-09T06:17:23.875Z",
+    "summary": "learn sampling FU ( revisist synth design project: How to accomplish )",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "k89uvb4idk2hkhlch2jq4lsq8s@google.com",
+    "sequence": 56,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919925645917000\"",
+    "id": "l8sbrmi51ehrlcknmv5h1csfvo",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=bDhzYnJtaTUxZWhybGNrbm12NWgxY3Nmdm8gbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-04-04T04:10:01.000Z",
+    "updated": "2016-04-09T06:17:24.673Z",
+    "summary": "Think about other drives in life.",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "iCalUID": "l8sbrmi51ehrlcknmv5h1csfvo@google.com",
+    "sequence": 5,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2917863276226000\"",
+    "id": "n4baoj9vqr8uasvs50je5jovog",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=bjRiYW9qOXZxcjh1YXN2czUwamU1am92b2cgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-03-07T04:51:06.000Z",
+    "updated": "2016-04-09T06:17:19.374Z",
+    "summary": "sort reason folder",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "n4baoj9vqr8uasvs50je5jovog@google.com",
+    "sequence": 20,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2917220801731000\"",
+    "id": "pi8ddep719jrqovia0ah1lhe9c",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=cGk4ZGRlcDcxOWpycW92aWEwYWgxbGhlOWMgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-03-03T20:49:22.000Z",
+    "updated": "2016-04-09T06:17:19.230Z",
+    "summary": "Research mechanism of action for phenyl, colur, and noopept, theanine compare to (phenyl) moda, and amp, piracetam, other peptides",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "iCalUID": "pi8ddep719jrqovia0ah1lhe9c@google.com",
+    "sequence": 21,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2920106083226000\"",
+    "id": "q3e2og3uaer7fh1vomvb25prjk",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=cTNlMm9nM3VhZXI3Zmgxdm9tdmIyNXByamsgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-02-28T03:34:54.000Z",
+    "updated": "2016-04-09T06:17:15.960Z",
+    "summary": "posstible festivals",
+    "description": "seasons - electronic vancouver, lots of bands I like\nTall tree - chill, some people I like going\nPemberton - coles going, but A lot of bigger bands I wouldnt enjoy, good for getting ass though",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "q3e2og3uaer7fh1vomvb25prjk@google.com",
+    "sequence": 4,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2915088581910000\"",
+    "id": "qd22tq4b95baij6ilued39v8fg",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=cWQyMnRxNGI5NWJhaWo2aWx1ZWQzOXY4Zmcgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-01-09T05:18:56.000Z",
+    "updated": "2016-04-09T06:17:20.644Z",
+    "summary": "remind matt bring back headphones",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "qd22tq4b95baij6ilued39v8fg@google.com",
+    "sequence": 20,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919760482379000\"",
+    "id": "sd24v008f07rdq6vmf99aa9o10_20160401",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=c2QyNHYwMDhmMDdyZHE2dm1mOTlhYTlvMTBfMjAxNjA0MDEgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2015-09-11T02:38:23.000Z",
+    "updated": "2016-04-09T06:17:20.310Z",
+    "summary": "do Helium Backup",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "recurringEventId": "sd24v008f07rdq6vmf99aa9o10",
+    "originalStartTime": {
+      "date": "2016-04-01"
+    },
+    "transparency": "transparent",
+    "iCalUID": "sd24v008f07rdq6vmf99aa9o10@google.com",
+    "sequence": 8,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2920013606908000\"",
+    "id": "sp25s3cp8gmg45oo2var8sg3h4",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=c3AyNXMzY3A4Z21nNDVvbzJ2YXI4c2czaDQgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-03-12T21:02:59.000Z",
+    "updated": "2016-04-09T06:17:17.016Z",
+    "summary": "assess final compentencies",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "sp25s3cp8gmg45oo2var8sg3h4@google.com",
+    "sequence": 5,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919101326405000\"",
+    "id": "taqirqieggmvdr9r4da3c67fis_20160325",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=dGFxaXJxaWVnZ212ZHI5cjRkYTNjNjdmaXNfMjAxNjAzMjUgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-02-11T06:02:48.000Z",
+    "updated": "2016-04-09T06:17:16.641Z",
+    "summary": "ask mom about biking",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "recurringEventId": "taqirqieggmvdr9r4da3c67fis",
+    "originalStartTime": {
+      "date": "2016-03-25"
+    },
+    "transparency": "transparent",
+    "iCalUID": "taqirqieggmvdr9r4da3c67fis@google.com",
+    "sequence": 14,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919587673467000\"",
+    "id": "tpsna9fgtttj6p4av22qna4trs_20160330",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=dHBzbmE5Zmd0dHRqNnA0YXYyMnFuYTR0cnNfMjAxNjAzMzAgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-02-11T06:16:37.000Z",
+    "updated": "2016-04-09T06:17:16.839Z",
+    "summary": "Ask mom how her weekend was ( optional )",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "recurringEventId": "tpsna9fgtttj6p4av22qna4trs",
+    "originalStartTime": {
+      "date": "2016-03-30"
+    },
+    "transparency": "transparent",
+    "iCalUID": "tpsna9fgtttj6p4av22qna4trs@google.com",
+    "sequence": 10,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2916391192266000\"",
+    "id": "ufn7ct477c65juuothhe4a2mc8",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=dWZuN2N0NDc3YzY1anV1b3RoaGU0YTJtYzggbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-01-30T23:03:18.000Z",
+    "updated": "2016-04-09T06:17:20.774Z",
+    "summary": "order more contacts",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "ufn7ct477c65juuothhe4a2mc8@google.com",
+    "sequence": 18,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2920278883366000\"",
+    "id": "vifonlmjofr7d2phe5abstd33c",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=dmlmb25sbWpvZnI3ZDJwaGU1YWJzdGQzM2Mgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-03-23T04:41:17.000Z",
+    "updated": "2016-04-09T06:17:15.293Z",
+    "summary": "Start cleaning apartment",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "vifonlmjofr7d2phe5abstd33c@google.com",
+    "sequence": 2,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2917247333385000\"",
+    "id": "vv8krh9gr6q7b327pbbqe9ufu4",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=dnY4a3JoOWdyNnE3YjMyN3BiYnFlOXVmdTQgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-03-04T04:11:33.000Z",
+    "updated": "2016-04-09T06:17:19.531Z",
+    "summary": "Think about never experiencing any of the feelings you do ever.again. Suicide?",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-09"
+    },
+    "end": {
+      "date": "2016-04-10"
+    },
+    "iCalUID": "vv8krh9gr6q7b327pbbqe9ufu4@google.com",
+    "sequence": 21,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2889206557331000\"",
+    "id": "4d3hhpae0ftsqh6ns2dqo86rm4_20160410",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=NGQzaGhwYWUwZnRzcWg2bnMyZHFvODZybTRfMjAxNjA0MTAgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2015-10-11T22:41:18.000Z",
+    "updated": "2015-10-11T22:41:18.707Z",
+    "summary": "Text Zach",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-10"
+    },
+    "end": {
+      "date": "2016-04-11"
+    },
+    "recurringEventId": "4d3hhpae0ftsqh6ns2dqo86rm4",
+    "originalStartTime": {
+      "date": "2016-04-10"
+    },
+    "iCalUID": "4d3hhpae0ftsqh6ns2dqo86rm4@google.com",
+    "sequence": 0,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2899743136884000\"",
+    "id": "6kk7906qrf6h501vjekd8bs1uo_20160410",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=NmtrNzkwNnFyZjZoNTAxdmpla2Q4YnMxdW9fMjAxNjA0MTAgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2014-11-30T18:21:07.000Z",
+    "updated": "2015-12-11T22:06:08.484Z",
+    "summary": "Backup comp",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-10"
+    },
+    "end": {
+      "date": "2016-04-11"
+    },
+    "recurringEventId": "6kk7906qrf6h501vjekd8bs1uo_R20151220",
+    "originalStartTime": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "6kk7906qrf6h501vjekd8bs1uo_R20151220@google.com",
+    "sequence": 0,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2920369808245000\"",
+    "id": "6m3qpd13m7s3b8ee9mjf4e4vfc",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=Nm0zcXBkMTNtN3MzYjhlZTltamY0ZTR2ZmMgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-04-08T14:39:42.000Z",
+    "updated": "2016-04-09T23:10:25.612Z",
+    "summary": "Ask Mary about apartment looking at",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-10"
+    },
+    "end": {
+      "date": "2016-04-11"
+    },
+    "iCalUID": "6m3qpd13m7s3b8ee9mjf4e4vfc@google.com",
+    "sequence": 4,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2903868461738000\"",
+    "id": "6q1i1rotd1vf9ltrfirabs3pq8_20160410",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=NnExaTFyb3RkMXZmOWx0cmZpcmFiczNwcThfMjAxNjA0MTAgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-01-04T19:03:50.000Z",
+    "updated": "2016-01-04T19:03:50.869Z",
+    "summary": "write a letter for my will",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-10"
+    },
+    "end": {
+      "date": "2016-04-11"
+    },
+    "recurringEventId": "6q1i1rotd1vf9ltrfirabs3pq8",
+    "originalStartTime": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "6q1i1rotd1vf9ltrfirabs3pq8@google.com",
+    "sequence": 0,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2910062360606000\"",
+    "id": "9a9fuog5asunomu15pf9pctk1k_20160410",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=OWE5ZnVvZzVhc3Vub211MTVwZjlwY3RrMWtfMjAxNjA0MTAgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-02-09T15:19:40.000Z",
+    "updated": "2016-02-09T15:19:40.373Z",
+    "summary": "Write goals on physical paper",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-10"
+    },
+    "end": {
+      "date": "2016-04-11"
+    },
+    "recurringEventId": "9a9fuog5asunomu15pf9pctk1k",
+    "originalStartTime": {
+      "date": "2016-04-10"
+    },
+    "iCalUID": "9a9fuog5asunomu15pf9pctk1k@google.com",
+    "sequence": 0,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2917455709957000\"",
+    "id": "c7ujvh69p4g524bogn148boov0",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=Yzd1anZoNjlwNGc1MjRib2duMTQ4Ym9vdjAgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-02-28T03:18:15.000Z",
+    "updated": "2016-04-09T23:10:41.506Z",
+    "summary": "check on acoustic guitar strings ( + 5 weeks )",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-10"
+    },
+    "end": {
+      "date": "2016-04-11"
+    },
+    "transparency": "transparent",
+    "iCalUID": "c7ujvh69p4g524bogn148boov0@google.com",
+    "sequence": 10,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919994063099000\"",
+    "id": "ceqrd1sm3mfqr16hf5b253l9so_20160403",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=Y2VxcmQxc20zbWZxcjE2aGY1YjI1M2w5c29fMjAxNjA0MDMgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2015-01-05T01:48:31.000Z",
+    "updated": "2016-04-09T23:10:15.667Z",
+    "summary": "call nana nono",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-10"
+    },
+    "end": {
+      "date": "2016-04-11"
+    },
+    "recurringEventId": "ceqrd1sm3mfqr16hf5b253l9so",
+    "originalStartTime": {
+      "date": "2016-04-03"
+    },
+    "transparency": "transparent",
+    "iCalUID": "ceqrd1sm3mfqr16hf5b253l9so@google.com",
+    "sequence": 7,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2872416831292000\"",
+    "id": "ceqrd1sm3mfqr16hf5b253l9so_20160410",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=Y2VxcmQxc20zbWZxcjE2aGY1YjI1M2w5c29fMjAxNjA0MTAgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2015-01-05T01:48:31.000Z",
+    "updated": "2015-07-06T18:46:55.646Z",
+    "summary": "call nana nono",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-10"
+    },
+    "end": {
+      "date": "2016-04-11"
+    },
+    "recurringEventId": "ceqrd1sm3mfqr16hf5b253l9so",
+    "originalStartTime": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "ceqrd1sm3mfqr16hf5b253l9so@google.com",
+    "sequence": 0,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2910347758940000\"",
+    "id": "g2bf0qtdnnf3j5lvmt55nepjp8_20160410",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=ZzJiZjBxdGRubmYzajVsdm10NTVuZXBqcDhfMjAxNjA0MTAgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-02-11T06:57:59.000Z",
+    "updated": "2016-02-11T06:57:59.504Z",
+    "summary": "Check credit card bill",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-10"
+    },
+    "end": {
+      "date": "2016-04-12"
+    },
+    "recurringEventId": "g2bf0qtdnnf3j5lvmt55nepjp8",
+    "originalStartTime": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "g2bf0qtdnnf3j5lvmt55nepjp8@google.com",
+    "sequence": 0,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2909824787717000\"",
+    "id": "gqt9gdkkj8gllhppvck65mcc9k_20160410",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=Z3F0OWdka2tqOGdsbGhwcHZjazY1bWNjOWtfMjAxNjA0MTAgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-02-05T06:13:47.000Z",
+    "updated": "2016-02-11T06:17:36.780Z",
+    "summary": "prioritize 5 goals for the week: Make tasks in google cal",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-10"
+    },
+    "end": {
+      "date": "2016-04-11"
+    },
+    "recurringEventId": "gqt9gdkkj8gllhppvck65mcc9k",
+    "originalStartTime": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "gqt9gdkkj8gllhppvck65mcc9k@google.com",
+    "sequence": 1,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2872102463898000\"",
+    "id": "m9drb2ua47ij6crnactuua3sc0_20160410",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=bTlkcmIydWE0N2lqNmNybmFjdHV1YTNzYzBfMjAxNjA0MTAgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2014-10-15T19:43:15.000Z",
+    "updated": "2015-07-06T18:46:55.646Z",
+    "summary": "change passwords",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "eric browning",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "eric browning",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-10"
+    },
+    "end": {
+      "date": "2016-04-11"
+    },
+    "recurringEventId": "m9drb2ua47ij6crnactuua3sc0",
+    "originalStartTime": {
+      "date": "2016-04-10"
+    },
+    "iCalUID": "m9drb2ua47ij6crnactuua3sc0@google.com",
+    "sequence": 5,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2885973241700000\"",
+    "id": "o7mm137gumirefvg86npeb6vms_20160410",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=bzdtbTEzN2d1bWlyZWZ2Zzg2bnBlYjZ2bXNfMjAxNjA0MTAgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2015-09-23T05:37:00.000Z",
+    "updated": "2015-09-23T05:37:00.850Z",
+    "summary": "Go Over bills",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-10"
+    },
+    "end": {
+      "date": "2016-04-11"
+    },
+    "recurringEventId": "o7mm137gumirefvg86npeb6vms",
+    "originalStartTime": {
+      "date": "2016-04-10"
+    },
+    "transparency": "transparent",
+    "iCalUID": "o7mm137gumirefvg86npeb6vms@google.com",
+    "sequence": 0,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2914114944206000\"",
+    "id": "eftipnbkcm845foa8t05b80mvs",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=ZWZ0aXBuYmtjbTg0NWZvYTh0MDViODBtdnMgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-01-31T23:45:58.000Z",
+    "updated": "2016-04-05T04:36:25.253Z",
+    "summary": "Deal with koodo with mom",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-11"
+    },
+    "end": {
+      "date": "2016-04-12"
+    },
+    "iCalUID": "eftipnbkcm845foa8t05b80mvs@google.com",
+    "sequence": 25,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2910342795658000\"",
+    "id": "tpsna9fgtttj6p4av22qna4trs_20160411",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=dHBzbmE5Zmd0dHRqNnA0YXYyMnFuYTR0cnNfMjAxNjA0MTEgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-02-11T06:16:37.000Z",
+    "updated": "2016-02-11T06:16:37.829Z",
+    "summary": "Ask mom how her weekend was ( optional )",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-11"
+    },
+    "end": {
+      "date": "2016-04-12"
+    },
+    "recurringEventId": "tpsna9fgtttj6p4av22qna4trs",
+    "originalStartTime": {
+      "date": "2016-04-11"
+    },
+    "transparency": "transparent",
+    "iCalUID": "tpsna9fgtttj6p4av22qna4trs@google.com",
+    "sequence": 0,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2920047281907000\"",
+    "id": "u8jnf7kcf8hfvrv4tihpa1d98k",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=dThqbmY3a2NmOGhmdnJ2NHRpaHBhMWQ5OGsgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-04-04T21:03:26.000Z",
+    "updated": "2016-04-09T23:11:14.936Z",
+    "summary": "Give Brett job acceptance",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-11"
+    },
+    "end": {
+      "date": "2016-04-12"
+    },
+    "iCalUID": "u8jnf7kcf8hfvrv4tihpa1d98k@google.com",
+    "sequence": 6,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2905146844252000\"",
+    "id": "48q2raihmfkfbbodu4hp0f1fhs_20160412T010000Z",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=NDhxMnJhaWhtZmtmYmJvZHU0aHAwZjFmaHNfMjAxNjA0MTJUMDEwMDAwWiBub2FoLmEuc2lsdmVyYUBt",
+    "created": "2016-01-07T01:59:21.000Z",
+    "updated": "2016-01-12T04:37:02.126Z",
+    "summary": "Wes guitar lesson ( 45 S. Turner )",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "dateTime": "2016-04-11T18:00:00-07:00",
+      "timeZone": "America/Los_Angeles"
+    },
+    "end": {
+      "dateTime": "2016-04-11T19:00:00-07:00",
+      "timeZone": "America/Los_Angeles"
+    },
+    "recurringEventId": "48q2raihmfkfbbodu4hp0f1fhs",
+    "originalStartTime": {
+      "dateTime": "2016-04-11T18:00:00-07:00",
+      "timeZone": "America/Los_Angeles"
+    },
+    "iCalUID": "48q2raihmfkfbbodu4hp0f1fhs@google.com",
+    "sequence": 1,
+    "reminders": {
+      "useDefault": true
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2913280430257000\"",
+    "id": "3l1mr97gdfr09p3jrtshc86rd0_20160412",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=M2wxbXI5N2dkZnIwOXAzanJ0c2hjODZyZDBfMjAxNjA0MTIgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-02-28T06:16:55.000Z",
+    "updated": "2016-02-28T06:16:55.187Z",
+    "summary": "Message someone from my \"people to keep in touch with\" list",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-12"
+    },
+    "end": {
+      "date": "2016-04-13"
+    },
+    "recurringEventId": "3l1mr97gdfr09p3jrtshc86rd0",
+    "originalStartTime": {
+      "date": "2016-04-12"
+    },
+    "transparency": "transparent",
+    "iCalUID": "3l1mr97gdfr09p3jrtshc86rd0@google.com",
+    "sequence": 0,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2920426082647000\"",
+    "id": "9pghtu366nus90m8ks6t2i81ak_20160408",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=OXBnaHR1MzY2bnVzOTBtOGtzNnQyaTgxYWtfMjAxNjA0MDggbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-01-24T18:35:53.000Z",
+    "updated": "2016-04-09T23:10:36.187Z",
+    "summary": "Call Dad",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-12"
+    },
+    "end": {
+      "date": "2016-04-13"
+    },
+    "recurringEventId": "9pghtu366nus90m8ks6t2i81ak",
+    "originalStartTime": {
+      "date": "2016-04-08"
+    },
+    "transparency": "transparent",
+    "iCalUID": "9pghtu366nus90m8ks6t2i81ak@google.com",
+    "sequence": 2,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919995395059000\"",
+    "id": "s41e70dn8thqmn4vuro5fth96s",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=czQxZTcwZG44dGhxbW40dnVybzVmdGg5NnMgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-04-06T05:09:45.000Z",
+    "updated": "2016-04-08T00:40:07.046Z",
+    "summary": "tell elena to tell the school about the girl who needs therapy",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-12"
+    },
+    "end": {
+      "date": "2016-04-13"
+    },
+    "transparency": "transparent",
+    "iCalUID": "s41e70dn8thqmn4vuro5fth96s@google.com",
+    "sequence": 2,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2910341136890000\"",
+    "id": "taqirqieggmvdr9r4da3c67fis_20160412",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=dGFxaXJxaWVnZ212ZHI5cjRkYTNjNjdmaXNfMjAxNjA0MTIgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-02-11T06:02:48.000Z",
+    "updated": "2016-02-11T06:02:48.445Z",
+    "summary": "ask mom about biking",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-12"
+    },
+    "end": {
+      "date": "2016-04-13"
+    },
+    "recurringEventId": "taqirqieggmvdr9r4da3c67fis",
+    "originalStartTime": {
+      "date": "2016-04-12"
+    },
+    "transparency": "transparent",
+    "iCalUID": "taqirqieggmvdr9r4da3c67fis@google.com",
+    "sequence": 0,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2918358226117000\"",
+    "id": "19il44f8kdi12hn1iiq05err7o",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=MTlpbDQ0ZjhrZGkxMmhuMWlpcTA1ZXJyN28gbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-03-16T07:53:07.000Z",
+    "updated": "2016-04-09T23:10:38.403Z",
+    "summary": "Call stock investor",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-13"
+    },
+    "end": {
+      "date": "2016-04-14"
+    },
+    "iCalUID": "19il44f8kdi12hn1iiq05err7o@google.com",
+    "sequence": 15,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2917279298219000\"",
+    "id": "1d97l7dmp49g9b6mekd9g0cnkk",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=MWQ5N2w3ZG1wNDlnOWI2bWVrZDlnMGNua2sgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-03-03T20:10:42.000Z",
+    "updated": "2016-04-09T23:10:55.160Z",
+    "summary": "Download evens samples",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-13"
+    },
+    "end": {
+      "date": "2016-04-14"
+    },
+    "iCalUID": "1d97l7dmp49g9b6mekd9g0cnkk@google.com",
+    "sequence": 26,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919594264564000\"",
+    "id": "ab8ib3ud9efo9ud7l87orh40sc",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=YWI4aWIzdWQ5ZWZvOXVkN2w4N29yaDQwc2Mgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-03-30T15:12:37.000Z",
+    "updated": "2016-04-09T23:11:46.617Z",
+    "summary": "Tell my mom in fully understand her getting mad for the little things ( relate to Connor )",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-13"
+    },
+    "end": {
+      "date": "2016-04-14"
+    },
+    "iCalUID": "ab8ib3ud9efo9ud7l87orh40sc@google.com",
+    "sequence": 7,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2910342795658000\"",
+    "id": "tpsna9fgtttj6p4av22qna4trs_20160413",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=dHBzbmE5Zmd0dHRqNnA0YXYyMnFuYTR0cnNfMjAxNjA0MTMgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-02-11T06:16:37.000Z",
+    "updated": "2016-02-11T06:16:37.829Z",
+    "summary": "Ask mom how her weekend was ( optional )",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-13"
+    },
+    "end": {
+      "date": "2016-04-14"
+    },
+    "recurringEventId": "tpsna9fgtttj6p4av22qna4trs",
+    "originalStartTime": {
+      "date": "2016-04-13"
+    },
+    "transparency": "transparent",
+    "iCalUID": "tpsna9fgtttj6p4av22qna4trs@google.com",
+    "sequence": 0,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2903868461738000\"",
+    "id": "6q1i1rotd1vf9ltrfirabs3pq8_20160414",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=NnExaTFyb3RkMXZmOWx0cmZpcmFiczNwcThfMjAxNjA0MTQgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-01-04T19:03:50.000Z",
+    "updated": "2016-01-04T19:03:50.869Z",
+    "summary": "write a letter for my will",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-14"
+    },
+    "end": {
+      "date": "2016-04-15"
+    },
+    "recurringEventId": "6q1i1rotd1vf9ltrfirabs3pq8",
+    "originalStartTime": {
+      "date": "2016-04-14"
+    },
+    "transparency": "transparent",
+    "iCalUID": "6q1i1rotd1vf9ltrfirabs3pq8@google.com",
+    "sequence": 0,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919991238103000\"",
+    "id": "aigqq3v9pg7478n71p1bb8gsic",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=YWlncXEzdjlwZzc0NzhuNzFwMWJiOGdzaWMgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-04-04T05:28:39.000Z",
+    "updated": "2016-04-09T23:11:58.848Z",
+    "summary": "Think about chicken and egg with happiness and goals",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-14"
+    },
+    "end": {
+      "date": "2016-04-15"
+    },
+    "iCalUID": "aigqq3v9pg7478n71p1bb8gsic@google.com",
+    "sequence": 6,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2918525297224000\"",
+    "id": "g90m2su6kl3adckjc8n0c8chbo",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=ZzkwbTJzdTZrbDNhZGNramM4bjBjOGNoYm8gbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-03-12T18:56:16.000Z",
+    "updated": "2016-04-09T23:10:56.841Z",
+    "summary": "download stuff from bousada",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-14"
+    },
+    "end": {
+      "date": "2016-04-15"
+    },
+    "transparency": "transparent",
+    "iCalUID": "g90m2su6kl3adckjc8n0c8chbo@google.com",
+    "sequence": 16,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2920080503461000\"",
+    "id": "g9e2482odnpncpa8jr11ldm4t8",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=ZzllMjQ4Mm9kbnBuY3BhOGpyMTFsZG00dDggbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-04-03T01:53:31.000Z",
+    "updated": "2016-04-09T23:11:00.792Z",
+    "summary": "george benson breezin",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-14"
+    },
+    "end": {
+      "date": "2016-04-15"
+    },
+    "transparency": "transparent",
+    "iCalUID": "g9e2482odnpncpa8jr11ldm4t8@google.com",
+    "sequence": 6,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919907699499000\"",
+    "id": "ii5dm3398cevm2ev4ko8o2loig",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=aWk1ZG0zMzk4Y2V2bTJldjRrbzhvMmxvaWcgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-04-01T21:55:45.000Z",
+    "updated": "2016-04-09T23:10:59.579Z",
+    "summary": "George barnett daft punk cover",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-14"
+    },
+    "end": {
+      "date": "2016-04-15"
+    },
+    "transparency": "transparent",
+    "iCalUID": "ii5dm3398cevm2ev4ko8o2loig@google.com",
+    "sequence": 8,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2919907697956000\"",
+    "id": "a3ljt3kj48tvoc69nl9gl7sbtc",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=YTNsanQza2o0OHR2b2M2OW5sOWdsN3NidGMgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-04-01T21:59:19.000Z",
+    "updated": "2016-04-09T23:10:58.311Z",
+    "summary": "EVERYTHING ROM TAKE SOME CRIME",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-15"
+    },
+    "end": {
+      "date": "2016-04-16"
+    },
+    "transparency": "transparent",
+    "iCalUID": "a3ljt3kj48tvoc69nl9gl7sbtc@google.com",
+    "sequence": 8,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2872416831292000\"",
+    "id": "ak2mq5m1mcga208tjr9kjvja7s_20160415",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=YWsybXE1bTFtY2dhMjA4dGpyOWtqdmphN3NfMjAxNjA0MTUgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2015-05-17T22:12:45.000Z",
+    "updated": "2015-07-06T18:46:55.646Z",
+    "summary": "clean guitar strings",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-15"
+    },
+    "end": {
+      "date": "2016-04-16"
+    },
+    "recurringEventId": "ak2mq5m1mcga208tjr9kjvja7s",
+    "originalStartTime": {
+      "date": "2016-04-15"
+    },
+    "transparency": "transparent",
+    "iCalUID": "ak2mq5m1mcga208tjr9kjvja7s@google.com",
+    "sequence": 0,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2911375842818000\"",
+    "id": "ettan3s4q74n0ctbscbqnrhdkk_20160415",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=ZXR0YW4zczRxNzRuMGN0YnNjYnFucmhka2tfMjAxNjA0MTUgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-02-17T05:45:21.000Z",
+    "updated": "2016-02-17T05:45:21.409Z",
+    "summary": "study and review others music production club",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-15"
+    },
+    "end": {
+      "date": "2016-04-16"
+    },
+    "recurringEventId": "ettan3s4q74n0ctbscbqnrhdkk",
+    "originalStartTime": {
+      "date": "2016-04-15"
+    },
+    "transparency": "transparent",
+    "iCalUID": "ettan3s4q74n0ctbscbqnrhdkk@google.com",
+    "sequence": 0,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2906354980626000\"",
+    "id": "k2injjb0017n4girllp5kbmsuk",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=azJpbmpqYjAwMTduNGdpcmxscDVrYm1zdWsgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2016-01-19T04:24:50.000Z",
+    "updated": "2016-01-19T04:24:50.398Z",
+    "summary": "Hang out with Carlos",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-15"
+    },
+    "end": {
+      "date": "2016-04-16"
+    },
+    "iCalUID": "k2injjb0017n4girllp5kbmsuk@google.com",
+    "sequence": 0,
+    "reminders": {
+      "useDefault": false
+    }
+  },
+  {
+    "kind": "calendar#event",
+    "etag": "\"2883878206330000\"",
+    "id": "sd24v008f07rdq6vmf99aa9o10_20160415",
+    "status": "confirmed",
+    "htmlLink": "https://www.google.com/calendar/event?eid=c2QyNHYwMDhmMDdyZHE2dm1mOTlhYTlvMTBfMjAxNjA0MTUgbm9haC5hLnNpbHZlcmFAbQ",
+    "created": "2015-09-11T02:38:23.000Z",
+    "updated": "2015-09-11T02:38:23.165Z",
+    "summary": "do Helium Backup",
+    "creator": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "organizer": {
+      "email": "noah.a.silvera@gmail.com",
+      "displayName": "Noah S",
+      "self": true
+    },
+    "start": {
+      "date": "2016-04-15"
+    },
+    "end": {
+      "date": "2016-04-16"
+    },
+    "recurringEventId": "sd24v008f07rdq6vmf99aa9o10",
+    "originalStartTime": {
+      "date": "2016-04-15"
+    },
+    "transparency": "transparent",
+    "iCalUID": "sd24v008f07rdq6vmf99aa9o10@google.com",
+    "sequence": 0,
+    "reminders": {
+      "useDefault": false
+    }
+  }
+]
