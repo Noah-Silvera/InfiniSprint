@@ -4,6 +4,7 @@ var path = require('path')
 
 var userDataPath = path.join( __dirname, './../user_data/')
 var dataFileName = 'events.json'
+var dataFilePath = path.join( userDataPath + dataFileName )
   
 // UNIMPLEMENTED
 // UNTESTED
@@ -16,9 +17,10 @@ function updateLocalData (events,callback) {
   // purge uneccesary data for quick read / writes
   var propsToKeep = ['summary','description','id','start']
   events = purgeProperties(events,propsToKeep)
+  events = events.slice(0,20)
 
   // see if the event data file already exists
-  fs.access( userDataPath + dataFileName, fs.F_OK, function(err) {
+  fs.access( dataFilePath, fs.F_OK, function(err) {
     if(err) {
       console.log('event data does not exist')
 
@@ -28,8 +30,34 @@ function updateLocalData (events,callback) {
       // write this to a file
       writeEventData(initData,callback)
     } else {
-      console.log('event data already exists')
-      return callback()
+      fs.readFile( dataFilePath, function(err, content){
+        if(err){
+          throw err
+        } else {
+          curEventData = JSON.parse(content)
+          console.log( "curEventData keys " + Object.keys(curEventData) )
+
+          // iterate over each of the events returned from the google calender API
+          events.forEach( function( curEvent, evIndex, evArry ){
+
+
+
+            // iterate over the event lists in the currentEventData
+            // curEventData.keys().forEach( function( curKey, keyIndex, keyArray ) {
+            //   if( curEventData[curKey][curEvent] !== undefined ){
+
+            //     updateEvent(curEventData[curKey][])
+
+            //     if( curKey === "sprint" ){
+
+            //     }
+            //   }
+            // });
+
+          });
+        return callback()
+        }
+      });
     }
   });
 
@@ -97,7 +125,7 @@ function writeEventData(data,callback){
     }
   }
 
-  fs.open(userDataPath + dataFileName,'w', function(err,fd){
+  fs.open(dataFilePath,'w', function(err,fd){
     if(err)
       throw err
     else
@@ -116,48 +144,107 @@ function writeEventData(data,callback){
   // backlog = [current day events]
 function createInitialEventData(events){
   var initData = {
-    "sprint" : [
+    "sprint" : {
       // ... rank of objects is recieved implicity through the order of the sorted array
-    ],
-    "backlog" : [
+    },
+    "backlog" : {
       // ...
-    ]
+    }
   }
 
   // Victoria is -7h during daylight saving time http://www.timetemperature.com/tzbc/victoria.shtml
   var timeZoneOffset = "Z-07:00"
 
+  console.time('initEvents')
   for( var i = 0; i < events.length; i++ ){
     
     // this is an all day event
     if( events[i].start ){
 
       // events[i].start.date is in ISO string format, which defaults to UTC time
+      // HAS COPIED CODE
       var eventDate = new Date(events[i].start.date + timeZoneOffset)
 
       // take events from todays date
+      
       if( eventDate.toDateString() !== new Date().toDateString() ){
-          // add to sprint part of data in order fetched
-        initData.sprint = events.slice(0,i)
-        // Take the rest of the events
-          // add to backlog part of data in date order
-        initData.backlog = events.slice(i)
+
+        // slice out the all day events in the backlog
+        // HAS COPIED CODE
+        for( var j = i; j < events.length; j++ ){
+          var backlogEventDate = new Date(events[j].start.date + timeZoneOffset)
+          if( backlogEventDate.toDateString() !== new Date().toDateString() ){
+            events = events.slice(0,j).concat(events.slice(j+1))
+            j--
+          }
+        }
+
+        // convert the events JSON array to a true array of objects 
+        // that have one propety, the previous id property of the object
+        // and this property contains all the event data
+        var indexedEvents = indexObjectById(events) 
+
+        // uses the power of arrays to slice up the events object now indexed by id
+        // convert that events array back to a object to re-allow indexing on the id
+        // this will later allow a list of events to be indexed on their id
+        // for extremely quick access and simpler coding
+        initData.sprint = convertSimpleArrayToObject( indexedEvents.slice( 0, i ) ) 
+        initData.backlog = convertSimpleArrayToObject( indexedEvents.slice( i ) )
         break;
       }
     }
     else {
       // cut out that non all day event
+      // HAS COPIED CODE
       events = events.slice(0,i).concat(events.slice(i+1))
       i--
     }
   }
+  console.timeEnd('initEvents')
   return initData
 }
 
-// UNIMPLEMENTED
-// UNTESTED
+// Converts a simple array in the form of
+// [ { 1:"first" }, { 2:"second"}, { 3:"third"}]
+// To a simple javascript object of
+// { 
+//    1:"first",
+//    2:"second",
+//    3:"third",
+// }
+function convertSimpleArrayToObject( simpleArray ){
+  var newObj = {}
+
+  simpleArray.forEach( function(curVal, index, arr ){
+    objKey = Object.keys(curVal)[0]
+    newObj[objKey] = curVal[objKey]
+  });
+
+  return newObj
+}
+
+
+// Converts a array of javascript objects with one property
+// the ID pulled from an object. The rest of the objects
+//  properties are the content of this id
+function indexObjectById( simpleObject ){
+    indexedOnId = []
+    // convert the events JSON array to an array of objects
+    // that have one property, the ID of the event
+    simpleObject.forEach( function( curEv, index, arr ){
+      var curEvId = new String(curEv.id)
+      delete curEv.id
+      var curObj = {}
+      curObj[curEvId] = curEv
+      indexedOnId.push(curObj)
+    });
+
+    return indexedOnId
+}
+
 // using the google calender event response, this function
 // updates the data referencing that event with the new data from the response
+// returns the updated eventRef
 function updateEvent(eventRef,calEvent){
   return ;
 }
