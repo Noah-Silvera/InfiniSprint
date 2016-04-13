@@ -17,11 +17,17 @@ function updateLocalData (events,callback) {
   // purge uneccesary data for quick read / writes
   var propsToKeep = ['summary','description','id','start']
   events = purgeProperties(events,propsToKeep)
+  // JUST FOR TESTING DELETE LATER
   events = events.slice(0,20)
 
-  // see if the event data file already exists
+  processCalendarResponse(events, callback)
+}
+
+function processCalendarResponse(events, callback){
+ // see if the event data file already exists
   fs.access( dataFilePath, fs.F_OK, function(err) {
     if(err) {
+      // no updates to perform
       console.log('event data does not exist')
 
       // If file doesn't exist
@@ -30,66 +36,97 @@ function updateLocalData (events,callback) {
       // write this to a file
       writeEventData(initData,callback)
     } else {
-      fs.readFile( dataFilePath, function(err, content){
-        if(err){
-          throw err
-        } else {
-          curEventData = JSON.parse(content)
-          console.log( "curEventData keys " + Object.keys(curEventData) )
+      // perform updates to the local data
 
-          // iterate over each of the events returned from the google calender API
-          events.forEach( function( curEvent, evIndex, evArry ){
-
-
-
-            // iterate over the event lists in the currentEventData
-            // curEventData.keys().forEach( function( curKey, keyIndex, keyArray ) {
-            //   if( curEventData[curKey][curEvent] !== undefined ){
-
-            //     updateEvent(curEventData[curKey][])
-
-            //     if( curKey === "sprint" ){
-
-            //     }
-            //   }
-            // });
-
-          });
-        return callback()
-        }
-      });
+      applyCalendarUpdates(events, function(updatedData,callback){
+        writeEventData(updatedData,callback)
+      })
     }
   });
+}
 
-  
-  // If file does exist
-  // Read file
-  // Convert to JSON object
-    // for each event in events
-      // if event in sprint 
-        // updateEvent()
-        // if eventDate === currentDate
-          // do nothing
-        // else 
-          // Move item to backlog at the bottom of the appropiate date
-      // else if event in backlog
-        // updateEvent()
-        // if eventDate === currentDate
-          // Move item to bottom of current sprint
-        // else
-          // Do nothing
-          // === OUT OF SCOPE === If the item has changed date, move it to the top of the day list above it, or the bottom of the day list below it 
-      // else if event in neither
-        // If eventDate === currentDate
-          // Move item to bottom of current sprint
-        // else
-          // move item to bottom of backlog
-          // 
-    // Problem - need to determine whether all the items in the stored data are items gathered from the retrieval
-      //  This is a JSON object - we can modify it
-      //  On each event in events, add a tag to the event it matches in the Data
+
+function applyCalendarUpdates(events,callback){
+  fs.readFile( dataFilePath, function(err, content){
+    if(err){
+      throw err
+    } else {
+      curEventData = JSON.parse(content)
+
+      console.log( "curEventData keys " + Object.keys(curEventData) )
+
+      // iterate over each of the events returned from the google calender API
+      for (var calEvent in events){
+        // iterate over the event lists in the currentEventData
+
+        // skip loop if the property is from prototype
+        if(!events.hasOwnProperty(calEvent)) continue;
+        
+        // look over all the lists in the events data
+        var listIndex = 0;
+        for (var list in curEventData){
+          // skip loop if the property is from prototype
+          if(!curEventData[list].hasOwnProperty(list)) continue;
+
+          // attempt to find the local datas copy of the calendar event by id
+          var localEvent = curEventData[list][events[calEvent].id]
+          // If the calender event exists in the local event data somewhere
+          if( localEvent !== undefined ){
+            // update the events data
+            localEvent = updateEvent(localEvent,calEvent)
+
+            // we are in the sprint ( this is name of sprint category independent )
+            if( listIndex === 0 ){
+              if( compareEventDates( getEventDateObj(localEvent), getEventDateObj(calEvent)) ) !== 0 ){
+                // THIS WILL NEED TO BE DYNAMICALLY DETERMINED ONCE DAYS ARE IMPLEMETNED
+                // Move item from the sprint to top of backlog at the appropiate date
+                moveEventToListIndex(localEvent, 0 curEventData[list], curEventData['backlog'])
+              }
+            } else if( listIndex === 1 ){
+              if( compareEventDates( getEventDateObj(localEvent), getEventDateObj(calEvent)) ) === 0 ){
+                // THIS WILL NEED TO BE DYNAMICALLY DETERMINED ONCE DAYS ARE IMPLEMETNED
+                // Move item from the backlog to the bottom of the sprint at the appropiate date
+                moveEventToListIndex(localEvent, -1, curEventData['backlog'], curEventData[list])
+              }
+            }
+            // === OUT OF SCOPE === If the item has changed date, move it to the top of the day list above it, or the bottom of the day list below it 
+
+            // add a flag to say this exist still corresopnds to an active google calendar event
+            addPropsToObject( [{ "eventStillExists":"true"}] )
+
+          } 
+          // else if event in neither
+          else {
+              // if it's not an event on the current day
+              if( compareEventDates( getEventDateObj(calEvent), new Date() ) === 0 ){
+                // THIS WILL NEED TO BE DYNAMICALLY DETERMINED ONCE DAYS ARE IMPLEMETNED
+                // create item at bottom of sprint
+                // THE { calEvent } IS VERY SKETCHY TEST IT
+                moveEventToListIndex(localEvent, -1, { calEvent }, curEventData['sprint'])
+              } else 
+              // This can be more precise if once dynamic days are implemented
+              if( compareEventDates( getEventDateObj(calEvent), new Date() ) !== 0 ){
+                // THIS WILL NEED TO BE DYNAMICALLY DETERMINED ONCE DAYS ARE IMPLEMETNED
+                // create item at bottom of backlog AT APPROPIATE DAY LATER
+                // THE { calEvent } IS VERY SKETCHY TEST IT
+                moveEventToListIndex(localEvent, -1, { calEvent }, curEventData['backlog'])
+              }
+
+
+
+          }
+        listIndex++
+        }
+      }
+
+
       //  at the end, iterate over the JSON objects and delete any events that don't have tags
-
+      //  
+      // stand in until I actually update the data  
+      // return the updated data
+      return callback(curEventData)
+    }
+  });
 }
 
 // EDGE CASES UNTESTED
@@ -110,6 +147,29 @@ function purgeProperties( objArr, keepArr ){
   }
 
   return newObjArr
+}
+
+// UNTESTED
+// adds an array of simple javascript key val pair objects as prop value pairs to an object
+// props:
+  // [ { 1:"first"}, {2:"second"}]
+// Target
+  // {
+        // "prop" : "i exist"
+  // }
+// Result
+  // {
+        // "prop" : "i exist"
+        // 1:"first"
+        // 2:"second"
+  // }
+function addPropsToObject(props,target){
+  // for each prop in props
+  props.forEach( function( prop, index, arr ){
+    var curKey = Object.keys(prop)[0]
+    // add a new propery to the target object
+    target[curKey] = prop[curKey] 
+  });
 }
 
 // UNTESTED
@@ -153,7 +213,6 @@ function createInitialEventData(events){
   }
 
   // Victoria is -7h during daylight saving time http://www.timetemperature.com/tzbc/victoria.shtml
-  var timeZoneOffset = "Z-07:00"
 
   console.time('initEvents')
   for( var i = 0; i < events.length; i++ ){
@@ -163,11 +222,11 @@ function createInitialEventData(events){
 
       // events[i].start.date is in ISO string format, which defaults to UTC time
       // HAS COPIED CODE
-      var eventDate = new Date(events[i].start.date + timeZoneOffset)
+      var eventDate = getEventDateObj(events[i])
 
       // take events from todays date
       
-      if( eventDate.toDateString() !== new Date().toDateString() ){
+      if( compareEventDates(eventDate, new Date()) === 0 ){
 
         // slice out the all day events in the backlog
         // HAS COPIED CODE
@@ -204,6 +263,7 @@ function createInitialEventData(events){
   return initData
 }
 
+// EDGE CASES UNTESTED
 // Converts a simple array in the form of
 // [ { 1:"first" }, { 2:"second"}, { 3:"third"}]
 // To a simple javascript object of
@@ -242,33 +302,62 @@ function indexObjectById( simpleObject ){
     return indexedOnId
 }
 
+// EDGE CASES UNTESTED
 // using the google calender event response, this function
 // updates the data referencing that event with the new data from the response
 // returns the updated eventRef
 function updateEvent(eventRef,calEvent){
-  return ;
+  return eventRef;
 }
 
 
 // UNIMPLEMENTED
 // UNTESTED
 // deletes the event eventRef from the data referenced by dataRef
-function deleteEvent(eventRef,dataRef){
+function deleteEvent(eventRef,listRef){
   return ;
 }
 
-// UNIMPLEMENTED
-// UNTESTED
-// Moves an event to the top of a given list 
-// Check if theres a built in JSON function that already does this
-function moveEventToTop( eventRef,listRef ){
-  ;
-}
 
 // UNIMPLEMENTED
 // UNTESTED
-// Moves an event to the top of a given list 
-// Check if theres a built in JSON function that already does this
-function moveEventToBottom( eventRef,listRef ){
+// Moves an event to a given index ( 0 based ) in a listObject
+// passing -1 as the index moves the event to the bottom of the list
+function moveEventToListIndex( eventRef, index, oldListRef,newListRef ){
   ;
+}
+
+// UNTESTED
+// Takes in two dates
+// return -1 if the first date s earlier than the second,
+// return 0 if the dates are the same
+// return 1 if the first date is later than the second
+function compareEventDates(date1,date2){
+
+  var onlyDateRegex = new RegExp('(.*?20..)');
+
+  date1String  = onlyDateRegex.exec( date1.toDateString() )
+  date2String  = onlyDateRegex.exec( date2.toDateString() )
+  console.log( 'does ' + date1String + " === " + date2String )
+
+  if( date1String === date2String ){
+    return 0
+  } 
+
+  if( ( date1.getTime() - date2.getTime() ) < 0 ){
+    return -1
+  }
+
+  if( ( date1.getTime() - date2.getTime() ) > 0 ){
+    return 1
+  }
+
+  throw "could not compare dates"
+}
+
+// gets a date object corresponding to a event's start date
+// takes into account ISO dateString by adding the local time zone
+function getEventDateObj( ev ){
+  var timeZoneOffset = "Z-07:00"
+  return new Date( ev.start.date + timeZoneOffset )
 }
