@@ -1,5 +1,6 @@
 var fs = require('fs');
 var path = require('path')
+var moment = require('moment')
 
 
 var userDataPath = path.join( __dirname, './../user_data/')
@@ -77,13 +78,13 @@ function applyCalendarUpdates(events,callback){
 
             // we are in the sprint ( this is name of sprint category independent )
             if( listIndex === 0 ){
-              if( compareEventDates( getEventDateObj(localEvent), getEventDateObj(calEvent)) ) !== 0 ){
+              if( compareEventDates( getEventDateObj(localEvent), getEventDateObj(calEvent)) !== 0 ){
                 // THIS WILL NEED TO BE DYNAMICALLY DETERMINED ONCE DAYS ARE IMPLEMETNED
                 // Move item from the sprint to top of backlog at the appropiate date
-                moveEventToListIndex(localEvent, 0 curEventData[list], curEventData['backlog'])
+                moveEventToListIndex(localEvent, 0, curEventData[list], curEventData['backlog'] )
               }
             } else if( listIndex === 1 ){
-              if( compareEventDates( getEventDateObj(localEvent), getEventDateObj(calEvent)) ) === 0 ){
+              if( compareEventDates( getEventDateObj(localEvent), getEventDateObj(calEvent)) === 0 ){
                 // THIS WILL NEED TO BE DYNAMICALLY DETERMINED ONCE DAYS ARE IMPLEMETNED
                 // Move item from the backlog to the bottom of the sprint at the appropiate date
                 moveEventToListIndex(localEvent, -1, curEventData['backlog'], curEventData[list])
@@ -215,24 +216,24 @@ function createInitialEventData(events){
   // Victoria is -7h during daylight saving time http://www.timetemperature.com/tzbc/victoria.shtml
 
   console.time('initEvents')
+  // for each event recieved from google
   for( var i = 0; i < events.length; i++ ){
     
-    // this is an all day event
-    if( events[i].start ){
+    // if this is an all day event
+    if( typeof events[i].start !== undefined ){
 
       // events[i].start.date is in ISO string format, which defaults to UTC time
       // HAS COPIED CODE
-      var eventDate = getEventDateObj(events[i])
+      var eventDate = moment(events[i].start.date)
 
       // take events from todays date
       
-      if( compareEventDates(eventDate, new Date()) === 0 ){
+      if( eventDate.diff(moment(),'days') !== 0 ){
 
-        // slice out the all day events in the backlog
+        // slice out the non-all day events in the backlog
         // HAS COPIED CODE
         for( var j = i; j < events.length; j++ ){
-          var backlogEventDate = new Date(events[j].start.date + timeZoneOffset)
-          if( backlogEventDate.toDateString() !== new Date().toDateString() ){
+          if( typeof events[j].start === undefined ){
             events = events.slice(0,j).concat(events.slice(j+1))
             j--
           }
@@ -325,39 +326,4 @@ function deleteEvent(eventRef,listRef){
 // passing -1 as the index moves the event to the bottom of the list
 function moveEventToListIndex( eventRef, index, oldListRef,newListRef ){
   ;
-}
-
-// UNTESTED
-// Takes in two dates
-// return -1 if the first date s earlier than the second,
-// return 0 if the dates are the same
-// return 1 if the first date is later than the second
-function compareEventDates(date1,date2){
-
-  var onlyDateRegex = new RegExp('(.*?20..)');
-
-  date1String  = onlyDateRegex.exec( date1.toDateString() )
-  date2String  = onlyDateRegex.exec( date2.toDateString() )
-  console.log( 'does ' + date1String + " === " + date2String )
-
-  if( date1String === date2String ){
-    return 0
-  } 
-
-  if( ( date1.getTime() - date2.getTime() ) < 0 ){
-    return -1
-  }
-
-  if( ( date1.getTime() - date2.getTime() ) > 0 ){
-    return 1
-  }
-
-  throw "could not compare dates"
-}
-
-// gets a date object corresponding to a event's start date
-// takes into account ISO dateString by adding the local time zone
-function getEventDateObj( ev ){
-  var timeZoneOffset = "Z-07:00"
-  return new Date( ev.start.date + timeZoneOffset )
 }

@@ -5,7 +5,8 @@ var google = require('googleapis');
 var googleAuth = require('google-auth-library');
 var fs = require('fs');
 var readline = require('readline');
-var data_manip = require('./data_manip')
+var sync_event_data = require('./sync_event_data')
+var moment = require('moment')
 
 // If modifying these scopes, delete your previously saved credentialsentials
 // at ~/.credentials/calendar-nodejs-quickstart.json
@@ -13,6 +14,8 @@ var SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
 var TOKEN_DIR = (process.env.HOME || process.env.HOMEPATH ||
     process.env.USERPROFILE) + '/.credentials/';
 var TOKEN_PATH = TOKEN_DIR + 'calendar-nodejs-backlog.json';
+
+var sprintLength = 7
 
 
   //----------------------------------------------------------------------------------------------------//
@@ -113,14 +116,15 @@ function storeToken(token) {
 // goes from 0:00 am on the startDate to 11:59 on the end date
 // and passes this on to another function to get the events, and the events
 // are passed to the callback
+module.exports.getEventsForTimeSpan = getEventsForTimeSpan
 function getEventsForTimeSpan( startDate, endDate, callback ) {
 
   var timeMin = startDate
   var timeMax = endDate
-  console.log('getting events from')
-  console.log(timeMin)
-  console.log("to ->")
-  console.log(timeMax)
+  console.log('getting events from'.trim())
+  console.log(timeMin.format().trim())
+  console.log("to ->".trim())
+  console.log(timeMax.format().trim())
   console.log("...")
 
   getAuth( function (auth) {
@@ -174,59 +178,15 @@ function listEvents(auth, startDate, endDate, callback) {
   });
 }
 
-
-
-
-function addAWeek(startDate){
-  var endDate = new Date( startDate.toDateString() )
-  // calculate a date a week from now
-
-  var newDate = endDate.getDate() + 7
-  var curMonth = endDate.getMonth()
-
-  if( newDate > (28 + 1) ){
-    if( curMonth === 1 ){
-      endDate.setMonth( curMonth + 1 ) 
-      endDate.setDate( newDate - (28-1) )
-    } else {
-      endDate.setDate(newDate)
-    }
-  } else if( newDate > (30 - 1) ){
-    if( [3,5,8,10].filter( (n) => { n === curMonth }).length != 0 ){
-      endDate.setMonth( curMonth + 1 )
-      endDate.setDate( newDate - (30-1) )
-    } else {
-      endDate.setDate(newDate)
-    }
-  } else if( newDate > (31 - 1) ){
-    if( [0,2,4,6,7,9,11].filter( (n) => { n === curMonth }).length != 0 ){
-      endDate.setMonth( curMonth + 1 ) 
-      endDate.setDate( newDate - (31-1) )
-    } else {
-      endDate.setDate(newDate)
-    }
-  } else {
-    endDate.setDate(newDate)
-  }
-
-  if( endDate.getMonth() > 11 ){
-    endDate.setMonth(0)
-    endDate.setMonth( endDate.getMonth() + 1 )
-  }
-
-  return endDate
-}
-
 // Syncs the calender events for sprint day + 7 with the local Copy of the events
 module.exports.syncCalendar = function syncCalendar( callback ) {
 
   // the current date - starting at the very begginning of the day
-  var startDate = new Date()
-  startDate.setHours(0,0,0,0)
+  var startDate = moment().startOf('day')
 
-  endDate = addAWeek(startDate)
+  endDate = startDate.add(sprintLength,days)
   getEventsForTimeSpan( startDate, endDate, function(events){
-    data_manip.updateLocalData(events,callback)
+    sync_event_data.updateLocalData(events,callback)
   })
 
 }
