@@ -2,6 +2,10 @@
 
 Takes your google calendar all day events and allows you to make a mini sprint, with a backlog, done collumn, and sprint countdown
 
+### Project Status
+
+Currently under development, no feature is currently working
+
 ### Setup
 
 create a client secret file as per these instructions from google
