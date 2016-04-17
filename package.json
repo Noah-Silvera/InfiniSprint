@@ -4,8 +4,9 @@
   "description": "Boilerplate for kick starting a React Project with ES6 (Babel) and Hot reloader using Webpack.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/**/*.js",
-    "posttest": "node --debug server"
+    "test": "mocha debug -R spec test/**/*.js",
+    "prestart": "mocha -R spec test/**/*.js",
+    "start": "node --debug server"
   },
   "repository": {
     "type": "git",

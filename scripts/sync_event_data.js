@@ -203,6 +203,8 @@ function writeEventData(data,callback){
 // create a new events.json file with 
   // sprint = [current day events]
   // backlog = [current day events]
+
+module.exports.createInitialEventData = createInitialEventData
 function createInitialEventData(events){
   var initData = {
     "sprint" : {

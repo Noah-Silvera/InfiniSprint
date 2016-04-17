@@ -155,26 +155,11 @@ function listEvents(auth, startDate, endDate, callback) {
   }, function(err, response) {
     if (err) {
       console.log('The API returned an error: ' + err);
-      return;
+      console.log('Could not retrieve events. Possibly authorization problems. Check your client secret')
+      throw err
     }
     var events = response.items;
-    if (events.length == 0) {
-      console.log('No upcoming events found.');
-    } else {
-      // console.log('Upcoming 10 events:');
-      // for (var i = 0; i < events.length; i++) {
-      //   var event = events[i];
-      //   var start = event.start.dateTime || event.start.date;
-      //   console.log('%s - %s', start, event.summary);
-      // }
-    }
-    if(events){ 
-      console.log('Recieved ' + events.length + " events")
-      return callback(events)
-    } else {
-      console.log('Could not retrieve events. Possibly authorization problems. Check your client secret')
-      return ;
-    }
+    return callback(events)
   });
 }
 
@@ -183,8 +168,8 @@ module.exports.syncCalendar = function syncCalendar( callback ) {
 
   // the current date - starting at the very begginning of the day
   var startDate = moment().startOf('day')
+  endDate = startDate.add(sprintLength,'days')
 
-  endDate = startDate.add(sprintLength,days)
   getEventsForTimeSpan( startDate, endDate, function(events){
     sync_event_data.updateLocalData(events,callback)
   })
