@@ -3,6 +3,7 @@ var google = require('googleapis');
 var googleAuth = require('google-auth-library');
 var fs = require('fs');
 var readline = require('readline');
+var path = require('path');
 var sync_event_data = require('./sync_event_data')
 var moment = require('moment')
 
@@ -22,7 +23,7 @@ var sprintLength = 7
 module.exports.getAuth = getAuth
 function getAuth(callback) {
   // Load client secrets from a local file.
-  fs.readFile('user_data/client_secret.json', function processClientSecrets(err, content) {
+  fs.readFile( path.join(__dirname, './../user_data/client_secret.json'), function processClientSecrets(err, content) {
     if (err) {
       console.log('Error loading client secret file: ' + err);
       return;
