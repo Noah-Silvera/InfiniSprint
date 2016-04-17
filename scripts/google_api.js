@@ -1,5 +1,3 @@
-// client id 228369885209-1ctbbbaq4adujev2a4936serilu5qd6f.apps.googleusercontent.com
-// client secret Yt-3rRbppo9D_-y3KxJ9ObFg
 
 var google = require('googleapis');
 var googleAuth = require('google-auth-library');
@@ -24,7 +22,7 @@ var sprintLength = 7
 module.exports.getAuth = getAuth
 function getAuth(callback) {
   // Load client secrets from a local file.
-  fs.readFile('client_secret.json', function processClientSecrets(err, content) {
+  fs.readFile('user_data/client_secret.json', function processClientSecrets(err, content) {
     if (err) {
       console.log('Error loading client secret file: ' + err);
       return;
@@ -121,11 +119,11 @@ function getEventsForTimeSpan( startDate, endDate, callback ) {
 
   var timeMin = startDate
   var timeMax = endDate
-  console.log('getting events from'.trim())
-  console.log(timeMin.format().trim())
-  console.log("to ->".trim())
-  console.log(timeMax.format().trim())
-  console.log("...")
+  // console.log('getting events from'.trim())
+  // console.log(timeMin.format().trim())
+  // console.log("to ->".trim())
+  // console.log(timeMax.format().trim())
+  // console.log("...")
 
   getAuth( function (auth) {
     // middleman function allows us to pass the events gathered from list events into a callback

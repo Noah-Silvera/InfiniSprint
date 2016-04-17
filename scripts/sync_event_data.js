@@ -1,6 +1,7 @@
 var fs = require('fs');
 var path = require('path')
 var moment = require('moment')
+var data_utils = require('./data_utils')
 
 
 var userDataPath = path.join( __dirname, './../user_data/')
@@ -17,7 +18,7 @@ function updateLocalData (events,callback) {
 
   // purge uneccesary data for quick read / writes
   var propsToKeep = ['summary','description','id','start']
-  events = purgeProperties(events,propsToKeep)
+  events = data_utils.purgeProperties(events,propsToKeep)
   // JUST FOR TESTING DELETE LATER
   events = events.slice(0,20)
 
@@ -35,12 +36,12 @@ function processCalendarResponse(events, callback){
       // chunk the event data into sprint | backlog 
       var initData = createInitialEventData(events)
       // write this to a file
-      writeEventData(initData,callback)
+      data_utils.writeData(initData,dataFilePath,callback)
     } else {
       // perform updates to the local data
 
       applyCalendarUpdates(events, function(updatedData,callback){
-        writeEventData(updatedData,callback)
+        data_utils.writeData(updatedData,dataFilePath,callback)
       })
     }
   });
@@ -93,7 +94,7 @@ function applyCalendarUpdates(events,callback){
             // === OUT OF SCOPE === If the item has changed date, move it to the top of the day list above it, or the bottom of the day list below it 
 
             // add a flag to say this exist still corresopnds to an active google calendar event
-            addPropsToObject( [{ "eventStillExists":"true"}] )
+            data_utils.addPropsToObject( [{ "eventStillExists":"true"}] )
 
           } 
           // else if event in neither
@@ -130,71 +131,6 @@ function applyCalendarUpdates(events,callback){
   });
 }
 
-// EDGE CASES UNTESTED
-// using an array of objects, purges all properties of the objects except the properties in keepArr 
-function purgeProperties( objArr, keepArr ){
-
-  // new object to manipulate
-  var newObjArr = []
-
-  for(var i = 0; i < objArr.length; i++){
-    var purgedObj = {}
-    keepArr.forEach( function(curVal,index,array){
-      // pull all the required properties from the old array item into the new
-      purgedObj[curVal] = objArr[i][curVal]
-    });
-    // push this trimmed array item into our new object
-    newObjArr.push(purgedObj)
-  }
-
-  return newObjArr
-}
-
-// UNTESTED
-// adds an array of simple javascript key val pair objects as prop value pairs to an object
-// props:
-  // [ { 1:"first"}, {2:"second"}]
-// Target
-  // {
-        // "prop" : "i exist"
-  // }
-// Result
-  // {
-        // "prop" : "i exist"
-        // 1:"first"
-        // 2:"second"
-  // }
-function addPropsToObject(props,target){
-  // for each prop in props
-  props.forEach( function( prop, index, arr ){
-    var curKey = Object.keys(prop)[0]
-    // add a new propery to the target object
-    target[curKey] = prop[curKey] 
-  });
-}
-
-// UNTESTED
-// ensures data is in a serializable format, then
-// writes 'data' to a new file, then closes file access 
-function writeEventData(data,callback){
-  if( typeof(data) !== typeof("string") ){
-    if( typeof(data) === typeof({ "json":"object "}) ){
-      data = JSON.stringify(data)
-    }
-    else{
-      data = data.toString()
-    }
-  }
-
-  fs.open(dataFilePath,'w', function(err,fd){
-    if(err)
-      throw err
-    else
-      fs.write(fd,data,function(err){
-        fs.close(fd,callback)
-      });
-  });
-}
 
 // UNTESTED
 // If we haven't retrieved event data for the user before, 
@@ -203,7 +139,6 @@ function writeEventData(data,callback){
 // create a new events.json file with 
   // sprint = [current day events]
   // backlog = [current day events]
-
 module.exports.createInitialEventData = createInitialEventData
 function createInitialEventData(events){
   var initData = {
@@ -217,7 +152,6 @@ function createInitialEventData(events){
 
   // Victoria is -7h during daylight saving time http://www.timetemperature.com/tzbc/victoria.shtml
 
-  console.time('initEvents')
   // for each event recieved from google
   for( var i = 0; i < events.length; i++ ){
     
@@ -244,14 +178,14 @@ function createInitialEventData(events){
         // convert the events JSON array to a true array of objects 
         // that have one propety, the previous id property of the object
         // and this property contains all the event data
-        var indexedEvents = indexObjectById(events) 
+        var indexedEvents = data_utils.indexObjectById(events) 
 
         // uses the power of arrays to slice up the events object now indexed by id
         // convert that events array back to a object to re-allow indexing on the id
         // this will later allow a list of events to be indexed on their id
         // for extremely quick access and simpler coding
-        initData.sprint = convertSimpleArrayToObject( indexedEvents.slice( 0, i ) ) 
-        initData.backlog = convertSimpleArrayToObject( indexedEvents.slice( i ) )
+        initData.sprint = data_utils.convertSimpleArrayToObject( indexedEvents.slice( 0, i ) ) 
+        initData.backlog = data_utils.convertSimpleArrayToObject( indexedEvents.slice( i ) )
         break;
       }
     }
@@ -262,70 +196,32 @@ function createInitialEventData(events){
       i--
     }
   }
-  console.timeEnd('initEvents')
   return initData
 }
 
-// EDGE CASES UNTESTED
-// Converts a simple array in the form of
-// [ { 1:"first" }, { 2:"second"}, { 3:"third"}]
-// To a simple javascript object of
-// { 
-//    1:"first",
-//    2:"second",
-//    3:"third",
-// }
-function convertSimpleArrayToObject( simpleArray ){
-  var newObj = {}
-
-  simpleArray.forEach( function(curVal, index, arr ){
-    objKey = Object.keys(curVal)[0]
-    newObj[objKey] = curVal[objKey]
-  });
-
-  return newObj
-}
-
-
-// Converts a array of javascript objects with one property
-// the ID pulled from an object. The rest of the objects
-//  properties are the content of this id
-function indexObjectById( simpleObject ){
-    indexedOnId = []
-    // convert the events JSON array to an array of objects
-    // that have one property, the ID of the event
-    simpleObject.forEach( function( curEv, index, arr ){
-      var curEvId = new String(curEv.id)
-      delete curEv.id
-      var curObj = {}
-      curObj[curEvId] = curEv
-      indexedOnId.push(curObj)
-    });
-
-    return indexedOnId
-}
 
 // EDGE CASES UNTESTED
 // using the google calender event response, this function
 // updates the data referencing that event with the new data from the response
 // returns the updated eventRef
-function updateEvent(eventRef,calEvent){
-  return eventRef;
+module.exports.updateEvent = updateEvent
+function updateEvent(localEventRef,calEvent){
+
+  // takes two events; a local event, and a calendar event, 
+  // updates all local event properties with the new calendar data
+  // adds new properties if they exist in the calEvent
+  // removes remotely controlled properties if they do not exist in the calEvent
+  return localEventRef;
 }
 
 
 // UNIMPLEMENTED
 // UNTESTED
 // deletes the event eventRef from the data referenced by dataRef
-function deleteEvent(eventRef,listRef){
-  return ;
+module.exports.deleteEventById = deleteEventById
+function deleteEventById(eventId,listRef){
+  return listRef;
 }
 
 
-// UNIMPLEMENTED
-// UNTESTED
-// Moves an event to a given index ( 0 based ) in a listObject
-// passing -1 as the index moves the event to the bottom of the list
-function moveEventToListIndex( eventRef, index, oldListRef,newListRef ){
-  ;
-}
+
