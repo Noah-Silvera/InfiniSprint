@@ -1,29 +1,27 @@
 {
-  "name": "react-es6-webpack-boilerplate",
-  "version": "4.0.0",
-  "description": "Boilerplate for kick starting a React Project with ES6 (Babel) and Hot reloader using Webpack.",
+  "name": "InfiniSprint",
+  "version": "0.1",
+  "description": "Used to abstract google calendar all day events into a sprint - backlog model",
   "main": "index.js",
   "scripts": {
-    "test": "mocha debug -R spec test/**/*.js",
-    "posttest" : "node --debug server",
+    "test": "mocha -R spec test/**/*.js",
+    "debug": "node --debug server",
     "start": "node server"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vasanthk/react-es6-webpack-boilerplate.git"
+    "url": "https://github.com/Noah-Silvera/InfiniSprint"
   },
   "keywords": [
     "react",
     "es6",
     "babel",
-    "webpack"
+    "webpack",
+    "google-api"
   ],
-  "author": "Vasanth Krishnamoorthy (http://www.vasanthk.com)",
+  "author": "Noah Silvera",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vasanthk/react-es6-webpack-boilerplate/issues"
-  },
-  "homepage": "https://github.com/vasanthk/react-es6-webpack-boilerplate",
+  "homepage": "https://github.com/Noah-Silvera/InfiniSprint",
   "dependencies": {
     "react": "^0.14.5",
     "react-dom": "^0.14.5",
