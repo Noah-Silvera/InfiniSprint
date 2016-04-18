@@ -225,7 +225,7 @@ export default class Frame extends Component {
     return (
       // Add your component markup and other subcomponent references here.
       <div className = "frame" onDragStart = {this.onDragStart} onDragEnter = {this.onDragEnter} onDragEnd = {this.onDragEnd} onClick = {this.onClick} >
-        <Header content="Agile Calendar"/>
+        <Header content="InfiniSprint"/>
         <Heading content="Current Sprint"/>
         <ActionList actions={this.state['sprint']} dataId = {0}/>
         <Heading content="Backlog"/>

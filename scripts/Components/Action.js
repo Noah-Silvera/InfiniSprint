@@ -15,7 +15,7 @@ export default class Action extends Component {
 	render() {
 		return (
 				<div className = "action" draggable = "true" data-id = {this.props.dataId} >
-						<p className = "row">{this.props.rank} -- </p><p className = "row">{this.props.content}</p>
+						<p className = "row">{this.props.rank}    </p><p className = "row">{this.props.content}</p>
 				</div>
 			)
 
