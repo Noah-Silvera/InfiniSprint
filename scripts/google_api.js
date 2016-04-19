@@ -109,17 +109,20 @@ function storeToken(token) {
   console.log('Token stored to ' + TOKEN_PATH);
 }
 
-// TODO TODO TODO TODO TODO
-
+module.exports.getEventsForTimeSpan = getEventsForTimeSpan
+/**
 // formats the date objects to go from
 // goes from 0:00 am on the startDate to 11:59 on the end date
 // and passes this on to another function to get the events, and the events
 // are passed to the callback
-module.exports.getEventsForTimeSpan = getEventsForTimeSpan
+ * @param  {moment}   startDate 
+ * @param  {moment}   endDate   
+ * @return {callback(events)}             
+ */
 function getEventsForTimeSpan( startDate, endDate, callback ) {
 
-  var timeMin = startDate
-  var timeMax = endDate
+  var timeMin = startDate.startOf('day')
+  var timeMax = endDate.endOf('day')
   // console.log('getting events from'.trim())
   // console.log(timeMin.format().trim())
   // console.log("to ->".trim())
@@ -140,7 +143,13 @@ function getEventsForTimeSpan( startDate, endDate, callback ) {
 
 
 
+/**
 // lists the events for a certain time span, passes the events object onto the callback
+ * @param  {oAuth credentials}   auth      Credentials returned from getting the authorization from the google api
+ * @param  {moment}   startDate 
+ * @param  {moment}   endDate   
+ * @return {callback(events)}      
+ */
 function listEvents(auth, startDate, endDate, callback) {
   var calendar = google.calendar('v3');
   calendar.events.list({
@@ -162,11 +171,14 @@ function listEvents(auth, startDate, endDate, callback) {
   });
 }
 
-// Syncs the calender events for sprint day + 7 with the local Copy of the events
+/**
+// Syncs the calender events for sprint day + sprint_length with the local Copy of the events
+ * @return {callback}            updates the local data then finally calls the callback with no args
+ */
 module.exports.syncCalendar = function syncCalendar( callback ) {
 
   // the current date - starting at the very begginning of the day
-  var startDate = moment().startOf('day')
+  var startDate = moment()
   endDate = startDate.add(sprintLength,'days')
 
   getEventsForTimeSpan( startDate, endDate, function(events){

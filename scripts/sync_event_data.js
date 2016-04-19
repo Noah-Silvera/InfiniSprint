@@ -10,9 +10,13 @@ var dataFilePath = path.join( userDataPath + dataFileName )
   
 // UNIMPLEMENTED
 // UNTESTED
+module.exports.updateLocalData = updateLocalData
+/**
 // using an events object, updates the locally stored data in a JSON text file
 // See inside for detailed rules
-module.exports.updateLocalData = updateLocalData
+ * @param  {Array}   events   Array of event objects returned from google calendar
+ * @return {callback} 
+ */
 function updateLocalData (events,callback) {
   console.log('updating local data....')
 
@@ -25,6 +29,12 @@ function updateLocalData (events,callback) {
   processCalendarResponse(events, callback)
 }
 
+/**
+ * Proccesses an events response from google calendar, updating the 
+ * appropiate events and creating or deleting event data as neccesary
+ * @param  {Array}   events   Array of event objects returned from google calendar
+ * @return {callback}
+ */
 function processCalendarResponse(events, callback){
  // see if the event data file already exists
   fs.access( dataFilePath, fs.F_OK, function(err) {
@@ -47,7 +57,12 @@ function processCalendarResponse(events, callback){
   });
 }
 
-
+/**
+ * Applies updates from the event data to current existing
+ * local event data
+ * @param  {Array}   events   Array of events returned from google calendar
+ * @return {callback}
+ */
 function applyCalendarUpdates(events,callback){
   fs.readFile( dataFilePath, function(err, content){
     if(err){
@@ -94,7 +109,7 @@ function applyCalendarUpdates(events,callback){
             // === OUT OF SCOPE === If the item has changed date, move it to the top of the day list above it, or the bottom of the day list below it 
 
             // add a flag to say this exist still corresopnds to an active google calendar event
-            data_utils.addPropsToObject( [{ "eventStillExists":"true"}] )
+            data_utils.addPropsToObject( localEvent, [{ "eventStillExists":"true"}] )
 
           } 
           // else if event in neither
@@ -133,13 +148,14 @@ function applyCalendarUpdates(events,callback){
 
 
 // UNTESTED
-// If we haven't retrieved event data for the user before, 
-// collect the event data
-// split it into two chunks - current day -> days afterwards
-// create a new events.json file with 
-  // sprint = [current day events]
-  // backlog = [current day events]
 module.exports.createInitialEventData = createInitialEventData
+/**
+// If we haven't retrieved event data for the user before, 
+ * Takes a calendar list events response from google calendar and converts it into 
+ * local data corresponding to the events
+ * @param  {Array} events response from a google calendar listEvents call
+ * @return {Object} the local data object corresponding to events         
+ */
 function createInitialEventData(events){
   var initData = {
     "sprint" : {
@@ -152,6 +168,7 @@ function createInitialEventData(events){
 
   // Victoria is -7h during daylight saving time http://www.timetemperature.com/tzbc/victoria.shtml
 
+// collect the event data
   // for each event recieved from google
   for( var i = 0; i < events.length; i++ ){
     
@@ -184,6 +201,8 @@ function createInitialEventData(events){
         // convert that events array back to a object to re-allow indexing on the id
         // this will later allow a list of events to be indexed on their id
         // for extremely quick access and simpler coding
+        
+         // split it into two chunks - current day -> days afterwards
         initData.sprint = data_utils.convertSimpleArrayToObject( indexedEvents.slice( 0, i ) ) 
         initData.backlog = data_utils.convertSimpleArrayToObject( indexedEvents.slice( i ) )
         break;
@@ -200,11 +219,16 @@ function createInitialEventData(events){
 }
 
 
-// EDGE CASES UNTESTED
+//UNTESTED
+module.exports.updateEvent = updateEvent
+/**
 // using the google calender event response, this function
 // updates the data referencing that event with the new data from the response
 // returns the updated eventRef
-module.exports.updateEvent = updateEvent
+ * @param  {Object} localEventRef a reference to an event object in the local data
+ * @param  {Object} calEvent      a reference to a calendar event object returned from google calendar
+ * @return {Object}               the updated localEventRef
+ */
 function updateEvent(localEventRef,calEvent){
 
   // takes two events; a local event, and a calendar event, 
@@ -217,10 +241,17 @@ function updateEvent(localEventRef,calEvent){
 
 // UNIMPLEMENTED
 // UNTESTED
-// deletes the event eventRef from the data referenced by dataRef
 module.exports.deleteEventById = deleteEventById
-function deleteEventById(eventId,listRef){
-  return listRef;
+/**
+// deletes the event eventRef from the data referenced by dataRef
+ * @param  {string} eventId id of the event to be deleted. Should correspond to an
+ *                          property in objListRef
+ * @param  {[type]} objListRef A object with properties that correspond to id's. Essentially
+ *                          a list of objects indexed by id 
+ * @return {Object}         Reference to the new objListRef
+ */
+function deleteEventById(eventId,objListRef){
+  return objListRef;
 }
 
 

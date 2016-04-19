@@ -1,8 +1,13 @@
 var fs = require('fs')
 
-// EDGE CASES UNTESTED
-// using an array of objects, purges all properties of the objects except the properties in keepArr 
 module.exports.purgeProperties = purgeProperties
+/**
+ * purgeProperties using an array of objects, 
+ * purges all properties of the objects except the properties in keepArr 
+ * @param  {Array} objArr  Array of objects to purge properties from 
+ * @param  {Array} keepArr String array of properties to keep
+ * @return {Array}         the Array of purged objects 
+ */
 function purgeProperties( objArr, keepArr ){
 
   // new object to manipulate
@@ -21,7 +26,8 @@ function purgeProperties( objArr, keepArr ){
   return newObjArr
 }
 
-// UNTESTED
+module.exports.addPropsToObject = addPropsToObject
+/*
 // adds an array of simple javascript key val pair objects as prop value pairs to an object
 // props:
   // [ { 1:"first"}, {2:"second"}]
@@ -34,11 +40,10 @@ function purgeProperties( objArr, keepArr ){
         // "prop" : "i exist"
         // 1:"first"
         // 2:"second"
-  // }
-module.exports.addPropsToObject = addPropsToObject
-function addPropsToObject(props,target){
+ */
+function addPropsToObject(target,newProps){
   // for each prop in props
-  props.forEach( function( prop, index, arr ){
+  newProps.forEach( function( prop, index, arr ){
     var curKey = Object.keys(prop)[0]
     // add a new propery to the target object
     target[curKey] = prop[curKey] 
@@ -46,7 +51,9 @@ function addPropsToObject(props,target){
 }
 
 
-// EDGE CASES UNTESTED
+// UNTESTED
+module.exports.convertSimpleArrayToObject = convertSimpleArrayToObject
+/**
 // Converts a simple array in the form of
 // [ { 1:"first" }, { 2:"second"}, { 3:"third"}]
 // To a simple javascript object of
@@ -55,7 +62,9 @@ function addPropsToObject(props,target){
 //    2:"second",
 //    3:"third",
 // }
-module.exports.convertSimpleArrayToObject = convertSimpleArrayToObject
+ * @param  {Array} simpleArray 
+ * @return {Object}             
+ */
 function convertSimpleArrayToObject( simpleArray ){
   var newObj = {}
 
@@ -67,16 +76,22 @@ function convertSimpleArrayToObject( simpleArray ){
   return newObj
 }
 
-
-// Converts a array of javascript objects with one property
-// the ID pulled from an object. The rest of the objects
-//  properties are the content of this id
+// UNTESTED
 module.exports.indexObjectById = indexObjectById
-function indexObjectById( simpleObject ){
+/**
+// indexObjectById Converts a array of javascript objects to an object with
+the properties being all the id's of the objects in the array
+Each properties value is an object containing the rest of the properties
+in the original object
+ * @param  {Array} objArr 
+ * @return {Object}              A single object with the properties being the id's
+ *                                 of every object in the array of objects
+ */
+function indexObjectById( objArr ){
     indexedOnId = []
     // convert the events JSON array to an array of objects
     // that have one property, the ID of the event
-    simpleObject.forEach( function( curEv, index, arr ){
+    objArr.forEach( function( curEv, index, arr ){
       var curEvId = new String(curEv.id)
       delete curEv.id
       var curObj = {}
@@ -89,33 +104,54 @@ function indexObjectById( simpleObject ){
 
 // UNIMPLEMENTED
 // UNTESTED
+module.exports.moveObjectToListIndex = moveObjectToListIndex
+/**
 // Moves an event to a given index ( 0 based ) in a listObject
 // passing -1 as the index moves the event to the bottom of the list
-module.exports.moveObjectToListIndex = moveObjectToListIndex
+ * @param  {Object} object     The object in the list to move
+ * @param  {Integer} index      the index to move the object in the new list
+ * @param  {Object} oldListRef The old list containing the object
+ * @param  {Object} newListRef the list to move the object into
+ * @return {Object}            the newList with the object inserted
+ */
 function moveObjectToListIndex( object, index, oldListRef,newListRef ){
 
 }
 
-// UNTESTED
+module.exports.writeData = writeData
+/**
 // ensures data is in a serializable format, then
 // writes 'data' to a new file, then closes file access 
-module.exports.writeData = writeData
+ * @param  {*}   data     anything with a toString method or an Object
+ * @param  {path object or string}   filePath 
+ */
 function writeData(data,filePath,callback){
-  if( typeof(data) !== typeof("string") ){
-    if( typeof(data) === typeof({ "json":"object "}) ){
-      data = JSON.stringify(data)
+  try {
+    if( typeof(data) !== typeof("string") ){
+      if( typeof(data) === typeof({ "json":"object "}) ){
+        data = JSON.stringify(data)
+      }
+      else{
+        data = data.toString()
+      }
     }
-    else{
-      data = data.toString()
-    }
+  }
+  catch( e ){
+    throw ( "Could not serialize data " + err )
   }
 
   fs.open(filePath,'w', function(err,fd){
-    if(err)
+    if(err){
       throw err
-    else
+    }
+    else {
       fs.write(fd,data,function(err){
-        fs.close(fd,callback)
+        if(err){
+          throw err
+        } else {
+          fs.close(fd,callback)
+        }
       });
+    }
   });
 }

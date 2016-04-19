@@ -1,6 +1,6 @@
 {
   "name": "InfiniSprint",
-  "version": "0.1",
+  "version": "0.0.1",
   "description": "Used to abstract google calendar all day events into a sprint - backlog model",
   "main": "index.js",
   "scripts": {

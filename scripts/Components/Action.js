@@ -10,6 +10,7 @@ import React, {Component} from 'react';
 // * rank - key for sorting order
 // * Content - Content of div
 // * data-id - unique ID for handling drag events
+
 export default class Action extends Component {
 
 	render() {
