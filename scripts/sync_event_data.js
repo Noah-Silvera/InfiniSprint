@@ -4,9 +4,6 @@ var moment = require('moment')
 var data_utils = require('./data_utils')
 
 
-var userDataPath = path.join( __dirname, './../user_data/')
-var dataFileName = 'events.json'
-var dataFilePath = path.join( userDataPath + dataFileName )
   
 // UNIMPLEMENTED
 // UNTESTED
@@ -17,7 +14,10 @@ module.exports.updateLocalData = updateLocalData
  * @param  {Array}   events   Array of event objects returned from google calendar
  * @return {callback} 
  */
-function updateLocalData (events,callback) {
+function updateLocalData (events, callback) {
+  var dataFileName = 'events.json'
+  var dataFilePath = path.join( global.paths.userDataPath + dataFileName )
+
   console.log('updating local data....')
 
   // purge uneccesary data for quick read / writes
@@ -26,7 +26,7 @@ function updateLocalData (events,callback) {
   // JUST FOR TESTING DELETE LATER
   events = events.slice(0,20)
 
-  processCalendarResponse(events, callback)
+  processCalendarResponse(events, dataFilePath, callback)
 }
 
 /**
@@ -35,7 +35,7 @@ function updateLocalData (events,callback) {
  * @param  {Array}   events   Array of event objects returned from google calendar
  * @return {callback}
  */
-function processCalendarResponse(events, callback){
+function processCalendarResponse(events, dataFilePath, callback){
  // see if the event data file already exists
   fs.access( dataFilePath, fs.F_OK, function(err) {
     if(err) {
@@ -50,7 +50,7 @@ function processCalendarResponse(events, callback){
     } else {
       // perform updates to the local data
 
-      applyCalendarUpdates(events, function(updatedData,callback){
+      applyCalendarUpdates(events, function(updatedData, dataFilePath, callback){
         data_utils.writeData(updatedData,dataFilePath,callback)
       })
     }
@@ -63,7 +63,7 @@ function processCalendarResponse(events, callback){
  * @param  {Array}   events   Array of events returned from google calendar
  * @return {callback}
  */
-function applyCalendarUpdates(events,callback){
+function applyCalendarUpdates(events, dataFilePath, callback){
   fs.readFile( dataFilePath, function(err, content){
     if(err){
       throw err

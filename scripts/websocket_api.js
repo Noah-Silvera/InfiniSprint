@@ -1,59 +1,61 @@
 var socketio = require('socket.io')
 var google_api = require('./google_api')
+var data_utils = require('./data_utils')
+var join = require('path').join
 
+module.exports.initializeWebsockets = initializeWebsockets 
+/**
 // Intialize the neccesary socket io server and listeners
-module.exports = initializeWebsockets = function initializeWebsockets(callback){
+ * @return {callback}            calls the callback with no args
+ */
+function initializeWebsockets(callback){
 	// create websocket infrastrcture
 	
 	var io = socketio.listen(80)
 	console.log("listening for socket requests on localhost:80")
-	setUpListeners(io)
-	return callback()
-
-	  //----------------------------------------------------------------------------------------------------//
-	 ///////////////////////////// Listener interface /////////////////////////////
-	//---------------------------------------------------------------------------------------------------//
-	
-	// intialize the listeners for server events like fetching new calender event data
-	function setUpListeners(io,callback){
-		console.log('setting up listeners')
-
-		io.on('connection', function(socket){
-		  console.log("new connection")
-
-		  socket.on('updateEvents', function() {
-		    // once the data has been updated locally, this function fires off the data in a eventsUpdated event
-		    updateEvents(socket)
-		  });
-
-		  socket.on('dragEvent', function(message) {
-		    console.log("drag event received....")
-		  });
-		});
-	};
+	setUpListeners(io,callback)
 }
 
+  //----------------------------------------------------------------------------------------------------//
+ ///////////////////////////// Listener interface /////////////////////////////
+//---------------------------------------------------------------------------------------------------//
+
+/**
+// intialize the listeners for server events like fetching new calender event data
+ * @param {socketio instance}   io
+ * @return {Function} callback calls with no args
+ */
+function setUpListeners(io,callback){
+	console.log('setting up listeners')
+
+	io.on('connection', function(socket){
+	  console.log("new connection")
+
+	  socket.on('updateEvents', function() {
+	    // once the data has been updated locally, this function fires off the data in a eventsUpdated event
+	    return updateEvents(socket)
+	  });
+
+	  socket.on('dragEvent', function(message) {
+	    console.log("drag event received....")
+	  });
+	});
+
+	return callback()
+};
 
   //----------------------------------------------------------------------------------------------------//
  ///////////////////////////// Handling socket requests /////////////////////////////
 //---------------------------------------------------------------------------------------------------//
 
 
-
-// TODO TODO TODO TODO TODO TODO TODO  
-// Fetches the data that represents the calender events locally
-function fetchLocalEvents(path,callback) {
-  console.log("retrieving local data copy....")
-  var data = {"events":"some content"}
-  // do some fetching
-	var args = Array.prototype.slice.call(arguments).slice(2)
-	var args = [data].concat(args)
-  return callback.apply(this,args)
-
-}
-// TODO TODO TODO TODO TODO TODO TODO  
+module.exports.updateEvents = updateEvents
+/**
 // updates the content that populates the app, and then informs the client it has been updated with a
 // eventsUpdated event
+ * @param  {socket} socket 
+ * @return fires off a eventsUpdated event 
+ */
 function updateEvents(socket) {
   
   console.log("retrieving events from google....");
@@ -61,7 +63,8 @@ function updateEvents(socket) {
    google_api.syncCalendar( 
     // fetched that local file with the changes
     function() {
-    	fetchLocalEvents('events.txt',  function emitEventData(data,socket) {
+    	var eventsToFetch = join( global.paths.userDataPath, '/events.json' )
+    	fetchLocalEvents( eventsToFetch ,  function emitEventData(data,socket) {
         socket.emit('eventsUpdated', data)
         console.log('Sent local event data to client')
       }, socket ) 

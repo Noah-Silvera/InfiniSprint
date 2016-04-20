@@ -23,7 +23,7 @@ var sprintLength = 7
 module.exports.getAuth = getAuth
 function getAuth(callback) {
   // Load client secrets from a local file.
-  fs.readFile( path.join(__dirname, './../user_data/client_secret.json'), function processClientSecrets(err, content) {
+  fs.readFile( path.join(global.paths.userDataPath, '/client_secret.json'), function processClientSecrets(err, content) {
     if (err) {
       console.log('Error loading client secret file: ' + err);
       return;

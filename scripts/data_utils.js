@@ -1,4 +1,5 @@
 var fs = require('fs')
+var path = require('path')
 
 module.exports.purgeProperties = purgeProperties
 /**
@@ -124,8 +125,12 @@ module.exports.writeData = writeData
 // writes 'data' to a new file, then closes file access 
  * @param  {*}   data     anything with a toString method or an Object
  * @param  {path object or string}   filePath 
+ * @return {callback}                         takes the callback and calls it with
+ *                                            callback( data, [arg1 [arg2 [...]]] )
+ *                                            with the argX being the arguments given after the callback
  */
 function writeData(data,filePath,callback){
+  var numberOfArgs = 3
   try {
     if( typeof(data) !== typeof("string") ){
       if( typeof(data) === typeof({ "json":"object "}) ){
@@ -149,9 +154,39 @@ function writeData(data,filePath,callback){
         if(err){
           throw err
         } else {
-          fs.close(fd,callback)
+          fs.close(fd,function(){
+            // apply all arguments given after the callback function to the callback
+            var args = Array.prototype.slice.call(arguments).slice(numberOfArgs)
+            return callback.apply(this,args)
+          })
         }
       });
     }
   });
+}
+
+// UNTESTED
+module.exports.fetchData = fetchData
+/**
+// Fetches any text data from a path
+ * @param  {string or path object}   path     file to read
+ * @return {callback}                         takes the callback and calls it with
+ *                                            callback( data, [arg1 [arg2 [...]]] )
+ *                                            with the argX being the arguments given after the callback
+ */
+function fetchData(path,callback) {
+  var numberOfArgs = 2
+  console.log("retrieving local data copy....")
+  
+  fs.readFile(path, function(err,data){
+    if(err){
+      throw err
+    }
+    else {
+      // apply the data arguments followed by all other given arguments to the callback
+      var args = Array.prototype.slice.call(arguments).slice(numberOfArgs)
+      var args = [data].concat(args)
+      return callback.apply(this,args)
+    }
+  })
 }
