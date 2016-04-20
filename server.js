@@ -5,11 +5,22 @@ var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config'); 
 var socketio = require('socket.io');
 var google_api = require('./scripts/google_api');
-var websocket_api = require('./scripts/websocket_api');
+var initializeWebsockets = require('./scripts/websocket_api').initializeWebsockets;
 
 var fs = require('fs');
 var readline = require('readline');
+var path = require('path')
 
+
+
+  //----------------------------------------------------------------------------------------------------//
+ ///////////////////////////// Define globals /////////////////////////////
+//---------------------------------------------------------------------------------------------------//
+
+// paths
+global.paths = {}
+
+global.paths.userDataPath = path.join( __dirname, './user_data/')
 
 
   //----------------------------------------------------------------------------------------------------//
