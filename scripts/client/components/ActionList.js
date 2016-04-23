@@ -38,7 +38,7 @@ export default class ActionList extends Component {
 
     var dragRank = ActionList.getPropByDataId(newState['actions'],'rank',dragItem.getAttribute('data-id'))
     var dropRank = ActionList.getPropByDataId(newState['actions'],'rank',dropItem.getAttribute('data-id'))
-
+    
     ActionList.setPropByDataId(newState['actions'],'rank',dropRank, dragItem.getAttribute('data-id') )
     ActionList.setPropByDataId(newState['actions'],'rank', dragRank, dropItem.getAttribute('data-id') )
 
