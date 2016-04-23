@@ -1,3 +1,7 @@
+var appRoot = require('app-root-path')
+var paths = require( appRoot + '\\_globals').paths
+
+
 var socketio = require('socket.io')
 var google_api = require('./google_api')
 var data_utils = require('./data_utils')

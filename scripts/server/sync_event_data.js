@@ -1,3 +1,7 @@
+var appRoot = require('app-root-path')
+var paths = require( appRoot + '\\_globals').paths
+
+
 var fs = require('fs');
 var path = require('path')
 var moment = require('moment')

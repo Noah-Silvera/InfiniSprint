@@ -1,6 +1,10 @@
+var appRoot = require('app-root-path')
+var paths = require( appRoot + '\\_globals').paths
+
+
 var should = require('chai').should();
-var sync_event_data = require('./../scripts/sync_event_data')
-var data_utils = require('./../scripts/data_utils')
+var sync_event_data = require( paths.scriptsPath + '/client' +  '/sync_event_data')
+var data_utils = require( paths.scriptsPath + '/client' + '/data_utils')
 var fs = require('fs')
 var path = require('path')
 var moment = require('moment')

@@ -1,6 +1,7 @@
+import {paths} from './../_globals'
 import React from 'react';
 import {render} from 'react-dom';
-import Frame from './Components/Frame';
+import Frame from './client/components/Frame'
 
 
 var scriptURLs = ["http://localhost:80/socket.io/socket.io.js","https://apis.google.com/js/platform.js"]

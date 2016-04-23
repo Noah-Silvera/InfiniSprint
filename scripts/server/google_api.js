@@ -1,3 +1,5 @@
+var appRoot = require('app-root-path')
+var paths = require( appRoot + '\\_globals').paths
 
 var google = require('googleapis');
 var googleAuth = require('google-auth-library');
@@ -23,7 +25,7 @@ var sprintLength = 7
 module.exports.getAuth = getAuth
 function getAuth(callback) {
   // Load client secrets from a local file.
-  fs.readFile( path.join(global.paths.userDataPath, '/client_secret.json'), function processClientSecrets(err, content) {
+  fs.readFile( path.join( paths.userDataPath, '/client_secret.json'), function processClientSecrets(err, content) {
     if (err) {
       console.log('Error loading client secret file: ' + err);
       return;

@@ -4,7 +4,7 @@
   "description": "Used to abstract google calendar all day events into a sprint - backlog model",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R spec test/  **/*.js",
+    "test": "mocha -R spec test/**/*.js",
     "debug": "node --debug server",
     "start": "node server"
   },
@@ -35,6 +35,7 @@
     "moment": "^2.12.0"
   },
   "devDependencies": {
+    "app-root-path": "^1.0.0",
     "babel-core": "^6.3.21",
     "babel-eslint": "^5.0.0-beta6",
     "babel-loader": "^6.2.0",

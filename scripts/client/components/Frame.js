@@ -1,13 +1,12 @@
 "use strict";
 
 
-import './../../styles/styles.css'
+import './../../../styles/styles.css'
 import React, {Component} from 'react';
 import ActionList from './ActionList';
 import Header from './Header';
 import Heading from './Heading';
-var globals = require('globals');
-
+  
 // This frame represents the main 
 // component of the app - the frame that renders the backlog and sprint items
 // STATE 

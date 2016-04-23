@@ -1,5 +1,9 @@
+var appRoot = require('app-root-path')
+var paths = require( appRoot + '\\_globals').paths
+
+
 var should = require('chai').should();
-var google_api = require('./../scripts/google_api')
+var google_api = require( paths.scriptsPath + '/client' + '/google_api')
 var moment = require('moment')
 
 describe('getEventsForTimeSpan', function() {
@@ -53,6 +57,6 @@ describe('getEventsForTimeSpan', function() {
   			eventDate.diff(moment(), 'day').should.equal(0)
   		});
   	});  	
-  })
+  });
 
 });
