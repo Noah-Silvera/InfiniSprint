@@ -9,12 +9,16 @@ export default class Header extends Component {
 		return (
 				<div className = "header">
 					<h1 className = "title">{this.props.content}</h1>
-					<button className="refreshButton" />
+					<button className="refreshButton" onClick = {this.refreshButton} />
 				</div>
 			)
 	}
 
-	onClick(e){
+  refreshButton = (e) => {
+    console.log('asking for events...')
+    this.props.socket.emit('refreshData')
 
-	}
+    e.preventDefault()
+    e.stopPropagation()
+  }
 }

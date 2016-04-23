@@ -5,6 +5,7 @@ var paths = require( appRoot + '\\_globals').paths
 var socketio = require('socket.io')
 var google_api = require('./google_api')
 var data_utils = require('./data_utils')
+var sync_event_data = require('./sync_event_data');
 var join = require('path').join
 
 module.exports.initializeWebsockets = initializeWebsockets 
@@ -35,14 +36,22 @@ function setUpListeners(io,callback){
 	io.on('connection', function(socket){
 	  console.log("new connection")
 
-	  socket.on('updateEvents', function() {
+	  socket.on('refreshData', function() {
+	  	console.log('refreshing data...')
 	    // once the data has been updated locally, this function fires off the data in a eventsUpdated event
-	    return updateEvents(socket)
+	    return refreshData(socket)
 	  });
 
-	  socket.on('dragEvent', function(message) {
-	    console.log("drag event received....")
-	  });
+	  socket.on('updateEvent', function(event) {
+  		console.log('updating event...')
+  		sync_event_data.updateEvent()
+	  })
+
+	  socket.on('deleteEvent', function(event) {
+  		console.log('deleting event...')
+  		sync_event_data.deleteEventById()
+	  })
+
 	});
 
 	return callback()
@@ -53,14 +62,14 @@ function setUpListeners(io,callback){
 //---------------------------------------------------------------------------------------------------//
 
 
-module.exports.updateEvents = updateEvents
+module.exports.refreshData = refreshData
 /**
 // updates the content that populates the app, and then informs the client it has been updated with a
 // eventsUpdated event
  * @param  {socket} socket 
  * @return fires off a eventsUpdated event 
  */
-function updateEvents(socket) {
+function refreshData(socket) {
   
   console.log("retrieving events from google....");
   // syncs the networks google cal events to a local file

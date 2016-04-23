@@ -20,7 +20,7 @@ module.exports.updateLocalData = updateLocalData
  */
 function updateLocalData (events, callback) {
   var dataFileName = 'events.json'
-  var dataFilePath = path.join( global.paths.userDataPath + dataFileName )
+  var dataFilePath = path.join( paths.userDataPath + dataFileName )
 
   console.log('updating local data....')
 
@@ -239,7 +239,7 @@ function updateEvent(localEventRef,calEvent){
   // updates all local event properties with the new calendar data
   // adds new properties if they exist in the calEvent
   // removes remotely controlled properties if they do not exist in the calEvent
-  return localEventRef;
+  // return localEventRef;
 }
 
 
@@ -255,7 +255,7 @@ module.exports.deleteEventById = deleteEventById
  * @return {Object}         Reference to the new objListRef
  */
 function deleteEventById(eventId,objListRef){
-  return objListRef;
+  // return objListRef;
 }
 
 
