@@ -44,12 +44,16 @@ function setUpListeners(io,callback){
 
 	  socket.on('updateEvent', function(event) {
   		console.log('updating event...')
-  		sync_event_data.updateEvent()
+  		return sync_event_data.updateEvent( {},{}, function(){
+	  	  socket.emit('dataUpdated',{})
+  		});
 	  })
 
-	  socket.on('deleteEvent', function(event) {
+	  socket.on('deleteEvent', function( event) {
   		console.log('deleting event...')
-  		sync_event_data.deleteEventById()
+  		sync_event_data.deleteEventById({},{}, function(){
+  			socket.emit('dataUpdated',{})
+  		})
 	  })
 
 	});
@@ -78,7 +82,7 @@ function refreshData(socket) {
     function() {
     	var eventsToFetch = join( global.paths.userDataPath, '/events.json' )
     	fetchLocalEvents( eventsToFetch ,  function emitEventData(data,socket) {
-        socket.emit('eventsUpdated', data)
+        socket.emit('dataUpdated', data)
         console.log('Sent local event data to client')
       }, socket ) 
      }

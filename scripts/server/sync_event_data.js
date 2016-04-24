@@ -233,12 +233,12 @@ module.exports.updateEvent = updateEvent
  * @param  {Object} calEvent      a reference to a calendar event object returned from google calendar
  * @return {Object}               the updated localEventRef
  */
-function updateEvent(localEventRef,calEvent){
+function updateEvent(localEventRef,newEvent,callback){
 
-  // takes two events; a local event, and a calendar event, 
-  // updates all local event properties with the new calendar data
-  // adds new properties if they exist in the calEvent
-  // removes remotely controlled properties if they do not exist in the calEvent
+  // takes two events; a local event, and a new event, 
+  // updates all local event properties with the new data
+  // adds new properties if they exist in the newEvent
+  // removes remotely controlled properties if they do not exist in the newEvent
   // return localEventRef;
 }
 
@@ -254,7 +254,7 @@ module.exports.deleteEventById = deleteEventById
  *                          a list of objects indexed by id 
  * @return {Object}         Reference to the new objListRef
  */
-function deleteEventById(eventId,objListRef){
+function deleteEventById(eventId,objListRef,callback){
   // return objListRef;
 }
 

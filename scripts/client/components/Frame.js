@@ -18,7 +18,8 @@ export default class Frame extends Component {
 	constructor(props){
 		super(props);
     this.socket = io.connect('http://localhost'); // io is imported in index.html    
-    this.dragItem = null
+    this.dragItemEvent = null
+    this.dragItemObj = null
     if( !this.socket ){
       console.log("!!! Could not initialize socket !!!")
     }
@@ -84,7 +85,7 @@ export default class Frame extends Component {
     ReactDOM.findDOMNode(this).addEventListener("itemLeave", this.itemLeave);
     ReactDOM.findDOMNode(this).addEventListener("itemDragged", this.itemDragged);
 
-    this.socket.on('eventsUpdated', function updateEvents(content){
+    this.socket.on('dataUpdated', function updateEvents(content){
       console.log('processing recieved events...')
       console.log(content)
         // this.data['sprint'] = content
@@ -105,6 +106,7 @@ export default class Frame extends Component {
 
   itemDragged = (e) => {
     this.dragItem = e.detail.dragItem
+    this.dragItemListId = e.detail.dragItemListId
     console.log('current dragged item = ')
     console.log(this.dragItem)
     // require to refresh the props of the actionList

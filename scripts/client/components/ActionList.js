@@ -32,23 +32,28 @@ export default class ActionList extends Component {
   // assumes the items are both in a ActionList
   // NOT SWAPPING RANK SWAPPING ID'S DOING IT WRONG
   swapActionItems = (dropItem) => {
-    // console.log(dragItem.parentNode.getAttribute('class') + " - " + dragItem.parentNode.getAttribute('data-id'))
-    var newState = this.state
-    var dragItem = this.props.dragItem
 
-    var dragRank = ActionList.getPropByDataId(newState['actions'],'rank',dragItem.getAttribute('data-id'))
-    var dropRank = ActionList.getPropByDataId(newState['actions'],'rank',dropItem.getAttribute('data-id'))
-    
-    ActionList.setPropByDataId(newState['actions'],'rank',dropRank, dragItem.getAttribute('data-id') )
-    ActionList.setPropByDataId(newState['actions'],'rank', dragRank, dropItem.getAttribute('data-id') )
+  	var dragItemObj = this.props.dragItem
+  	var dragItemListId = this.props.dragItemListId
 
-    this.setState( newState )
-    // console.log("new state"  )
-    console.log(this.state  )
+  	var dropItemObj = {}
+    this.state['actions'].forEach( function(obj){
+    	if( dropItem.getAttribute('data-id') === obj['dataId']){
+    		dropItemObj = obj
+    	}
+    });
+
+    var dropItemListId = this.props.dataId
+
+    var dragRank = ActionList.getPropByDataId(dragItemObj,'rank',dragItemObj['dataId'])
+    var dropRank = ActionList.getPropByDataId(dropItemObj,'rank',dropItem.getAttribute('data-id'))
+
+    ActionList.setPropByDataId(dragItemObj,'rank',dropRank, dragItemObj['dataId'] )
+    ActionList.setPropByDataId(dropItemObj,'rank', dragRank, dropItem.getAttribute('data-id') )
     
   	console.log('dispatching drag item update events')
-  	this.props.socket.emit('updateEvent', { 'event': dragItem } )
-  	this.props.socket.emit('updateEvent', { 'event': dropItem } )
+  	this.props.socket.emit('updateEvent', { 'event': dragItemObj, 'list' : dropItemListId  } )
+  	this.props.socket.emit('updateEvent', { 'event': dropItemObj, 'list' : dropItemListId } )
 
   }
 
@@ -84,7 +89,8 @@ export default class ActionList extends Component {
   onDragEnd = (e) => {
     e.preventDefault()
 	  ReactDOM.findDOMNode(this).dispatchEvent( new CustomEvent('itemDragged', { 'detail': {
-	   																																						'dragItem' : null 
+	   																																						'dragItem' : null,
+	   																																						'dragItemList': null
 	   																																					} ,
 																																							'bubbles' : true,
 																																							'cancelable' :true
@@ -98,8 +104,17 @@ export default class ActionList extends Component {
     // console.log(class)
     // console.log("drag started")
     // console.log(e.target.getAttribute('data-id'))
+    // 
+  	var dragItemObj = {}
+    this.state['actions'].forEach( function(obj){
+    	console.log(obj)
+    	if( e.target.getAttribute('data-id') === obj['dataId']){
+    		dragItemObj = obj
+    	}
+    });
 	  ReactDOM.findDOMNode(this).dispatchEvent( new CustomEvent('itemDragged', { 'detail': {
-	  																																						 'dragItem' : e.target 
+	  																																						 'dragItem' : dragItemObj,
+	  																																						 'dragItemListId' : this.props.dataId
 	  																																						},
 	  																																						'bubbles' : true,
 																																								'cancelable' :true
@@ -122,18 +137,16 @@ export default class ActionList extends Component {
 
       // Get the class of both items
       var dropItemClass = dropItem.getAttribute('class').toString()
-      var dragItemClass = this.props.dragItem.getAttribute('class').toString()
-      console.log("drop item class = " + dropItemClass)
-      console.log("drag item class = " + dragItemClass)
+      // console.log("drop item class = " + dropItemClass)
 
       // filter action items ( exclude actionLists )
       var actionRegex = new RegExp("( |^)action( |$)")
 
       // both action classes
-      if ( actionRegex.exec(dropItemClass) != null && actionRegex.exec(dragItemClass) != null ){
+      if ( actionRegex.exec(dropItemClass) != null ){
         // console.log('both action classes')
         // have unique id's
-        if( dropItem.getAttribute('data-id') != this.props.dragItem.getAttribute('data-id')){
+        if( dropItem.getAttribute('data-id') != this.props.dragItem['dataId'] ){
   				console.log('dragged over valid drop target')
           // console.log('have unique ids')
           // swap the action itmes
@@ -166,9 +179,14 @@ export default class ActionList extends Component {
 	  																														 },
 	  																														)
 	  																					)
-			this.props.socket.emit('deleteEvent', { 'event' : e.target })
   	}
   	e.stopPropagation()
+
+  	this.deleteAction(e.target)
+  }
+
+  deleteAction = (action) => {
+		this.props.socket.emit('deleteEvent', { 'event' : action })
   }
 
 	render() {
