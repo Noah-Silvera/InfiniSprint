@@ -3,15 +3,15 @@ var paths = require( appRoot + '\\_globals').paths
 
 
 var should = require('chai').should();
-var sync_event_data = require( paths.scriptsPath + '/client' +  '/sync_event_data')
-var data_utils = require( paths.scriptsPath + '/client' + '/data_utils')
+var sync_event_data = require( paths.scriptsPath + '/server' +  '/sync_event_data')
+var data_utils = require( paths.scriptsPath + '/server' + '/data_utils')
 var fs = require('fs')
 var path = require('path')
 var moment = require('moment')
 
 describe('createInitialEventData', function() {
 
-	var fakeResponsePath = path.join( __dirname, 'fake_data/fake_response.json' )
+	var fakeResponsePath = path.join( paths.testPath, '/fake_data/fake_response.json' )
 
 	// get the cached reponse from google
 	var fakeResponse = JSON.parse( fs.readFileSync(fakeResponsePath, "utf8") )

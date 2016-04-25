@@ -3,7 +3,7 @@ var paths = require( appRoot + '\\_globals').paths
 
 
 var should = require('chai').should();
-var google_api = require( paths.scriptsPath + '/client' + '/google_api')
+var google_api = require( paths.scriptsPath + '/server' + '/google_api')
 var moment = require('moment')
 
 describe('getEventsForTimeSpan', function() {
