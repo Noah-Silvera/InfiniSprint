@@ -1,5 +1,6 @@
 var appRoot = require('app-root-path')
 var paths = require( appRoot + '\\_globals').paths
+var consts = require( appRoot + '\\_globals').consts
 
 var google = require('googleapis');
 var googleAuth = require('google-auth-library');
@@ -16,7 +17,6 @@ var TOKEN_DIR = (process.env.HOME || process.env.HOMEPATH ||
     process.env.USERPROFILE) + '/.credentials/';
 var TOKEN_PATH = TOKEN_DIR + 'calendar-nodejs-backlog.json';
 
-var sprintLength = 7
 
 
   //----------------------------------------------------------------------------------------------------//
@@ -111,6 +111,10 @@ function storeToken(token) {
   console.log('Token stored to ' + TOKEN_PATH);
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                Request Functions                                               //
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 module.exports.getEventsForTimeSpan = getEventsForTimeSpan
 /**
 // formats the date objects to go from
@@ -136,14 +140,6 @@ function getEventsForTimeSpan( startDate, endDate, callback ) {
     listEvents(auth, startDate, endDate, callback)
   });
 }
-
-
-
-  //----------------------------------------------------------------------------------------------------//
- ///////////////////////////// DATA MANIPULATION FUNCTIONS /////////////////////////////
-//---------------------------------------------------------------------------------------------------//
-
-
 
 /**
 // lists the events for a certain time span, passes the events object onto the callback
@@ -181,7 +177,7 @@ module.exports.syncCalendar = function syncCalendar( callback ) {
 
   // the current date - starting at the very begginning of the day
   var startDate = moment()
-  endDate = startDate.add(sprintLength,'days')
+  endDate = startDate.add(consts.sprintLength,'days')
 
   getEventsForTimeSpan( startDate, endDate, function(events){
     sync_event_data.updateLocalData(events,callback)

@@ -65,7 +65,7 @@ function setUpListeners(io,callback){
  ///////////////////////////// Handling socket requests /////////////////////////////
 //---------------------------------------------------------------------------------------------------//
 
-
+//UNTESTED
 module.exports.refreshData = refreshData
 /**
 // updates the content that populates the app, and then informs the client it has been updated with a
@@ -81,7 +81,7 @@ function refreshData(socket) {
     // fetched that local file with the changes
     function() {
     	var eventsToFetch = join( global.paths.userDataPath, '/events.json' )
-    	fetchLocalEvents( eventsToFetch ,  function emitEventData(data,socket) {
+    	sync_event_data.fetchLocalEvents( eventsToFetch ,  function emitEventData(data,socket) {
         socket.emit('dataUpdated', data)
         console.log('Sent local event data to client')
       }, socket ) 

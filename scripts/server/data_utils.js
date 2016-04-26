@@ -55,7 +55,7 @@ function addPropsToObject(target,newProps){
 }
 
 
-// UNTESTED
+// UNTESTED - Tested by overall black box 
 module.exports.convertSimpleArrayToObject = convertSimpleArrayToObject
 /**
 // Converts a simple array in the form of
@@ -65,7 +65,6 @@ module.exports.convertSimpleArrayToObject = convertSimpleArrayToObject
 //    1:"first",
 //    2:"second",
 //    3:"third",
-// }
  * @param  {Array} simpleArray 
  * @return {Object}             
  */
@@ -80,7 +79,7 @@ function convertSimpleArrayToObject( simpleArray ){
   return newObj
 }
 
-// UNTESTED
+// UNTESTED - Tested by overall black box
 module.exports.indexObjectById = indexObjectById
 /**
 // indexObjectById Converts a array of javascript objects to an object with
@@ -122,6 +121,7 @@ function moveObjectToListIndex( object, index, oldListRef,newListRef ){
 
 }
 
+// UNTESTED - NWI
 module.exports.writeData = writeData
 /**
 // ensures data is in a serializable format, then
@@ -168,7 +168,7 @@ function writeData(data,filePath,callback){
   });
 }
 
-// UNTESTED
+// UNTESTED - NWI
 module.exports.fetchData = fetchData
 /**
 // Fetches any text data from a path

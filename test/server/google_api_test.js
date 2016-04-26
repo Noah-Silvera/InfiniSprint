@@ -35,6 +35,10 @@ describe('getEventsForTimeSpan', function() {
 	  		neccesaryProps.forEach( function(prop){
 	  			events[i].should.have.property(prop)
 	  		});
+			  
+			if( event.start !== undefined){
+				moment( event.start.date ).diff( moment( endOfWeek) ).should.be.above(0)
+			}
   		});
   	});
   });

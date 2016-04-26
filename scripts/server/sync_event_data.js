@@ -1,5 +1,6 @@
 var appRoot = require('app-root-path')
 var paths = require( appRoot + '\\_globals').paths
+var consts = require( appRoot + '\\_globals').consts
 
 
 var fs = require('fs');
@@ -8,6 +9,13 @@ var moment = require('moment')
 var data_utils = require('./data_utils')
 
 
+// UNTESTED
+/**
+ * Fetches the local event data
+ */
+function fetchLocalData (callback){
+  data_utils.fetchData( ( paths.userDataPath + "/events.json" ), callback )
+}
   
 // UNIMPLEMENTED
 // UNTESTED
@@ -33,6 +41,8 @@ function updateLocalData (events, callback) {
   processCalendarResponse(events, dataFilePath, callback)
 }
 
+// UNIMPLEMENTED
+// UNTESTED
 /**
  * Proccesses an events response from google calendar, updating the 
  * appropiate events and creating or deleting event data as neccesary
@@ -61,6 +71,7 @@ function processCalendarResponse(events, dataFilePath, callback){
   });
 }
 
+// UNTESTED
 /**
  * Applies updates from the event data to current existing
  * local event data
@@ -72,9 +83,9 @@ function applyCalendarUpdates(events, dataFilePath, callback){
     if(err){
       throw err
     } else {
-      curEventData = JSON.parse(content)
+      var curCalEventData = JSON.parse(content)
 
-      console.log( "curEventData keys " + Object.keys(curEventData) )
+      console.log( "curCalEventData keys " + Object.keys(curCalEventData) )
 
       // iterate over each of the events returned from the google calender API
       for (var calEvent in events){
@@ -85,12 +96,12 @@ function applyCalendarUpdates(events, dataFilePath, callback){
         
         // look over all the lists in the events data
         var listIndex = 0;
-        for (var list in curEventData){
+        for (var list in curCalEventData){
           // skip loop if the property is from prototype
-          if(!curEventData[list].hasOwnProperty(list)) continue;
+          if(!curCalEventData[list].hasOwnProperty(list)) continue;
 
           // attempt to find the local datas copy of the calendar event by id
-          var localEvent = curEventData[list][events[calEvent].id]
+          var localEvent = curCalEventData[list][events[calEvent].id]
           // If the calender event exists in the local event data somewhere
           if( localEvent !== undefined ){
             // update the events data
@@ -101,13 +112,13 @@ function applyCalendarUpdates(events, dataFilePath, callback){
               if( compareEventDates( getEventDateObj(localEvent), getEventDateObj(calEvent)) !== 0 ){
                 // THIS WILL NEED TO BE DYNAMICALLY DETERMINED ONCE DAYS ARE IMPLEMETNED
                 // Move item from the sprint to top of backlog at the appropiate date
-                moveEventToListIndex(localEvent, 0, curEventData[list], curEventData['backlog'] )
+                moveEventToListIndex(localEvent, 0, curCalEventData[list], curCalEventData['backlog'] )
               }
             } else if( listIndex === 1 ){
               if( compareEventDates( getEventDateObj(localEvent), getEventDateObj(calEvent)) === 0 ){
                 // THIS WILL NEED TO BE DYNAMICALLY DETERMINED ONCE DAYS ARE IMPLEMETNED
                 // Move item from the backlog to the bottom of the sprint at the appropiate date
-                moveEventToListIndex(localEvent, -1, curEventData['backlog'], curEventData[list])
+                moveEventToListIndex(localEvent, -1, curCalEventData['backlog'], curCalEventData[list])
               }
             }
             // === OUT OF SCOPE === If the item has changed date, move it to the top of the day list above it, or the bottom of the day list below it 
@@ -123,14 +134,14 @@ function applyCalendarUpdates(events, dataFilePath, callback){
                 // THIS WILL NEED TO BE DYNAMICALLY DETERMINED ONCE DAYS ARE IMPLEMETNED
                 // create item at bottom of sprint
                 // THE { calEvent } IS VERY SKETCHY TEST IT
-                moveEventToListIndex(localEvent, -1, { calEvent }, curEventData['sprint'])
+                moveEventToListIndex(localEvent, -1, { calEvent }, curCalEventData['sprint'])
               } else 
               // This can be more precise if once dynamic days are implemented
               if( compareEventDates( getEventDateObj(calEvent), new Date() ) !== 0 ){
                 // THIS WILL NEED TO BE DYNAMICALLY DETERMINED ONCE DAYS ARE IMPLEMETNED
                 // create item at bottom of backlog AT APPROPIATE DAY LATER
                 // THE { calEvent } IS VERY SKETCHY TEST IT
-                moveEventToListIndex(localEvent, -1, { calEvent }, curEventData['backlog'])
+                moveEventToListIndex(localEvent, -1, { calEvent }, curCalEventData['backlog'])
               }
 
 
@@ -145,7 +156,7 @@ function applyCalendarUpdates(events, dataFilePath, callback){
       //  
       // stand in until I actually update the data  
       // return the updated data
-      return callback(curEventData)
+      return callback(curCalEventData)
     }
   });
 }
@@ -223,23 +234,77 @@ function createInitialEventData(events){
 }
 
 
-//UNTESTED
 module.exports.updateEvent = updateEvent
 /**
 // using the google calender event response, this function
 // updates the data referencing that event with the new data from the response
 // returns the updated eventRef
+// uses the eventsPropWhitelist in the globals to determine which properties should not be deleted from the old event
  * @param  {Object} localEventRef a reference to an event object in the local data
  * @param  {Object} calEvent      a reference to a calendar event object returned from google calendar
  * @return {Object}               the updated localEventRef
  */
-function updateEvent(localEventRef,newEvent,callback){
-
-  // takes two events; a local event, and a new event, 
-  // updates all local event properties with the new data
-  // adds new properties if they exist in the newEvent
-  // removes remotely controlled properties if they do not exist in the newEvent
-  // return localEventRef;
+function updateEvent(oldEvent,newEvent,callback){
+  var whiteList = consts.eventPropWhiteList
+  var blackList = consts.eventPropBlackList
+  // gets the actual properties under the ID property made for indexing
+  var oldProps = Object.keys(oldEvent[newEvent['id']]) 
+  var newProps = Object.keys(newEvent)
+  
+  for(var i = 0; i < oldProps.length; i++){
+    var curOldProp = oldProps[i]
+    // see if the key is whiteListed for non-deletion
+     var deleteKey = true;
+     for( var j = 0; j < whiteList.length; j++){
+       
+      //  current key is whitelisted for non-deletion
+       if( whiteList[j] === curOldProp ){
+         deleteKey = false;
+         break;
+       }
+     }
+     
+    //  if we are allowed to delete the key
+     if( deleteKey ){
+       
+      //  check if the key exists in the newEvent
+       if( newEvent[curOldProp] === undefined ){
+        //  if it does not, it should be deleted
+         delete oldEvent[newEvent['id']][curOldProp]
+       } else {
+        //  otherwise, update the key!
+        oldEvent[newEvent['id']][curOldProp] = newEvent[curOldProp]
+       }
+     }
+  }
+  //  finally, check for new properties in the newEvent
+  for(var i =0; i < newProps.length; i++){
+    var curNewProp = newProps[i]
+    
+  // see if the key is blackListed for non-addition
+     var addKey = true;
+     for( var j = 0; j < blackList.length; j++){
+      //  if the current prop shouldnt be added to the old event
+       if( blackList[j] === curNewProp ){
+        //  dont add it
+         addKey = false;
+         break;
+       }
+     }
+      
+      // if we are allowed to add the current prop
+     if( addKey ){
+      //  see if we need to
+      if( oldEvent[newEvent['id']][curNewProp] === undefined){
+        // add the prop
+        oldEvent[newEvent['id']][curNewProp] = newEvent[curNewProp]
+      }
+     }
+  }
+  
+  // return the updated oldEvent
+  return oldEvent
+  
 }
 
 

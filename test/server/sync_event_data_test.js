@@ -1,6 +1,6 @@
 var appRoot = require('app-root-path')
 var paths = require( appRoot + '\\_globals').paths
-
+var consts = require( appRoot + '\\_globals').consts
 
 var should = require('chai').should();
 var sync_event_data = require( paths.scriptsPath + '/server' +  '/sync_event_data')
@@ -136,7 +136,8 @@ describe('createInitialEventData', function() {
 describe('updateEvent', function(){
 
 	// the properties maintained locally by the app that should be removed
-	var whitelist = ['rank']
+	var whiteList = consts.eventPropWhiteList
+	var blackList = consts.eventPropBlackList
 
 	// the event stored in local data
 	var localEvent =  { 
@@ -164,10 +165,11 @@ describe('updateEvent', function(){
       "date": "2016-04-10"
     }
   }
+  console.log('made it')
+  localEvent = sync_event_data.updateEvent(localEvent,calEvent)
 
-  sync_event_data.updateEvent(localEvent,calEvent)
-
-	it('should ensure all the fields of the calEvent match the fields of the local event', function(){
+	it('should ensure all the fields of the calEvent match the fields of the local event. \
+		 This includes the fields that should have been added', function(){
 
 
 	  Object.keys(calEvent).forEach( function(key,index){
@@ -180,16 +182,26 @@ describe('updateEvent', function(){
 	});
 
 	it('should ensure all the old fields in the localEvent not present \
-		in the calendar event should be removed, excepting the whitelist', function(){
-
-		// whitelist properties should still exist
-		whitelist.forEach( function( prop, index ){
+		in the calendar event should be removed, excepting the whiteList', function(){
+			
+		
+		// whiteList properties should still exist
+		whiteList.forEach( function( prop, index ){
 			should.exist(localEvent[eventId][prop])
 		});
 
 		should.not.exist(localEvent[eventId]['oldField'])
 
 	});
+	
+	it('should add all the new field in the calEvent, excepting the blacklist', function(){
+		
+		// blackList properties should not exist
+		blackList.forEach( function( prop, index ){
+			should.not.exist(localEvent[eventId][prop])
+		});
+		
+	})
 
 });
 

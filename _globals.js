@@ -5,6 +5,11 @@
 		'scriptsPath' : path.join( __dirname, './scripts'),
 		'stylesPath' : path.join( __dirname, './styles' ),
 		'testPath' : path.join( __dirname, './test' )
+	},
+	'consts' : {
+		'sprintLength': 7,
+		'eventPropWhiteList': ['rank'],
+		'eventPropBlackList': ['id'],
 	}
 }
 
