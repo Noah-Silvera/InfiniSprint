@@ -8,9 +8,9 @@ var data_utils = require('./data_utils')
 var sync_event_data = require('./sync_event_data');
 var join = require('path').join
 
-module.exports.initializeWebsockets = initializeWebsockets 
+exports.initializeWebsockets = initializeWebsockets 
 /**
-// Intialize the neccesary socket io server and listeners
+ * Intialize the neccesary socket io server and listeners
  * @return {callback}            calls the callback with no args
  */
 function initializeWebsockets(callback){
@@ -18,7 +18,7 @@ function initializeWebsockets(callback){
 	
 	var io = socketio.listen(80)
 	console.log("listening for socket requests on localhost:80")
-	setUpListeners(io,callback)
+	return setUpListeners(io,callback)
 }
 
   //----------------------------------------------------------------------------------------------------//
@@ -26,9 +26,9 @@ function initializeWebsockets(callback){
 //---------------------------------------------------------------------------------------------------//
 
 /**
-// intialize the listeners for server events like fetching new calender event data
+ * intialize the listeners for server events like fetching new calender event data
  * @param {socketio instance}   io
- * @return {Function} callback calls with no args
+ * @return {callback} callback called with no args
  */
 function setUpListeners(io,callback){
 	console.log('setting up listeners')
@@ -51,7 +51,7 @@ function setUpListeners(io,callback){
 
 	  socket.on('deleteEvent', function( event) {
   		console.log('deleting event...')
-  		sync_event_data.deleteEventById({},{}, function(){
+  		return sync_event_data.deleteEventById({},{}, function(){
   			socket.emit('dataUpdated',{})
   		})
 	  })
@@ -66,12 +66,12 @@ function setUpListeners(io,callback){
 //---------------------------------------------------------------------------------------------------//
 
 //UNTESTED
-module.exports.refreshData = refreshData
+exports.refreshData = refreshData
 /**
-// updates the content that populates the app, and then informs the client it has been updated with a
-// eventsUpdated event
+ * updates the content that populates the app, and then informs the client it has been updated with a
+ * eventsUpdated event
  * @param  {socket} socket 
- * @return fires off a eventsUpdated event 
+ * @return {websocket} fires off a eventsUpdated event 
  */
 function refreshData(socket) {
   
@@ -80,7 +80,7 @@ function refreshData(socket) {
    google_api.syncCalendar( 
     // fetched that local file with the changes
     function() {
-    	var eventsToFetch = join( global.paths.userDataPath, '/events.json' )
+    	var eventsToFetch = join( paths.userDataPath, '/events.json' )
     	sync_event_data.fetchLocalEvents( eventsToFetch ,  function emitEventData(data,socket) {
         socket.emit('dataUpdated', data)
         console.log('Sent local event data to client')

@@ -22,7 +22,13 @@ var TOKEN_PATH = TOKEN_DIR + 'calendar-nodejs-backlog.json';
   //----------------------------------------------------------------------------------------------------//
  ///////////////////////////// AUTHORIZATION FUNCTIONS /////////////////////////////
 //---------------------------------------------------------------------------------------------------//
-module.exports.getAuth = getAuth
+exports.getAuth = getAuth
+/**
+ * Gets authorization to use google library function using the client secret
+ * sends this Oauth to the callback 
+ * @param  {any} callback
+ * @return {callback(Oauth)} returns a callback called with the authorization produced
+ */
 function getAuth(callback) {
   // Load client secrets from a local file.
   fs.readFile( path.join( paths.userDataPath, '/client_secret.json'), function processClientSecrets(err, content) {
@@ -115,12 +121,25 @@ function storeToken(token) {
 //                                Request Functions                                               //
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-module.exports.getEventsForTimeSpan = getEventsForTimeSpan
+// UNIMPLEMENTED
+// UNTESTED
+
+exports.deleteEvent = deleteEvent
 /**
-// formats the date objects to go from
-// goes from 0:00 am on the startDate to 11:59 on the end date
-// and passes this on to another function to get the events, and the events
-// are passed to the callback
+ * Deletes an event from the remote google calendar
+ * @param  {any} eventId Id of the event to delete
+ */
+function deleteEvent(eventId){
+// stiuff goes here
+}
+
+
+exports.getEventsForTimeSpan = getEventsForTimeSpan
+/**
+ * formats the date objects to go from
+ * goes from 0:00 am on the startDate to 11:59 on the end date
+ * and passes this on to another function to get the events, and the events
+ * are passed to the callback
  * @param  {moment}   startDate 
  * @param  {moment}   endDate   
  * @return {callback(events)}             
@@ -142,7 +161,7 @@ function getEventsForTimeSpan( startDate, endDate, callback ) {
 }
 
 /**
-// lists the events for a certain time span, passes the events object onto the callback
+ * lists the events for a certain time span, passes the events object onto the callback
  * @param  {oAuth credentials}   auth      Credentials returned from getting the authorization from the google api
  * @param  {moment}   startDate 
  * @param  {moment}   endDate   
@@ -170,10 +189,10 @@ function listEvents(auth, startDate, endDate, callback) {
 }
 
 /**
-// Syncs the calender events for sprint day + sprint_length with the local Copy of the events
+ * Syncs the calender events for sprint day + sprint_length with the local Copy of the events
  * @return {callback}            updates the local data then finally calls the callback with no args
  */
-module.exports.syncCalendar = function syncCalendar( callback ) {
+exports.syncCalendar = function syncCalendar( callback ) {
 
   // the current date - starting at the very begginning of the day
   var startDate = moment()

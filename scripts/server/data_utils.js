@@ -4,7 +4,7 @@ var paths = require( appRoot + '\\_globals').paths
 var fs = require('fs')
 var path = require('path')
 
-module.exports.purgeProperties = purgeProperties
+exports.purgeProperties = purgeProperties
 /**
  * purgeProperties using an array of objects, 
  * purges all properties of the objects except the properties in keepArr 
@@ -30,20 +30,22 @@ function purgeProperties( objArr, keepArr ){
   return newObjArr
 }
 
-module.exports.addPropsToObject = addPropsToObject
-/*
-// adds an array of simple javascript key val pair objects as prop value pairs to an object
-// props:
-  // [ { 1:"first"}, {2:"second"}]
-// Target
-  // {
-        // "prop" : "i exist"
-  // }
-// Result
-  // {
-        // "prop" : "i exist"
-        // 1:"first"
-        // 2:"second"
+exports.addPropsToObject = addPropsToObject
+/**
+* adds an array of simple javascript key val pair objects as prop value pairs to an object
+* props:
+*   [ { 1:"first"}, {2:"second"}]
+* Target
+*   {
+*         "prop" : "i exist"
+*   }
+* Result
+*   {
+*         "prop" : "i exist"
+*         1:"first"
+*         2:"second"
+ * @param  {any} target object to add properties too
+ * @param  {any} newProps properties to add to the object
  */
 function addPropsToObject(target,newProps){
   // for each prop in props
@@ -56,18 +58,18 @@ function addPropsToObject(target,newProps){
 
 
 // UNTESTED - Tested by overall black box 
-module.exports.convertSimpleArrayToObject = convertSimpleArrayToObject
+exports.convertSimpleArrayToObject = convertSimpleArrayToObject
 /**
-// Converts a simple array in the form of
-// [ { 1:"first" }, { 2:"second"}, { 3:"third"}]
-// To a simple javascript object of
-// { 
-//    1:"first",
-//    2:"second",
-//    3:"third",
- * @param  {Array} simpleArray 
- * @return {Object}             
- */
+* Converts a simple array in the form of
+* [ { 1:"first" }, { 2:"second"}, { 3:"third"}]
+* To a simple javascript object of
+* { 
+*    1:"first",
+*    2:"second",
+*    3:"third",
+* @param  {Array} simpleArray 
+* @return {Object}             
+*/
 function convertSimpleArrayToObject( simpleArray ){
   var newObj = {}
 
@@ -79,14 +81,15 @@ function convertSimpleArrayToObject( simpleArray ){
   return newObj
 }
 
+
 // UNTESTED - Tested by overall black box
-module.exports.indexObjectById = indexObjectById
+exports.indexObjectById = indexObjectById
 /**
-// indexObjectById Converts a array of javascript objects to an object with
-the properties being all the id's of the objects in the array
-Each properties value is an object containing the rest of the properties
-in the original object
- * @param  {Array} objArr 
+ * indexObjectById Converts a array of javascript objects to an object with
+ * the properties being all the id's of the objects in the array
+ * Each properties value is an object containing the rest of the properties
+ * in the original object
+ * @param  {Array} objArr object to index
  * @return {Object}              A single object with the properties being the id's
  *                                 of every object in the array of objects
  */
@@ -107,10 +110,10 @@ function indexObjectById( objArr ){
 
 // UNIMPLEMENTED
 // UNTESTED
-module.exports.moveObjectToListIndex = moveObjectToListIndex
+exports.moveObjectToListIndex = moveObjectToListIndex
 /**
-// Moves an event to a given index ( 0 based ) in a listObject
-// passing -1 as the index moves the event to the bottom of the list
+ * Moves an event to a given index ( 0 based ) in a listObject
+ * passing -1 as the index moves the event to the bottom of the list
  * @param  {Object} object     The object in the list to move
  * @param  {Integer} index      the index to move the object in the new list
  * @param  {Object} oldListRef The old list containing the object
@@ -121,11 +124,13 @@ function moveObjectToListIndex( object, index, oldListRef,newListRef ){
 
 }
 
-// UNTESTED - NWI
-module.exports.writeData = writeData
+writeData
+
+//  * UNTESTED - NWI
+exports.writeData = writeData
 /**
-// ensures data is in a serializable format, then
-// writes 'data' to a new file, then closes file access 
+ * ensures data is in a serializable format, then
+ * writes 'data' to a new file, then closes file access 
  * @param  {*}   data     anything with a toString method or an Object
  * @param  {path object or string}   filePath 
  * @return {callback}                         takes the callback and calls it with
@@ -158,8 +163,8 @@ function writeData(data,filePath,callback){
           throw err
         } else {
           fs.close(fd,function(){
-            // apply all arguments given after the callback function to the callback
-            var args = Array.prototype.slice.call(arguments).slice(numberOfArgs)
+            // apply all arguments given after the callback function to the callback, with the data function first
+            var args = [data] + Array.prototype.slice.call(arguments).slice(numberOfArgs)
             return callback.apply(this,args)
           })
         }
@@ -169,7 +174,7 @@ function writeData(data,filePath,callback){
 }
 
 // UNTESTED - NWI
-module.exports.fetchData = fetchData
+exports.fetchData = fetchData
 /**
 // Fetches any text data from a path
  * @param  {string or path object}   path     file to read

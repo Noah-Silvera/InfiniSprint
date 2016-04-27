@@ -6,7 +6,12 @@ import Frame from './client/components/Frame'
 
 var scriptURLs = ["http://localhost:80/socket.io/socket.io.js","https://apis.google.com/js/platform.js"]
 
-// Loads an array of scripts synchronously and then executes the callback
+
+/**
+ * Loads an array of scripts synchronously and then executes the callback
+ * @param  {any} scriptURLs an array of script URLs to load before loading the page
+ * @param  {any} callback called after all the scripts are loaded
+ */
 function loadScripts(scriptURLs, callback){
 		
 	// loaded all the scripts
@@ -36,7 +41,6 @@ function loadScripts(scriptURLs, callback){
 
 // REnder the document once the socketIO script has loaded ( yayyy sockets )
 // initialize the document
-
 loadScripts( scriptURLs, function renderDom(){
 	console.log("loading DOM ...");
 

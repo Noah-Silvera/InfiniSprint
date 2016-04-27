@@ -7,22 +7,26 @@ var fs = require('fs');
 var path = require('path')
 var moment = require('moment')
 var data_utils = require('./data_utils')
-
+var google_api = require( "./google_api")
 
 // UNTESTED
+
 /**
- * Fetches the local event data
+ * Fetchs the local event data so it can be 
+ * quickly processed as JSON
+ * @param  {any} callback
+ * @return {callback(data)}
  */
 function fetchLocalData (callback){
-  data_utils.fetchData( ( paths.userDataPath + "/events.json" ), callback )
+  return data_utils.fetchData( ( paths.userDataPath + "/events.json" ), callback )
 }
   
 // UNIMPLEMENTED
 // UNTESTED
-module.exports.updateLocalData = updateLocalData
+exports.updateLocalData = updateLocalData
 /**
-// using an events object, updates the locally stored data in a JSON text file
-// See inside for detailed rules
+ * using an events object, updates the locally stored data in a JSON text file
+ * See inside for detailed rules
  * @param  {Array}   events   Array of event objects returned from google calendar
  * @return {callback} 
  */
@@ -47,7 +51,7 @@ function updateLocalData (events, callback) {
  * Proccesses an events response from google calendar, updating the 
  * appropiate events and creating or deleting event data as neccesary
  * @param  {Array}   events   Array of event objects returned from google calendar
- * @return {callback}
+ * @return {callback(data)}
  */
 function processCalendarResponse(events, dataFilePath, callback){
  // see if the event data file already exists
@@ -76,7 +80,7 @@ function processCalendarResponse(events, dataFilePath, callback){
  * Applies updates from the event data to current existing
  * local event data
  * @param  {Array}   events   Array of events returned from google calendar
- * @return {callback}
+ * @return {callback(updatedData,dataFilePath,callback)}
  */
 function applyCalendarUpdates(events, dataFilePath, callback){
   fs.readFile( dataFilePath, function(err, content){
@@ -163,9 +167,9 @@ function applyCalendarUpdates(events, dataFilePath, callback){
 
 
 // UNTESTED
-module.exports.createInitialEventData = createInitialEventData
+exports.createInitialEventData = createInitialEventData
 /**
-// If we haven't retrieved event data for the user before, 
+ * If we haven't retrieved event data for the user before, 
  * Takes a calendar list events response from google calendar and converts it into 
  * local data corresponding to the events
  * @param  {Array} events response from a google calendar listEvents call
@@ -234,12 +238,12 @@ function createInitialEventData(events){
 }
 
 
-module.exports.updateEvent = updateEvent
+exports.updateEvent = updateEvent
 /**
-// using the google calender event response, this function
-// updates the data referencing that event with the new data from the response
-// returns the updated eventRef
-// uses the eventsPropWhitelist in the globals to determine which properties should not be deleted from the old event
+ * using the google calender event response, this function
+ * updates the data referencing that event with the new data from the response
+ * returns the updated eventRef
+ * uses the eventsPropWhitelist in the globals to determine which properties should not be deleted from the old event
  * @param  {Object} localEventRef a reference to an event object in the local data
  * @param  {Object} calEvent      a reference to a calendar event object returned from google calendar
  * @return {Object}               the updated localEventRef
@@ -308,11 +312,10 @@ function updateEvent(oldEvent,newEvent,callback){
 }
 
 
-// UNIMPLEMENTED
 // UNTESTED
-module.exports.deleteEventById = deleteEventById
+exports.deleteEventById = deleteEventById
 /**
-// deletes the event eventRef from the data referenced by dataRef
+ * deletes the event eventRef from the data referenced by dataRef
  * @param  {string} eventId id of the event to be deleted. Should correspond to an
  *                          property in objListRef
  * @param  {[type]} objListRef A object with properties that correspond to id's. Essentially
@@ -320,7 +323,12 @@ module.exports.deleteEventById = deleteEventById
  * @return {Object}         Reference to the new objListRef
  */
 function deleteEventById(eventId,objListRef,callback){
-  // return objListRef;
+  if( objListRef[eventId] !== undefined){
+    delete objListRef[eventId];
+    google_api.deleteEvent(eventId)
+  } else {
+    throw "could not find event " + eventId + " to delete"
+  }
 }
 
 
