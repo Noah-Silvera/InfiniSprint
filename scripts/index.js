@@ -1,4 +1,4 @@
-import {paths} from './../_globals'
+import {paths} from './utils/_globals'
 import React from 'react';
 import {render} from 'react-dom';
 import Frame from './client/components/Frame'

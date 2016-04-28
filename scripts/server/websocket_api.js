@@ -1,11 +1,11 @@
 var appRoot = require('app-root-path')
-var paths = require( appRoot + '\\_globals').paths
+var paths = require('./../utils/_globals').paths
 
 
 var socketio = require('socket.io')
 var google_api = require('./google_api')
 var data_utils = require('./data_utils')
-var sync_event_data = require('./sync_event_data');
+var sync_local_data = require('./sync_local_data');
 var join = require('path').join
 
 exports.initializeWebsockets = initializeWebsockets 
@@ -44,14 +44,14 @@ function setUpListeners(io,callback){
 
 	  socket.on('updateEvent', function(event) {
   		console.log('updating event...')
-  		return sync_event_data.updateEvent( {},{}, function(){
+  		return sync_local_data.updateEvent( {},{}, function(){
 	  	  socket.emit('dataUpdated',{})
   		});
 	  })
 
 	  socket.on('deleteEvent', function( event) {
   		console.log('deleting event...')
-  		return sync_event_data.deleteEventById({},{}, function(){
+  		return sync_local_data.deleteEventById({},{}, function(){
   			socket.emit('dataUpdated',{})
   		})
 	  })
@@ -81,7 +81,7 @@ function refreshData(socket) {
     // fetched that local file with the changes
     function() {
     	var eventsToFetch = join( paths.userDataPath, '/events.json' )
-    	sync_event_data.fetchLocalEvents( eventsToFetch ,  function emitEventData(data,socket) {
+    	sync_local_data.fetchLocalEvents( eventsToFetch ,  function emitEventData(data,socket) {
         socket.emit('dataUpdated', data)
         console.log('Sent local event data to client')
       }, socket ) 

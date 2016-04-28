@@ -3,7 +3,7 @@ var paths = require( appRoot + '\\_globals').paths
 var consts = require( appRoot + '\\_globals').consts
 
 var should = require('chai').should();
-var sync_event_data = require( paths.scriptsPath + '/server' +  '/sync_event_data')
+var sync_local_data = require( paths.scriptsPath + '/server' +  '/sync_local_data')
 var data_utils = require( paths.scriptsPath + '/server' + '/data_utils')
 var fs = require('fs')
 var path = require('path')
@@ -30,7 +30,7 @@ describe('createInitialEventData', function() {
 	fakeResponse[1].start.date = curDate
 
 	// get the function to process the faked response
-	var createdData = sync_event_data.createInitialEventData(fakeResponse)
+	var createdData = sync_local_data.createInitialEventData(fakeResponse)
 
 	// write the fake initial data to a file for testing purposes
 	// data_utils.writeData(createdData, path.join( __dirname, '/fake_data/initData.json' ), function(){
@@ -166,7 +166,7 @@ describe('updateEvent', function(){
     }
   }
   console.log('made it')
-  localEvent = sync_event_data.updateEvent(localEvent,calEvent)
+  localEvent = sync_local_data.updateEvent(localEvent,calEvent)
 
 	it('should ensure all the fields of the calEvent match the fields of the local event. \
 		 This includes the fields that should have been added', function(){
@@ -224,7 +224,7 @@ describe('deleteEventById', function(){
 
 	var eventId = Object.keys(list)[0]
 
-	sync_event_data.deleteEventById(eventId,list)
+	sync_local_data.deleteEventById(eventId,list)
 
 	it('Should take a local eventId and a reference to a list containing that event \
 			 and remove the event from the list', function(){

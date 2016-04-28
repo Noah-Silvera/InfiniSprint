@@ -1,13 +1,13 @@
 var appRoot = require('app-root-path')
-var paths = require( appRoot + '\\_globals').paths
-var consts = require( appRoot + '\\_globals').consts
+var paths = require('./../utils/_globals').paths
+var consts = require('./../utils/_globals').consts
 
 var google = require('googleapis');
 var googleAuth = require('google-auth-library');
 var fs = require('fs');
 var readline = require('readline');
 var path = require('path');
-var sync_event_data = require('./sync_event_data')
+var sync_local_data = require('./sync_local_data')
 var moment = require('moment')
 
 // If modifying these scopes, delete your previously saved credentialsentials
@@ -199,7 +199,7 @@ exports.syncCalendar = function syncCalendar( callback ) {
   endDate = startDate.add(consts.sprintLength,'days')
 
   getEventsForTimeSpan( startDate, endDate, function(events){
-    sync_event_data.updateLocalData(events,callback)
+    sync_local_data.updateLocalData(events,callback)
   })
 
 }

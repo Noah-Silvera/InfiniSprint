@@ -1,6 +1,6 @@
 var appRoot = require('app-root-path')
-var paths = require( appRoot + '\\_globals').paths
-var consts = require( appRoot + '\\_globals').consts
+var paths = require('./../utils/_globals').paths
+var consts = require('./../utils/_globals').consts
 
 
 var fs = require('fs');

@@ -1,5 +1,6 @@
 var appRoot = require('app-root-path')
-var paths = require( appRoot + '\\_globals').paths
+//  appRoot + '\\_globals'
+var paths = require('./../utils/_globals').paths
 
 var fs = require('fs')
 var path = require('path')
@@ -108,24 +109,6 @@ function indexObjectById( objArr ){
     return indexedOnId
 }
 
-// UNIMPLEMENTED
-// UNTESTED
-exports.moveObjectToListIndex = moveObjectToListIndex
-/**
- * Moves an event to a given index ( 0 based ) in a listObject
- * passing -1 as the index moves the event to the bottom of the list
- * @param  {Object} object     The object in the list to move
- * @param  {Integer} index      the index to move the object in the new list
- * @param  {Object} oldListRef The old list containing the object
- * @param  {Object} newListRef the list to move the object into
- * @return {Object}            the newList with the object inserted
- */
-function moveObjectToListIndex( object, index, oldListRef,newListRef ){
-
-}
-
-writeData
-
 //  * UNTESTED - NWI
 exports.writeData = writeData
 /**
@@ -198,3 +181,4 @@ function fetchData(path,callback) {
     }
   })
 }
+
