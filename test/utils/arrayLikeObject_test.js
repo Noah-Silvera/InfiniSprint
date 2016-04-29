@@ -4,9 +4,9 @@ var data_utils = require('./../../scripts/server/data_utils')
 var fs = require('fs')
 
 
-describe('arrayLikeObject', function(){
+describe('new arrayLikeObject', function(){
     
-    var indexedData = fs.readFileSync('./test/fake_data/initData.json')
+    var indexedData = JSON.parse(fs.readFileSync('./test/fake_data/initData.json','utf-8'))
     
     
     var newEventIndexed = { 
@@ -18,10 +18,13 @@ describe('arrayLikeObject', function(){
             }
         }
     }
+   
     
     it('Should allow retrieving of an object by index', function(){
-        var sprint = arrayLikeObject(indexedData['sprint'])
-        var backlog = arrayLikeObject(indexedData['backlog'])
+        // console.log( typeof indexedData['sprint'])
+        var sprint = new arrayLikeObject(indexedData['sprint'])
+        var backlog = new arrayLikeObject(indexedData['backlog'])
+        console.log(sprint)
         
         var firstSprintItem = sprint.get(0) 
         should.exist(firstSprintItem)
@@ -55,8 +58,8 @@ describe('arrayLikeObject', function(){
     
     it('Should allow insertion of an object by index', function(){
         
-        var sprint = arrayLikeObject(indexedData['sprint'])
-        var backlog = arrayLikeObject(indexedData['backlog'])
+        var sprint = new arrayLikeObject(indexedData['sprint'])
+        var backlog = new arrayLikeObject(indexedData['backlog'])
         
         // edge case -> -1 should insert the element last in the object
         // all other negative indexes should be rejected
@@ -88,9 +91,10 @@ describe('arrayLikeObject', function(){
     })
 
     it('Should allow deletion of an object by index', function(){
+
         
-        var sprint = arrayLikeObject(indexedData['sprint'])
-        var backlog = arrayLikeObject(indexedData['backlog'])
+        var sprint = new arrayLikeObject(indexedData['sprint'])
+        var backlog = new arrayLikeObject(indexedData['backlog'])
         
         // edge case -> -1 should delete the element last in the object
         // all other negative indexes should be rejected
@@ -102,7 +106,7 @@ describe('arrayLikeObject', function(){
         
 
         
-        var deletedItem = sprint.delete(0)
+        var deletedItem = sprint.del(0)
         
         should.exist(deletedItem)
         
@@ -121,7 +125,7 @@ describe('arrayLikeObject', function(){
         // try deleting the last item in the list
 
         
-        deletedItem = sprint.delete(-1)
+        deletedItem = sprint.del(-1)
         
         should.exist(deletedItem)
         
@@ -133,7 +137,7 @@ describe('arrayLikeObject', function(){
            
         // try deleting an item in the middle of the list
            
-        deletedItem = backlog.delete(1)
+        deletedItem = backlog.del(1)
         
         should.exist(deletedItem)
         
@@ -150,8 +154,8 @@ describe('arrayLikeObject', function(){
     
     it('Should allow moving of an object to another index', function(){
         
-        var sprint = arrayLikeObject(indexedData['sprint'])
-        var backlog = arrayLikeObject(indexedData['backlog'])
+        var sprint = new arrayLikeObject(indexedData['sprint'])
+        var backlog = new arrayLikeObject(indexedData['backlog'])
         
         // edge case -> -1 should move the element to the last place in the object
         // all other negative indexes should be rejected

@@ -20,7 +20,7 @@ describe('getEventsForTimeSpan', function() {
   		should.exist(events)
 
   		// returned right data type
-  		events.should.be.an('array')
+  		events.should.be.an('array')  
 
   		// more than one event in the upcoming week ( in my calendar, this will ALWAYS be the case )
   		events.should.not.have.length(0)

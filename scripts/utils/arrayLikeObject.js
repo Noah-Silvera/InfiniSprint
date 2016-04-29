@@ -1,21 +1,28 @@
-module.exports = exports = function arrayLikeObject(obj){
-    this.obj = obj
+module.exports = function arrayLikeObject(obj){
     
-    this.length = 0
+    if( typeof obj !== typeof {}){
+        throw "did not pass an object"
+    }
+    
+    // assign all the properties from the old obj so it maintains it's indexibility
+    Object.assign(this,obj)
+    
+    this.array = []
+    
 
-
-    this.get = get
-    function get(index){
+    this.get = function get(index){
         
     }
 
-    this.insert = insert
-    function insert(object,index){
+    this.insert = function insert(object,index){
         
     }
     
-    this.move = move
-    function move(index1,index2){
+    this.del = function del(index) {
+        
+    }
+    
+    this.move = function move(index1,index2){
 
     }
 
@@ -31,14 +38,12 @@ module.exports = exports = function arrayLikeObject(obj){
      * @param  {Object} newListRef the list to move the object into
      * @return {Object}            the newList with the object inserted
      */
-    this.moveObjectToListIndex = moveObjectToListIndex
-    function moveObjectToListIndex( oldIndex, newIndex, oldListRef,newListRef ){
+    this.moveObjectToListIndex = function moveObjectToListIndex( oldIndex, newIndex, oldListRef,newListRef ){
     }
 
 
-    this.insertObjectAtListIndex = insertObjectAtListIndex
-    function insertObjectAtListIndex(){
-    console.log(" I insert an object at a list index")
+    this.insertObjectAtListIndex = function insertObjectAtListIndex(){
+     console.log(" I insert an object at a list index")
     }
 
 }
