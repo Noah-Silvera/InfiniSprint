@@ -1,9 +1,10 @@
+ var appRoot = require('app-root-path')
  var path = require('path')
  exports.paths =  {
-		'userDataPath' : path.join( __dirname, './user_data'),
-		'scriptsPath' : path.join( __dirname, './scripts'),
-		'stylesPath' : path.join( __dirname, './styles' ),
-		'testPath' : path.join( __dirname, './test' )
+		'userDataPath' : path.join( appRoot.toString(), '\\user_data'),
+		'scriptsPath' : path.join( appRoot.toString(), '\\scripts'),
+		'stylesPath' : path.join( appRoot.toString(), '\\styles' ),
+		'testPath' : path.join( appRoot.toString(), '\\test' )
 	}
 	
 exports.consts = {

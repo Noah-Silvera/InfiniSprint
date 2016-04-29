@@ -1,5 +1,5 @@
 var appRoot = require('app-root-path')
-var paths = require( appRoot + '\\_globals').paths
+var paths = require('./../../scripts/utils/_globals').paths
 
 // paths.scriptsPath + '/server' + '/data_utils'
 var data_utils = require( './../../scripts/server/data_utils' );
@@ -123,9 +123,3 @@ describe('addPropsToObject', function(){
 	})
 
 });
-
-describe('moveObjectToListIndex', function(){
-	
-	it('Should move an object around in the same list')
-})
-

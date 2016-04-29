@@ -1,15 +1,22 @@
 module.exports = exports = function arrayLikeObject(obj){
     this.obj = obj
+    
+    this.length = 0
 
 
-    this.getByIndex = getByIndex
-    function getByIndex(index){
+    this.get = get
+    function get(index){
         
     }
 
     this.insert = insert
     function insert(object,index){
         
+    }
+    
+    this.move = move
+    function move(index1,index2){
+
     }
 
     // UNIMPLEMENTED

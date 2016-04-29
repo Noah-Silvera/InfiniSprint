@@ -1,10 +1,10 @@
 var appRoot = require('app-root-path')
-var paths = require( appRoot + '\\_globals').paths
-var consts = require( appRoot + '\\_globals').consts
+var paths = require('./../../scripts/utils/_globals').paths
+var consts = require('./../../scripts/utils/_globals').consts
 
 var should = require('chai').should();
-var sync_local_data = require( paths.scriptsPath + '/server' +  '/sync_local_data')
-var data_utils = require( paths.scriptsPath + '/server' + '/data_utils')
+var sync_local_data = require('./../../scripts/server/sync_local_data')
+var data_utils = require('./../../scripts/server/data_utils')
 var fs = require('fs')
 var path = require('path')
 var moment = require('moment')
@@ -142,13 +142,13 @@ describe('updateEvent', function(){
 	// the event stored in local data
 	var localEvent =  { 
 		"02ous69h6u6h7halum2va6r3dg": {
-      "summary": "old summary",
-      "description": "old description",
-      "oldField": "old calendar field",
-      "rank": "10",
-      "start": {
-        "date": "2016-04-09"
-     	}
+		"summary": "old summary",
+		"description": "old description",
+		"oldField": "old calendar field",
+		"rank": "10",
+		"start": {
+		"date": "2016-04-09"
+		}
 		}
 	}
 
@@ -156,17 +156,17 @@ describe('updateEvent', function(){
 
 	// the event recieved as a response from google calendar
 	//  corresponding to the local data event
-  var calEvent =   {
-    "id": eventId,
-    "summary": "new summary",
-    "description" : "new description",
-    "newField": "new content",
-    "start": {
-      "date": "2016-04-10"
-    }
-  }
-  console.log('made it')
-  localEvent = sync_local_data.updateEvent(localEvent,calEvent)
+	var calEvent =   {
+		"id": eventId,
+		"summary": "new summary",
+		"description" : "new description",
+		"newField": "new content",
+		"start": {
+		"date": "2016-04-10"
+		}
+	}
+	console.log('made it')
+	localEvent = sync_local_data.updateEvent(localEvent,calEvent)
 
 	it('should ensure all the fields of the calEvent match the fields of the local event. \
 		 This includes the fields that should have been added', function(){
