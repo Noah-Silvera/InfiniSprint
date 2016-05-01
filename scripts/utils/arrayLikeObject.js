@@ -1,49 +1,132 @@
 module.exports = function arrayLikeObject(obj){
     
+    ////////////////////////////////////////////////////////////
+    ////////////// Constructor ////////////////////////////////
+    //////////////////////////////////////////////////////////
+    
     if( typeof obj !== typeof {}){
         throw "did not pass an object"
     }
     
     // assign all the properties from the old obj so it maintains it's indexibility
-    Object.assign(this,obj)
-    
-    this.array = []
-    
 
-    this.get = function get(index){
+    // Represents the current object properties
+    this.keys = keys = Object.keys(obj)
+    
+    // Assign all the given object properties to the object we are creating
+    Object.assign(this,obj) 
+    
+    this.arr = arr = []
+    this.length = length = 0
+    
+    var _this = this
+    
+    // initialize the object array
+    createArrFromObj()
+    
+    
+    ////////////////////////////////////////////////////////////
+    ////////////// Object Functions ////////////////////////////////
+    //////////////////////////////////////////////////////////
+    
+    this.createArrFromObj = createArrFromObj  
+    function createArrFromObj(){
+        // reset the array property
+        arr = []
+        
+        for( var i =0; i < keys.length; i++){
+            // push an object in the form { id : content } onto the array
+            // in the order the the properties appear in the object
+            var objToPush = {}
+            objToPush[keys[i]] = obj[keys[i]] 
+            
+            arr.push( objToPush )
+        }
+        
+        length = arr.length
         
     }
+    
+    this.createObjFromArr = createObjFromArr
+    function createObjFromArr(){
+        
+        // Delete all the old properties
+        keys.forEach(function(key){
+            delete this[key]
+        })
+        
+        keys = []
 
-    this.insert = function insert(object,index){
+        arr.forEach(function( item, index, arr ){
+            // add each new property from the array to the list of keys
+            var objKey = getObjKey(index)
+            keys.push(objKey)
+            
+            // assign a new property to the object for each property in the array
+            _this[objKey] = item[objKey]
+        })
+    }
+    
+
+    this.get = get  
+    function get(index){
+        var objKey = getObjKey(index)
+
+        return arr[index][objKey]
+    }
+    
+    // index is optional
+    // object must be in correct form, indexed by ID
+    // equivalent to adding a new property onto an arrayLikeObject
+    this.set = set  
+    function set(object,index){
+        arr[index] = object
+        createObjFromArr()
+    }
+
+    this.insert = insert  
+    function insert(object,index){
+        
+        var front = arr.slice(0,index)
+        var back = arr.slice(index)
+        
+        front.push(object)
+        
+        arr = front + back
+        
+        createObjFromArr()
         
     }
     
-    this.del = function del(index) {
+    this.del = del  
+    function del(index) {
+        
+
+        var front = arr.slice(0,index)
+        var back = arr.slice(index+1)
+
+        
+        
+        arr = front + back
+        
+        createObjFromArr()
         
     }
     
-    this.move = function move(index1,index2){
+    this.move = move  
+    function move(index1,index2){
+        
+        var obj2 = arr[index2]
+        var obj1 = arr[index1]
+        
+        this.set(obj2,index1)
+        this.set(obj1,index2)
 
     }
-
-    // UNIMPLEMENTED
-    // UNTESTED
-    /**
-     * Neccesary because I'm treating objects as lists
-     * Moves an object from oldIndex in oldListRef to newIndex in newListRef
-     * if new list ref is ommitted, the object is moved within the oldListRef
-     * @param  {Integer} oldIndex  The index of the object to move in oldListRef
-     * @param  {Integer} newIndex  The index to move the object to in newListRef
-     * @param  {Object} oldListRef The old list containing the object
-     * @param  {Object} newListRef the list to move the object into
-     * @return {Object}            the newList with the object inserted
-     */
-    this.moveObjectToListIndex = function moveObjectToListIndex( oldIndex, newIndex, oldListRef,newListRef ){
-    }
-
-
-    this.insertObjectAtListIndex = function insertObjectAtListIndex(){
-     console.log(" I insert an object at a list index")
+    
+    this.getObjKey = getObjKey  
+    function getObjKey(index){
+        return Object.keys(arr[index])[0]
     }
 
 }

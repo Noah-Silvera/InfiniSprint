@@ -29,26 +29,29 @@ describe('new arrayLikeObject', function(){
         var firstSprintItem = sprint.get(0) 
         should.exist(firstSprintItem)
         
+        console.log(typeof firstSprintItem);
+        console.log(firstSprintItem);
+        
         // check that it retrieved the correct item
-        firstSprintItem.should.deepEqual( indexedData['02ous69h6u6h7halum2va6r3dg'] )
+        firstSprintItem.should.eql( sprint['02ous69h6u6h7halum2va6r3dg'] )
 
         var firstBacklogItem = backlog.get(1) 
         should.exist(firstBacklogItem)
         
         // check that it retrieved the correct item
-        firstBacklogItem.should.deepEqual( indexedData['24734vo522s26jmlq38iipibc4'] )
+        firstBacklogItem.should.eql( backlog['24734vo522s26jmlq38iipibc4'] )
         
         var lastBacklogItem = backlog.get(-1)
         should.exist(lastBacklogItem)
         
         // check that it retrieved the correct item
-        lastBacklogItem.should.deepEqual( indexedData['3l1mr97gdfr09p3jrtshc86rd0_20160412'] )
+        lastBacklogItem.should.eql( backlog['3l1mr97gdfr09p3jrtshc86rd0_20160412'] )
         
         var lastBacklogItemDiffMethod = backlog.get(3)
         
         // check that it actually retrieved the last backlog item
         // check for no index errors with edge cases
-        lastBacklogItemDiffMethod.should.deepEqual(lastBacklogItem)
+        lastBacklogItemDiffMethod.should.eql(lastBacklogItem)
         
         // edge case -> -1 should retrieve the last element in the object
         // all other negative indexes should be rejected
@@ -68,7 +71,7 @@ describe('new arrayLikeObject', function(){
         
         sprint.insert(newEventIndexed,0)
         
-        sprint.get(0).should.deepEqual(newEventIndexed)
+        sprint.get(0).should.eql(newEventIndexed)
         
         sprint.should.have.length(3)
         
@@ -76,7 +79,7 @@ describe('new arrayLikeObject', function(){
         
         backlog.insert(newEventIndexed,1)
         
-        backlog.get(1).should.deepEqual(newEventIndexed)
+        backlog.get(1).should.eql(newEventIndexed)
         
         backlog.should.have.length(5)
         
@@ -84,7 +87,7 @@ describe('new arrayLikeObject', function(){
         
         sprint.insert(newEventIndexed,2)
         
-        sprint.get(2).should.deepEqual(newEventIndexed)
+        sprint.get(2).should.eql(newEventIndexed)
         
         sprint.should.have.length(4)
         
@@ -110,7 +113,7 @@ describe('new arrayLikeObject', function(){
         
         should.exist(deletedItem)
         
-        deletedItem.should.deepEqual(firstItem)
+        deletedItem.should.eql(firstItem)
         
         sprint.get(0).should.equal(secondItem)
         
@@ -129,7 +132,7 @@ describe('new arrayLikeObject', function(){
         
         should.exist(deletedItem)
         
-        deletedItem.should.deepEqual(lastItem)
+        deletedItem.should.eql(lastItem)
         
         backlog.get(-1).should.equal(secondLastItem)
         
@@ -141,7 +144,7 @@ describe('new arrayLikeObject', function(){
         
         should.exist(deletedItem)
         
-        deletedItem.should.deepEqual(secondItem)
+        deletedItem.should.eql(secondItem)
         
         backlog.get(0).should.equal(firstItem)
         
@@ -169,23 +172,23 @@ describe('new arrayLikeObject', function(){
         
         sprint.move(0,1)
         
-        sprint.get(0).should.deepEqual(secondItem)
-        sprint.get(1).should.deepEqual(firstItem)
+        sprint.get(0).should.eql(secondItem)
+        sprint.get(1).should.eql(firstItem)
         
         sprint.should.have.length(2)
         
         // swap items in a 2 item list
         sprint.move(0,-1)
         
-        sprint.get(0).should.deepEqual(firstItem)
-        sprint.get(1).should.deepEqual(secondItem)
+        sprint.get(0).should.eql(firstItem)
+        sprint.get(1).should.eql(secondItem)
         
         sprint.should.have.length(2)
         
         sprint.move(-1,0)
         
-        sprint.get(0).should.deepEqual(secondItem)
-        sprint.get(1).should.deepEqual(firstItem)
+        sprint.get(0).should.eql(secondItem)
+        sprint.get(1).should.eql(firstItem)
         
         sprint.should.have.length(2)
         
@@ -197,22 +200,22 @@ describe('new arrayLikeObject', function(){
         
         sprint.move(0,0)
         
-        sprint.get(0).should.deepEqual(firstItem)
-        sprint.get(1).should.deepEqual(secondItem)
+        sprint.get(0).should.eql(firstItem)
+        sprint.get(1).should.eql(secondItem)
         
         sprint.should.have.length(2)
         
         sprint.move(1,1)
         
-        sprint.get(0).should.deepEqual(firstItem)
-        sprint.get(1).should.deepEqual(secondItem)
+        sprint.get(0).should.eql(firstItem)
+        sprint.get(1).should.eql(secondItem)
         
         sprint.should.have.length(2)
         
         sprint.move(-1,-1)
         
-        sprint.get(0).should.deepEqual(firstItem)
-        sprint.get(1).should.deepEqual(secondItem)
+        sprint.get(0).should.eql(firstItem)
+        sprint.get(1).should.eql(secondItem)
         
         sprint.should.have.length(2)
         
@@ -224,14 +227,14 @@ describe('new arrayLikeObject', function(){
         // swap first and last without (-1)
         backlog.move(0,3)
         
-        backlog.get(0).should.deepEqual(lastItem)
-        backlog.get(1).should.deepEqual(firstItem)
+        backlog.get(0).should.eql(lastItem)
+        backlog.get(1).should.eql(firstItem)
         
         // swap first and last with (-1)
         backlog.move(0,-1)
         
-        backlog.get(0).should.deepEqual(firstItem)
-        backlog.get(1).should.deepEqual(lastItem)
+        backlog.get(0).should.eql(firstItem)
+        backlog.get(1).should.eql(lastItem)
         
         // swap first with middle item
         
@@ -240,8 +243,8 @@ describe('new arrayLikeObject', function(){
         
         backlog.move(0,2)
         
-        backlog.get(0).should.deepEqual(thirdItem)
-        backlog.get(2).should.deepEqual(firstItem)
+        backlog.get(0).should.eql(thirdItem)
+        backlog.get(2).should.eql(firstItem)
         
         
         // swap two middle items
@@ -251,8 +254,8 @@ describe('new arrayLikeObject', function(){
         
         backlog.move(1,2)
         
-        backlog.get(1).should.deepEqual(thirdItem)
-        backlog.get(2).should.deepEqual(secondItem)
+        backlog.get(1).should.eql(thirdItem)
+        backlog.get(2).should.eql(secondItem)
         
     })
 
