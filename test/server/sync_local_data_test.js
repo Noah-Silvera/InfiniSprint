@@ -165,7 +165,6 @@ describe('updateEvent', function(){
 		"date": "2016-04-10"
 		}
 	}
-	console.log('made it')
 	localEvent = sync_local_data.updateEvent(localEvent,calEvent)
 
 	it('should ensure all the fields of the calEvent match the fields of the local event. \

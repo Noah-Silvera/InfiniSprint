@@ -1,5 +1,5 @@
 var appRoot = require('app-root-path')
-var paths = require( appRoot + '/_globals').paths
+var paths = require( appRoot + '\utils\_globals').paths
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config'); 

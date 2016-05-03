@@ -7,7 +7,7 @@ var fs = require('fs')
 describe('new arrayLikeObject', function(){
     
     var indexedData = JSON.parse(fs.readFileSync('./test/fake_data/initData.json','utf-8'))
-    
+    this.timeout(50000)
     
     var newEventIndexed = { 
         "123123": {
@@ -24,28 +24,25 @@ describe('new arrayLikeObject', function(){
         // console.log( typeof indexedData['sprint'])
         var sprint = new arrayLikeObject(indexedData['sprint'])
         var backlog = new arrayLikeObject(indexedData['backlog'])
-        console.log(sprint)
         
         var firstSprintItem = sprint.get(0) 
-        should.exist(firstSprintItem)
-        
-        console.log(typeof firstSprintItem);
-        console.log(firstSprintItem);
+        should.exist(firstSprintItem['02ous69h6u6h7halum2va6r3dg'])
+      
         
         // check that it retrieved the correct item
-        firstSprintItem.should.eql( sprint['02ous69h6u6h7halum2va6r3dg'] )
+        firstSprintItem['02ous69h6u6h7halum2va6r3dg'].should.eql( sprint['02ous69h6u6h7halum2va6r3dg'] )
 
-        var firstBacklogItem = backlog.get(1) 
+        var firstBacklogItem = backlog.get(0) 
         should.exist(firstBacklogItem)
         
         // check that it retrieved the correct item
-        firstBacklogItem.should.eql( backlog['24734vo522s26jmlq38iipibc4'] )
+        firstBacklogItem['24734vo522s26jmlq38iipibc4'].should.eql( backlog['24734vo522s26jmlq38iipibc4'] )
         
         var lastBacklogItem = backlog.get(-1)
         should.exist(lastBacklogItem)
         
         // check that it retrieved the correct item
-        lastBacklogItem.should.eql( backlog['3l1mr97gdfr09p3jrtshc86rd0_20160412'] )
+        lastBacklogItem['3l1mr97gdfr09p3jrtshc86rd0_20160412'].should.eql( backlog['3l1mr97gdfr09p3jrtshc86rd0_20160412'] )
         
         var lastBacklogItemDiffMethod = backlog.get(3)
         
@@ -69,11 +66,15 @@ describe('new arrayLikeObject', function(){
         
         // insert in the first place
         
+        
+        // Get the content of the new event
+        var newEventContent = newEventIndexed[Object.keys(newEventIndexed)[0]]
+        
         sprint.insert(newEventIndexed,0)
         
         sprint.get(0).should.eql(newEventIndexed)
         
-        sprint.should.have.length(3)
+        sprint.length().should.equal(3)
         
         // insert in the second place
         
@@ -81,7 +82,7 @@ describe('new arrayLikeObject', function(){
         
         backlog.get(1).should.eql(newEventIndexed)
         
-        backlog.should.have.length(5)
+        backlog.length().should.equal(5)
         
         // insert in the last place
         
@@ -89,7 +90,7 @@ describe('new arrayLikeObject', function(){
         
         sprint.get(2).should.eql(newEventIndexed)
         
-        sprint.should.have.length(4)
+        sprint.length().should.equal(4)
         
     })
 
@@ -113,30 +114,30 @@ describe('new arrayLikeObject', function(){
         
         should.exist(deletedItem)
         
-        deletedItem.should.eql(firstItem)
+        deletedItem[Object.keys(deletedItem)[0]].should.eql(firstItem)
         
-        sprint.get(0).should.equal(secondItem)
+        sprint.get(0).should.eql(secondItem)
         
-        sprint.should.have.length(1)
+        sprint.length().should.equal(1)
         
         firstItem = backlog.get(0)
         secondItem = backlog.get(1)
         var lastItem = backlog.get(-1)
-        var secondLastItem = backlog.get(3)
+        var secondLastItem = backlog.get(2)
         
         
         // try deleting the last item in the list
 
         
-        deletedItem = sprint.del(-1)
+        deletedItem = backlog.del(-1)
         
         should.exist(deletedItem)
         
-        deletedItem.should.eql(lastItem)
+        deletedItem[Object.keys(deletedItem)[0]].should.eql(lastItem)
         
-        backlog.get(-1).should.equal(secondLastItem)
+        backlog.get(-1).should.eql(secondLastItem)
         
-        backlog.should.have.length(3)
+        backlog.length().should.equal(3)
            
         // try deleting an item in the middle of the list
            
@@ -144,13 +145,13 @@ describe('new arrayLikeObject', function(){
         
         should.exist(deletedItem)
         
-        deletedItem.should.eql(secondItem)
+        deletedItem[Object.keys(deletedItem)[0]].should.eql(secondItem)
         
-        backlog.get(0).should.equal(firstItem)
+        backlog.get(0).should.eql(firstItem)
         
-        backlog.get(0).should.equal(secondLastItem)
+        backlog.get(1).should.eql(secondLastItem)
         
-        backlog.should.have.length(2)
+        backlog.length().should.equal(2)
         
 
     })
@@ -175,7 +176,7 @@ describe('new arrayLikeObject', function(){
         sprint.get(0).should.eql(secondItem)
         sprint.get(1).should.eql(firstItem)
         
-        sprint.should.have.length(2)
+        sprint.length().should.equal(2)
         
         // swap items in a 2 item list
         sprint.move(0,-1)
@@ -183,14 +184,14 @@ describe('new arrayLikeObject', function(){
         sprint.get(0).should.eql(firstItem)
         sprint.get(1).should.eql(secondItem)
         
-        sprint.should.have.length(2)
+        sprint.length().should.equal(2)
         
         sprint.move(-1,0)
         
         sprint.get(0).should.eql(secondItem)
         sprint.get(1).should.eql(firstItem)
         
-        sprint.should.have.length(2)
+        sprint.length().should.equal(2)
         
         
         // perform operations that should not change the list
@@ -203,21 +204,21 @@ describe('new arrayLikeObject', function(){
         sprint.get(0).should.eql(firstItem)
         sprint.get(1).should.eql(secondItem)
         
-        sprint.should.have.length(2)
+        sprint.length().should.equal(2)
         
         sprint.move(1,1)
         
         sprint.get(0).should.eql(firstItem)
         sprint.get(1).should.eql(secondItem)
         
-        sprint.should.have.length(2)
+        sprint.length().should.equal(2)
         
         sprint.move(-1,-1)
         
         sprint.get(0).should.eql(firstItem)
         sprint.get(1).should.eql(secondItem)
         
-        sprint.should.have.length(2)
+        sprint.length().should.equal(2)
         
         // swap first and last items in a larger list
         
@@ -228,13 +229,13 @@ describe('new arrayLikeObject', function(){
         backlog.move(0,3)
         
         backlog.get(0).should.eql(lastItem)
-        backlog.get(1).should.eql(firstItem)
+        backlog.get(3).should.eql(firstItem)
         
         // swap first and last with (-1)
         backlog.move(0,-1)
         
         backlog.get(0).should.eql(firstItem)
-        backlog.get(1).should.eql(lastItem)
+        backlog.get(-1).should.eql(lastItem)
         
         // swap first with middle item
         
@@ -256,6 +257,24 @@ describe('new arrayLikeObject', function(){
         
         backlog.get(1).should.eql(thirdItem)
         backlog.get(2).should.eql(secondItem)
+        
+    })
+    
+    it('Should allow retrieving of a numeric index by Id', function(){
+        var backlog = new arrayLikeObject(indexedData['backlog'])
+    
+        var idsInOrder =   ['24734vo522s26jmlq38iipibc4',
+                            '4d3hhpae0ftsqh6ns2dqo86rm4_20160410',
+                            'eftipnbkcm845foa8t05b80mvs',
+                            '3l1mr97gdfr09p3jrtshc86rd0_20160412']
+                
+        for(var i =0; i < idsInOrder.length; i++){
+            var curId = idsInOrder[i]
+
+            should.exist(backlog.getIndex(curId))
+            backlog.getIndex(curId).should.equal(i)
+        }
+
         
     })
 
