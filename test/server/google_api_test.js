@@ -1,4 +1,3 @@
-var appRoot = require('app-root-path')
 var paths = require('./../../scripts/utils/_globals').paths
 
 
@@ -62,5 +61,32 @@ describe('getEventsForTimeSpan', function() {
   		});
   	});  	
   });
-
+  
 });
+
+describe('createCalEvent', function(){
+	
+	it('Should take in a obj with fields applicable to \
+		google calendar and use the calendar API to make a new event', function(){
+       
+	   google_api.createEvent({
+		   	summary : 'Programmatic events',
+		   	description : 'I created this',
+		   	invalidProp : 'this should not cause an error',
+		   	start : {
+				date : '2016-04-09'
+			},
+			end: {
+				date: '2016-04-10'
+    		},
+	   })
+	   
+	})
+	
+})
+
+describe('deleteCalEvent', function(){
+	it('Should delete an event from the remote calendar using a given id', function(){
+        'test'.should.equal('not implemented')
+	})
+})

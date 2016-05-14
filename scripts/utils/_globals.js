@@ -1,16 +1,29 @@
- var appRoot = require('app-root-path')
+ var appRoot = './'
  var path = require('path')
+ 
  exports.paths =  {
-		'userDataPath' : path.join( appRoot.toString(), '\\user_data'),
-		'scriptsPath' : path.join( appRoot.toString(), '\\scripts'),
-		'stylesPath' : path.join( appRoot.toString(), '\\styles' ),
-		'testPath' : path.join( appRoot.toString(), '\\test' )
+		'userDataPath' : path.join( appRoot, 'user_data'),
+		'scriptsPath' : path.join( appRoot, 'scripts'),
+		'stylesPath' : path.join( appRoot, 'styles' ),
+		'testPath' : path.join( appRoot, 'test' )
 	}
 	
 exports.consts = {
 		'sprintLength': 7,
+		// props not to delete from local
+		// event data even though they don't exist in
+		// google calendar data
 		'eventPropWhiteList': ['rank'],
+		// props to that shouldn't be added from google
+		// calendar event data into the local data
 		'eventPropBlackList': ['id'],
 	}
+	
+exports.config = {
+	// Forces a refresh on every load of the data
+	// even if the data already exists
+	'hardRefresh' : true,
+	'logResponses' : true
+}
 
 

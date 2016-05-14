@@ -28,9 +28,10 @@ export default class ActionList extends Component {
     this.state = { 'actions' : this.props.actions }
 	}
 
-
-  // assumes the items are both in a ActionList
-  // NOT SWAPPING RANK SWAPPING ID'S DOING IT WRONG
+  /**
+   * @param  {any} dropItem The element that represents the item
+   *                        the dragItem was dropped on 
+   */
   swapActionItems = (dropItem) => {
 
   	var dragItemObj = this.props.dragItem
@@ -52,8 +53,8 @@ export default class ActionList extends Component {
     ActionList.setPropByDataId(dropItemObj,'rank', dragRank, dropItem.getAttribute('data-id') )
     
   	console.log('dispatching drag item update events')
-  	this.props.socket.emit('updateEvent', { 'event': dragItemObj, 'list' : dropItemListId  } )
-  	this.props.socket.emit('updateEvent', { 'event': dropItemObj, 'list' : dropItemListId } )
+  	this.props.socket.emit('updateEvents', { 'event': dropItemObj, 'list' : dropItemListId } )
+  	this.props.socket.emit('updateEvents', { 'event': dragItemObj, 'list' : dropItemListId  } )
 
   }
 

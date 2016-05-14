@@ -1,6 +1,7 @@
-var appRoot = require('app-root-path')
 var paths = require('./../utils/_globals').paths
 var consts = require('./../utils/_globals').consts
+var config = require('./../utils/_globals').config
+
 
 var google = require('googleapis');
 var googleAuth = require('google-auth-library');
@@ -9,6 +10,7 @@ var readline = require('readline');
 var path = require('path');
 var sync_local_data = require('./sync_local_data')
 var moment = require('moment')
+var w = require('winston').loggers.get('main')
 
 // If modifying these scopes, delete your previously saved credentialsentials
 // at ~/.credentials/calendar-nodejs-quickstart.json
@@ -33,7 +35,7 @@ function getAuth(callback) {
   // Load client secrets from a local file.
   fs.readFile( path.join( paths.userDataPath, '/client_secret.json'), function processClientSecrets(err, content) {
     if (err) {
-      console.log('Error loading client secret file: ' + err);
+      w.log('Error loading client secret file: ' + err);
       return;
     }
     // Authorize a client with the loaded credentials, then call the
@@ -81,7 +83,7 @@ function getNewToken(oauth2Client, callback) {
     access_type: 'offline',
     scope: SCOPES
   });
-  console.log('Authorize this app by visiting this url: ', authUrl);
+  w.log('Authorize this app by visiting this url: ', authUrl);
   var rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -90,7 +92,7 @@ function getNewToken(oauth2Client, callback) {
     rl.close();
     oauth2Client.getToken(code, function(err, token) {
       if (err) {
-        console.log('Error while trying to retrieve access token', err);
+        w.log('Error while trying to retrieve access token', err);
         return;
       }
       oauth2Client.credentials = token;
@@ -114,7 +116,7 @@ function storeToken(token) {
     }
   }
   fs.writeFile(TOKEN_PATH, JSON.stringify(token));
-  console.log('Token stored to ' + TOKEN_PATH);
+  w.log('Token stored to ' + TOKEN_PATH);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -123,15 +125,64 @@ function storeToken(token) {
 
 // UNIMPLEMENTED
 // UNTESTED
-
 exports.deleteEvent = deleteEvent
 /**
  * Deletes an event from the remote google calendar
  * @param  {any} eventId Id of the event to delete
  */
 function deleteEvent(eventId){
-// stiuff goes here
+// stuff goes here
 }
+
+// UNTESTED
+exports.createEvent = createEvent
+/** 
+ * Should take in a obj with fields applicable to 
+ * google calendar and use the calendar API to make a new event
+ * @param  {any} object
+ */
+function createEvent(auth,object,callback){
+  var calendar = google.calendar('v3');
+
+  var event = {};
+  
+  // valid properties for a google calendar event
+  var eventPropWhiteList = ['summary','location','description','start','end','recurrence','attendees','reminders']
+  
+  
+  // cycle through all the properties in the event given
+  for( var prop in object){
+    // ensure they are valid properties for a google calender event
+    if( eventPropWhiteList[prop] ){
+      // add every valid property to the event object
+      event[prop] = object[prop]
+    }
+  }
+
+  calendar.events.insert({
+    auth: auth,
+    calendarId: 'primary',
+    resource: event,
+  }, function(err, event) {
+    if (err) {
+      w.log('error','There was an error contacting the Calendar service: ' + err);
+      return;
+    }
+    w.log('info','Event created: %s', event.htmlLink);
+    callback(event)
+  });
+}
+
+// UNIMPLEMENTED
+// UNTESTED
+exports.updateEvent = updateEvent
+/**
+ * @param  {any} Should take in an obj with an id and fields applicable to the calendar API to update
+ */
+function updateEvent(event){
+
+}
+
 
 
 exports.getEventsForTimeSpan = getEventsForTimeSpan
@@ -148,11 +199,11 @@ function getEventsForTimeSpan( startDate, endDate, callback ) {
 
   var timeMin = startDate.startOf('day')
   var timeMax = endDate.endOf('day')
-  // console.log('getting events from'.trim())
-  // console.log(timeMin.format().trim())
-  // console.log("to ->".trim())
-  // console.log(timeMax.format().trim())
-  // console.log("...")
+  // w.log('info','getting events from'.trim())
+  // w.log('info',timeMin.format().trim())
+  // w.log('info',"to ->".trim())
+  // w.log('info',timeMax.format().trim())
+  // w.log('info',"...")
 
   getAuth( function (auth) {
     // middleman function allows us to pass the events gathered from list events into a callback
@@ -178,12 +229,30 @@ function listEvents(auth, startDate, endDate, callback) {
     singleEvents: true,
     orderBy: 'startTime'
   }, function(err, response) {
+    
+    w.log('debug','Google API request')
+    w.log('debug','calendar.events.list({\n\
+                    auth: auth,\n\
+                    calendarId: "primary",\n\
+                    timeMin: startDate.toISOString(),\n\
+                    timeMax: endDate.toISOString(),\n\
+                    maxResults: 250, // this is the default value\n\
+                    singleEvents: true,\n\
+                    orderBy: "startTime"\n\
+                  }')
+    w.log('debug', 'Google API Response')
+    w.log('debug',response)
+    
     if (err) {
-      console.log('The API returned an error: ' + err);
-      console.log('Could not retrieve events. Possibly authorization problems. Check your client secret')
+      w.log('error','The API returned an error: ');
+      w.log('error',err)
+      w.log('error','Could not retrieve events. Possibly authorization problems. Check your client secret')
+
       throw err
     }
+    
     var events = response.items;
+
     return callback(events)
   });
 }
@@ -199,7 +268,7 @@ exports.syncCalendar = function syncCalendar( callback ) {
   endDate = startDate.add(consts.sprintLength,'days')
 
   getEventsForTimeSpan( startDate, endDate, function(events){
-    sync_local_data.updateLocalData(events,callback)
+    sync_local_data.updateData(events,callback)
   })
 
 }

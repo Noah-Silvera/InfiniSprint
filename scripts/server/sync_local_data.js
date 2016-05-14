@@ -1,40 +1,28 @@
-var appRoot = require('app-root-path')
 var paths = require('./../utils/_globals').paths
 var consts = require('./../utils/_globals').consts
-
+var config = require('./../utils/_globals').config
 
 var fs = require('fs');
 var path = require('path')
 var moment = require('moment')
 var data_utils = require('./data_utils')
 var google_api = require( "./google_api")
-
-// UNTESTED
-
-/**
- * Fetchs the local event data so it can be 
- * quickly processed as JSON
- * @param  {any} callback
- * @return {callback(data)}
- */
-function fetchLocalData (callback){
-  return data_utils.fetchData( ( paths.userDataPath + "/events.json" ), callback )
-}
+var w = require('winston').loggers.get('main')
   
 // UNIMPLEMENTED
 // UNTESTED
-exports.updateLocalData = updateLocalData
+exports.updateData = updateData
 /**
  * using an events object, updates the locally stored data in a JSON text file
  * See inside for detailed rules
  * @param  {Array}   events   Array of event objects returned from google calendar
  * @return {callback} 
  */
-function updateLocalData (events, callback) {
+function updateData (events, callback) {
   var dataFileName = 'events.json'
   var dataFilePath = path.join( paths.userDataPath + dataFileName )
 
-  console.log('updating local data....')
+  w.log('info','updating local data....')
 
   // purge uneccesary data for quick read / writes
   var propsToKeep = ['summary','description','id','start']
@@ -55,20 +43,23 @@ function updateLocalData (events, callback) {
  */
 function processCalendarResponse(events, dataFilePath, callback){
  // see if the event data file already exists
+//  Or if we are set to hard refresh on each calendar grab
   fs.access( dataFilePath, fs.F_OK, function(err) {
-    if(err) {
+    if(err || config.hardRefresh ) {
       // no updates to perform
-      console.log('event data does not exist')
+      w.log('info','event data does not exist')
 
       // If file doesn't exist
       // chunk the event data into sprint | backlog 
       var initData = createInitialEventData(events)
       // write this to a file
+      w.log('info','writing new local data...')
       data_utils.writeData(initData,dataFilePath,callback)
     } else {
       // perform updates to the local data
 
       applyCalendarUpdates(events, function(updatedData, dataFilePath, callback){
+        w.log('info','over-writing local data')
         data_utils.writeData(updatedData,dataFilePath,callback)
       })
     }
@@ -89,7 +80,8 @@ function applyCalendarUpdates(events, dataFilePath, callback){
     } else {
       var curCalEventData = JSON.parse(content)
 
-      console.log( "curCalEventData keys " + Object.keys(curCalEventData) )
+      w.log("info","curCalEventData keys " )
+      w.log("info", Object.keys(curCalEventData) )
 
       // iterate over each of the events returned from the google calender API
       for (var calEvent in events){
@@ -109,7 +101,7 @@ function applyCalendarUpdates(events, dataFilePath, callback){
           // If the calender event exists in the local event data somewhere
           if( localEvent !== undefined ){
             // update the events data
-            localEvent = updateEvent(localEvent,calEvent)
+            localEvent = updateLocalEvents(localEvent,calEvent)
 
             // we are in the sprint ( this is name of sprint category independent )
             if( listIndex === 0 ){
@@ -166,7 +158,6 @@ function applyCalendarUpdates(events, dataFilePath, callback){
 }
 
 
-// UNTESTED
 exports.createInitialEventData = createInitialEventData
 /**
  * If we haven't retrieved event data for the user before, 
@@ -238,7 +229,7 @@ function createInitialEventData(events){
 }
 
 
-exports.updateEvent = updateEvent
+exports.updateLocalEvents = updateLocalEvents
 /**
  * using the google calender event response, this function
  * updates the data referencing that event with the new data from the response
@@ -248,7 +239,7 @@ exports.updateEvent = updateEvent
  * @param  {Object} calEvent      a reference to a calendar event object returned from google calendar
  * @return {Object}               the updated localEventRef
  */
-function updateEvent(oldEvent,newEvent,callback){
+function updateLocalEvents(oldEvent,newEvent,callback){
   var whiteList = consts.eventPropWhiteList
   var blackList = consts.eventPropBlackList
   // gets the actual properties under the ID property made for indexing
@@ -312,7 +303,6 @@ function updateEvent(oldEvent,newEvent,callback){
 }
 
 
-// UNTESTED
 exports.deleteEventById = deleteEventById
 /**
  * deletes the event eventRef from the data referenced by dataRef
@@ -331,5 +321,13 @@ function deleteEventById(eventId,objListRef,callback){
   }
 }
 
-
+exports.wipeData = wipeData
+/**
+ * Wipes all the user data from the server
+ * @param  {any} callback
+ */
+function wipeData(callback){
+  w.log('info','Wiping all user data...')
+  fs.rmdir( paths.userDataPath,callback)
+}
 

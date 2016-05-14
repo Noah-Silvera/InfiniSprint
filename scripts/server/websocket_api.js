@@ -1,4 +1,3 @@
-var appRoot = require('app-root-path')
 var paths = require('./../utils/_globals').paths
 
 
@@ -6,6 +5,7 @@ var socketio = require('socket.io')
 var google_api = require('./google_api')
 var data_utils = require('./data_utils')
 var sync_local_data = require('./sync_local_data');
+var w = require('winston').loggers.get('main')
 var join = require('path').join
 
 exports.initializeWebsockets = initializeWebsockets 
@@ -17,7 +17,7 @@ function initializeWebsockets(callback){
 	// create websocket infrastrcture
 	
 	var io = socketio.listen(80)
-	console.log("listening for socket requests on localhost:80")
+	w.log('info',"listening for socket requests on localhost:80")
 	return setUpListeners(io,callback)
 }
 
@@ -31,34 +31,34 @@ function initializeWebsockets(callback){
  * @return {callback} callback called with no args
  */
 function setUpListeners(io,callback){
-	console.log('setting up listeners')
+	w.log('info','setting up listeners')
 
 	io.on('connection', function(socket){
-	  console.log("new connection")
+	  w.log('info',"new connection")
 
 	  socket.on('refreshData', function() {
-	  	console.log('refreshing data...')
+	  	w.log('info','refreshing data...')
 	    // once the data has been updated locally, this function fires off the data in a eventsUpdated event
 	    return refreshData(socket)
 	  });
 
-	  socket.on('updateEvent', function(event) {
-  		console.log('updating event...')
-  		return sync_local_data.updateEvent( {},{}, function(){
-	  	  socket.emit('dataUpdated',{})
+	  socket.on('updateEvents', function(event) {
+  		w.log('info', 'updating event...')
+  		return sync_local_data.updateLocalEvents( {},{}, function(){
+	  	  socket.emit('eventsUpdated',{})
   		});
 	  })
 
 	  socket.on('deleteEvent', function( event) {
-  		console.log('deleting event...')
+  		w.log('info','deleting event...')
   		return sync_local_data.deleteEventById({},{}, function(){
-  			socket.emit('dataUpdated',{})
+  			socket.emit('eventDeleted',{})
   		})
 	  })
 
 	});
 
-	return callback()
+	return callback(io)
 };
 
   //----------------------------------------------------------------------------------------------------//
@@ -75,16 +75,16 @@ exports.refreshData = refreshData
  */
 function refreshData(socket) {
   
-  console.log("retrieving events from google....");
+  w.log('info',"retrieving events from google....");
   // syncs the networks google cal events to a local file
    google_api.syncCalendar( 
     // fetched that local file with the changes
     function() {
     	var eventsToFetch = join( paths.userDataPath, '/events.json' )
-    	sync_local_data.fetchLocalEvents( eventsToFetch ,  function emitEventData(data,socket) {
-        socket.emit('dataUpdated', data)
-        console.log('Sent local event data to client')
-      }, socket ) 
+    	data_utils.fetchData( eventsToFetch ,  function emitEventData(data) {
+        socket.emit('eventsUpdated', data)
+        w.log('info','Sent local event data to client')
+      })
      }
   );
 }

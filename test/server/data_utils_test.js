@@ -1,4 +1,3 @@
-var appRoot = require('app-root-path')
 var paths = require('./../../scripts/utils/_globals').paths
 
 // paths.scriptsPath + '/server' + '/data_utils'

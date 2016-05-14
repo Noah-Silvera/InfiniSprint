@@ -53,6 +53,7 @@ module.exports = {
     extensions: ['', '.js']
   },
   devtool: 'source-map',
+  stats : 'errors-only',
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin({

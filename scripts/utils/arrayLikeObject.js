@@ -31,11 +31,19 @@ module.exports = function arrayLikeObject(obj){
     //////////////////////////////////////////////////////////
     
     this.length = length
+    /**
+     * @return the length of the array representation of the object
+     */
     function length(){
         return _this.arr.length
     }
     
     this.createArrFromObj = createArrFromObj  
+    /**
+     * takes the an object in the appropiate form and 
+     * sets the array of this object to the array 
+     * representation of the object given
+     */
     function createArrFromObj(){
         // reset the array property
         _this.arr = []
@@ -53,6 +61,11 @@ module.exports = function arrayLikeObject(obj){
     }
     
     this.createObjFromArr = createObjFromArr
+    /**
+     * takes the an array in the appropiate form and 
+     * sets the object of this to the object 
+     * representation of the array given
+     */
     function createObjFromArr(){
         
         // Delete all the old properties
@@ -74,6 +87,12 @@ module.exports = function arrayLikeObject(obj){
     
 
     this.get = get  
+    /**
+     * Gets a item from the array representation
+     * of the object by index
+     * @param  {Integer} index
+     * @return {Integer} the length of the array representation
+     */
     function get(index){
         
         if( index === -1){
@@ -91,6 +110,13 @@ module.exports = function arrayLikeObject(obj){
     // object must be in correct form, indexed by ID
     // equivalent to adding a new property onto an arrayLikeObject
     this.set = set  
+    
+    /**
+     * Sets the given object to the location in the 
+     * data structure at 'index'
+     * @param  {Object} object
+     * @param  {Integer} index index of the array representation to overide with the given object
+     */
     function set(object,index){
         
         if( index === -1){
@@ -192,6 +218,8 @@ module.exports = function arrayLikeObject(obj){
             
         }
     }
+    
+    
    
 
 }

@@ -1,9 +1,9 @@
-var appRoot = require('app-root-path')
-//  appRoot + '\\_globals'
 var paths = require('./../utils/_globals').paths
 
 var fs = require('fs')
 var path = require('path')
+
+var w = require('winston').loggers.get('main')
 
 exports.purgeProperties = purgeProperties
 /**
@@ -58,7 +58,7 @@ function addPropsToObject(target,newProps){
 }
 
 
-// UNTESTED - Tested by overall black box 
+// UNTESTED-Tested by overall black box 
 exports.convertSimpleArrayToObject = convertSimpleArrayToObject
 /**
 * Converts a simple array in the form of
@@ -83,7 +83,7 @@ function convertSimpleArrayToObject( simpleArray ){
 }
 
 
-// UNTESTED - Tested by overall black box
+// UNTESTED-Tested by overall black box
 exports.indexObjectById = indexObjectById
 /**
  * indexObjectById Converts a array of javascript objects to an object with
@@ -109,23 +109,8 @@ function indexObjectById( objArr ){
     return indexedOnId
 }
 
-// UNIMPLEMENTED
-// UNTESTED
-/**
- * Neccesary because I'm treating objects as lists
- * Moves an object from oldIndex in oldListRef to newIndex in newListRef
- * if new list ref is ommitted, the object is moved within the oldListRef
- * @param  {Integer} oldIndex  The index of the object to move in oldListRef
- * @param  {Integer} newIndex  The index to move the object to in newListRef
- * @param  {Object} oldListRef The old list containing the object
- * @param  {Object} newListRef the list to move the object into
- * @return {Object}            the newList with the object inserted
- */
-this.moveObjectToListIndex = function moveObjectToListIndex( oldIndex, newIndex, oldListRef,newListRef ){
-}
 
-
-//  * UNTESTED - NWI
+//  * UNTESTED-NWI
 exports.writeData = writeData
 /**
  * ensures data is in a serializable format, then
@@ -163,7 +148,7 @@ function writeData(data,filePath,callback){
         } else {
           fs.close(fd,function(){
             // apply all arguments given after the callback function to the callback, with the data function first
-            var args = [data] + Array.prototype.slice.call(arguments).slice(numberOfArgs)
+            var args = [data].concat(Array.prototype.slice.call(arguments).slice(numberOfArgs))
             return callback.apply(this,args)
           })
         }
@@ -172,7 +157,7 @@ function writeData(data,filePath,callback){
   });
 }
 
-// UNTESTED - NWI
+// UNTESTED-NWI
 exports.fetchData = fetchData
 /**
 // Fetches any text data from a path
@@ -183,7 +168,7 @@ exports.fetchData = fetchData
  */
 function fetchData(path,callback) {
   var numberOfArgs = 2
-  console.log("retrieving local data copy....")
+  w.log("info","retrieving local data copy....")
   
   fs.readFile(path, function(err,data){
     if(err){

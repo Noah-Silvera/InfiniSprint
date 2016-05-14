@@ -1,8 +1,8 @@
-var appRoot = require('app-root-path')
 var paths = require('./../../scripts/utils/_globals').paths
 var consts = require('./../../scripts/utils/_globals').consts
 
 var should = require('chai').should();
+
 var sync_local_data = require('./../../scripts/server/sync_local_data')
 var data_utils = require('./../../scripts/server/data_utils')
 var fs = require('fs')
@@ -133,7 +133,7 @@ describe('createInitialEventData', function() {
 
 });
 
-describe('updateEvent', function(){
+describe('updateLocalEvents', function(){
 
 	// the properties maintained locally by the app that should be removed
 	var whiteList = consts.eventPropWhiteList
@@ -165,7 +165,7 @@ describe('updateEvent', function(){
 		"date": "2016-04-10"
 		}
 	}
-	localEvent = sync_local_data.updateEvent(localEvent,calEvent)
+	localEvent = sync_local_data.updateLocalEvents(localEvent,calEvent)
 
 	it('should ensure all the fields of the calEvent match the fields of the local event. \
 		 This includes the fields that should have been added', function(){

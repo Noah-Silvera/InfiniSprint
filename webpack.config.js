@@ -58,6 +58,7 @@ module.exports = {
   resolve: {
     extensions: ['', '.js']
   },
+  stats : 'errors-only',
   devtool: 'eval-source-map',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

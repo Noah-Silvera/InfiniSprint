@@ -1,0 +1,18 @@
+{"level":"error","message":"hello winston","timestamp":"2016-05-12T03:12:22.443Z"}
+{"level":"info","message":"starting server","timestamp":"2016-05-12T03:12:22.466Z"}
+{"level":"info","message":"Listening at localhost:5000","timestamp":"2016-05-12T03:12:22.634Z"}
+{"level":"error","message":"hello winston","timestamp":"2016-05-12T03:15:38.873Z"}
+{"level":"info","message":"starting server","timestamp":"2016-05-12T03:15:38.898Z"}
+{"level":"info","message":"Listening at localhost:5000","timestamp":"2016-05-12T03:15:39.047Z"}
+{"level":"info","message":"starting server","timestamp":"2016-05-12T03:16:21.403Z"}
+{"level":"info","message":"Listening at localhost:5000","timestamp":"2016-05-12T03:16:21.564Z"}
+{"level":"info","message":"starting server","timestamp":"2016-05-12T03:17:39.999Z"}
+{"level":"info","message":"Listening at localhost:5000","timestamp":"2016-05-12T03:17:40.191Z"}
+{"level":"info","message":"starting server","timestamp":"2016-05-12T03:20:04.300Z"}
+{"level":"info","message":"Listening at localhost:5000","timestamp":"2016-05-12T03:20:04.458Z"}
+{"level":"info","message":"starting server","timestamp":"2016-05-12T03:20:57.672Z"}
+{"level":"info","message":"Listening at localhost:5000","timestamp":"2016-05-12T03:20:57.854Z"}
+{"level":"info","message":"starting server","timestamp":"2016-05-12T03:22:54.618Z"}
+{"level":"info","message":"Listening at localhost:5000","timestamp":"2016-05-12T03:22:54.776Z"}
+{"level":"info","message":"starting server","timestamp":"2016-05-12T03:24:54.471Z"}
+{"level":"info","message":"Listening at localhost:5000","timestamp":"2016-05-12T03:24:54.639Z"}
