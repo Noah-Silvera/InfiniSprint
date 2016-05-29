@@ -5,7 +5,6 @@ var socketio = require('socket.io')
 var google_api = require('./google_api')
 var data_utils = require('./data_utils')
 var sync_local_data = require('./sync_local_data');
-var w = require('winston').loggers.get('main')
 var join = require('path').join
 
 exports.initializeWebsockets = initializeWebsockets 
@@ -17,7 +16,7 @@ function initializeWebsockets(callback){
 	// create websocket infrastrcture
 	
 	var io = socketio.listen(80)
-	w.log('info',"listening for socket requests on localhost:80")
+	w.info("listening for socket requests on localhost:80")
 	return setUpListeners(io,callback)
 }
 

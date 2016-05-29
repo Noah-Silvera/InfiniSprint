@@ -3,25 +3,14 @@ var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config'); 
 var socketio = require('socket.io');
-var winston = require('winston')
+var log = require('./scripts/utils/log_setup')
 
 var initializeWebsockets = require('./scripts/server/websocket_api').initializeWebsockets;
 
 // set up loggin with winston
 
-winston.loggers.add('main', {
-     
-    console: {
-      level: 'error',
-      colorize: true,
-    },
-    file: {
-      level: 'silly',
-      filename: './logs/log.txt'
-    }
-  });
+log.init()
 
-var w = winston.loggers.get('main')
 
   //----------------------------------------------------------------------------------------------------//
  ///////////////////////////// START THE SERVER /////////////////////////////

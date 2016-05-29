@@ -3,7 +3,6 @@ var paths = require('./../utils/_globals').paths
 var fs = require('fs')
 var path = require('path')
 
-var w = require('winston').loggers.get('main')
 
 exports.purgeProperties = purgeProperties
 /**

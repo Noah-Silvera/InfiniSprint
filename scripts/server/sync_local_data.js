@@ -7,8 +7,7 @@ var path = require('path')
 var moment = require('moment')
 var data_utils = require('./data_utils')
 var google_api = require( "./google_api")
-var w = require('winston').loggers.get('main')
-  
+
 // UNIMPLEMENTED
 // UNTESTED
 exports.updateData = updateData
