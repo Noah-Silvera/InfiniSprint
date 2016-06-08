@@ -15,7 +15,7 @@ define(['react'], function (React) {
         function Header(props) {
             _classCallCheck(this, Header);
 
-            return _possibleConstructorReturn(this, Object.getPrototypeOf(Header).call(this, propsU));
+            return _possibleConstructorReturn(this, Object.getPrototypeOf(Header).call(this, props));
         }
 
         _createClass(Header, [{

@@ -8,7 +8,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-define(['react', 'components/ActionList', 'components/Header', 'components/Heading'], function (React, ActionList, Header, Heading) {
+define(['react', 'react-dom', 'components/ActionList', 'components/Header', 'components/Heading', 'socket-io'], function (React, ReactDOM, ActionList, Header, Heading, io) {
 
     // This frame represents the main
     // component of the app - the frame that renders the backlog and sprint items
@@ -24,7 +24,7 @@ define(['react', 'components/ActionList', 'components/Header', 'components/Headi
 
             var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Frame).call(this, props));
 
-            _this.socket = io.connect('http://localhost:80'); // io is imported in index.html   
+            _this.socket = io('http://localhost:80'); // io is imported in index.html   
             _this.dragItemEvent = null;
             _this.dragItemObj = null;
             if (!_this.socket) {

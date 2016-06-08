@@ -1,6 +1,6 @@
 
   
-define(['react','components/ActionList','components/Header','components/Heading'], function(React,ActionList,Header,Heading) {
+define(['react','react-dom','components/ActionList','components/Header','components/Heading','socket-io'], function(React,ReactDOM,ActionList,Header,Heading,io) {
 
     // This frame represents the main 
     // component of the app - the frame that renders the backlog and sprint items
@@ -11,7 +11,7 @@ define(['react','components/ActionList','components/Header','components/Heading'
     return class Frame extends React.Component {
         constructor(props){
             super(props);
-            this.socket = io.connect('http://localhost:80'); // io is imported in index.html    
+            this.socket = io('http://localhost:80'); // io is imported in index.html    
             this.dragItemEvent = null
             this.dragItemObj = null
             if( !this.socket ){

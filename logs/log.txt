@@ -116,3 +116,45 @@
 {"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-08T05:21:13.154Z"}
 {"level":"info","message":"setting up listeners","timestamp":"2016-06-08T05:21:13.158Z"}
 {"level":"info","message":"starting server","timestamp":"2016-06-08T05:21:13.159Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T05:56:13.481Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T05:56:19.945Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T05:56:29.689Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T05:56:45.266Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T05:56:58.510Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T05:58:33.754Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T05:58:44.533Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T05:58:53.707Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-08T06:03:28.667Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-08T06:03:28.671Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-08T06:03:28.671Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:03:36.494Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:04:03.582Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:04:16.707Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:04:24.774Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:04:34.330Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:04:39.199Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:05:01.980Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:05:11.750Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:06:17.103Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:06:28.499Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:06:31.223Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:10:23.444Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:10:43.202Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:11:08.192Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:11:15.753Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:11:25.033Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:11:29.032Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:11:37.492Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:11:46.871Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:11:48.912Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:11:58.277Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:12:09.719Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:12:18.588Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:13:04.665Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-08T06:13:32.384Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-08T06:13:32.387Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-08T06:13:32.387Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:13:32.449Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:13:35.735Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:14:25.476Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-08T06:14:29.240Z"}

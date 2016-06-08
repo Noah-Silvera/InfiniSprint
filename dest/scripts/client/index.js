@@ -15,22 +15,24 @@ requirejs.config({
         },
         'react': {
             exports: ['React', 'Component']
+        },
+        'socket-io': {
+            exports: ['io']
+        },
+        'google-api': {
+            exports: ['gapi']
         }
     }
 });
 
 var _require = requirejs;
 
-_require(['react', 'react-dom', 'socket-io', 'google-api', './components/Action'], function (React, ReactDOM, Action) {
+_require(['react', 'react-dom', './components/Frame'], function (React, ReactDOM, Frame) {
     //This function is called when scripts/helper/util.js is loaded.
     //If util.js calls define(), then this function is not fired until
     //util's dependencies have loaded, and the util argument will hold
-    //the module value for "helper/util". 
+    //the module value for "helper/util".
 
     // hand control of the DOM over to react
-    ReactDOM.render(React.createElement(
-        "div",
-        null,
-        React.createElement(Action, null)
-    ), document.getElementById('root'));
+    ReactDOM.render(React.createElement(Frame, null), document.getElementById('root'));
 });

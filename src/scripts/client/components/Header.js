@@ -1,7 +1,7 @@
 define(['react'],function(React){
     return class Header extends React.Component {
         constructor(props){
-            super(propsU)
+            super(props)
         }
         
         render(){
