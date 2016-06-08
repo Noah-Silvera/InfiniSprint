@@ -27,7 +27,7 @@ rename the file client_secret.json
 ```
 npm install
 npm start
-Open http://localhost:5000
+Open http://localhost:3000
 Click the refresh data button to fetch data from your google calendar
 Enter your credentials in the command line when prompteds
 ```
