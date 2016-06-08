@@ -1,6 +1,6 @@
-var arrayLikeObject = require("./../../scripts/utils/arrayLikeObject")
+var arrayLikeObject = require("./../../src/utils/arrayLikeObject")
 var should = require('chai').should()
-var data_utils = require('./../../scripts/server/data_utils')
+var data_utils = require('./../../src/server/data_utils')
 var fs = require('fs')
 
 

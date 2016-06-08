@@ -1,10 +1,10 @@
-var paths = require('./../../scripts/utils/_globals').paths
-var consts = require('./../../scripts/utils/_globals').consts
+var paths = require('./../../src/utils/_globals').paths
+var consts = require('./../../src/utils/_globals').consts
 
 var should = require('chai').should();
 
-var sync_local_data = require('./../../scripts/server/sync_local_data')
-var data_utils = require('./../../scripts/server/data_utils')
+var sync_local_data = require('./../../src/server/sync_local_data')
+var data_utils = require('./../../src/server/data_utils')
 var fs = require('fs')
 var path = require('path')
 var moment = require('moment')

@@ -1,3 +1,3 @@
-var log = require('./../scripts/utils/log_setup')
+var log = require('./../src/utils/log_setup')
 
 log.init()

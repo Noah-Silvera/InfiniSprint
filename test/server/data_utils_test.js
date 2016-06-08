@@ -1,7 +1,7 @@
-var paths = require('./../../scripts/utils/_globals').paths
+var paths = require('./../../src/utils/_globals').paths
 
 // paths.scriptsPath + '/server' + '/data_utils'
-var data_utils = require( './../../scripts/server/data_utils' );
+var data_utils = require( './../../src/server/data_utils' );
 var should = require('chai').should();
 
 describe('purgeProperties', function(){

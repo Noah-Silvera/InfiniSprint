@@ -1,8 +1,8 @@
-var paths = require('./../../scripts/utils/_globals').paths
+var paths = require('./../../src/utils/_globals').paths
 
 
 var should = require('chai').should();
-var google_api = require('./../../scripts/server/google_api')
+var google_api = require('./../../src/server/google_api')
 var moment = require('moment')
 
 var startDate = '2016-04-09'

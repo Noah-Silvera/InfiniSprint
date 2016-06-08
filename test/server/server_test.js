@@ -1,1 +1,1 @@
-var _globals = require('./../../scripts/utils/_globals')
+var _globals = require('./../../src/utils/_globals')

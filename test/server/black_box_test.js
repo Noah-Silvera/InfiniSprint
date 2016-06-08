@@ -1,6 +1,6 @@
-var sync_local_data = require( './../../scripts/server/sync_local_data' );
-var data_utils = require('./../../scripts/server/data_utils')
-var paths = require('./../../scripts/utils/_globals').paths
+var sync_local_data = require( './../../src/server/sync_local_data' );
+var data_utils = require('./../../src/server/data_utils')
+var paths = require('./../../src/utils/_globals').paths
 var socketClient = require('socket.io-client')
 var should = require('chai').should();
 
