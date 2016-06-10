@@ -158,3 +158,10 @@
 {"level":"info","message":"new connection","timestamp":"2016-06-08T06:13:35.735Z"}
 {"level":"info","message":"new connection","timestamp":"2016-06-08T06:14:25.476Z"}
 {"level":"info","message":"new connection","timestamp":"2016-06-08T06:14:29.240Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-10T01:51:31.402Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-10T01:51:31.413Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-10T01:51:31.415Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-10T02:00:49.181Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-10T02:00:49.185Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-10T02:00:49.185Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-10T02:01:03.019Z"}

@@ -6,6 +6,7 @@ requirejs.config({
       "react-dom": 'http://cdn.bootcss.com/react/0.14.7/react-dom',
       "socket-io": "http://localhost:80/socket.io/socket.io",
       "google-api": "https://apis.google.com/js/platform",
+      "jQuery": 'https://code.jquery.com/jquery-3.0.0.min.js'
     },
     shim:{
         'react-dom': {
@@ -20,6 +21,9 @@ requirejs.config({
         },
         'google-api' : {
             exports: ['gapi']
+        },
+        'jQuery': {
+            exports: ['$']
         }
     }
 });

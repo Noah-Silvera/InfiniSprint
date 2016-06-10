@@ -5,3 +5,4 @@ dist
 user_data/*	
 .vscode/*
 jsconfig.json
+dest/**/*

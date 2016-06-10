@@ -11,6 +11,7 @@ var livereload = require('gulp-livereload')
 var clean = require('gulp-clean')
 var runSequence = require('run-sequence')
 var babel = require('gulp-babel')
+var sourceMaps = require('gulp-sourceMaps')
 
 var spawn = require('child_process').spawn
 var node;
@@ -137,9 +138,11 @@ gulp.task('frontend', ['sass'], function(){
   
   return gulp.src(patt.frontend, { base: patt.scriptsBase } )
     .pipe(plumber())
+    .pipe(sourceMaps.init())
     .pipe(babel({
         presets: ['react','es2015']
     }))
+    .pipe(sourceMaps.write())
     .pipe(gulp.dest('./dest/scripts/'))
     .pipe(livereload())
 })
