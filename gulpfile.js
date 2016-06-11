@@ -12,6 +12,7 @@ var clean = require('gulp-clean')
 var runSequence = require('run-sequence')
 var babel = require('gulp-babel')
 var sourceMaps = require('gulp-sourceMaps')
+var notify = require('gulp-notify')
 
 var spawn = require('child_process').spawn
 var node;
@@ -123,7 +124,7 @@ gulp.task('copy',['backend','frontend','static'])
 // copy the new backend files over
 gulp.task('backend', function(){
   return gulp.src(patt.backend, { base: patt.scriptsBase } )
-    .pipe(plumber())
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(gulp.dest('./dest/scripts/'))
 })
 
@@ -137,12 +138,12 @@ gulp.task('frontend', ['sass'], function(){
 
   
   return gulp.src(patt.frontend, { base: patt.scriptsBase } )
-    .pipe(plumber())
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(sourceMaps.init())
     .pipe(babel({
-        presets: ['react','es2015']
+        presets: ["react","stage-0"]
     }))
-    .pipe(sourceMaps.write())
+    .pipe(sourceMaps.write('./dest/maps'))
     .pipe(gulp.dest('./dest/scripts/'))
     .pipe(livereload())
 })

@@ -11,7 +11,6 @@ define(['react'],function(React){
         class Action extends React.Component {
 
             render() {
-                console.log('this is called')
                 return (<div className = "action" draggable = "true" data-id = {this.props.dataId} >
                                 <p className = "row">{this.props.rank}    </p><p className = "row">{this.props.content}</p>
                         </div>)

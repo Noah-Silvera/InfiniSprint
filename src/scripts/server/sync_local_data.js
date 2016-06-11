@@ -50,7 +50,11 @@ function processCalendarResponse(events, dataFilePath, callback){
 
       // If file doesn't exist
       // chunk the event data into sprint | backlog 
-      var initData = createInitialEventData(events)
+    //   var initData = createInitialEventData(events)
+
+    // logic being moved to front end
+      var initData = events
+      // write this to a file
       // write this to a file
       w.log('info','writing new local data...')
       data_utils.writeData(initData,dataFilePath,callback)
@@ -166,14 +170,6 @@ exports.createInitialEventData = createInitialEventData
  * @return {Object} the local data object corresponding to events         
  */
 function createInitialEventData(events){
-  var initData = {
-    "sprint" : {
-      // ... rank of objects is recieved implicity through the order of the sorted array
-    },
-    "backlog" : {
-      // ...
-    }
-  }
 
   // Victoria is -7h during daylight saving time http://www.timetemperature.com/tzbc/victoria.shtml
 
@@ -212,9 +208,8 @@ function createInitialEventData(events){
         // for extremely quick access and simpler coding
         
          // split it into two chunks - current day -> days afterwards
-        initData.sprint = data_utils.convertSimpleArrayToObject( indexedEvents.slice( 0, i ) ) 
-        initData.backlog = data_utils.convertSimpleArrayToObject( indexedEvents.slice( i ) )
-        break;
+         return indexedEvents
+
       }
     }
     else {
@@ -224,7 +219,6 @@ function createInitialEventData(events){
       i--
     }
   }
-  return initData
 }
 
 
