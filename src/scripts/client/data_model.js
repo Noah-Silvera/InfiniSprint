@@ -1,7 +1,3 @@
-define(function(){
-    return (
-        class data_model {
-            
-        }
-    )
-})
+define(function () {
+    return class data_model {};
+});

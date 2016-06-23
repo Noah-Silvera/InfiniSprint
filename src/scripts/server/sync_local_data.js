@@ -46,8 +46,8 @@ function processCalendarResponse(events, dataFilePath, callback){
   fs.access( dataFilePath, fs.F_OK, function(err) {
     if(err || config.hardRefresh ) {
       // no updates to perform
-      w.log('info','event data does not exist')
-
+      w.log('info','event data does not exist');
+      (() => w.log('es6'))()
       // If file doesn't exist
       // chunk the event data into sprint | backlog 
     //   var initData = createInitialEventData(events)

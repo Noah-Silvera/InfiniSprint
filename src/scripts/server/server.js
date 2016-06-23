@@ -7,11 +7,12 @@ var initializeWebsockets = require('./websocket_api').initializeWebsockets;
 var express = require('express')
 var app = express()
 
-var root = 'dest/'
+var root = 'src/'
 
 // set up express static directories
 app.use(express.static(path.join(root,'/scripts/client').toString()));
-app.use(express.static(path.join(root,'/static').toString()));
+app.use(express.static(path.join(root,'/scripts/client/lib').toString()));
+app.use (express.static(path.join(root,'/static').toString()));
 app.use(express.static(path.join(root,'/css').toString()));
 
           
@@ -20,7 +21,14 @@ app.use(express.static(path.join(root,'/css').toString()));
 var indexHtml = fs.readFileSync(path.join(root,'static/index.html'));
 var index = fs.readFileSync(path.join(root,'scripts/client/index.js'));
 
-      
+//enable cors for google domain
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 // routing for the app homepage
 app.get('/', function( req, res){
   res.writeHead(200, {'Content  -Type': 'text/html'});

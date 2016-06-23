@@ -38,7 +38,16 @@ function setUpListeners(io,callback){
 	  socket.on('refreshData', function() {
 	  	w.log('info','refreshing data...')
 	    // once the data has been updated locally, this function fires off the data in a eventsUpdated event
-	    return refreshData(socket)
+        w.log('info',"retrieving events from google....");
+        // syncs the networks google cal events to a local file
+        google_api.syncCalendar( function() {
+
+            var eventsToFetch = join( paths.userDataPath, '/events.json' )
+            data_utils.fetchData( eventsToFetch ,  function emitEventData(data) {
+                socket.emit('eventsUpdated', data)
+                w.log('info','Sent local event data to client')
+            });
+        })
 	  });
 
 	  socket.on('updateEvents', function(event) {
@@ -74,16 +83,5 @@ exports.refreshData = refreshData
  */
 function refreshData(socket) {
   
-  w.log('info',"retrieving events from google....");
-  // syncs the networks google cal events to a local file
-   google_api.syncCalendar( 
-    // fetched that local file with the changes
-    function() {
-    	var eventsToFetch = join( paths.userDataPath, '/events.json' )
-    	data_utils.fetchData( eventsToFetch ,  function emitEventData(data) {
-        socket.emit('eventsUpdated', data)
-        w.log('info','Sent local event data to client')
-      })
-     }
-  );
+
 }

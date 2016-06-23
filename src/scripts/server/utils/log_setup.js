@@ -5,7 +5,7 @@ exports.init = function(){
   global.w = new (winston.Logger)({
     transports: [
       new (winston.transports.Console)({
-        level: 'error',
+        level: 'info',
         colorize: true,
       }),
       new (winston.transports.File)({

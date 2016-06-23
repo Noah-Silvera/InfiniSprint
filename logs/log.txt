@@ -299,3 +299,641 @@
 {"level":"info","message":"writing new local data...","timestamp":"2016-06-11T23:58:54.131Z"}
 {"level":"info","message":"retrieving local data copy....","timestamp":"2016-06-11T23:58:54.136Z"}
 {"level":"info","message":"Sent local event data to client","timestamp":"2016-06-11T23:58:54.152Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T16:46:12.892Z"}
+{"level":"info","message":"refreshing data...","timestamp":"2016-06-12T17:16:43.463Z"}
+{"level":"info","message":"retrieving events from google....","timestamp":"2016-06-12T17:16:43.463Z"}
+{"level":"debug","message":"getting events from","timestamp":"2016-06-12T17:16:43.465Z"}
+{"level":"debug","message":"2016-06-19T23:59:59-07:00","timestamp":"2016-06-12T17:16:43.465Z"}
+{"level":"debug","message":"to ->","timestamp":"2016-06-12T17:16:43.465Z"}
+{"level":"debug","message":"2016-06-19T23:59:59-07:00","timestamp":"2016-06-12T17:16:43.465Z"}
+{"level":"debug","message":"...","timestamp":"2016-06-12T17:16:43.465Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:20:15.813Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:20:20.321Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:20:27.079Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:20:54.305Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:20:59.312Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:21:14.321Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:21:20.338Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:21:45.280Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:21:49.288Z"}
+{"level":"debug","message":"Google API request","timestamp":"2016-06-12T17:21:55.719Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-12T17:32:14.223Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-12T17:32:14.227Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-12T17:32:14.228Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:32:59.911Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:34:45.384Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:34:53.921Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:35:07.104Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:35:14.297Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:35:21.181Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:35:30.174Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:35:40.834Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:35:49.677Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:35:52.014Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:35:54.872Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:36:05.278Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:36:08.696Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:36:15.684Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:36:18.490Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:36:37.703Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:36:46.461Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:36:49.632Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:36:56.067Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:37:05.048Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:37:09.020Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:37:11.135Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:37:19.514Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:37:22.610Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:37:31.538Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:37:42.716Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:37:48.757Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:38:00.999Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:38:09.310Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T17:38:11.367Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-12T18:58:09.905Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-13T17:38:46.844Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-13T17:38:46.847Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-13T17:38:46.847Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-13T17:39:48.223Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-13T17:42:13.197Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-13T17:42:30.792Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-13T17:43:26.447Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-13T17:43:26.448Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-13T17:43:26.449Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-13T17:43:26.505Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-13T17:43:46.079Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-13T17:43:59.745Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-14T15:31:28.745Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-14T15:33:48.281Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-14T15:33:48.283Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-14T15:33:48.283Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-14T15:33:48.472Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-14T15:34:26.924Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-14T15:34:59.205Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-14T15:35:34.338Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-14T15:36:04.038Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-14T15:36:04.039Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-14T15:36:04.040Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-14T15:36:18.397Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-14T15:37:51.629Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-14T15:37:51.633Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-14T15:37:51.634Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-14T15:38:03.273Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-14T15:41:25.015Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-14T15:42:40.584Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-14T15:43:34.897Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-14T15:43:41.734Z"}
+{"level":"info","message":"refreshing data...","timestamp":"2016-06-14T15:43:43.008Z"}
+{"level":"info","message":"retrieving events from google....","timestamp":"2016-06-14T15:43:43.008Z"}
+{"level":"debug","message":"getting events from","timestamp":"2016-06-14T15:43:43.015Z"}
+{"level":"debug","message":"2016-06-21T23:59:59-07:00","timestamp":"2016-06-14T15:43:43.018Z"}
+{"level":"debug","message":"to ->","timestamp":"2016-06-14T15:43:43.018Z"}
+{"level":"debug","message":"2016-06-21T23:59:59-07:00","timestamp":"2016-06-14T15:43:43.018Z"}
+{"level":"debug","message":"...","timestamp":"2016-06-14T15:43:43.018Z"}
+{"level":"debug","message":"Google API request","timestamp":"2016-06-14T15:43:44.154Z"}
+{"auth":{"transporter":{},"clientId_":"228369885209-sut0vj747hls0mtc3k7mb1s8fre2jl3n.apps.googleusercontent.com","clientSecret_":"9rdqmGaFuQWQo2oIqS73kig-","redirectUri_":"urn:ietf:wg:oauth:2.0:oob","opts":{},"credentials":{"access_token":"ya29.CjIBA1htiCwZqQf-qIjZF3budvS4aU1-EBxMBSc7DBz7RvJrHeGQsTL023Q_al546NxpUw","token_type":"Bearer","expiry_date":1465922623836,"refresh_token":"1/XHsDicCGbb8K6CohIZ7m3yCRXvbZkuw_JXmUqiZL7nYMEudVrK5jSpoR30zcRFq6"}},"calendarId":"primary","timeMin":"2016-06-22T06:59:59.999Z","timeMax":"2016-06-22T06:59:59.999Z","maxResults":250,"singleEvents":true,"orderBy":"startTime","level":"debug","message":"","timestamp":"2016-06-14T15:43:44.154Z"}
+{"level":"debug","message":"Google API Response","timestamp":"2016-06-14T15:43:44.155Z"}
+{"kind":"calendar#events","etag":"\"0\"","summary":"noah.a.silvera@gmail.com","updated":"1970-01-01T00:00:00.000Z","timeZone":"America/Vancouver","accessRole":"owner","defaultReminders":[],"items":[],"level":"debug","message":"","timestamp":"2016-06-14T15:43:44.155Z"}
+{"level":"info","message":"updating local data....","timestamp":"2016-06-14T15:43:44.156Z"}
+{"level":"info","message":"event data does not exist","timestamp":"2016-06-14T15:43:44.157Z"}
+{"level":"info","message":"writing new local data...","timestamp":"2016-06-14T15:43:44.158Z"}
+{"level":"info","message":"retrieving local data copy....","timestamp":"2016-06-14T15:43:44.160Z"}
+{"level":"info","message":"Sent local event data to client","timestamp":"2016-06-14T15:43:44.169Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-16T15:14:57.188Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-16T15:14:57.192Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-16T15:14:57.192Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T15:15:01.461Z"}
+{"level":"info","message":"refreshing data...","timestamp":"2016-06-16T15:15:54.338Z"}
+{"level":"info","message":"retrieving events from google....","timestamp":"2016-06-16T15:15:54.338Z"}
+{"level":"debug","message":"getting events from","timestamp":"2016-06-16T15:15:54.345Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:15:54.347Z"}
+{"level":"debug","message":"to ->","timestamp":"2016-06-16T15:15:54.347Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:15:54.348Z"}
+{"level":"debug","message":"...","timestamp":"2016-06-16T15:15:54.348Z"}
+{"level":"debug","message":"Google API request","timestamp":"2016-06-16T15:15:55.612Z"}
+{"auth":{"transporter":{},"clientId_":"228369885209-sut0vj747hls0mtc3k7mb1s8fre2jl3n.apps.googleusercontent.com","clientSecret_":"9rdqmGaFuQWQo2oIqS73kig-","redirectUri_":"urn:ietf:wg:oauth:2.0:oob","opts":{},"credentials":{"access_token":"ya29.CjIDA_bsvrKMr_HYTKYWNj_9XEv5HvBZBs4nahXtere0tq6KK3N90eutyOfsp8pMS9kFJQ","token_type":"Bearer","expiry_date":1466093755344,"refresh_token":"1/XHsDicCGbb8K6CohIZ7m3yCRXvbZkuw_JXmUqiZL7nYMEudVrK5jSpoR30zcRFq6"}},"calendarId":"primary","timeMin":"2016-06-24T06:59:59.999Z","timeMax":"2016-06-24T06:59:59.999Z","maxResults":250,"singleEvents":true,"orderBy":"startTime","level":"debug","message":"","timestamp":"2016-06-16T15:15:55.613Z"}
+{"level":"debug","message":"Google API Response","timestamp":"2016-06-16T15:15:55.614Z"}
+{"kind":"calendar#events","etag":"\"0\"","summary":"noah.a.silvera@gmail.com","updated":"1970-01-01T00:00:00.000Z","timeZone":"America/Vancouver","accessRole":"owner","defaultReminders":[],"items":[],"level":"debug","message":"","timestamp":"2016-06-16T15:15:55.614Z"}
+{"level":"info","message":"updating local data....","timestamp":"2016-06-16T15:15:55.614Z"}
+{"level":"info","message":"event data does not exist","timestamp":"2016-06-16T15:15:55.616Z"}
+{"level":"info","message":"writing new local data...","timestamp":"2016-06-16T15:15:55.616Z"}
+{"level":"info","message":"retrieving local data copy....","timestamp":"2016-06-16T15:15:55.620Z"}
+{"level":"info","message":"Sent local event data to client","timestamp":"2016-06-16T15:15:55.632Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-16T15:25:26.290Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-16T15:25:26.295Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-16T15:25:26.295Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T15:26:03.356Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-16T15:32:52.414Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-16T15:32:52.417Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-16T15:32:52.417Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T15:32:52.673Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T15:32:58.359Z"}
+{"level":"info","message":"refreshing data...","timestamp":"2016-06-16T15:33:11.661Z"}
+{"level":"info","message":"retrieving events from google....","timestamp":"2016-06-16T15:33:11.661Z"}
+{"level":"debug","message":"getting events from","timestamp":"2016-06-16T15:33:11.664Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:33:11.665Z"}
+{"level":"debug","message":"to ->","timestamp":"2016-06-16T15:33:11.665Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:33:11.666Z"}
+{"level":"debug","message":"...","timestamp":"2016-06-16T15:33:11.666Z"}
+{"level":"debug","message":"Google API request","timestamp":"2016-06-16T15:33:12.191Z"}
+{"auth":{"transporter":{},"clientId_":"228369885209-sut0vj747hls0mtc3k7mb1s8fre2jl3n.apps.googleusercontent.com","clientSecret_":"9rdqmGaFuQWQo2oIqS73kig-","redirectUri_":"urn:ietf:wg:oauth:2.0:oob","opts":{},"credentials":{"access_token":"ya29.CjIDA7mel6q6GXLv8NwT-DhCBMyjOxz2sxD2X64XNYiidT6zeyHsFC8D_Wb47RGJ4XuPdA","token_type":"Bearer","expiry_date":1466094791912,"refresh_token":"1/XHsDicCGbb8K6CohIZ7m3yCRXvbZkuw_JXmUqiZL7nYMEudVrK5jSpoR30zcRFq6"}},"calendarId":"primary","timeMin":"2016-06-24T06:59:59.999Z","timeMax":"2016-06-24T06:59:59.999Z","maxResults":250,"singleEvents":true,"orderBy":"startTime","level":"debug","message":"","timestamp":"2016-06-16T15:33:12.192Z"}
+{"level":"debug","message":"Google API Response","timestamp":"2016-06-16T15:33:12.193Z"}
+{"kind":"calendar#events","etag":"\"0\"","summary":"noah.a.silvera@gmail.com","updated":"1970-01-01T00:00:00.000Z","timeZone":"America/Vancouver","accessRole":"owner","defaultReminders":[],"items":[],"level":"debug","message":"","timestamp":"2016-06-16T15:33:12.193Z"}
+{"level":"info","message":"updating local data....","timestamp":"2016-06-16T15:33:12.193Z"}
+{"level":"info","message":"event data does not exist","timestamp":"2016-06-16T15:33:12.194Z"}
+{"level":"info","message":"writing new local data...","timestamp":"2016-06-16T15:33:12.194Z"}
+{"level":"info","message":"retrieving local data copy....","timestamp":"2016-06-16T15:33:12.196Z"}
+{"level":"info","message":"Sent local event data to client","timestamp":"2016-06-16T15:33:12.198Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-16T15:34:55.262Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-16T15:34:55.265Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-16T15:34:55.266Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T15:34:56.074Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T15:36:13.046Z"}
+{"level":"info","message":"refreshing data...","timestamp":"2016-06-16T15:36:14.810Z"}
+{"level":"info","message":"retrieving events from google....","timestamp":"2016-06-16T15:36:14.810Z"}
+{"level":"debug","message":"getting events from","timestamp":"2016-06-16T15:36:14.812Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:36:14.813Z"}
+{"level":"debug","message":"to ->","timestamp":"2016-06-16T15:36:14.813Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:36:14.814Z"}
+{"level":"debug","message":"...","timestamp":"2016-06-16T15:36:14.814Z"}
+{"level":"debug","message":"Google API request","timestamp":"2016-06-16T15:36:15.560Z"}
+{"auth":{"transporter":{},"clientId_":"228369885209-sut0vj747hls0mtc3k7mb1s8fre2jl3n.apps.googleusercontent.com","clientSecret_":"9rdqmGaFuQWQo2oIqS73kig-","redirectUri_":"urn:ietf:wg:oauth:2.0:oob","opts":{},"credentials":{"access_token":"ya29.CjIDAzVkYAByoGgvUm6xQuvpCotcP09lp2Dwvmi2QZcoLRvPuE5uEf5mMJ18_bv67tGqJA","token_type":"Bearer","expiry_date":1466094975067,"refresh_token":"1/XHsDicCGbb8K6CohIZ7m3yCRXvbZkuw_JXmUqiZL7nYMEudVrK5jSpoR30zcRFq6"}},"calendarId":"primary","timeMin":"2016-06-24T06:59:59.999Z","timeMax":"2016-06-24T06:59:59.999Z","maxResults":250,"singleEvents":true,"orderBy":"startTime","level":"debug","message":"","timestamp":"2016-06-16T15:36:15.560Z"}
+{"level":"debug","message":"Google API Response","timestamp":"2016-06-16T15:36:15.561Z"}
+{"kind":"calendar#events","etag":"\"0\"","summary":"noah.a.silvera@gmail.com","updated":"1970-01-01T00:00:00.000Z","timeZone":"America/Vancouver","accessRole":"owner","defaultReminders":[],"items":[],"level":"debug","message":"","timestamp":"2016-06-16T15:36:15.561Z"}
+{"level":"info","message":"updating local data....","timestamp":"2016-06-16T15:36:15.561Z"}
+{"level":"info","message":"event data does not exist","timestamp":"2016-06-16T15:36:15.562Z"}
+{"level":"info","message":"writing new local data...","timestamp":"2016-06-16T15:36:15.562Z"}
+{"level":"info","message":"retrieving local data copy....","timestamp":"2016-06-16T15:36:15.565Z"}
+{"level":"info","message":"Sent local event data to client","timestamp":"2016-06-16T15:36:15.567Z"}
+{"level":"info","message":"refreshing data...","timestamp":"2016-06-16T15:36:35.876Z"}
+{"level":"info","message":"retrieving events from google....","timestamp":"2016-06-16T15:36:35.876Z"}
+{"level":"debug","message":"getting events from","timestamp":"2016-06-16T15:36:35.877Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:36:35.877Z"}
+{"level":"debug","message":"to ->","timestamp":"2016-06-16T15:36:35.877Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:36:35.878Z"}
+{"level":"debug","message":"...","timestamp":"2016-06-16T15:36:35.878Z"}
+{"level":"debug","message":"Google API request","timestamp":"2016-06-16T15:36:36.383Z"}
+{"auth":{"transporter":{},"clientId_":"228369885209-sut0vj747hls0mtc3k7mb1s8fre2jl3n.apps.googleusercontent.com","clientSecret_":"9rdqmGaFuQWQo2oIqS73kig-","redirectUri_":"urn:ietf:wg:oauth:2.0:oob","opts":{},"credentials":{"access_token":"ya29.CjIDA7SUnIeqxPwyVTGnFJv1rvXOL1GEYxaZEDdLCwARx8mysIJYHN1YfSYPIVesPNWPBw","token_type":"Bearer","expiry_date":1466094996012,"refresh_token":"1/XHsDicCGbb8K6CohIZ7m3yCRXvbZkuw_JXmUqiZL7nYMEudVrK5jSpoR30zcRFq6"}},"calendarId":"primary","timeMin":"2016-06-24T06:59:59.999Z","timeMax":"2016-06-24T06:59:59.999Z","maxResults":250,"singleEvents":true,"orderBy":"startTime","level":"debug","message":"","timestamp":"2016-06-16T15:36:36.384Z"}
+{"level":"debug","message":"Google API Response","timestamp":"2016-06-16T15:36:36.384Z"}
+{"kind":"calendar#events","etag":"\"0\"","summary":"noah.a.silvera@gmail.com","updated":"1970-01-01T00:00:00.000Z","timeZone":"America/Vancouver","accessRole":"owner","defaultReminders":[],"items":[],"level":"debug","message":"","timestamp":"2016-06-16T15:36:36.384Z"}
+{"level":"info","message":"updating local data....","timestamp":"2016-06-16T15:36:36.384Z"}
+{"level":"info","message":"event data does not exist","timestamp":"2016-06-16T15:36:36.385Z"}
+{"level":"info","message":"writing new local data...","timestamp":"2016-06-16T15:36:36.386Z"}
+{"level":"info","message":"retrieving local data copy....","timestamp":"2016-06-16T15:36:36.387Z"}
+{"level":"info","message":"Sent local event data to client","timestamp":"2016-06-16T15:36:36.389Z"}
+{"level":"info","message":"refreshing data...","timestamp":"2016-06-16T15:36:38.083Z"}
+{"level":"info","message":"retrieving events from google....","timestamp":"2016-06-16T15:36:38.083Z"}
+{"level":"debug","message":"getting events from","timestamp":"2016-06-16T15:36:38.083Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:36:38.083Z"}
+{"level":"debug","message":"to ->","timestamp":"2016-06-16T15:36:38.084Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:36:38.084Z"}
+{"level":"debug","message":"...","timestamp":"2016-06-16T15:36:38.086Z"}
+{"level":"info","message":"refreshing data...","timestamp":"2016-06-16T15:36:38.237Z"}
+{"level":"info","message":"retrieving events from google....","timestamp":"2016-06-16T15:36:38.238Z"}
+{"level":"debug","message":"getting events from","timestamp":"2016-06-16T15:36:38.238Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:36:38.238Z"}
+{"level":"debug","message":"to ->","timestamp":"2016-06-16T15:36:38.239Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:36:38.239Z"}
+{"level":"debug","message":"...","timestamp":"2016-06-16T15:36:38.239Z"}
+{"level":"debug","message":"Google API request","timestamp":"2016-06-16T15:36:38.397Z"}
+{"auth":{"transporter":{},"clientId_":"228369885209-sut0vj747hls0mtc3k7mb1s8fre2jl3n.apps.googleusercontent.com","clientSecret_":"9rdqmGaFuQWQo2oIqS73kig-","redirectUri_":"urn:ietf:wg:oauth:2.0:oob","opts":{},"credentials":{"access_token":"ya29.CjIDA_ZtlfqvMGKsdivoe3H8OFkjrpY7ppZ1TBlaVAOxZmAdZyx711yb7j2j-ajZF4PL8w","token_type":"Bearer","expiry_date":1466094998187,"refresh_token":"1/XHsDicCGbb8K6CohIZ7m3yCRXvbZkuw_JXmUqiZL7nYMEudVrK5jSpoR30zcRFq6"}},"calendarId":"primary","timeMin":"2016-06-24T06:59:59.999Z","timeMax":"2016-06-24T06:59:59.999Z","maxResults":250,"singleEvents":true,"orderBy":"startTime","level":"debug","message":"","timestamp":"2016-06-16T15:36:38.398Z"}
+{"level":"debug","message":"Google API Response","timestamp":"2016-06-16T15:36:38.398Z"}
+{"kind":"calendar#events","etag":"\"0\"","summary":"noah.a.silvera@gmail.com","updated":"1970-01-01T00:00:00.000Z","timeZone":"America/Vancouver","accessRole":"owner","defaultReminders":[],"items":[],"level":"debug","message":"","timestamp":"2016-06-16T15:36:38.399Z"}
+{"level":"info","message":"updating local data....","timestamp":"2016-06-16T15:36:38.399Z"}
+{"level":"info","message":"event data does not exist","timestamp":"2016-06-16T15:36:38.403Z"}
+{"level":"info","message":"writing new local data...","timestamp":"2016-06-16T15:36:38.404Z"}
+{"level":"info","message":"retrieving local data copy....","timestamp":"2016-06-16T15:36:38.409Z"}
+{"level":"info","message":"Sent local event data to client","timestamp":"2016-06-16T15:36:38.411Z"}
+{"level":"info","message":"refreshing data...","timestamp":"2016-06-16T15:36:38.511Z"}
+{"level":"info","message":"retrieving events from google....","timestamp":"2016-06-16T15:36:38.511Z"}
+{"level":"debug","message":"getting events from","timestamp":"2016-06-16T15:36:38.512Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:36:38.512Z"}
+{"level":"debug","message":"to ->","timestamp":"2016-06-16T15:36:38.513Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:36:38.513Z"}
+{"level":"debug","message":"...","timestamp":"2016-06-16T15:36:38.513Z"}
+{"level":"debug","message":"Google API request","timestamp":"2016-06-16T15:36:38.668Z"}
+{"auth":{"transporter":{},"clientId_":"228369885209-sut0vj747hls0mtc3k7mb1s8fre2jl3n.apps.googleusercontent.com","clientSecret_":"9rdqmGaFuQWQo2oIqS73kig-","redirectUri_":"urn:ietf:wg:oauth:2.0:oob","opts":{},"credentials":{"access_token":"ya29.CjIDA_ZtlfqvMGKsdivoe3H8OFkjrpY7ppZ1TBlaVAOxZmAdZyx711yb7j2j-ajZF4PL8w","token_type":"Bearer","expiry_date":1466094998400,"refresh_token":"1/XHsDicCGbb8K6CohIZ7m3yCRXvbZkuw_JXmUqiZL7nYMEudVrK5jSpoR30zcRFq6"}},"calendarId":"primary","timeMin":"2016-06-24T06:59:59.999Z","timeMax":"2016-06-24T06:59:59.999Z","maxResults":250,"singleEvents":true,"orderBy":"startTime","level":"debug","message":"","timestamp":"2016-06-16T15:36:38.668Z"}
+{"level":"debug","message":"Google API Response","timestamp":"2016-06-16T15:36:38.669Z"}
+{"kind":"calendar#events","etag":"\"0\"","summary":"noah.a.silvera@gmail.com","updated":"1970-01-01T00:00:00.000Z","timeZone":"America/Vancouver","accessRole":"owner","defaultReminders":[],"items":[],"level":"debug","message":"","timestamp":"2016-06-16T15:36:38.669Z"}
+{"level":"info","message":"updating local data....","timestamp":"2016-06-16T15:36:38.669Z"}
+{"level":"info","message":"event data does not exist","timestamp":"2016-06-16T15:36:38.669Z"}
+{"level":"info","message":"writing new local data...","timestamp":"2016-06-16T15:36:38.671Z"}
+{"level":"info","message":"retrieving local data copy....","timestamp":"2016-06-16T15:36:38.673Z"}
+{"level":"info","message":"Sent local event data to client","timestamp":"2016-06-16T15:36:38.674Z"}
+{"level":"debug","message":"Google API request","timestamp":"2016-06-16T15:36:38.810Z"}
+{"auth":{"transporter":{},"clientId_":"228369885209-sut0vj747hls0mtc3k7mb1s8fre2jl3n.apps.googleusercontent.com","clientSecret_":"9rdqmGaFuQWQo2oIqS73kig-","redirectUri_":"urn:ietf:wg:oauth:2.0:oob","opts":{},"credentials":{"access_token":"ya29.CjIDA_ZtlfqvMGKsdivoe3H8OFkjrpY7ppZ1TBlaVAOxZmAdZyx711yb7j2j-ajZF4PL8w","token_type":"Bearer","expiry_date":1466094998621,"refresh_token":"1/XHsDicCGbb8K6CohIZ7m3yCRXvbZkuw_JXmUqiZL7nYMEudVrK5jSpoR30zcRFq6"}},"calendarId":"primary","timeMin":"2016-06-24T06:59:59.999Z","timeMax":"2016-06-24T06:59:59.999Z","maxResults":250,"singleEvents":true,"orderBy":"startTime","level":"debug","message":"","timestamp":"2016-06-16T15:36:38.810Z"}
+{"level":"debug","message":"Google API Response","timestamp":"2016-06-16T15:36:38.810Z"}
+{"kind":"calendar#events","etag":"\"0\"","summary":"noah.a.silvera@gmail.com","updated":"1970-01-01T00:00:00.000Z","timeZone":"America/Vancouver","accessRole":"owner","defaultReminders":[],"items":[],"level":"debug","message":"","timestamp":"2016-06-16T15:36:38.811Z"}
+{"level":"info","message":"updating local data....","timestamp":"2016-06-16T15:36:38.811Z"}
+{"level":"info","message":"event data does not exist","timestamp":"2016-06-16T15:36:38.812Z"}
+{"level":"info","message":"writing new local data...","timestamp":"2016-06-16T15:36:38.812Z"}
+{"level":"info","message":"retrieving local data copy....","timestamp":"2016-06-16T15:36:38.813Z"}
+{"level":"info","message":"Sent local event data to client","timestamp":"2016-06-16T15:36:38.815Z"}
+{"level":"info","message":"refreshing data...","timestamp":"2016-06-16T15:36:38.982Z"}
+{"level":"info","message":"retrieving events from google....","timestamp":"2016-06-16T15:36:38.982Z"}
+{"level":"debug","message":"getting events from","timestamp":"2016-06-16T15:36:38.982Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:36:38.983Z"}
+{"level":"debug","message":"to ->","timestamp":"2016-06-16T15:36:38.983Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:36:38.983Z"}
+{"level":"debug","message":"...","timestamp":"2016-06-16T15:36:38.983Z"}
+{"level":"debug","message":"Google API request","timestamp":"2016-06-16T15:36:39.285Z"}
+{"auth":{"transporter":{},"clientId_":"228369885209-sut0vj747hls0mtc3k7mb1s8fre2jl3n.apps.googleusercontent.com","clientSecret_":"9rdqmGaFuQWQo2oIqS73kig-","redirectUri_":"urn:ietf:wg:oauth:2.0:oob","opts":{},"credentials":{"access_token":"ya29.CjIDAzILV7uYFJgyrVd2M9Hdu_b95yJPrpzpsmhy_LhEHEn03dRcFTY5tUOyXp0XC25yww","token_type":"Bearer","expiry_date":1466094999083,"refresh_token":"1/XHsDicCGbb8K6CohIZ7m3yCRXvbZkuw_JXmUqiZL7nYMEudVrK5jSpoR30zcRFq6"}},"calendarId":"primary","timeMin":"2016-06-24T06:59:59.999Z","timeMax":"2016-06-24T06:59:59.999Z","maxResults":250,"singleEvents":true,"orderBy":"startTime","level":"debug","message":"","timestamp":"2016-06-16T15:36:39.285Z"}
+{"level":"debug","message":"Google API Response","timestamp":"2016-06-16T15:36:39.285Z"}
+{"kind":"calendar#events","etag":"\"0\"","summary":"noah.a.silvera@gmail.com","updated":"1970-01-01T00:00:00.000Z","timeZone":"America/Vancouver","accessRole":"owner","defaultReminders":[],"items":[],"level":"debug","message":"","timestamp":"2016-06-16T15:36:39.285Z"}
+{"level":"info","message":"updating local data....","timestamp":"2016-06-16T15:36:39.285Z"}
+{"level":"info","message":"event data does not exist","timestamp":"2016-06-16T15:36:39.286Z"}
+{"level":"info","message":"writing new local data...","timestamp":"2016-06-16T15:36:39.286Z"}
+{"level":"info","message":"retrieving local data copy....","timestamp":"2016-06-16T15:36:39.288Z"}
+{"level":"info","message":"Sent local event data to client","timestamp":"2016-06-16T15:36:39.289Z"}
+{"level":"info","message":"refreshing data...","timestamp":"2016-06-16T15:37:13.529Z"}
+{"level":"info","message":"retrieving events from google....","timestamp":"2016-06-16T15:37:13.531Z"}
+{"level":"debug","message":"getting events from","timestamp":"2016-06-16T15:37:13.538Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:37:13.540Z"}
+{"level":"debug","message":"to ->","timestamp":"2016-06-16T15:37:13.540Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:37:13.541Z"}
+{"level":"debug","message":"...","timestamp":"2016-06-16T15:37:13.541Z"}
+{"level":"debug","message":"Google API request","timestamp":"2016-06-16T15:37:13.896Z"}
+{"auth":{"transporter":{},"clientId_":"228369885209-sut0vj747hls0mtc3k7mb1s8fre2jl3n.apps.googleusercontent.com","clientSecret_":"9rdqmGaFuQWQo2oIqS73kig-","redirectUri_":"urn:ietf:wg:oauth:2.0:oob","opts":{},"credentials":{"access_token":"ya29.CjIDA71eJPeZEHAN2mz6QRe1aO1fqeFgGeYpOd936CsGjp_pCFDe0V2rtS1i5BFIqlZddw","token_type":"Bearer","expiry_date":1466095033688,"refresh_token":"1/XHsDicCGbb8K6CohIZ7m3yCRXvbZkuw_JXmUqiZL7nYMEudVrK5jSpoR30zcRFq6"}},"calendarId":"primary","timeMin":"2016-06-24T06:59:59.999Z","timeMax":"2016-06-24T06:59:59.999Z","maxResults":250,"singleEvents":true,"orderBy":"startTime","level":"debug","message":"","timestamp":"2016-06-16T15:37:13.896Z"}
+{"level":"debug","message":"Google API Response","timestamp":"2016-06-16T15:37:13.897Z"}
+{"kind":"calendar#events","etag":"\"0\"","summary":"noah.a.silvera@gmail.com","updated":"1970-01-01T00:00:00.000Z","timeZone":"America/Vancouver","accessRole":"owner","defaultReminders":[],"items":[],"level":"debug","message":"","timestamp":"2016-06-16T15:37:13.897Z"}
+{"level":"info","message":"updating local data....","timestamp":"2016-06-16T15:37:13.897Z"}
+{"level":"info","message":"event data does not exist","timestamp":"2016-06-16T15:37:13.899Z"}
+{"level":"info","message":"writing new local data...","timestamp":"2016-06-16T15:37:13.899Z"}
+{"level":"info","message":"retrieving local data copy....","timestamp":"2016-06-16T15:37:13.901Z"}
+{"level":"info","message":"Sent local event data to client","timestamp":"2016-06-16T15:37:13.905Z"}
+{"level":"info","message":"refreshing data...","timestamp":"2016-06-16T15:37:26.163Z"}
+{"level":"info","message":"retrieving events from google....","timestamp":"2016-06-16T15:37:26.164Z"}
+{"level":"debug","message":"getting events from","timestamp":"2016-06-16T15:37:26.164Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:37:26.165Z"}
+{"level":"debug","message":"to ->","timestamp":"2016-06-16T15:37:26.165Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:37:26.165Z"}
+{"level":"debug","message":"...","timestamp":"2016-06-16T15:37:26.165Z"}
+{"level":"debug","message":"Google API request","timestamp":"2016-06-16T15:37:26.470Z"}
+{"auth":{"transporter":{},"clientId_":"228369885209-sut0vj747hls0mtc3k7mb1s8fre2jl3n.apps.googleusercontent.com","clientSecret_":"9rdqmGaFuQWQo2oIqS73kig-","redirectUri_":"urn:ietf:wg:oauth:2.0:oob","opts":{},"credentials":{"access_token":"ya29.CjIDA1j8E6-9orjdeljX73Cn6ouvragRdOV96cmDn0aoOI9Zie1QDAEzmq_O13lnH41CpQ","token_type":"Bearer","expiry_date":1466095046269,"refresh_token":"1/XHsDicCGbb8K6CohIZ7m3yCRXvbZkuw_JXmUqiZL7nYMEudVrK5jSpoR30zcRFq6"}},"calendarId":"primary","timeMin":"2016-06-24T06:59:59.999Z","timeMax":"2016-06-24T06:59:59.999Z","maxResults":250,"singleEvents":true,"orderBy":"startTime","level":"debug","message":"","timestamp":"2016-06-16T15:37:26.470Z"}
+{"level":"debug","message":"Google API Response","timestamp":"2016-06-16T15:37:26.470Z"}
+{"kind":"calendar#events","etag":"\"0\"","summary":"noah.a.silvera@gmail.com","updated":"1970-01-01T00:00:00.000Z","timeZone":"America/Vancouver","accessRole":"owner","defaultReminders":[],"items":[],"level":"debug","message":"","timestamp":"2016-06-16T15:37:26.470Z"}
+{"level":"info","message":"updating local data....","timestamp":"2016-06-16T15:37:26.471Z"}
+{"level":"info","message":"event data does not exist","timestamp":"2016-06-16T15:37:26.471Z"}
+{"level":"info","message":"writing new local data...","timestamp":"2016-06-16T15:37:26.471Z"}
+{"level":"info","message":"retrieving local data copy....","timestamp":"2016-06-16T15:37:26.473Z"}
+{"level":"info","message":"Sent local event data to client","timestamp":"2016-06-16T15:37:26.474Z"}
+{"level":"info","message":"refreshing data...","timestamp":"2016-06-16T15:37:27.643Z"}
+{"level":"info","message":"retrieving events from google....","timestamp":"2016-06-16T15:37:27.643Z"}
+{"level":"debug","message":"getting events from","timestamp":"2016-06-16T15:37:27.644Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:37:27.644Z"}
+{"level":"debug","message":"to ->","timestamp":"2016-06-16T15:37:27.644Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:37:27.644Z"}
+{"level":"debug","message":"...","timestamp":"2016-06-16T15:37:27.644Z"}
+{"level":"debug","message":"Google API request","timestamp":"2016-06-16T15:37:28.004Z"}
+{"auth":{"transporter":{},"clientId_":"228369885209-sut0vj747hls0mtc3k7mb1s8fre2jl3n.apps.googleusercontent.com","clientSecret_":"9rdqmGaFuQWQo2oIqS73kig-","redirectUri_":"urn:ietf:wg:oauth:2.0:oob","opts":{},"credentials":{"access_token":"ya29.CjIDA43rLzjHLUykQcqOGonIPYsXekDAunNF697PZq6ucxid1kfeuEN8FjvnWdZHhtMp9g","token_type":"Bearer","expiry_date":1466095047808,"refresh_token":"1/XHsDicCGbb8K6CohIZ7m3yCRXvbZkuw_JXmUqiZL7nYMEudVrK5jSpoR30zcRFq6"}},"calendarId":"primary","timeMin":"2016-06-24T06:59:59.999Z","timeMax":"2016-06-24T06:59:59.999Z","maxResults":250,"singleEvents":true,"orderBy":"startTime","level":"debug","message":"","timestamp":"2016-06-16T15:37:28.004Z"}
+{"level":"debug","message":"Google API Response","timestamp":"2016-06-16T15:37:28.005Z"}
+{"kind":"calendar#events","etag":"\"0\"","summary":"noah.a.silvera@gmail.com","updated":"1970-01-01T00:00:00.000Z","timeZone":"America/Vancouver","accessRole":"owner","defaultReminders":[],"items":[],"level":"debug","message":"","timestamp":"2016-06-16T15:37:28.005Z"}
+{"level":"info","message":"updating local data....","timestamp":"2016-06-16T15:37:28.005Z"}
+{"level":"info","message":"event data does not exist","timestamp":"2016-06-16T15:37:28.006Z"}
+{"level":"info","message":"writing new local data...","timestamp":"2016-06-16T15:37:28.006Z"}
+{"level":"info","message":"retrieving local data copy....","timestamp":"2016-06-16T15:37:28.007Z"}
+{"level":"info","message":"Sent local event data to client","timestamp":"2016-06-16T15:37:28.011Z"}
+{"level":"info","message":"refreshing data...","timestamp":"2016-06-16T15:37:28.758Z"}
+{"level":"info","message":"retrieving events from google....","timestamp":"2016-06-16T15:37:28.759Z"}
+{"level":"debug","message":"getting events from","timestamp":"2016-06-16T15:37:28.759Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:37:28.759Z"}
+{"level":"debug","message":"to ->","timestamp":"2016-06-16T15:37:28.759Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:37:28.759Z"}
+{"level":"debug","message":"...","timestamp":"2016-06-16T15:37:28.760Z"}
+{"level":"debug","message":"Google API request","timestamp":"2016-06-16T15:37:29.053Z"}
+{"auth":{"transporter":{},"clientId_":"228369885209-sut0vj747hls0mtc3k7mb1s8fre2jl3n.apps.googleusercontent.com","clientSecret_":"9rdqmGaFuQWQo2oIqS73kig-","redirectUri_":"urn:ietf:wg:oauth:2.0:oob","opts":{},"credentials":{"access_token":"ya29.CjIDA_8nlMxHzCn8c-p8BDQ1Jr9N62omZW-W0pBOkHcntGUwBrbM94x65gx9l7YqB7JYxQ","token_type":"Bearer","expiry_date":1466095048881,"refresh_token":"1/XHsDicCGbb8K6CohIZ7m3yCRXvbZkuw_JXmUqiZL7nYMEudVrK5jSpoR30zcRFq6"}},"calendarId":"primary","timeMin":"2016-06-24T06:59:59.999Z","timeMax":"2016-06-24T06:59:59.999Z","maxResults":250,"singleEvents":true,"orderBy":"startTime","level":"debug","message":"","timestamp":"2016-06-16T15:37:29.053Z"}
+{"level":"debug","message":"Google API Response","timestamp":"2016-06-16T15:37:29.054Z"}
+{"kind":"calendar#events","etag":"\"0\"","summary":"noah.a.silvera@gmail.com","updated":"1970-01-01T00:00:00.000Z","timeZone":"America/Vancouver","accessRole":"owner","defaultReminders":[],"items":[],"level":"debug","message":"","timestamp":"2016-06-16T15:37:29.054Z"}
+{"level":"info","message":"updating local data....","timestamp":"2016-06-16T15:37:29.055Z"}
+{"level":"info","message":"event data does not exist","timestamp":"2016-06-16T15:37:29.055Z"}
+{"level":"info","message":"writing new local data...","timestamp":"2016-06-16T15:37:29.056Z"}
+{"level":"info","message":"retrieving local data copy....","timestamp":"2016-06-16T15:37:29.057Z"}
+{"level":"info","message":"Sent local event data to client","timestamp":"2016-06-16T15:37:29.058Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T15:37:36.582Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-16T15:38:24.358Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-16T15:38:24.361Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-16T15:38:24.363Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T15:38:28.356Z"}
+{"level":"info","message":"refreshing data...","timestamp":"2016-06-16T15:38:28.407Z"}
+{"level":"info","message":"retrieving events from google....","timestamp":"2016-06-16T15:38:28.408Z"}
+{"level":"debug","message":"getting events from","timestamp":"2016-06-16T15:38:28.412Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:38:28.414Z"}
+{"level":"debug","message":"to ->","timestamp":"2016-06-16T15:38:28.415Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:38:28.415Z"}
+{"level":"debug","message":"...","timestamp":"2016-06-16T15:38:28.415Z"}
+{"level":"debug","message":"Google API request","timestamp":"2016-06-16T15:38:29.188Z"}
+{"auth":{"transporter":{},"clientId_":"228369885209-sut0vj747hls0mtc3k7mb1s8fre2jl3n.apps.googleusercontent.com","clientSecret_":"9rdqmGaFuQWQo2oIqS73kig-","redirectUri_":"urn:ietf:wg:oauth:2.0:oob","opts":{},"credentials":{"access_token":"ya29.CjIDA_U6p9dR_aloVXpWfhI-ond60Z9mGR-Ld05OvTeYitB_BSsCF9jM8H1zRFCQERZavg","token_type":"Bearer","expiry_date":1466095108612,"refresh_token":"1/XHsDicCGbb8K6CohIZ7m3yCRXvbZkuw_JXmUqiZL7nYMEudVrK5jSpoR30zcRFq6"}},"calendarId":"primary","timeMin":"2016-06-24T06:59:59.999Z","timeMax":"2016-06-24T06:59:59.999Z","maxResults":250,"singleEvents":true,"orderBy":"startTime","level":"debug","message":"","timestamp":"2016-06-16T15:38:29.188Z"}
+{"level":"debug","message":"Google API Response","timestamp":"2016-06-16T15:38:29.189Z"}
+{"kind":"calendar#events","etag":"\"0\"","summary":"noah.a.silvera@gmail.com","updated":"1970-01-01T00:00:00.000Z","timeZone":"America/Vancouver","accessRole":"owner","defaultReminders":[],"items":[],"level":"debug","message":"","timestamp":"2016-06-16T15:38:29.189Z"}
+{"level":"info","message":"updating local data....","timestamp":"2016-06-16T15:38:29.190Z"}
+{"level":"info","message":"event data does not exist","timestamp":"2016-06-16T15:38:29.191Z"}
+{"level":"info","message":"writing new local data...","timestamp":"2016-06-16T15:38:29.191Z"}
+{"level":"info","message":"retrieving local data copy....","timestamp":"2016-06-16T15:38:29.194Z"}
+{"level":"info","message":"Sent local event data to client","timestamp":"2016-06-16T15:38:29.197Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-16T15:40:26.469Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-16T15:40:26.473Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-16T15:40:26.474Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T15:40:29.877Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-16T15:44:34.917Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-16T15:44:34.921Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-16T15:44:34.921Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T15:44:39.639Z"}
+{"level":"info","message":"refreshing data...","timestamp":"2016-06-16T15:44:48.338Z"}
+{"level":"info","message":"retrieving events from google....","timestamp":"2016-06-16T15:44:48.339Z"}
+{"level":"debug","message":"getting events from","timestamp":"2016-06-16T15:44:48.341Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:44:48.343Z"}
+{"level":"debug","message":"to ->","timestamp":"2016-06-16T15:44:48.343Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:44:48.343Z"}
+{"level":"debug","message":"...","timestamp":"2016-06-16T15:44:48.343Z"}
+{"level":"debug","message":"Google API request","timestamp":"2016-06-16T15:44:48.900Z"}
+{"auth":{"transporter":{},"clientId_":"228369885209-sut0vj747hls0mtc3k7mb1s8fre2jl3n.apps.googleusercontent.com","clientSecret_":"9rdqmGaFuQWQo2oIqS73kig-","redirectUri_":"urn:ietf:wg:oauth:2.0:oob","opts":{},"credentials":{"access_token":"ya29.CjIDA0yK6AsmWuT0jgw8Xs1tDClyS44-Sq_LDxSZQ1KzpmcfQNpai9vJIJTQfBgroNYlwQ","token_type":"Bearer","expiry_date":1466095488611,"refresh_token":"1/XHsDicCGbb8K6CohIZ7m3yCRXvbZkuw_JXmUqiZL7nYMEudVrK5jSpoR30zcRFq6"}},"calendarId":"primary","timeMin":"2016-06-24T06:59:59.999Z","timeMax":"2016-06-24T06:59:59.999Z","maxResults":250,"singleEvents":true,"orderBy":"startTime","level":"debug","message":"","timestamp":"2016-06-16T15:44:48.901Z"}
+{"level":"debug","message":"Google API Response","timestamp":"2016-06-16T15:44:48.902Z"}
+{"kind":"calendar#events","etag":"\"0\"","summary":"noah.a.silvera@gmail.com","updated":"1970-01-01T00:00:00.000Z","timeZone":"America/Vancouver","accessRole":"owner","defaultReminders":[],"items":[],"level":"debug","message":"","timestamp":"2016-06-16T15:44:48.902Z"}
+{"level":"info","message":"updating local data....","timestamp":"2016-06-16T15:44:48.903Z"}
+{"level":"info","message":"event data does not exist","timestamp":"2016-06-16T15:44:48.904Z"}
+{"level":"info","message":"writing new local data...","timestamp":"2016-06-16T15:44:48.904Z"}
+{"level":"info","message":"retrieving local data copy....","timestamp":"2016-06-16T15:44:48.906Z"}
+{"level":"info","message":"Sent local event data to client","timestamp":"2016-06-16T15:44:48.909Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-16T15:48:23.731Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-16T15:48:23.735Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-16T15:48:23.735Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T15:48:26.879Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T15:48:36.652Z"}
+{"level":"info","message":"refreshing data...","timestamp":"2016-06-16T15:48:39.375Z"}
+{"level":"info","message":"retrieving events from google....","timestamp":"2016-06-16T15:48:39.375Z"}
+{"level":"debug","message":"getting events from","timestamp":"2016-06-16T15:48:39.378Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:48:39.379Z"}
+{"level":"debug","message":"to ->","timestamp":"2016-06-16T15:48:39.379Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:48:39.380Z"}
+{"level":"debug","message":"...","timestamp":"2016-06-16T15:48:39.380Z"}
+{"level":"debug","message":"Google API request","timestamp":"2016-06-16T15:48:39.978Z"}
+{"auth":{"transporter":{},"clientId_":"228369885209-sut0vj747hls0mtc3k7mb1s8fre2jl3n.apps.googleusercontent.com","clientSecret_":"9rdqmGaFuQWQo2oIqS73kig-","redirectUri_":"urn:ietf:wg:oauth:2.0:oob","opts":{},"credentials":{"access_token":"ya29.CjIDAwyN5r6gxctKlWuucAzuprKsOoLGqIPoJU37YqZgqL6TFUsnWTY1sCMVOTxDagIPUA","token_type":"Bearer","expiry_date":1466095719624,"refresh_token":"1/XHsDicCGbb8K6CohIZ7m3yCRXvbZkuw_JXmUqiZL7nYMEudVrK5jSpoR30zcRFq6"}},"calendarId":"primary","timeMin":"2016-06-24T06:59:59.999Z","timeMax":"2016-06-24T06:59:59.999Z","maxResults":250,"singleEvents":true,"orderBy":"startTime","level":"debug","message":"","timestamp":"2016-06-16T15:48:39.978Z"}
+{"level":"debug","message":"Google API Response","timestamp":"2016-06-16T15:48:39.979Z"}
+{"kind":"calendar#events","etag":"\"0\"","summary":"noah.a.silvera@gmail.com","updated":"1970-01-01T00:00:00.000Z","timeZone":"America/Vancouver","accessRole":"owner","defaultReminders":[],"items":[],"level":"debug","message":"","timestamp":"2016-06-16T15:48:39.979Z"}
+{"level":"info","message":"updating local data....","timestamp":"2016-06-16T15:48:39.980Z"}
+{"level":"info","message":"event data does not exist","timestamp":"2016-06-16T15:48:39.981Z"}
+{"level":"info","message":"writing new local data...","timestamp":"2016-06-16T15:48:39.981Z"}
+{"level":"info","message":"retrieving local data copy....","timestamp":"2016-06-16T15:48:39.984Z"}
+{"level":"info","message":"Sent local event data to client","timestamp":"2016-06-16T15:48:39.986Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T15:49:07.679Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-16T15:51:01.836Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-16T15:51:01.840Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-16T15:51:01.841Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T15:51:04.878Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T15:51:07.910Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T15:51:11.996Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-16T15:53:36.194Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-16T15:53:36.198Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-16T15:53:36.199Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T15:53:38.885Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T15:53:45.895Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-16T15:57:49.738Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-16T15:57:49.740Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-16T15:57:49.741Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T15:57:49.901Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T15:57:58.741Z"}
+{"level":"info","message":"refreshing data...","timestamp":"2016-06-16T15:58:30.786Z"}
+{"level":"info","message":"retrieving events from google....","timestamp":"2016-06-16T15:58:30.786Z"}
+{"level":"debug","message":"getting events from","timestamp":"2016-06-16T15:58:30.789Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:58:30.791Z"}
+{"level":"debug","message":"to ->","timestamp":"2016-06-16T15:58:30.791Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T15:58:30.791Z"}
+{"level":"debug","message":"...","timestamp":"2016-06-16T15:58:30.791Z"}
+{"level":"debug","message":"Google API request","timestamp":"2016-06-16T15:58:31.361Z"}
+{"auth":{"transporter":{},"clientId_":"228369885209-sut0vj747hls0mtc3k7mb1s8fre2jl3n.apps.googleusercontent.com","clientSecret_":"9rdqmGaFuQWQo2oIqS73kig-","redirectUri_":"urn:ietf:wg:oauth:2.0:oob","opts":{},"credentials":{"access_token":"ya29.CjIDA9lM2M6M0BL8q0jqYmS5LGmPWyD-d5uAuwLaa89lQFkGaA3PCkSmH0vexWTzDNXVIw","token_type":"Bearer","expiry_date":1466096311076,"refresh_token":"1/XHsDicCGbb8K6CohIZ7m3yCRXvbZkuw_JXmUqiZL7nYMEudVrK5jSpoR30zcRFq6"}},"calendarId":"primary","timeMin":"2016-06-24T06:59:59.999Z","timeMax":"2016-06-24T06:59:59.999Z","maxResults":250,"singleEvents":true,"orderBy":"startTime","level":"debug","message":"","timestamp":"2016-06-16T15:58:31.362Z"}
+{"level":"debug","message":"Google API Response","timestamp":"2016-06-16T15:58:31.363Z"}
+{"kind":"calendar#events","etag":"\"0\"","summary":"noah.a.silvera@gmail.com","updated":"1970-01-01T00:00:00.000Z","timeZone":"America/Vancouver","accessRole":"owner","defaultReminders":[],"items":[],"level":"debug","message":"","timestamp":"2016-06-16T15:58:31.363Z"}
+{"level":"info","message":"updating local data....","timestamp":"2016-06-16T15:58:31.364Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-16T16:00:25.193Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-16T16:00:25.196Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-16T16:00:25.197Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T16:00:25.875Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T16:00:27.159Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T16:00:31.123Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-16T16:00:42.912Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-16T16:00:42.915Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-16T16:00:42.915Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T16:00:44.292Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T16:00:45.865Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-16T16:00:54.113Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-16T16:00:54.117Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-16T16:00:54.118Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T16:00:54.843Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T16:00:55.864Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-16T16:00:57.649Z"}
+{"level":"info","message":"refreshing data...","timestamp":"2016-06-16T16:00:59.040Z"}
+{"level":"info","message":"retrieving events from google....","timestamp":"2016-06-16T16:00:59.041Z"}
+{"level":"debug","message":"getting events from","timestamp":"2016-06-16T16:00:59.043Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T16:00:59.044Z"}
+{"level":"debug","message":"to ->","timestamp":"2016-06-16T16:00:59.045Z"}
+{"level":"debug","message":"2016-06-23T23:59:59-07:00","timestamp":"2016-06-16T16:00:59.045Z"}
+{"level":"debug","message":"...","timestamp":"2016-06-16T16:00:59.045Z"}
+{"level":"debug","message":"Google API request","timestamp":"2016-06-16T16:00:59.877Z"}
+{"auth":{"transporter":{},"clientId_":"228369885209-sut0vj747hls0mtc3k7mb1s8fre2jl3n.apps.googleusercontent.com","clientSecret_":"9rdqmGaFuQWQo2oIqS73kig-","redirectUri_":"urn:ietf:wg:oauth:2.0:oob","opts":{},"credentials":{"access_token":"ya29.CjIDA9ag_S8rDwDaC28JtlOjg6P6HPce0ozHIzSWXqcOgeWscaGPYsYbKPWx6q3ATuuq1w","token_type":"Bearer","expiry_date":1466096459288,"refresh_token":"1/XHsDicCGbb8K6CohIZ7m3yCRXvbZkuw_JXmUqiZL7nYMEudVrK5jSpoR30zcRFq6"}},"calendarId":"primary","timeMin":"2016-06-24T06:59:59.999Z","timeMax":"2016-06-24T06:59:59.999Z","maxResults":250,"singleEvents":true,"orderBy":"startTime","level":"debug","message":"","timestamp":"2016-06-16T16:00:59.877Z"}
+{"level":"debug","message":"Google API Response","timestamp":"2016-06-16T16:00:59.878Z"}
+{"kind":"calendar#events","etag":"\"0\"","summary":"noah.a.silvera@gmail.com","updated":"1970-01-01T00:00:00.000Z","timeZone":"America/Vancouver","accessRole":"owner","defaultReminders":[],"items":[],"level":"debug","message":"","timestamp":"2016-06-16T16:00:59.878Z"}
+{"level":"info","message":"updating local data....","timestamp":"2016-06-16T16:00:59.879Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-17T15:19:39.632Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-17T15:19:39.635Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-17T15:19:39.636Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-17T15:19:48.357Z"}
+{"level":"info","message":"refreshing data...","timestamp":"2016-06-17T15:19:50.558Z"}
+{"level":"info","message":"retrieving events from google....","timestamp":"2016-06-17T15:19:50.558Z"}
+{"level":"debug","message":"getting events from","timestamp":"2016-06-17T15:19:50.560Z"}
+{"level":"debug","message":"2016-06-24T23:59:59-07:00","timestamp":"2016-06-17T15:19:50.561Z"}
+{"level":"debug","message":"to ->","timestamp":"2016-06-17T15:19:50.561Z"}
+{"level":"debug","message":"2016-06-24T23:59:59-07:00","timestamp":"2016-06-17T15:19:50.561Z"}
+{"level":"debug","message":"...","timestamp":"2016-06-17T15:19:50.561Z"}
+{"level":"debug","message":"Google API request","timestamp":"2016-06-17T15:19:52.082Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-17T15:57:26.039Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-17T15:57:26.041Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-17T15:57:26.042Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-17T15:57:32.908Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-17T15:58:37.270Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-17T15:58:37.272Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-17T15:58:37.272Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-17T15:58:39.568Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-17T15:58:40.709Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-17T15:59:07.889Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-17T15:59:24.103Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-17T15:59:51.153Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-17T16:00:00.903Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-17T16:00:00.905Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-17T16:00:00.905Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-17T16:00:00.953Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-17T16:00:46.049Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-17T16:00:46.053Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-17T16:00:46.054Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-17T16:00:46.140Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-17T16:00:47.550Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-17T16:01:35.818Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-19T19:30:03.300Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-19T19:30:03.313Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-19T19:30:03.314Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-19T19:30:50.272Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-19T19:31:25.085Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-19T19:31:39.330Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-19T19:39:41.285Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-21T23:11:45.511Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-21T23:11:45.520Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-21T23:11:45.523Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:13:08.736Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:13:22.260Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:14:34.993Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-21T23:17:38.349Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-21T23:17:38.450Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-21T23:17:38.460Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:17:42.990Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:18:26.614Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:19:55.050Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:20:20.689Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:20:49.375Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:21:24.659Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-21T23:27:58.333Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-21T23:27:58.349Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-21T23:27:58.353Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:30:54.135Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:31:25.259Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:31:36.217Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:31:45.974Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:31:52.516Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:32:35.007Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:32:49.971Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:32:51.754Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:34:01.537Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:34:55.081Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:35:10.874Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:35:18.478Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:35:27.840Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:38:52.060Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:39:25.575Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:40:27.445Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:40:55.493Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:40:58.964Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:41:01.802Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:41:04.944Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:41:08.652Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:43:35.568Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-21T23:51:05.093Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-21T23:51:05.101Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-21T23:51:05.103Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:51:05.483Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:53:27.699Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:54:09.572Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:54:53.016Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:55:33.394Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:55:49.048Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-21T23:57:01.474Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-21T23:57:01.479Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-21T23:57:01.481Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:57:03.398Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-21T23:58:24.579Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-22T23:29:43.832Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-22T23:29:43.837Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-22T23:29:43.838Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-22T23:30:06.642Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-22T23:32:10.772Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-22T23:32:12.891Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-22T23:36:36.330Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-22T23:36:41.283Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-22T23:36:54.325Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-22T23:36:57.089Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-22T23:37:12.095Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-22T23:38:35.399Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-22T23:38:46.368Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-22T23:38:52.215Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-22T23:38:53.136Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-22T23:39:20.744Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-22T23:39:35.137Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-22T23:39:38.456Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-22T23:39:43.699Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-22T23:40:12.229Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-22T23:42:34.209Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:09:20.552Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:09:30.180Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:10:11.270Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:12:40.100Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:13:27.074Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:13:55.937Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:14:34.015Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:14:47.681Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-23T00:15:42.656Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-23T00:15:42.660Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-23T00:15:42.661Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:15:45.886Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-23T00:16:05.236Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-23T00:16:05.241Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-23T00:16:05.241Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:16:07.514Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-23T00:16:37.200Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-23T00:16:37.209Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-23T00:16:37.210Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-23T00:16:44.775Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-23T00:16:44.801Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-23T00:16:44.819Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:16:46.928Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-23T00:19:24.122Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-23T00:19:24.127Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-23T00:19:24.128Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-23T00:22:55.082Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-23T00:22:55.086Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-23T00:22:55.087Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-23T00:24:19.484Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-23T00:24:19.488Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-23T00:24:19.489Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-23T00:25:07.099Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-23T00:25:07.103Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-23T00:25:07.104Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-23T00:41:15.144Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-23T00:41:15.151Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-23T00:41:15.153Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:41:27.443Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-23T00:43:41.891Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-23T00:43:41.897Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-23T00:43:41.899Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:43:45.789Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-23T00:45:15.107Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-23T00:45:15.111Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-23T00:45:15.112Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:45:18.476Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:45:44.851Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-23T00:45:58.345Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-23T00:45:58.350Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-23T00:45:58.351Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:45:59.828Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:46:39.346Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:46:51.399Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:46:54.083Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:47:01.546Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:47:36.976Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:47:42.411Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:47:43.535Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:47:44.937Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:47:49.237Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:48:12.595Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:48:24.755Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T00:48:34.126Z"}
+{"level":"info","message":"listening for socket requests on localhost:80","timestamp":"2016-06-23T01:04:12.916Z"}
+{"level":"info","message":"setting up listeners","timestamp":"2016-06-23T01:04:12.922Z"}
+{"level":"info","message":"starting server","timestamp":"2016-06-23T01:04:12.923Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:05:11.239Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:05:12.864Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:05:33.834Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:05:43.645Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:05:54.875Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:08:41.487Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:09:45.042Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:10:11.019Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:10:33.703Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:11:09.211Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:11:10.757Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:11:26.932Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:12:07.271Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:13:13.455Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:13:39.625Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:14:14.964Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:14:48.989Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:14:50.418Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:15:16.601Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:15:24.986Z"}
+{"level":"info","message":"new connection","timestamp":"2016-06-23T01:16:28.339Z"}
