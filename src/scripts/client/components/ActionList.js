@@ -201,7 +201,14 @@ define(['react', 'components/Action'], function (React, Action) {
             }
 
             // renders an actionList using the action items giving with a unique dataID to distuinguish it in it's parent container
-            return React.createElement('div', { className: 'actionList', 'data-id': this.props.dataId, onDragStart: this.onDragStart, onDragEnter: this.onDragEnter, onDragEnd: this.onDragEnd, onDragLeave: this.onDragLeave }, actionElems);
+            return React.createElement('div', { className: 'actionList',
+                                                'data-id': this.props.dataId,
+                                                onDragStart: this.onDragStart,
+                                                onDragEnter: this.onDragEnter,
+                                                onDragEnd: this.onDragEnd,
+                                                onDragLeave: this.onDragLeave },
+                                        actionElems
+                                    );
         }
     };
 });

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>InfinisprintClient Tests</title>
+  <link rel="stylesheet" media="all" href="lib/mocha.css">
+</head>
+<body>
+  <div id="mocha"><p><a href=".">Index</a></p></div>
+  <div id="messages"></div>
+  <div id="fixtures"></div>
+  <script src="lib/sinon.js"></script>
+  <script src="lib/mocha.js"></script>
+  <script src="lib/chai.js"></script>
+  <script>
+    // use chais BDD should assertion style
+    mocha.setup('bdd')
+  </script>
+  <script src="./../../src/scripts/client/lib/require.js"></script>
+  <script>
+    srcPath = "./../../src/scripts/client/"
+
+      
+    // set up requirejs to load external API's ( specifically, react )
+    requirejs.config({
+        paths: {
+        "socket-io": "http://localhost:80/socket.io/socket.io",
+        "jQuery": 'https://code.jquery.com/jquery-3.0.0.min',
+        'google-api': 'https://apis.google.com/js/client.js?onload=define'
+        },
+        shim:{
+            'socket-io' : {
+                exports: ['io']
+            },
+            'jQuery': {
+                exports: ['$']
+            }
+        }
+    });
+  </script>
+  <script src="model.test.js"></script>
+  <script>
+    //make the should variable global 
+    var should = chai.should()
+    mocha.run();
+  </script>
+</body>
+</html>
+

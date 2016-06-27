@@ -75,12 +75,6 @@ div.invisibleFrame {
   /*For testing purposes*/
   max-width: 100%; }
 
-.refreshButton {
-  width: 30px;
-  height: 30px;
-  border: 5px solid black;
-  background: blue; }
-
 /*Forces element to align side by side*/
 .row {
   display: inline-block; }

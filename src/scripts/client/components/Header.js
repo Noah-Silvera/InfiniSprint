@@ -1,4 +1,4 @@
-define(['react','socket'],function(React,socket){
+define(['react','socket','components/Menu'],function(React,socket,Menu){
     return class Header extends React.Component {
         constructor(props){
             super(props)
@@ -6,18 +6,13 @@ define(['react','socket'],function(React,socket){
         }   
         
         render(){
-            return (  React.createElement("div", {className: "header"}, 
-                        React.createElement("h1", {className: "title"}, this.props.content), 
-                        React.createElement("button", {className: "refreshButton", onClick: this.refreshButton})
-                    ) );
+            return  React.createElement("div", {className: "header"}, 
+                        React.createElement("h1", {className: "title"}, this.props.content),
+                        React.createElement(Menu, null)
+                    ) 
         }
 
-        refreshButton(e){
-            console.log('asking for events...')
-            socket.emit.refreshData()
 
-            e.preventDefault()
-            e.stopPropagation()
-        }
+
     }
 })

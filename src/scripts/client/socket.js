@@ -1,5 +1,5 @@
 define(['socket-io'], function (io) {
-    var socket = io('http://localhost:80'); // io is imported in index.html
+    var socket = io('http://localhost:80');
 
     return {
         emit: {

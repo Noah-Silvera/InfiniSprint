@@ -35,6 +35,11 @@ function setUpListeners(io,callback){
 	io.on('connection', function(socket){
 	  w.log('info',"new connection")
 
+      socket.on('test',function(data){
+          w.log('info','test socket message recieved')
+          w.log('debug',data)
+      })
+
 	  socket.on('refreshData', function() {
 	  	w.log('info','refreshing data...')
 	    // once the data has been updated locally, this function fires off the data in a eventsUpdated event

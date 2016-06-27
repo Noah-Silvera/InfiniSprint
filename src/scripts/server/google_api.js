@@ -9,8 +9,7 @@ var fs = require('fs');
 var readline = require('readline');
 var path = require('path');
 var sync_local_data = require('./sync_local_data')
-var moment = require('moment')
-
+var moment = require('moment') 
 // If modifying these scopes, delete your previously saved credentialsentials
 // at ~/.credentials/calendar-nodejs-quickstart.json
 var SCOPES = ['https://www.googleapis.com/auth/calendar'];

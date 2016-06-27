@@ -48,7 +48,7 @@ log.init()
 
 
 // after waitin  for webSockets to initialize, start the WebpackDevServer
-initializeWebsockets( function startServer(socket) {
+initializeWebsockets( function startServer() {
   w.log('info',"starting server")
   app.listen(3000, function(){
     console.log('listening on localhost:3000')  

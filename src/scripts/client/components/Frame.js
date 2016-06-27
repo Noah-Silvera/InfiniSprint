@@ -1,6 +1,6 @@
 
 
-define(['react', 'react_dom', 'components/ActionList', 'components/Header', 'components/Heading', 'socket'], function (React, ReactDOM, ActionList, Header, Heading, socket) {
+define(['react', 'react_dom', 'components/ActionList', 'components/Header', 'components/Heading','socket'], function (React, ReactDOM, ActionList, Header, Heading, socket) {
 
     // This frame represents the main
     // component of the app - the frame that renders the backlog and sprint items
@@ -109,11 +109,18 @@ define(['react', 'react_dom', 'components/ActionList', 'components/Header', 'com
         render() {
 
             return React.createElement('div', { className: 'frame' }, 
-                React.createElement(Header, { content: 'InfiniSprint', socket: this.socket }), 
+                React.createElement(Header, {   content: 'InfiniSprint',
+                                                socket: this.socket }), 
                 React.createElement(Heading, { content: 'Current Sprint' }), 
-                React.createElement(ActionList, { actions: this.data['sprint'], dataId: 0, socket: this.socket, dragItem: this.dragItem }), 
+                React.createElement(ActionList, {   actions: this.data['sprint'],
+                                                    dataId: 0,
+                                                    socket: this.socket,
+                                                    dragItem: this.dragItem }), 
                 React.createElement(Heading, { content: 'Backlog' }), 
-                React.createElement(ActionList, { actions: this.data['backlog'], dataId: 1, socket: this.socket, dragItem: this.dragItem }));
+                React.createElement(ActionList, {   actions: this.data['backlog'],
+                                                    dataId: 1,
+                                                    socket: this.socket,
+                                                    dragItem: this.dragItem }));
         }
     };
 });

@@ -20,29 +20,13 @@ var require = requirejs
 
 
 require(['./react','./react_dom','./google-api','./google_auth','./components/Frame'], function(React,ReactDOM,googleApi,googleAuth,Frame) {
-    function checkGAPI() {
-      if (gapi && gapi.client) {
-        // ensure we have access to google
-        googleAuth.checkAuth().then(function(result){
 
-            console.info(result)
+
 
             // hand control of the DOM over to react
             ReactDOM.render(
                    React.createElement(Frame,null), document.getElementById('root')
             )
-
-        })
-      } else {
-        setTimeout(checkGAPI, 100);
-      }
-    }
-
-    checkGAPI();
-
-
-
-
 });
 
 
