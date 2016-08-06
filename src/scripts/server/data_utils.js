@@ -13,7 +13,7 @@ exports.purgeProperties = purgeProperties
  * @return {Array}         the Array of purged objects 
  */
 function purgeProperties( objArr, keepArr ){
-
+ 
   // new object to manipulate
   var newObjArr = []
 

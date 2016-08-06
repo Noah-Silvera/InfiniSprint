@@ -3,8 +3,7 @@
 requirejs.config({
     paths: {
       "socket-io": "http://localhost:80/socket.io/socket.io",
-      "jQuery": 'https://code.jquery.com/jquery-3.0.0.min',
-      'google-api': 'https://apis.google.com/js/client.js?onload=define'
+      "jQuery": 'https://code.jquery.com/jquery-3.0.0.min'
     },
     shim:{
         'socket-io' : {
@@ -19,14 +18,16 @@ requirejs.config({
 var require = requirejs
 
 
-require(['./react','./react_dom','./google-api','./google_auth','./components/Frame'], function(React,ReactDOM,googleApi,googleAuth,Frame) {
-
-
-
+require(['./react','./react_dom','./components/Frame','google_api'], function(React,ReactDOM,Frame,google_api) {
             // hand control of the DOM over to react
             ReactDOM.render(
                    React.createElement(Frame,null), document.getElementById('root')
             )
+
+            
+            google_api.handleClientLoad()
+
+
 });
 
 

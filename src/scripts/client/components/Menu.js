@@ -1,7 +1,8 @@
-define(['react','google_auth','socket'],function(React,googleAuth,socket){
+define(['react','socket'],function(React,googleAuth,socket){
 
     var retrieveDataMes = 'Retrieve Events'
-    var retrieveAuthMes = 'Authorize google calendar'
+    var retrieveAuthMes = 'Sign In'
+    var removeAuthMes = 'Sign Out'
 
     return class Menu extends React.Component {
         constructor(props){
@@ -16,10 +17,16 @@ define(['react','google_auth','socket'],function(React,googleAuth,socket){
                                                         onClick: this.refreshButton,
                                                         },
                                                 retrieveDataMes),
-                        React.createElement('button', { className : 'menuButton',
-                                                        id: 'retrieveAuthButton',
-                                                        onClick: this.retrieveAuth},
-                                                retrieveAuthMes)
+                        React.createElement('button',   { 
+                                                            className : 'menuButton',
+                                                            id: 'signin-button'
+                                                        },
+                                                retrieveAuthMes),
+                        React.createElement('button',   {
+                                                            className : 'menuButton',
+                                                            id: 'signout-button'
+                                                        },
+                                                removeAuthMes)
                     )
         }
 
@@ -31,18 +38,6 @@ define(['react','google_auth','socket'],function(React,googleAuth,socket){
             e.stopPropagation()
         }
 
-        retrieveAuth(e){
-            console.log("retrieving google authorization")
-
-            googleAuth.checkAuth().then(function(mes){
-                console.log(mes)
-            },function(err){
-                throw err
-            })
-
-
-            
-        }
 
 
 

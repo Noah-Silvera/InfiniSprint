@@ -34,7 +34,12 @@ app.get('/', function( req, res){
   res.writeHead(200, {'Content  -Type': 'text/html'});
   res.end(indexHtml);
   res.send()
-});  
+}); 
+
+app.get('/keys', function(req,res){
+    var keys = fs.readFileSync(path.join(root, '/keys.json'));
+    res.send(keys)
+}) 
 
 
 // set up loggin with winston

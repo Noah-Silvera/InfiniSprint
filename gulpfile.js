@@ -113,7 +113,7 @@ gulp.task('watch',function() {
   gulp.watch(patt.sass, ['sass'])
   
   // watch for changes to static files
-  gulp.watch(patt.static, ['static']);
+  gulp.watch(patt.static, ['reload']);
 })
 
 gulp.task('copy',['frontend','sass'])
