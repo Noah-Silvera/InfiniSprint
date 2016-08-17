@@ -1,6 +1,16 @@
 
 
-define(['react', 'react_dom', 'components/ActionList', 'components/Header', 'components/Heading','socket'], function (React, ReactDOM, ActionList, Header, Heading, socket) {
+define(['react',
+        'react_dom',
+        'components/ActionList',
+        'components/Header',
+        'components/Heading',
+        'components/Spinner',
+        'components/simple/signinButton',
+        'components/simple/signoutButton',
+        'components/Menu',
+        'socket'
+        ], function (React, ReactDOM, ActionList, Header, Heading, Spinner,signinButton,signoutButton, Menu, socket) {
 
     // This frame represents the main
     // component of the app - the frame that renders the backlog and sprint items
@@ -108,19 +118,52 @@ define(['react', 'react_dom', 'components/ActionList', 'components/Header', 'com
         // binds the dragging event
         render() {
 
+            // the main body of content to be loaded in the frame
+            var content = null;
+
+            if( !this.props.apiReady ){
+                // present a loading screen 
+                content = [
+                    React.createElement(Spinner, {
+                       message: 'Loading google calendar component' 
+                    })
+                ]
+
+            }
+            else if( !this.props.signedIn ){
+                // api is ready but user not signed in
+                content = React.createElement(signinButton)
+
+            } else {
+
+                // load the users data
+                content = [
+                    React.createElement(Heading, { content: 'Current Sprint' }), 
+                    React.createElement(ActionList, {
+                        actions: this.data['sprint'],
+                        dataId: 0,
+                        socket: this.socket,
+                        dragItem: this.dragItem }), 
+                    React.createElement(Heading, { content: 'Backlog' }), 
+                    React.createElement(ActionList, {
+                        actions: this.data['backlog'],
+                        dataId: 1,
+                        socket: this.socket,
+                        dragItem: this.dragItem })
+                ]
+            }
+
             return React.createElement('div', { className: 'frame' }, 
+                React.createElement(Menu, {
+                    items: [ 
+                        React.createElement(signoutButton)
+                    ]
+                }),
                 React.createElement(Header, {   content: 'InfiniSprint',
-                                                socket: this.socket }), 
-                React.createElement(Heading, { content: 'Current Sprint' }), 
-                React.createElement(ActionList, {   actions: this.data['sprint'],
-                                                    dataId: 0,
-                                                    socket: this.socket,
-                                                    dragItem: this.dragItem }), 
-                React.createElement(Heading, { content: 'Backlog' }), 
-                React.createElement(ActionList, {   actions: this.data['backlog'],
-                                                    dataId: 1,
-                                                    socket: this.socket,
-                                                    dragItem: this.dragItem }));
+                                                socket: this.socket }),
+                content
+            )
+
         }
     };
 });

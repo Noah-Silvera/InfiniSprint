@@ -1,4 +1,4 @@
-define(['react','socket','components/Menu'],function(React,socket,Menu){
+define(['react','socket','components/simple/signoutButton'],function(React,socket,signoutButton){
     return class Header extends React.Component {
         constructor(props){
             super(props)
@@ -7,8 +7,8 @@ define(['react','socket','components/Menu'],function(React,socket,Menu){
         
         render(){
             return  React.createElement("div", {className: "header"}, 
-                        React.createElement("h1", {className: "title"}, this.props.content),
-                        React.createElement(Menu, null)
+
+                        React.createElement("h1", {className: "title"}, this.props.content)
                     ) 
         }
 

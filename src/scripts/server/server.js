@@ -6,6 +6,7 @@ var log = require('./utils/log_setup')
 var initializeWebsockets = require('./websocket_api').initializeWebsockets;
 var express = require('express')
 var app = express()
+var dbAdapter = require('./db_adapter')
 
 var root = 'src/'
 
@@ -36,16 +37,22 @@ app.get('/', function( req, res){
   res.send()
 }); 
 
+// retrieve the API and Client keys from a secret file
 app.get('/keys', function(req,res){
     var keys = fs.readFileSync(path.join(root, '/keys.json'));
     res.send(keys)
 }) 
 
+app.post('/events', function(req,res){
+    var events = req.body;
 
+
+})
+
+ 
 // set up loggin with winston
 
 log.init()
-
 
   //----------------------------------------------------------------------------------------------------//
  ///////////////////////////// START THE SERVER /////////////////////////////

@@ -73,7 +73,55 @@ html {
   border: 2px dashed #000;
 }
 
+.menu {
+    overflow:auto;
+}
+
+
+/* Other Components */
+
+.spinner-wrapper {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    vertical-align: bottom;
+    position:relative;
+
+}
+
+.spinner-mes {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    text-align:center;
+}
+
+.spinner-animation {
+    position: relative !important;
+    left:50% !important;
+    top:30% !important;
+}
+
+#signin-button {
+    margin:0 auto;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#signout-button {
+    position:relative;
+    float:right;
+}
+
 /*Helper elements*/
+
+$icon-size: 25px;
+
+img.icon {
+    height:$icon-size;
+    width:$icon-size;
+    margin: 3px;
+}
 
 div.separator {
 	margin : 14px auto;
@@ -88,6 +136,10 @@ div.invisibleFrame {
     padding : 0px;
     border : 2px solid #3259EB; /*For testing purposes*/
     max-width : 100%;
+}
+
+div.centerWrapper {
+    text-align:center;
 }
 
 /*Forces element to align side by side*/
@@ -115,3 +167,4 @@ div.invisibleFrame {
 .plainText {
     margin-left : 13px;
 }
+

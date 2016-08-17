@@ -11,7 +11,7 @@ module.exports = function arrayLikeObject(obj){
     // assign all the properties from the old obj so it maintains it's indexibility
 
     // Represents the currest object properties
-    this.keys = Object.keys(obj)
+    this.keys = Object.keys(obj) 
     
     // Assign all the given object properties to the object we are creating
     Object.assign(this,obj) 
