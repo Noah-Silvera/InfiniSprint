@@ -2,7 +2,6 @@
 // set up requirejs to load external API's
 requirejs.config({
     paths: {
-      "socket-io": "http://localhost:80/socket.io/socket.io",
       "jQuery": 'https://code.jquery.com/jquery-3.0.0.min',
       'spin': './spin',
       'moment': './moment'
@@ -39,18 +38,15 @@ require(['./react','./react_dom','./components/Frame','google_api'], function(Re
                 document.getElementById('root')
             )
 
-            var updateSignIn = (isSignedIn) => {
-                // if the user is sign in, load the data
-                if( isSignedIn ){
-                    ReactDOM.render(
-                        React.createElement(Frame, {
-                            apiReady: true,
-                            signedIn: true
-                        }), document.getElementById('root')
-                    )
 
-                } else {
-                    // load the sign in button
+            // initialize the client loading process
+            googleApi.handleClientLoad().then( () => {}, (err) => {
+                throw err
+            })
+            
+            googleApi.signinCallback( (signedIn) => {
+                // if the user is not signed in, present them with the not-signed in state
+                if( !signedIn ){
                     ReactDOM.render(
                         React.createElement(Frame, {
                             apiReady: true,
@@ -58,21 +54,17 @@ require(['./react','./react_dom','./components/Frame','google_api'], function(Re
                         }), document.getElementById('root')
                     )
                 }
-
-            }
-
-            googleApi.handleClientLoad().then( () => {
-                console.info('ready to work with google API')
-
-                updateSignIn( googleApi.isSignedIn() )
-
-            }, (err) => {
-                throw err
             })
 
-            googleApi.listen( (isSignedIn) => {
-                
-                updateSignIn( isSignedIn )
+            googleApi.calReadyCallback( () => {
+                // once the user has signed in AND The calendar has loaded
+                // render the data from the calendar
+                ReactDOM.render(
+                    React.createElement(Frame, {
+                        apiReady: true,
+                        signedIn: true
+                    }), document.getElementById('root')
+                )
             })
 
 

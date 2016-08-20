@@ -1,6 +1,13 @@
 
 
-define(['react', 'components/Action'], function (React, Action) {
+define(['react', 
+'react_dom', 
+'google_api', 
+'browser_request', 
+'api',
+'components/BaseComponent', 
+'components/Action',
+'components/Spinner'], function (React, ReactDOM, googleApi, request, api, BaseComponent, Action, Spinner) {
 
     // This component renders a list from object containing a array of action items
     // STATELESS
@@ -20,76 +27,37 @@ define(['react', 'components/Action'], function (React, Action) {
 
         constructor(props) {
             super(props);
-            // initial state
-            // take the initial list given to the ActionList
-            this.state = { 'actions': this.props.actions };
+
+            this.swapActionItems = this.swapActionItems.bind(this);
+            this.onDragEnd = this.onDragEnd.bind(this);
+            this.onDragStart = this.onDragStart.bind(this);
+            this.onDragEnter = this.onDragEnter.bind(this);
+            this.onDragLeave = this.onDragLeave.bind(this);
+            this.deleteAction = this.deleteAction.bind(this);
+
+            this.curDraggedItem = null;
         }
 
         /**
          * @param  {any} dropItem The element that represents the item
          *                        the dragItem was dropped on 
          */
-        swapActionItems(dropItem) {
+        swapActionItems(dropTargetItem){
   
-            var dragItemObj = this.props.dragItem;
-            var dragItemListId = this.props.dragItemListId;
+            var dragItemObj = this.curDraggedItem;
 
-            var dropItemObj = {};
+            var dropTargetItemObj = {};
             this.state['actions'].forEach(function (obj) {
-                if (dropItem.getAttribute('data-id') === obj['dataId']) {
-                    dropItemObj = obj;
+                if (dropTargetItem.getAttribute('data-id') === obj['id']) {
+                    dropTargetItemObj = obj;
                 }
             });
-
-            var dropItemListId = this.props.dataId;
-
-            var dragRank = ActionList.getPropByDataId(dragItemObj, 'rank', dragItemObj['dataId']);
-            var dropRank = ActionList.getPropByDataId(dropItemObj, 'rank', dropItem.getAttribute('data-id'));
-
-            ActionList.setPropByDataId(dragItemObj, 'rank', dropRank, dragItemObj['dataId']);
-            ActionList.setPropByDataId(dropItemObj, 'rank', dragRank, dropItem.getAttribute('data-id'));
-
-            console.log('dispatching drag item update events');
-            this.props.socket.emit('updateEvents', { 'event': dropItemObj, 'list': dropItemListId });
-            this.props.socket.emit('updateEvents', { 'event': dragItemObj, 'list': dropItemListId });
-        }
-
-        // retrieves the prop "prop" of an object using the dataId attribute as a key
-        static getPropByDataId(object, prop, dataId) {
-            for (var i = 0; i < object.length; i++) {
-                if (object[i]["dataId"] == dataId) {
-                    return object[i][prop];
-                }
-            }
-        }
-
-        // sets the prop "prop" of an object to value using  dataID as a key
-        static setPropByDataId(object, prop, value, dataId) {
-            // console.log("-----------------------------")
-            // console.log( "start of setting" + JSON.stringify(object) )
-            for (var i = 0; i < object.length; i++) {
-                if (object[i]["dataId"] == dataId) {
-                    // console.log("object" + JSON.stringify( object[i] ) )
-                    // console.log("value" + value)
-                    // console.log("before change" + JSON.stringify( object[i] ) )
-                    object[i][prop] = value;
-                    // console.log("after change" + JSON.stringify( object[i] ) )
-                }
-            }
-            // console.log( "end of setting" + JSON.stringify(object) )
-            // console.log("-----------------------------")
         }
 
         // prevent default behaviour and tell the actionList that nothing is being dragged
         onDragEnd(e) {
             e.preventDefault();
-            ReactDOM.findDOMNode(this).dispatchEvent(new CustomEvent('itemDragged', { 'detail': {
-                    'dragItem': null,
-                    'dragItemList': null
-                },
-                'bubbles': true,
-                'cancelable': true
-            }));
+            this.curDraggedItem = null;
             e.stopPropagation();
         }
 
@@ -98,21 +66,15 @@ define(['react', 'components/Action'], function (React, Action) {
             // console.log(class)
             // console.log("drag started")
             // console.log(e.target.getAttribute('data-id'))
-            //
-            var dragItemObj = {};
-            this.state['actions'].forEach(function (obj) {
+            //  
+            
+            this.state['actions'].forEach((obj) => {
                 console.log(obj);
-                if (e.target.getAttribute('data-id') === obj['dataId']) {
-                    dragItemObj = obj;
+                if (e.target.getAttribute('data-id') === obj['id']) {
+                    this.curDraggedItem = obj;
                 }
             });
-            ReactDOM.findDOMNode(this).dispatchEvent(new CustomEvent('itemDragged', { 'detail': {
-                    'dragItem': dragItemObj,
-                    'dragItemListId': this.props.dataId
-                },
-                'bubbles': true,
-                'cancelable': true
-            }));
+
             e.stopPropagation();
         }
 
@@ -120,30 +82,30 @@ define(['react', 'components/Action'], function (React, Action) {
         onDragEnter(e) {
 
             // local variable to complement the this.props.dragItem
-            var dropItem = e.target;
-            // console.log("dragged over : " + dropItem)
+            var dropTargetItem = e.target;
+            // console.log("dragged over : " + dropTargetItem)
             // console.log("currently dragged : " + this.props.dragItem)
 
-            // console.log(" --- drop item = " + dropItem + " --- drag item = " + this.props.dragItem)
+            // console.log(" --- drop item = " + dropTargetItem + " --- drag item = " + this.props.dragItem)
             // Ensure that the user is dragging two valid objects
-            if (dropItem != null && this.props.dragItem != null) {
+            if (dropTargetItem != null && this.curDraggedItem != null) {
 
                 // Get the class of both items
-                var dropItemClass = dropItem.getAttribute('class').toString();
-                // console.log("drop item class = " + dropItemClass)
+                var dropTargetItemClass = dropTargetItem.getAttribute('class').toString();
+                // console.log("drop item class = " + dropTargetItemClass)
 
                 // filter action items ( exclude actionLists )
                 var actionRegex = new RegExp("( |^)action( |$)");
 
                 // both action classes
-                if (actionRegex.exec(dropItemClass) != null) {
+                if (actionRegex.exec(dropTargetItemClass) != null) {
                     // console.log('both action classes')
                     // have unique id's
-                    if (dropItem.getAttribute('data-id') != this.props.dragItem['dataId']) {
+                    if (dropTargetItem.getAttribute('data-id') != this.curDraggedItem['id']) {
                         console.log('dragged over valid drop target');
                         // console.log('have unique ids')
                         // swap the action itmes
-                        this.swapActionItems(dropItem);
+                        this.swapActionItems(dropTargetItem);
                     }
                 }
                 // Oppurtunity here to implement drag with other types of objects
@@ -165,10 +127,6 @@ define(['react', 'components/Action'], function (React, Action) {
                 console.log('left valid drag target');
                 // console.log(e.target.getAttribute('class'));
                 // console.log('dispatching drag leave event')
-                ReactDOM.findDOMNode(this).dispatchEvent(new CustomEvent('itemLeave', { 'detail': this.props.dragItem,
-                    'bubbles': true,
-                    'cancelable': true
-                }));
             }
             e.stopPropagation();
 
@@ -176,38 +134,151 @@ define(['react', 'components/Action'], function (React, Action) {
         }
 
         deleteAction(action) {
-            this.props.socket.emit('deleteEvent', { 'event': action });
+            // this.props.socket.emit('deleteEvent', { 'event': action });
         }
+
+        componentWillMount(){
+
+            this.googleEventUpdates().then( (events) => {
+                this.setState( { actions : events } )
+            })
+
+        }
+
+        googleEventUpdates(){
+            return new Promise((resolve, reject) => {
+                googleApi.getEvents(this.props.date).then( (events) => {
+
+                    var eventOps = []
+
+                    for(var i =0; i< events.length; i++){
+                        var curEv = events[i]
+
+                        eventOps.push( this.syncEvent(curEv) )
+                    }
+
+                    Promise.all( eventOps ).then( (events) => {
+                        resolve(events)
+                    })
+
+                }) 
+            });
+        }
+
+
+        syncEvent(event){
+            return new Promise((resolve, reject) => {
+                 var getUrl = `/event/${googleApi.calId}/${event.id}` 
+                 request.get(getUrl, (err,res,body) => {
+                        if(err) throw err
+
+                        
+                        if( res.status !== 200){
+                            // did not recieve any event data
+                            if( res.status === 404){
+                                // event doesn't exist yet
+                                // create the event
+                                api.createEvent(googleApi.calId, event).then( (remoteEvent) => {
+                                    // rank should have been created on the server according to it's date.
+                                    resolve(remoteEvent)
+                                }, (err) => {
+                                    reject(err)
+                                })
+                            } else {
+                                var err = new Error(`Unknown request response encountered\n
+                                                    Request eventId:${event.id}, calId:${googleApi.calId}\n
+                                                    Request url: ${getUrl}`)
+                                throw err
+                            }
+                            
+                            
+                        } else {
+                            // retrieve the returned event
+                            var remoteEvent = JSON.parse(body);
+
+
+                            // assume the event needs updating
+                            // optimize to check equality and only update when neccesary later
+
+                            if( remoteEvent.start.dateTime != event.start.dateTime){
+                                // dates changed, which means the remote rank is not reliable. 
+                                // Create a whole new event, overwriting the old one, and getting a new rank
+                                api.createEvent(googleApi.calId, event).then( (remoteEvent) => {
+                                    // rank should have been created on the server according to it's date.
+                                    resolve(remoteEvent)
+                                }, (err) => {
+                                    reject(err)
+                                })
+                            } else  {
+                                // date hasn't changed, rank is still reliable
+                                // can't trust anything else is equal, so update.
+
+                                // give the new event the props to be preserved ( in this case, only rank)
+                                event.rank = remoteEvent.rank
+
+                                api.updateEvent(googleApi.calId,event).then( (remoteEvent) => {
+
+                                    resolve(remoteEvent)
+                                }, (err) => {
+                                    reject(err)
+                                })
+
+                            }
+
+
+                            // use the rank to sort the object
+                        }
+
+                        
+
+                        // console.debug(body)
+                    })
+            });
+        }
+
+        
 
         render() {
 
-            // console.log(JSON.stringify(this.props.actions) )
+            // content to be rendered
+            var content = null;
+            // placeholder for actual action items
+            var actionElems = null;
 
-            if (this.props.actions.length == 0) {
+            // initial date retrieval has not been performed
+            if( this.state == null || this.state.actions == null || this.state.actions == undefined ){
+                content = React.createElement(Spinner, { message: 'Loading action data...' } )
+            } else if( this.state.actions.length == 0) {
                 // Placeholder message if no actions are present in the object
                 actionElems = React.createElement('p', { className: 'plainText' }, 'You have nothing to do .... ');
+                
             } else {
 
                 // Sorts the given list of action items by rank ascending order vertically
-                var sortedActions = this.props.actions.sort(function (one, two) {
+                var sortedActions = this.state.actions.sort(function (one, two) {
                     return one.rank - two.rank;
                 });
 
                 // maps each action in the object to a Action component to render
                 // passing down the dataId property for drag event handling
-                var actionElems = sortedActions.map(function (action) {
-                    return React.createElement(Action, { key: action.dataId, dataId: action.dataId, content: action.content, rank: action.rank });
+                actionElems = sortedActions.map(function (action) {
+                    return React.createElement(Action, { key: action.id, dataId: action.id ,content: action.summary, rank: action.rank });
                 });
+            }
+
+            if( content == null){
+                // no placeholder for action items has been created
+                content = actionElems
             }
 
             // renders an actionList using the action items giving with a unique dataID to distuinguish it in it's parent container
             return React.createElement('div', { className: 'actionList',
-                                                'data-id': this.props.dataId,
+                                                date : this.props.date,
                                                 onDragStart: this.onDragStart,
                                                 onDragEnter: this.onDragEnter,
                                                 onDragEnd: this.onDragEnd,
                                                 onDragLeave: this.onDragLeave },
-                                        actionElems
+                                        content
                                     );
         }
     };

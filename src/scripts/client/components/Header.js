@@ -1,4 +1,4 @@
-define(['react','socket','components/simple/signoutButton'],function(React,socket,signoutButton){
+define(['react','components/simple/signoutButton'],function(React,signoutButton){
     return class Header extends React.Component {
         constructor(props){
             super(props)

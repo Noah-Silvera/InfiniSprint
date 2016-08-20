@@ -2,6 +2,7 @@
 
 define(['react',
         'react_dom',
+        'moment',
         'components/ActionList',
         'components/Header',
         'components/Heading',
@@ -9,8 +10,7 @@ define(['react',
         'components/simple/signinButton',
         'components/simple/signoutButton',
         'components/Menu',
-        'socket'
-        ], function (React, ReactDOM, ActionList, Header, Heading, Spinner,signinButton,signoutButton, Menu, socket) {
+        ], function (React, ReactDOM, Moment, ActionList, Header, Heading, Spinner,signinButton,signoutButton, Menu) {
 
     // This frame represents the main
     // component of the app - the frame that renders the backlog and sprint items
@@ -81,17 +81,6 @@ define(['react',
             ReactDOM.findDOMNode(this).addEventListener("itemLeave", this.itemLeave);
             ReactDOM.findDOMNode(this).addEventListener("itemDragged", this.itemDragged);
 
-            socket.listen.eventsUpdated(function updateEvents(content) {
-                console.log('processing recieved events...');
-                console.log(content);
-                // this.data['sprint'] = content
-            });
-
-            socket.listen.eventDeleted(function updateEvents(content) {
-                console.log('processing recieved events...');
-                console.log(content);
-                this.data['sprint'] = content;
-            });
 
             // this.socket.emit('getSprintItems')
         }
@@ -111,7 +100,7 @@ define(['react',
             console.log('current dragged item = ');
             console.log(this.dragItem);
             // require to refresh the props of the actionList
-            this.forceUpdate();
+            // this.forceUpdate();
         }
 
         // Renders the frame for the backlog and action items using ActionLists and headings
@@ -138,18 +127,16 @@ define(['react',
 
                 // load the users data
                 content = [
-                    React.createElement(Heading, { content: 'Current Sprint' }), 
+                    React.createElement(Heading, { content: 'Today' }), 
                     React.createElement(ActionList, {
-                        actions: this.data['sprint'],
-                        dataId: 0,
-                        socket: this.socket,
+                        date: new Moment(),
                         dragItem: this.dragItem }), 
-                    React.createElement(Heading, { content: 'Backlog' }), 
-                    React.createElement(ActionList, {
-                        actions: this.data['backlog'],
-                        dataId: 1,
-                        socket: this.socket,
-                        dragItem: this.dragItem })
+                    React.createElement(Heading, { content: 'Tommorow' }), 
+                    // React.createElement(ActionList, {
+                    //     actions: this.data['backlog'],
+                    //     dataId: 1,
+                    //     socket: this.socket,
+                    //     dragItem: this.dragItem })
                 ]
             }
 

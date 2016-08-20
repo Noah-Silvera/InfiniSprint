@@ -1,10 +1,9 @@
-define( function(){
+define( ['moment'], function(Moment){
 
-    // CONFIGURATION
-    var signInButtonSelector = '#signin-button'
-    var signOutButtonSelector = '#signout-button'
+    var moduleName = 'Google API' // for logging purposes
 
-    var listenerHoldingTank = []
+    var calReadyListeners = []
+    var signinListeners = []
 
     
     var google_api = {
@@ -13,9 +12,13 @@ define( function(){
         'isSignedIn': isSignedIn,
         'handleAuthClick': handleAuthClick,
         'handleSignoutClick': handleSignoutClick,
-        'listen':  (listener)=>{
-            listenerHoldingTank.push(listener)
-        } // default value until possible to check if signed in
+        'calReadyCallback':  (listener)=>{
+            calReadyListeners.push(listener)
+        }, // default value until possible to check if signed in
+        'signinCallback': (listener) => {
+            signinListeners.push(listener)
+        },
+        'calId': null,
 
     }
 
@@ -23,6 +26,7 @@ define( function(){
     var calendar = null;
     var auth2 = null; // The Sign-In object.
 
+    
     // Enter an API key from the Google API Console:
     //   https://console.developers.google.com/apis/credentials?project=_
     var apiKey;
@@ -39,6 +43,8 @@ define( function(){
 
     function handleClientLoad() {
         return new Promise((resolve, reject) => {
+
+            console.info(`Loading module: ${moduleName}`)
             
             setUpKeys().then(()=>{
                 // load the GAPI client and authorization library
@@ -53,10 +59,6 @@ define( function(){
                 // perform the initial sign in work
                 auth2 = gapi.auth2.getAuthInstance();
 
-                // take all the listeners out of the drunk tank and attach them to the real listener
-                while( listenerHoldingTank.length !== 0 ){
-                    auth2.isSignedIn.listen( listenerHoldingTank.pop() )
-                }
                 google_api.listen = auth2.isSignedIn.listen
 
                 // Listen for sign-in state changes.
@@ -66,6 +68,7 @@ define( function(){
                 return updateSigninStatus(auth2.isSignedIn.get());
                 
             }).then( ()=> {
+                console.info(`Module loaded: ${moduleName}`)
                 resolve()
             }).catch( (err) => {
                 if(err.type === 'CALERR'){
@@ -117,31 +120,57 @@ define( function(){
             })
         })
     }
+
+  	function ready( listeners ){
+          for(var i=0; i < listeners.length; i++){
+              var cb = listeners[i];
+              
+              cb()
+
+          }
+    }
+
     function updateSigninStatus(isSignedIn) {
         return new Promise( (resolve,reject) => {
 
-            var errMes = 'error occured during sign';
+            ready( signinListeners)
 
             if (isSignedIn) {
                 // load the calendar API
-                loadCalendar().then( ()=>{
-                    console.info('successfully loaded calendar API')
+
+
+                calendar = loadCalendar()
+
+                calendar.then( ()=>{
+
+                    ready( calReadyListeners )
                     resolve()
                 }, (err) => {
-                    console.error(errMes)
                     reject(err)
                 })
                 
             } else {
+
                 // reset the cal value to avoid auth errors
-                calendar = null;
-                resolve()
+                loadCalendar({ 'unload': true }).then( () => {
+                    resolve()
+                })
             }
         })
     }
 
-    function loadCalendar(){
+    function loadCalendar(options){
+        var subModuleName = 'Calendar Module'
+
+
+        if( options !== undefined && options.unload !== undefined && options.unload === true){
+            calendar = null;
+            console.info(`${moduleName} sub-module destroyed: ${subModuleName}`)
+            return Promise.resolve();
+        }
+
         return new Promise((resolve, reject) => {
+
             // calendar has already been loaded
             if( calendar !== null) resolve()
 
@@ -149,16 +178,39 @@ define( function(){
                 // set the module scope calendar variable
                 calendar = gapi.client.calendar;
 
-                resolve()
+                return calendar.calendarList.list()
+
             }, (err) =>{
                 // reset the module scope calendar variable
-                calendar = null;
+                loadCalendar({ 'unload': true}).then( () => {
+                    console.error('Could not load calendar API')
+                    err.type = 'CALERR'
+                    reject(err)
+                })
                 
-                console.error('Could not load calendar API')
+
+            }).then((res) =>{
+                var cals = JSON.parse(res.body).items
+
+                var primId;
+                cals.forEach( (cal) => {
+                    if( cal.primary ) primId = cal.id
+                })
+
+                google_api.calId = primId
+                
+                console.info(`${moduleName} sub-module loaded: ${subModuleName}`)
+                console.debug(`primary calendar ID ${primId}`)
+
+
+                resolve()
+            }, (err) => {
+                console.error('Could not determine primary calendar ID')
                 err.type = 'CALERR'
                 reject(err)
             });
         }); 
+        
     }
 
     function handleAuthClick(event) {
@@ -177,38 +229,38 @@ define( function(){
     
     function getEvents(day){
         return new Promise((resolve, reject) => {
-            console.info(`retrieving events from ${day}`)
+            console.debug(`retrieving events from ${day}`)
             if( calendar == null ) throw new Error('calendar not loaded')
 
-            calendar.events.list({
-                'calendarId': 'primary',
-                'timeMin': moment().startOf('day').subtract(2,'days').toDate().toISOString(), 
-                'timeMax': moment().endOf('day').subtract(2,'days').toDate().toISOString(), 
-                'singleEvents':true // this needs testing
+            Promise.resolve().then( () => {
+
+                if( calendar.then !== undefined || calendar.then !== null){
+                   return calendar
+                } else {
+                    return Promise.resolve()
+                }            
+
+            }).then( () => {
+                return calendar.events.list({
+                    'calendarId': 'primary',
+                    'timeMin': day.startOf('day').subtract(1,'days').toDate().toISOString(), 
+                    'timeMax': day.endOf('day').toDate().toISOString(), 
+                    'singleEvents':true // this needs testing
+                })
             }).then((res) =>{
                 var body = JSON.parse(res.body)
 
                 var events = body.items;
 
-                console.debug('calendar events returned from google')
+                console.info(`Events for calendar with calId: ${google_api.calId} recieved from google`)
                 console.debug(events)
 
-                return calendar.calendarList.list()
+                resolve(events)
 
             },(err) =>{
                 console.error('Bad request for calendar events')
                 console.error(err)
-            }).then((res) =>{
-                var cals = JSON.parse(res.body).items
-
-                var primId;
-                cals.forEach( (cal) => {
-                    if( cal.primary ) primId = cal.id
-                })
-                
-                console.debug(`primary calendar ID ${primId}`)
             })
-
             
             
         });
