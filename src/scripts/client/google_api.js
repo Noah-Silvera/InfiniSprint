@@ -243,7 +243,7 @@ define( ['moment'], function(Moment){
             }).then( () => {
                 return calendar.events.list({
                     'calendarId': 'primary',
-                    'timeMin': day.startOf('day').subtract(1,'days').toDate().toISOString(), 
+                    'timeMin': day.startOf('day').toDate().toISOString(), 
                     'timeMax': day.endOf('day').toDate().toISOString(), 
                     'singleEvents':true // this needs testing
                 })

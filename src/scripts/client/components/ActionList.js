@@ -2,12 +2,14 @@
 
 define(['react', 
 'react_dom', 
+'jquery',
+'jquery-ui', 
 'google_api', 
 'browser_request', 
 'api',
 'components/BaseComponent', 
 'components/Action',
-'components/Spinner'], function (React, ReactDOM, googleApi, request, api, BaseComponent, Action, Spinner) {
+'components/Spinner'], function (React, ReactDOM, $, jqueryUi, googleApi, request, api, BaseComponent, Action, Spinner) {
 
     // This component renders a list from object containing a array of action items
     // STATELESS
@@ -28,110 +30,11 @@ define(['react',
         constructor(props) {
             super(props);
 
-            this.swapActionItems = this.swapActionItems.bind(this);
-            this.onDragEnd = this.onDragEnd.bind(this);
-            this.onDragStart = this.onDragStart.bind(this);
-            this.onDragEnter = this.onDragEnter.bind(this);
-            this.onDragLeave = this.onDragLeave.bind(this);
             this.deleteAction = this.deleteAction.bind(this);
 
-            this.curDraggedItem = null;
         }
 
-        /**
-         * @param  {any} dropItem The element that represents the item
-         *                        the dragItem was dropped on 
-         */
-        swapActionItems(dropTargetItem){
-  
-            var dragItemObj = this.curDraggedItem;
-
-            var dropTargetItemObj = {};
-            this.state['actions'].forEach(function (obj) {
-                if (dropTargetItem.getAttribute('data-id') === obj['id']) {
-                    dropTargetItemObj = obj;
-                }
-            });
-        }
-
-        // prevent default behaviour and tell the actionList that nothing is being dragged
-        onDragEnd(e) {
-            e.preventDefault();
-            this.curDraggedItem = null;
-            e.stopPropagation();
-        }
-
-        // Tells the frame what object is being dragged to handle the drop later
-        onDragStart(e) {
-            // console.log(class)
-            // console.log("drag started")
-            // console.log(e.target.getAttribute('data-id'))
-            //  
-            
-            this.state['actions'].forEach((obj) => {
-                console.log(obj);
-                if (e.target.getAttribute('data-id') === obj['id']) {
-                    this.curDraggedItem = obj;
-                }
-            });
-
-            e.stopPropagation();
-        }
-
-        // When a object is dragged over another valid object
-        onDragEnter(e) {
-
-            // local variable to complement the this.props.dragItem
-            var dropTargetItem = e.target;
-            // console.log("dragged over : " + dropTargetItem)
-            // console.log("currently dragged : " + this.props.dragItem)
-
-            // console.log(" --- drop item = " + dropTargetItem + " --- drag item = " + this.props.dragItem)
-            // Ensure that the user is dragging two valid objects
-            if (dropTargetItem != null && this.curDraggedItem != null) {
-
-                // Get the class of both items
-                var dropTargetItemClass = dropTargetItem.getAttribute('class').toString();
-                // console.log("drop item class = " + dropTargetItemClass)
-
-                // filter action items ( exclude actionLists )
-                var actionRegex = new RegExp("( |^)action( |$)");
-
-                // both action classes
-                if (actionRegex.exec(dropTargetItemClass) != null) {
-                    // console.log('both action classes')
-                    // have unique id's
-                    if (dropTargetItem.getAttribute('data-id') != this.curDraggedItem['id']) {
-                        console.log('dragged over valid drop target');
-                        // console.log('have unique ids')
-                        // swap the action itmes
-                        this.swapActionItems(dropTargetItem);
-                    }
-                }
-                // Oppurtunity here to implement drag with other types of objects
-            }
-
-            // Prevent the browsers default drag and drop behaviour from occuring
-            if (e.preventDefault) {
-                e.preventDefault();
-            }
-
-            e.stopPropagation();
-        }
-
-        onDragLeave(e) {
-
-            // actionList is a class of the target
-            // console.log(e.target)
-            if (e.target.getAttribute('class').indexOf('actionList') > -1) {
-                console.log('left valid drag target');
-                // console.log(e.target.getAttribute('class'));
-                // console.log('dispatching drag leave event')
-            }
-            e.stopPropagation();
-
-            this.deleteAction(e.target);
-        }
+      
 
         deleteAction(action) {
             // this.props.socket.emit('deleteEvent', { 'event': action });
@@ -272,14 +175,19 @@ define(['react',
             }
 
             // renders an actionList using the action items giving with a unique dataID to distuinguish it in it's parent container
-            return React.createElement('div', { className: 'actionList',
-                                                date : this.props.date,
-                                                onDragStart: this.onDragStart,
-                                                onDragEnter: this.onDragEnter,
-                                                onDragEnd: this.onDragEnd,
-                                                onDragLeave: this.onDragLeave },
-                                        content
-                                    );
+            return React.createElement('div', {
+                    className: 'actionList',
+                    date : this.props.date,
+                    "ref": function(el){
+                        if( el !== null){
+                            // remove the spinner if it exists
+                            $(el).sortable({
+                                connectWith: '.actionList'
+                            })
+                        }
+                    }
+                }, content
+            );
         }
     };
 });

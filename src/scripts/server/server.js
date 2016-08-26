@@ -88,7 +88,7 @@ app.route('/event/:calId/:eventId')
         w.info('updating event data...')
 
         dbAdapter.updateEvent( req.params.calId, req.body).then( (event) => {
-
+ 
             res.status(200).send(event)
 
         }, (err) => {

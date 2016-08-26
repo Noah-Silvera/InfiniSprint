@@ -2,7 +2,8 @@
 // set up requirejs to load external API's
 requirejs.config({
     paths: {
-      "jQuery": 'https://code.jquery.com/jquery-3.0.0.min',
+      "jquery": './jquery',
+      "jquery-ui": './jquery-ui.min',
       'spin': './spin',
       'moment': './moment'
     },
@@ -10,7 +11,7 @@ requirejs.config({
         'socket-io' : {
             exports: ['io']
         },
-        'jQuery': {
+        'jquery': {
             exports: ['$']
         },
         'spin' : {

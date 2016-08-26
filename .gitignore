@@ -7,3 +7,4 @@ user_data/*
 jsconfig.json
 dest/**/*
 keys.json
+*.css

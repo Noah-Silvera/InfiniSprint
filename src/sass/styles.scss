@@ -6,17 +6,22 @@ html {
   box-sizing: inherit;
 }
 
-/* Prevent the text contents of draggable elements from being selectable. */
-[draggable] {
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-  /* Required to make elements draggable in old WebKit */
-  -khtml-user-drag: element;
-  -webkit-user-drag: element;
+input {
+    cursor: text;
 }
 
+
+/** MIXINS **?
+
+
+/* Mixin */
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 
 /*Main Component CSS classes*/
 
@@ -69,8 +74,21 @@ html {
 
 }
 
+
 .action.over {
   border: 2px dashed #000;
+}
+
+.action p, .action input {
+    margin: 0px;
+    @include vertical-align();
+}
+
+// used to force the size of the inner div of an action
+.action > div {
+    height: 50px; 
+    display: flex;
+    align-items:flex-start;   
 }
 
 .menu {
@@ -114,7 +132,21 @@ html {
     float:right;
 }
 
+
 /*Helper elements*/
+
+
+
+.selectable {
+
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
 
 $icon-size: 25px;
 
@@ -146,18 +178,17 @@ div.centerWrapper {
 /*Forces element to align side by side*/
 .row {
     display: inline-block;
+    width:100%;
 }
 
-/*prevent user selection*/
-/*[draggable] {
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-  /* Required to make elements draggable in old WebKit */
-/*  -khtml-user-drag: element;
-  -webkit-user-drag: element;
-}*/
+
+
+
+
+.no-margin {
+    margin: 0px;
+}
+
 
 /*Text*/
 

@@ -21,8 +21,7 @@ define(['react',
     return class Frame extends React.Component {
         constructor(props) {
             super(props);
-            this.dragItemEvent = null;
-            this.dragItemObj = null;
+
 
             // Pull the google calender item's from the server, process them and use them as our state ( test data for now )
             // State should be of the following form
@@ -77,31 +76,8 @@ define(['react',
             };
         }
 
-        componentDidMount() {
-            ReactDOM.findDOMNode(this).addEventListener("itemLeave", this.itemLeave);
-            ReactDOM.findDOMNode(this).addEventListener("itemDragged", this.itemDragged);
 
 
-            // this.socket.emit('getSprintItems')
-        }
-
-        componentWillUnmount() {
-            ReactDOM.findDOMNode(this).removeEventListener("itemLeave", this.itemLeave);
-            ReactDOM.findDOMNode(this).removeEventListener("itemDragged", this.itemDragged);
-        }
-
-        itemLeave(e) {
-            // console.log('Item left list')
-        }
-
-        itemDragged(e) {
-            this.dragItem = e.detail.dragItem;
-            this.dragItemListId = e.detail.dragItemListId;
-            console.log('current dragged item = ');
-            console.log(this.dragItem);
-            // require to refresh the props of the actionList
-            // this.forceUpdate();
-        }
 
         // Renders the frame for the backlog and action items using ActionLists and headings
         // binds the dragging event
@@ -129,14 +105,13 @@ define(['react',
                 content = [
                     React.createElement(Heading, { content: 'Today' }), 
                     React.createElement(ActionList, {
-                        date: new Moment(),
-                        dragItem: this.dragItem }), 
+                        date: new Moment().subtract(3,'days') }), 
                     React.createElement(Heading, { content: 'Tommorow' }), 
-                    // React.createElement(ActionList, {
-                    //     actions: this.data['backlog'],
-                    //     dataId: 1,
-                    //     socket: this.socket,
-                    //     dragItem: this.dragItem })
+                    React.createElement(ActionList, {
+                        date: new Moment().subtract(2,'days') }), 
+                    React.createElement(Heading, { content: 'The next day' }), 
+                    React.createElement(ActionList, {
+                        date: new Moment().subtract(1,'days') }), 
                 ]
             }
 
