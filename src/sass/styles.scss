@@ -23,6 +23,8 @@ input {
   transform: translateY(-50%);
 }
 
+$border-radius: 7px;
+
 /*Main Component CSS classes*/
 
 .frame {
@@ -30,7 +32,7 @@ input {
     margin : 10px auto;
     padding : 5px;
     border : 5px solid #A7A2A2;
-    border-radius : 7px;
+    border-radius :$border-radius;
     background-color : #ECECEC;
     max-width : 700px;
 
@@ -41,7 +43,7 @@ input {
     margin : inherit;
     padding : 0px;
     border : inherit;
-    border-radius : 7px;
+    border-radius : $border-radius;
     max-width : 97%;
 }
 
@@ -49,7 +51,7 @@ input {
     margin : inherit;
     padding : 0px;
     border : inherit;
-    border-radius : 7px;
+    border-radius : $border-radius;
     max-width : 97%;
 }
 
@@ -58,7 +60,7 @@ input {
     padding : 2px;
     background-color : #B1C1FD;
     border : 2px solid #3259EB;
-    border-radius : inherit;
+    border-radius : $border-radius;
     max-width : 97%;
     min-height : 45px;
 }
@@ -68,7 +70,7 @@ input {
     padding : 10px;
     background-color : #B1C1FD;
     border : 2px solid #3259EB;
-    border-radius : 5px;
+    border-radius :$border-radius - 2px;
     max-width : 97%;
     cursor: move;
 
@@ -131,6 +133,12 @@ input {
     position:relative;
     float:right;
 }
+
+.refreshIcon {
+    float:right;
+}
+
+
 
 
 /*Helper elements*/
@@ -200,3 +208,15 @@ div.centerWrapper {
     margin-left : 13px;
 }
 
+/** animations */
+
+
+.fastSpin {
+    -webkit-animation: 0.3s linear infinite fastSpin;
+    -moz-animation: 0.3s linear infinite fastSpin;
+    animation: 0.3s linear infinite fastSpin;
+}
+
+@-moz-keyframes fastSpin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes fastSpin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes fastSpin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

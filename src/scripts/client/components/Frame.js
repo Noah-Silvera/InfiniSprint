@@ -5,12 +5,11 @@ define(['react',
         'moment',
         'components/ActionList',
         'components/Header',
-        'components/Heading',
         'components/Spinner',
         'components/simple/signinButton',
         'components/simple/signoutButton',
         'components/Menu',
-        ], function (React, ReactDOM, Moment, ActionList, Header, Heading, Spinner,signinButton,signoutButton, Menu) {
+        ], function (React, ReactDOM, Moment, ActionList, Header, Spinner,signinButton,signoutButton, Menu) {
 
     // This frame represents the main
     // component of the app - the frame that renders the backlog and sprint items
@@ -103,15 +102,18 @@ define(['react',
 
                 // load the users data
                 content = [
-                    React.createElement(Heading, { content: 'Today' }), 
                     React.createElement(ActionList, {
-                        date: new Moment().subtract(3,'days') }), 
-                    React.createElement(Heading, { content: 'Tommorow' }), 
+                        date: new Moment().subtract(3,'days'),
+                        title: 'Today'
+                    }), 
                     React.createElement(ActionList, {
-                        date: new Moment().subtract(2,'days') }), 
-                    React.createElement(Heading, { content: 'The next day' }), 
+                        date: new Moment().subtract(2,'days'),
+                        title: 'Tommorow'
+                    }), 
                     React.createElement(ActionList, {
-                        date: new Moment().subtract(1,'days') }), 
+                        date: new Moment().subtract(1,'days'),
+                        title: 'The Next Day'
+                    }), 
                 ]
             }
 

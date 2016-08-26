@@ -9,7 +9,9 @@ define(['react',
 'api',
 'components/BaseComponent', 
 'components/Action',
-'components/Spinner'], function (React, ReactDOM, $, jqueryUi, googleApi, request, api, BaseComponent, Action, Spinner) {
+'components/Spinner',
+'components/simple/RefreshIcon',
+'components/Heading'], function (React, ReactDOM, $, jqueryUi, googleApi, request, api, BaseComponent, Action, Spinner, RefreshIcon, Heading) {
 
     // This component renders a list from object containing a array of action items
     // STATELESS
@@ -174,20 +176,27 @@ define(['react',
                 content = actionElems
             }
 
-            // renders an actionList using the action items giving with a unique dataID to distuinguish it in it's parent container
-            return React.createElement('div', {
-                    className: 'actionList',
-                    date : this.props.date,
-                    "ref": function(el){
-                        if( el !== null){
-                            // remove the spinner if it exists
-                            $(el).sortable({
-                                connectWith: '.actionList'
-                            })
-                        }
-                    }
-                }, content
-            );
+            return React.createElement('div',null,
+                React.createElement(Heading,{ content: this.props.title }),
+                // renders an actionList using the action items giving with a unique dataID to distuinguish it in it's parent container
+                React.createElement('div', {
+                                    className: 'actionList',
+                                    date : this.props.date,
+                                    "ref": function(el){
+                                        if( el !== null){
+                                            // remove the spinner if it exists
+                                            $(el).sortable({
+                                                connectWith: '.actionList',
+                                                items: "> .action"
+                                            })
+                                        }
+                                    }
+                                }, 
+                                React.createElement(RefreshIcon), 
+                                content
+                            )
+            )
+
         }
     };
 });
