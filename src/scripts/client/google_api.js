@@ -252,7 +252,7 @@ define( ['moment'], function(Moment){
 
                 var events = body.items;
 
-                console.info(`Events for calendar with calId: ${google_api.calId} recieved from google`)
+                console.debug(`Events for calendar with calId: ${google_api.calId} recieved from google`)
                 console.debug(events)
 
                 resolve(events)

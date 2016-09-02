@@ -32,8 +32,10 @@ define(['react',
         constructor(props) {
             super(props);
 
-            this.deleteAction = this.deleteAction.bind(this);
-
+            this.state = {
+                error: null,
+                actions: null
+            }
         }
 
       
@@ -43,12 +45,34 @@ define(['react',
         }
 
         componentWillMount(){
+            
+           Promise.all([
+               this.refreshData() 
+            ]).then( (results) => {
+                results.forEach( (result) => {
+                    console.info(result)
+                })
 
-            this.googleEventUpdates().then( (events) => {
-                this.setState( { actions : events } )
             })
 
         }
+
+        refreshData(){
+            return new Promise((resolve, reject) => {
+                this.googleEventUpdates().then( (events) => {
+                    this.setState( { actions : events } )
+
+                    resolve(`Data for action list with title "${this.props.title}" successfully refreshed`)
+                }).catch( (err) => {
+                    this.setState({
+                        error : err 
+                    })
+
+                    resolve(`Error occured while refreshing data for action list with title "${this.props.title}"`)
+                })
+            });
+        }
+        
 
         googleEventUpdates(){
             return new Promise((resolve, reject) => {
@@ -62,10 +86,12 @@ define(['react',
                         eventOps.push( this.syncEvent(curEv) )
                     }
 
-                    Promise.all( eventOps ).then( (events) => {
-                        resolve(events)
-                    })
+                    return Promise.all( eventOps )
 
+                }).then( (events) => {
+                    resolve(events)
+                }).catch( (err) => {
+                    reject(err)
                 }) 
             });
         }
@@ -75,25 +101,22 @@ define(['react',
             return new Promise((resolve, reject) => {
                  var getUrl = `/event/${googleApi.calId}/${event.id}` 
                  request.get(getUrl, (err,res,body) => {
-                        if(err) throw err
-
-                        
+                    Promise.resolve().then( () => {
+                        // misc error occured
+                        if(err) return Promise.reject(err)
                         if( res.status !== 200){
                             // did not recieve any event data
                             if( res.status === 404){
                                 // event doesn't exist yet
                                 // create the event
-                                api.createEvent(googleApi.calId, event).then( (remoteEvent) => {
-                                    // rank should have been created on the server according to it's date.
-                                    resolve(remoteEvent)
-                                }, (err) => {
-                                    reject(err)
-                                })
+                                // rank should be created on the server according to it's date.
+                                return api.createEvent(googleApi.calId, event)
                             } else {
+                                // reject the unknown response
                                 var err = new Error(`Unknown request response encountered\n
                                                     Request eventId:${event.id}, calId:${googleApi.calId}\n
                                                     Request url: ${getUrl}`)
-                                throw err
+                                return Promise.reject(err)
                             }
                             
                             
@@ -108,12 +131,8 @@ define(['react',
                             if( remoteEvent.start.dateTime != event.start.dateTime){
                                 // dates changed, which means the remote rank is not reliable. 
                                 // Create a whole new event, overwriting the old one, and getting a new rank
-                                api.createEvent(googleApi.calId, event).then( (remoteEvent) => {
-                                    // rank should have been created on the server according to it's date.
-                                    resolve(remoteEvent)
-                                }, (err) => {
-                                    reject(err)
-                                })
+                                // rank should be created on the server according to it's date.
+                                return api.createEvent(googleApi.calId, event)
                             } else  {
                                 // date hasn't changed, rank is still reliable
                                 // can't trust anything else is equal, so update.
@@ -121,23 +140,17 @@ define(['react',
                                 // give the new event the props to be preserved ( in this case, only rank)
                                 event.rank = remoteEvent.rank
 
-                                api.updateEvent(googleApi.calId,event).then( (remoteEvent) => {
-
-                                    resolve(remoteEvent)
-                                }, (err) => {
-                                    reject(err)
-                                })
-
+                                return api.updateEvent(googleApi.calId,event)
                             }
-
-
-                            // use the rank to sort the object
                         }
 
-                        
-
-                        // console.debug(body)
+                    }).then( (remoteEvent) => {
+                        resolve(remoteEvent)
+                    }).catch( (err) => {
+                        reject(err)
                     })
+
+                })
             });
         }
 
@@ -147,17 +160,18 @@ define(['react',
 
             // content to be rendered
             var content = null;
-            // placeholder for actual action items
-            var actionElems = null;
 
-            // initial date retrieval has not been performed
-            if( this.state == null || this.state.actions == null || this.state.actions == undefined ){
+            if( this.state.error !== null ){
+                content = React.createElement('p', { className: 'errText'}, `Error: ${this.state.error.message}` )
+            } else if( this.state.actions == null ){
+                // initial data retrieval has not been performed
                 content = React.createElement(Spinner, { message: 'Loading action data...' } )
             } else if( this.state.actions.length == 0) {
                 // Placeholder message if no actions are present in the object
-                actionElems = React.createElement('p', { className: 'plainText' }, 'You have nothing to do .... ');
+                content = React.createElement('p', { className: 'plainText' }, 'You have nothing to do .... ');
                 
             } else {
+                // render the states action items
 
                 // Sorts the given list of action items by rank ascending order vertically
                 var sortedActions = this.state.actions.sort(function (one, two) {
@@ -166,15 +180,11 @@ define(['react',
 
                 // maps each action in the object to a Action component to render
                 // passing down the dataId property for drag event handling
-                actionElems = sortedActions.map(function (action) {
+                content = sortedActions.map(function (action) {
                     return React.createElement(Action, { key: action.id, dataId: action.id ,content: action.summary, rank: action.rank });
                 });
             }
 
-            if( content == null){
-                // no placeholder for action items has been created
-                content = actionElems
-            }
 
             return React.createElement('div',null,
                 React.createElement(Heading,{ content: this.props.title }),
@@ -192,7 +202,7 @@ define(['react',
                                         }
                                     }
                                 }, 
-                                React.createElement(RefreshIcon), 
+                                React.createElement(RefreshIcon, { task: this.refreshData.bind(this) } ), 
                                 content
                             )
             )
