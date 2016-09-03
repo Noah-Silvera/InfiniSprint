@@ -68,7 +68,7 @@ define(['react',
                         error : err 
                     })
 
-                    resolve(`Error occured while refreshing data for action list with title "${this.props.title}"`)
+                    reject(`Error occured while refreshing data for action list with title "${this.props.title}"`)
                 })
             });
         }
@@ -147,6 +147,82 @@ define(['react',
             });
         }
 
+        // refreshRankings(order){
+        //     return new Promise((resolve, reject) => {
+        //         var actions = this.state.actions
+        //         var newActions = []
+        //         var fetchMissingEvents = [] // array of promises to retrieve missing events
+                
+        //         // takes a actionId, retrieves the appropiate action, and updates it
+        //         // with the appropiate rank and date and inserts it into the actionList
+        //         var getEvent = (actionId, i, actionList) => {
+        //             return new Promise((resolve, reject) => {
+        //                 var getUrl = `/event/${googleApi.calId}/${actionId}` 
+        //                 request.get(getUrl, (err,res,body) => {
+        //                     if(err) return reject(err)
+
+        //                     if( res.status !== 200){
+        //                         var err = new Error(`Unknown request response encountered\n
+        //                                             Request eventId:${event.id}, calId:${googleApi.calId}\n
+        //                                             Request url: ${getUrl}`)
+        //                         return reject(err)
+        //                     }
+
+        //                     var remoteEvent = JSON.parse(body)
+
+        //                     // update the date and rank
+
+        //                     remoteEvent.rank = i
+        //                     remoteEvent.start.date = this.props.date.format('YYYY-MM-DD') 
+
+        //                     actionList[i] = remoteEvent
+        //                 })
+        //             });
+        //         }
+
+        //         for( var i =0; i< order.length; i++){
+        //             var newActionId = order[i]
+
+        //             for( var j =0; j< actions.length; j++){
+        //                 if( actions[j].id === newActionId ){
+        //                     // insert the already retrieved item into the appropiate spot in the list
+        //                     newActions[i] = actions[j]
+        //                     newActions[i].rank = i;
+        //                 }
+        //             }
+
+        //             // this item hasn't been retrieved yet
+
+        //             fetchMissingEvents.push( getEvent(newActionId, i, newActions) )
+
+
+        //         }
+
+
+              
+
+        //         Promise.resolve().then( () => {
+        //             return Promise.all( fetchMissingEvents )
+        //         }).then( () => {
+        //             return Promise.all( 
+        //                 newActions.map( (event,i,arr) => {
+        //                     return api.updateEvent(googleApi.calId, event)
+        //                 }) 
+        //             )
+        //         }).then( (actions) => {
+        //             // this.setState( { 'actions': actions} ) 
+        //             resolve('Refreshed rankings')
+        //         }).catch( (err) => {
+        //             this.setState({
+        //                 error : err 
+        //             })
+
+        //             reject('Could not refresh rankings. Error state invoked')
+        //         })
+
+        //     });
+        // }
+
         
 
         render() {
@@ -185,7 +261,7 @@ define(['react',
                 React.createElement('div', {
                                     className: 'actionList',
                                     date : this.props.date,
-                                    "ref": function(el){
+                                    "ref": (function (el){
                                         if( el !== null){
                                             // remove the spinner if it exists
                                             $(el).sortable({
@@ -193,7 +269,7 @@ define(['react',
                                                 items: "> .action"
                                             })
                                         }
-                                    }
+                                    }).bind(this)
                                 }, 
                                 React.createElement(RefreshIcon, { task: this.refreshData.bind(this) } ), 
                                 content
