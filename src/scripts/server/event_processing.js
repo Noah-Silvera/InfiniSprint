@@ -1,32 +1,36 @@
 
 
-/**
- * @param  Array events     each event is a JSON object that must contain the id and date property. No
- * @param  String calId     the unique identifier of the calendar to look for events in]
- * @return An object containing event objects with properties such as rank.
- */
-function retrieveAndUpdateEvents( events, calId ){
+exports.rankLast = rankLast
 
-    // for each event
+function rankLast(newEvent, currentEvents){
 
-        // check if the event has data
+    if( currentEvents.length === 0){
+        initialRanking( newEvent )
+    } else {
+        // set it last in the stack of events
+        newEvent.rank = currentEvents[currentEvents.length -1].rank + 1;
+    }
+    
 
-            // check if the date of the event has changed
-
-                // if it has, update the event date and rank appropiately
-
-            // add the event with the appropiate properties to the object to be returned
-        
-        // if the event has no data
-
-            // add null to the id location in the object to be returned
-
-
-    return {}
+    return newEvent
 }
 
-function updateEvents(){
+exports.rankFirst = rankFirst
 
+function rankFirst( newEvent, currentEvents){
+
+    if( currentEvents.length === 0){
+        initialRanking( newEvent )
+    } else {
+        newEvent.rank = currentEvents[0].rank - 1;
+    }
+
+
+    return newEvent
+}
+
+function initialRanking( newEvent ){
+    newEvent.rank = 0
 }
 
 function cleanEvents(){

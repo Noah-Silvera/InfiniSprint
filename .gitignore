@@ -8,3 +8,4 @@ jsconfig.json
 dest/**/*
 keys.json
 *.css
+**/**/log.txt

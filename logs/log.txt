@@ -4586,3 +4586,792 @@
 {"level":"info","message":"updating event data...","timestamp":"2016-09-02T20:25:50.369Z"}
 {"level":"info","message":"updating event data...","timestamp":"2016-09-02T20:25:50.395Z"}
 {"level":"info","message":"updating event data...","timestamp":"2016-09-02T20:25:50.404Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T21:32:40.462Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T21:33:13.658Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T21:33:13.690Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T21:33:13.706Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T21:33:13.709Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T21:33:14.154Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T21:33:14.166Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T21:33:14.167Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T21:33:14.168Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T21:33:14.187Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T21:33:14.249Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T21:33:14.253Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T21:33:14.258Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T21:33:14.266Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T21:33:14.275Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:28:52.483Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:28:59.288Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:29:07.605Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:29:07.671Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:29:07.724Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:29:07.741Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:29:07.749Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:29:07.781Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:29:07.909Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:29:07.918Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:29:07.926Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:29:08.047Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:29:08.065Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:29:08.072Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:29:08.083Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:29:08.110Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:29:15.295Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:29:18.955Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:29:18.984Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:29:18.988Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:29:18.994Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:29:19.097Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:29:19.122Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:29:19.185Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:29:19.192Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:29:19.222Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:29:19.234Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:29:19.275Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:29:19.278Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:29:19.285Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:29:19.312Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:30:42.725Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:30:47.603Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:30:47.642Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:30:47.687Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:30:47.746Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:30:47.824Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:30:47.837Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:30:47.919Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:30:48.003Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:30:48.132Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:30:48.137Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:30:48.139Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:30:48.176Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:30:48.183Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:30:48.189Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:31:02.517Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:31:06.827Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:31:06.850Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:31:06.857Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:31:06.966Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:31:06.972Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:31:06.983Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:31:06.985Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:31:06.986Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:31:06.990Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:31:07.093Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:31:07.168Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:31:07.176Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:31:07.192Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:31:07.271Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:31:23.386Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:31:28.595Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:31:28.629Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:31:28.645Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:31:28.650Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:31:28.661Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:31:28.663Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:31:28.827Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:31:28.897Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:31:28.906Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:31:28.914Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:31:28.940Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:31:29.099Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:31:29.202Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:31:29.229Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:32:15.588Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:32:19.993Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:32:20.053Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:32:20.069Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:32:20.072Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:32:20.137Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:32:20.170Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:32:20.173Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:32:20.175Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:32:20.183Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:32:20.185Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:32:20.187Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:32:20.279Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:32:20.293Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:32:20.317Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:32:28.081Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:32:34.369Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:32:34.551Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:32:34.839Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:32:35.034Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:32:35.042Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:32:35.050Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:32:35.143Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:32:35.164Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:32:35.182Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:32:35.237Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:32:35.300Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:32:35.304Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:32:35.326Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:32:35.413Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:34:26.669Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:34:30.841Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:34:30.872Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:34:30.893Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:34:30.927Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:34:30.996Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:34:31.035Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:34:31.038Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:34:31.056Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:34:31.070Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:34:31.228Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:34:31.239Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:34:31.303Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:34:31.311Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:34:31.359Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:35:26.315Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:35:30.338Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:35:30.422Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:35:30.459Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:35:30.470Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:35:30.475Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:35:30.490Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:35:30.513Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:35:30.523Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:35:30.790Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:35:30.792Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:35:30.794Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:35:30.819Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:35:30.833Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:35:30.837Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:37:15.626Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:37:19.905Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:37:19.954Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:37:19.971Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:37:20.051Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:37:20.094Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:37:20.100Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:37:20.112Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:37:20.136Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:37:20.138Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:37:20.139Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:37:20.211Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:37:20.213Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:37:20.229Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:37:20.235Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:47:15.135Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:49:49.221Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:49:49.318Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:49:49.354Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:49:49.367Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:49:49.383Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:49:49.465Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:49:49.471Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:49:49.475Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:49:49.489Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:49:49.511Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:49:49.537Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:49:49.549Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:49:49.556Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T22:49:49.575Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:53:24.737Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:53:37.285Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:53:37.298Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:53:37.310Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:53:37.318Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:53:37.328Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:53:37.337Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:53:37.342Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:53:37.346Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:53:37.362Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:53:37.365Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:53:37.370Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:53:37.372Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:53:37.376Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:53:37.380Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:53:37.436Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:53:37.458Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:53:37.460Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:53:37.464Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:53:37.478Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:53:37.480Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:53:37.513Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:27.593Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:27.596Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:27.598Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:27.600Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:27.605Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:27.618Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:27.621Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:27.623Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:27.627Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:27.644Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:27.648Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:27.664Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:27.666Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:27.687Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:27.693Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:27.697Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:27.749Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:27.830Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:27.832Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:27.862Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:27.883Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:33.910Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:33.912Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:33.938Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:33.970Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:33.972Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:33.974Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:33.976Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:33.978Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:33.982Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:34.019Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:34.032Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:34.062Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:34.103Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:34.110Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:34.112Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:34.188Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:34.205Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:34.218Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:34.256Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:34.262Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:34.280Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:42.387Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:42.393Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:42.397Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:42.399Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:42.402Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:42.404Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:42.413Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:42.426Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:42.430Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:42.431Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:42.438Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:42.442Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:54:42.445Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:54:42.449Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:42.455Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:42.466Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:42.536Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:42.566Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:42.571Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:42.588Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:54:42.626Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:55:08.048Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:55:08.058Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:55:08.070Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:55:08.080Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:55:08.087Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:55:08.100Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:56:47.199Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:56:51.786Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:56:51.822Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:56:51.838Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:56:51.842Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:56:51.910Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:56:51.931Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:57:12.849Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:57:17.379Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:57:17.408Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:57:17.414Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:57:17.430Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:57:17.494Z"}
+{"level":"error","message":"Unknown error in creating event","timestamp":"2016-09-02T22:57:17.502Z"}
+{"message":"Cannot create property '_id' on string 'noah.a.silvera@gmail.com'","stack":"TypeError: Cannot create property '_id' on string 'noah.a.silvera@gmail.com'\n    at insertDocuments (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\mongodb\\lib\\collection.js:719:43)\n    at insertOne (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\mongodb\\lib\\collection.js:415:3)\n    at C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\mongodb\\lib\\collection.js:407:5\n    at Collection.insertOne (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\mongodb\\lib\\collection.js:406:10)\n    at Promise (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:64:16)\n    at Object.createEvent (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:59:12)\n    at app.route.get.post (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\server.js:80:19)\n    at Layer.handle [as handle_request] (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\express\\lib\\router\\route.js:131:13)\n    at next (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\express\\lib\\router\\route.js:125:14)","level":"error","timestamp":"2016-09-02T22:57:17.507Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:57:17.519Z"}
+{"level":"error","message":"Unknown error in creating event","timestamp":"2016-09-02T22:57:17.520Z"}
+{"message":"Cannot create property '_id' on string 'noah.a.silvera@gmail.com'","stack":"TypeError: Cannot create property '_id' on string 'noah.a.silvera@gmail.com'\n    at insertDocuments (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\mongodb\\lib\\collection.js:719:43)\n    at insertOne (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\mongodb\\lib\\collection.js:415:3)\n    at C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\mongodb\\lib\\collection.js:407:5\n    at Collection.insertOne (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\mongodb\\lib\\collection.js:406:10)\n    at Promise (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:64:16)\n    at Object.createEvent (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:59:12)\n    at app.route.get.post (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\server.js:80:19)\n    at Layer.handle [as handle_request] (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\express\\lib\\router\\route.js:131:13)\n    at next (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\express\\lib\\router\\route.js:125:14)","level":"error","timestamp":"2016-09-02T22:57:17.524Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:58:15.634Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:58:20.202Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:58:20.220Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:58:20.225Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:58:20.238Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:58:20.305Z"}
+{"level":"error","message":"Unknown error in creating event","timestamp":"2016-09-02T22:58:20.313Z"}
+{"message":"Cannot create property '_id' on string 'noah.a.silvera@gmail.com'","stack":"TypeError: Cannot create property '_id' on string 'noah.a.silvera@gmail.com'\n    at insertDocuments (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\mongodb\\lib\\collection.js:719:43)\n    at insertOne (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\mongodb\\lib\\collection.js:415:3)\n    at C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\mongodb\\lib\\collection.js:407:5\n    at Collection.insertOne (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\mongodb\\lib\\collection.js:406:10)\n    at Promise (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:64:16)\n    at Object.createEvent (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:59:12)\n    at app.route.get.post (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\server.js:80:19)\n    at Layer.handle [as handle_request] (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\express\\lib\\router\\route.js:131:13)\n    at next (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\express\\lib\\router\\route.js:125:14)","level":"error","timestamp":"2016-09-02T22:58:20.322Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:58:20.338Z"}
+{"level":"error","message":"Unknown error in creating event","timestamp":"2016-09-02T22:58:20.340Z"}
+{"message":"Cannot create property '_id' on string 'noah.a.silvera@gmail.com'","stack":"TypeError: Cannot create property '_id' on string 'noah.a.silvera@gmail.com'\n    at insertDocuments (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\mongodb\\lib\\collection.js:719:43)\n    at insertOne (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\mongodb\\lib\\collection.js:415:3)\n    at C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\mongodb\\lib\\collection.js:407:5\n    at Collection.insertOne (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\mongodb\\lib\\collection.js:406:10)\n    at Promise (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:64:16)\n    at Object.createEvent (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:59:12)\n    at app.route.get.post (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\server.js:80:19)\n    at Layer.handle [as handle_request] (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\express\\lib\\router\\route.js:131:13)\n    at next (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\node_modules\\express\\lib\\router\\route.js:125:14)","level":"error","timestamp":"2016-09-02T22:58:20.344Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:58:29.819Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:58:34.951Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:58:35.042Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:58:35.063Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:58:35.157Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:58:35.172Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:58:35.234Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:58:37.608Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:58:42.024Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:58:42.043Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:58:42.052Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:58:42.060Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:58:42.111Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:58:42.119Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:58:46.151Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:58:49.779Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:58:49.811Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:58:49.816Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:58:49.823Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:58:49.861Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:58:49.885Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:59:09.421Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:59:13.844Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:59:13.869Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:59:13.935Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:59:13.973Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:59:13.989Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:59:14.013Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:59:18.461Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:59:22.556Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:59:22.581Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:59:22.591Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T22:59:22.598Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:59:22.666Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T22:59:22.680Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:59:44.856Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:59:49.338Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:59:49.734Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T22:59:49.797Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:59:51.641Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T22:59:55.981Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:00:00.261Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:00:00.293Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:00:00.360Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:00:00.369Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:00:37.910Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:00:37.913Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:00:37.914Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T23:00:37.930Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T23:00:37.980Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:00:37.992Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T23:00:37.996Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T23:00:38.006Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T23:01:28.167Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:01:32.991Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:01:33.028Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:01:33.033Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:01:33.040Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:01:33.120Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:01:33.131Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:01:33.218Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:01:33.223Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T23:14:14.312Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:14:18.452Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:14:18.474Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:14:18.481Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:14:18.547Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:14:18.639Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:14:18.652Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:14:18.789Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:14:18.799Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T23:14:46.526Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:14:50.913Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:14:50.951Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:14:50.960Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:14:50.965Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:14:51.032Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:14:51.130Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:14:51.202Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:14:51.217Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T23:15:22.150Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:15:26.362Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:15:26.399Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:15:26.405Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:15:26.498Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:15:26.503Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:15:26.505Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:15:26.519Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:15:26.547Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T23:15:43.452Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:15:46.978Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:15:47.012Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:15:47.018Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:15:47.068Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:15:47.075Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:15:47.082Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:15:47.114Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:15:47.126Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T23:15:57.503Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:16:01.266Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:16:01.305Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:16:01.310Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:16:01.346Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:16:01.401Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:16:01.409Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:16:01.412Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:16:01.469Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T23:16:15.536Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:16:19.964Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:16:20.014Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:16:20.027Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:16:20.088Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:16:20.113Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:16:20.168Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:16:20.173Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:16:20.244Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T23:16:30.650Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:16:34.923Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:16:35.003Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:16:35.010Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:16:35.080Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:16:35.246Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:16:35.254Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:16:35.281Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:16:35.485Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T23:16:59.271Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:17:03.306Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:17:03.374Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:17:03.383Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:17:03.452Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:17:03.683Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:17:03.753Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:17:03.808Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:17:03.871Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T23:17:06.578Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T23:17:09.153Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:17:13.548Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:17:13.570Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:17:13.579Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:17:13.669Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:17:13.774Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:17:13.787Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:17:13.909Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:17:13.922Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T23:17:20.531Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:17:23.367Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:17:23.416Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:17:23.428Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:17:23.480Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:17:23.494Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:17:23.510Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:17:23.561Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:17:23.596Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T23:18:35.405Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:18:39.348Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:18:39.388Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:18:39.394Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:18:39.398Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:18:39.458Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:18:39.469Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:18:39.539Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:18:39.591Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T23:18:41.857Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:18:45.578Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:18:45.615Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:18:45.625Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:18:45.646Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:18:45.822Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:18:46.023Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:18:46.027Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:18:46.031Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T23:18:55.304Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:18:59.683Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:18:59.736Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:18:59.745Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:18:59.750Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:18:59.849Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:18:59.861Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:18:59.938Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:18:59.960Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T23:19:06.762Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:19:10.704Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:19:10.745Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:19:10.752Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:19:10.775Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:19:10.848Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:19:10.936Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:19:11.007Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:19:11.012Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T23:19:27.734Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:20:06.196Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:20:06.206Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:20:06.237Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:20:06.238Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:20:06.336Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T23:20:06.340Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:20:06.358Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T23:20:06.374Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:20:06.390Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:20:20.964Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:20:20.973Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:20:20.974Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:20:20.977Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T23:20:20.981Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:20:20.989Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:20:20.996Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:20:21.005Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T23:20:21.011Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T23:20:35.217Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:20:39.741Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:20:39.746Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:20:39.749Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:20:39.776Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:20:39.832Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T23:20:39.837Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:20:39.850Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:20:39.853Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T23:20:39.864Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-02T23:24:29.778Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:25:47.157Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T23:25:47.165Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T23:25:47.233Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:26:06.506Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T23:26:06.786Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T23:26:06.848Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:26:31.078Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:26:31.081Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-02T23:26:31.086Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-02T23:26:31.091Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-02T23:26:31.107Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:26:31.124Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-02T23:26:31.131Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-03T03:59:40.085Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-03T03:59:43.159Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-03T03:59:50.164Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-03T04:05:23.084Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-03T04:05:36.710Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-03T04:21:43.620Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:24:34.237Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-03T04:24:34.262Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-03T04:24:35.105Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:24:51.661Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:24:51.663Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-03T04:24:51.673Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:24:51.694Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-03T04:24:51.703Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-03T04:25:46.612Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:25:50.970Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:25:50.999Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:25:51.090Z"}
+{"level":"error","message":"Unknown error in updating event with id:nuv4k572u9dm248nrk1fae91sg by overwriting with creation","timestamp":"2016-09-03T04:25:51.168Z"}
+{"message":"moment is not defined","stack":"ReferenceError: moment is not defined\n    at Promise.all.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\server.js:104:17)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","level":"error","timestamp":"2016-09-03T04:25:51.178Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:25:51.190Z"}
+{"level":"error","message":"Unknown error in updating event with id:jbevr8o3aumoiodqjnidqi547c by overwriting with creation","timestamp":"2016-09-03T04:25:51.212Z"}
+{"message":"moment is not defined","stack":"ReferenceError: moment is not defined\n    at Promise.all.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\server.js:104:17)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","level":"error","timestamp":"2016-09-03T04:25:51.215Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-03T04:26:11.364Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:26:15.766Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:26:15.800Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:26:15.871Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:26:15.884Z"}
+{"level":"error","message":"Unknown error in updating event with id:nuv4k572u9dm248nrk1fae91sg by overwriting with creation","timestamp":"2016-09-03T04:26:15.920Z"}
+{"message":"Cannot read property 'date' of undefined","stack":"TypeError: Cannot read property 'date' of undefined\n    at Promise.all.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\server.js:110:83)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","level":"error","timestamp":"2016-09-03T04:26:15.924Z"}
+{"level":"error","message":"Unknown error in updating event with id:jbevr8o3aumoiodqjnidqi547c by overwriting with creation","timestamp":"2016-09-03T04:26:15.956Z"}
+{"message":"Cannot read property 'date' of undefined","stack":"TypeError: Cannot read property 'date' of undefined\n    at Promise.all.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\server.js:110:83)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","level":"error","timestamp":"2016-09-03T04:26:15.965Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-03T04:26:49.383Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:27:04.157Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:27:04.167Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:27:04.214Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:27:04.221Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-03T04:27:37.478Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:27:43.125Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:27:43.169Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:27:43.260Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:27:43.305Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:27:51.807Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:27:51.814Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:27:51.817Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-03T04:27:51.821Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:27:51.827Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:27:51.833Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-03T04:27:51.837Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:29:45.397Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:29:45.401Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:29:45.409Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:29:45.455Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:29:45.476Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:29:45.516Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:29:45.531Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-03T04:29:45.583Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-03T04:29:45.720Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:29:58.417Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-03T04:29:58.419Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-03T04:29:58.428Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:30:15.794Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:30:15.797Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:30:15.810Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:30:15.816Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:30:17.300Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:30:17.304Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:30:17.323Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:30:17.328Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:30:17.333Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:30:17.354Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:31:16.074Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:31:16.076Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:31:16.083Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:31:16.085Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:31:16.093Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:31:16.096Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:31:16.109Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:31:16.140Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:31:17.237Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:31:17.249Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:32:15.667Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:32:15.668Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:32:15.690Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:32:15.699Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:32:17.083Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:32:17.111Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:32:17.130Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:32:17.143Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:32:17.176Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:32:17.185Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:33:03.804Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:33:03.805Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-03T04:33:03.807Z"}
+{"message":"Could not find Item","stack":"Error: Could not find Item\n    at events.find.limit.toArray.then (C:\\Users\\Noah\\Desktop\\Dropbox\\noahSilvera\\Code\\github\\InfiniSprint\\src\\scripts\\server\\db_adapter.js:27:31)\n    at process._tickCallback (internal/process/next_tick.js:103:7)","type":"NOTFOUND","level":"error","timestamp":"2016-09-03T04:33:03.809Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-03T04:33:03.822Z"}
+{"level":"info","message":"posting event data...","timestamp":"2016-09-03T04:33:03.827Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:33:29.289Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:33:29.292Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:33:29.294Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:33:29.303Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:33:29.323Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:33:29.330Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:33:29.338Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:33:29.366Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:33:29.391Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:33:29.401Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:33:29.408Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:33:29.411Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:33:29.430Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:33:29.496Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:33:56.266Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:33:56.281Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:33:56.296Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:33:56.307Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:33:56.338Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:33:56.348Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:33:57.254Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:33:57.257Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:33:57.261Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:33:57.262Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:33:57.274Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:33:57.283Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:33:57.295Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:33:57.302Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:36:16.670Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:36:16.674Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:36:16.679Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:36:16.704Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:36:16.707Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:36:16.729Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:36:16.777Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:36:16.794Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:36:16.861Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:36:16.865Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:36:16.870Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:36:16.880Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:36:16.895Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:36:16.906Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:38:20.627Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:38:20.646Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:38:20.653Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:38:20.683Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:38:20.688Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:38:20.690Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:38:20.712Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:38:20.753Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:38:20.763Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:38:20.788Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:38:20.792Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:38:20.820Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:38:20.834Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:38:20.842Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-03T04:39:08.581Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:39:17.318Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:39:17.396Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-03T04:39:24.978Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:39:41.046Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:39:41.060Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:39:41.068Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:39:41.156Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:39:41.160Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:39:41.190Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:39:49.271Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:39:49.312Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:39:49.324Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:39:49.325Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:39:49.328Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:39:49.372Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:39:49.390Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:39:49.433Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:40:01.633Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:40:01.648Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:40:01.655Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:40:01.664Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:40:25.954Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:40:25.972Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:40:29.787Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:40:29.788Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:40:29.789Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:40:29.791Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:40:29.840Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:40:29.842Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:40:30.768Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:40:33.774Z"}
+{"level":"info","message":"starting server","timestamp":"2016-09-03T04:42:31.860Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:42:38.282Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:42:38.335Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:42:38.349Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:42:38.352Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:42:41.885Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:42:41.897Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:42:42.830Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:42:42.832Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:42:42.835Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:42:42.844Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:42:42.856Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:42:45.630Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:42:45.633Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:42:45.637Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:42:58.115Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:42:58.130Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:42:58.133Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:42:58.137Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:42:58.141Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:42:58.145Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:42:58.174Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:42:58.176Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:42:58.178Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:42:58.190Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:42:58.194Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:42:58.204Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:42:58.208Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:42:58.220Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:09.925Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:09.928Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:09.935Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:09.942Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:09.980Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:09.990Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:09.996Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:10.008Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:10.022Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:10.027Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:10.029Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:10.081Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:10.105Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:10.117Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:21.652Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:21.653Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:21.666Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:21.671Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:21.673Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:21.694Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:21.711Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:21.722Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:21.733Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:21.744Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:21.807Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:21.811Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:21.825Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:21.840Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:35.474Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:35.486Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:35.534Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:35.535Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:35.542Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:35.577Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:35.579Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:35.582Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:35.710Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:35.713Z"}
+{"level":"info","message":"retrieving event data...","timestamp":"2016-09-03T04:43:35.717Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:35.727Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:35.739Z"}
+{"level":"info","message":"updating event data...","timestamp":"2016-09-03T04:43:35.741Z"}

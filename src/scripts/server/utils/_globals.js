@@ -9,7 +9,6 @@
 	}
 	
 exports.consts = {
-		'sprintLength': 7,
 		// props not to delete from local
 		// event data even though they don't exist in
 		// google calendar data
@@ -17,6 +16,9 @@ exports.consts = {
 		// props to that shouldn't be added from google
 		// calendar event data into the local data
 		'eventPropBlackList': ['id'],
+
+        //used to format dates for querying googles event objects
+        'googleDateFormat': 'YYYY-MM-DD'
 	}
 	
 exports.config = {

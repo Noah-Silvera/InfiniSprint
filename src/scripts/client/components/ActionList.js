@@ -124,28 +124,21 @@ define(['react',
                             // retrieve the returned event
                             var remoteEvent = JSON.parse(body);
 
+                            // give the new event the properties to be perserved, indicated by the props parameter
+                            ;(function augmentProps(event, augmentedEvent, props){
+                                props.forEach( (prop) => {
+                                    event[prop] = augmentedEvent[prop]
+                                })
+                            })(event, remoteEvent, ['rank'])
 
-                            // assume the event needs updating
-                            // optimize to check equality and only update when neccesary later
+                            // update the event, assume it has changed
+                            // if the date has been changed, the rank will automatically be updated
+                            return api.updateEvent(googleApi.calId, event)
 
-                            if( remoteEvent.start.dateTime != event.start.dateTime){
-                                // dates changed, which means the remote rank is not reliable. 
-                                // Create a whole new event, overwriting the old one, and getting a new rank
-                                // rank should be created on the server according to it's date.
-                                return api.createEvent(googleApi.calId, event)
-                            } else  {
-                                // date hasn't changed, rank is still reliable
-                                // can't trust anything else is equal, so update.
-
-                                // give the new event the props to be preserved ( in this case, only rank)
-                                event.rank = remoteEvent.rank
-
-                                return api.updateEvent(googleApi.calId,event)
-                            }
                         }
 
-                    }).then( (remoteEvent) => {
-                        resolve(remoteEvent)
+                    }).then( (updatedEvent) => {
+                        resolve(updatedEvent)
                     }).catch( (err) => {
                         reject(err)
                     })

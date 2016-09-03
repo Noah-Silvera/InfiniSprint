@@ -15,7 +15,7 @@ define(['browser_request', 'google_api'], function(request, googleApi){
                     url:`/event/${googleApi.calId}/${event.id}`,
                     json:true,
                     body: JSON.stringify(event)
-                }, function(err,res,event){
+                }, (err,res,returnedEvent) => {
                     if(err) {
                         reject( 
                             new Error(`Error in creating event\n
@@ -29,9 +29,9 @@ define(['browser_request', 'google_api'], function(request, googleApi){
                         )
                     } else {
                         console.debug(`Event CREATED\n
-                                        \tid: ${event.id} and calId: ${googleApi.calId}\n
-                                        \tsummary: ${event.summary}`)
-                        resolve(event)  
+                                        \tid: ${returnedEvent.id} and calId: ${googleApi.calId}\n
+                                        \tsummary: ${returnedEvent.summary}`)
+                        resolve(returnedEvent)  
                     }
 
             })

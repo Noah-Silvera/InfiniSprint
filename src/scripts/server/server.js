@@ -6,6 +6,8 @@ var express = require('express')
 var app = express()
 var dbAdapter = require('./db_adapter')
 var bodyParser = require('body-parser')
+var eventProcessing = require('./event_processing')
+var moment = require('moment')
 
 var root = 'src/'
 
@@ -72,35 +74,60 @@ app.route('/event/:calId/:eventId')
     })
     .post( (req,res) => {
         w.info('posting event data...')
+        var event = req.body
 
-        dbAdapter.createEvent(req.params.calId, req.body).then( (event) => {
+        dbAdapter.listEvents( req.params.calId, event.start.date ).then( (currentEvents) => {
 
-            res.status(200).send(event)
+            event = eventProcessing.rankLast(event, currentEvents )
 
-        }, (err) => {
-                w.error('Unknown error in creating event')
-                w.error(err)
-                res.status(500).send("Error in creating event")
+            return dbAdapter.createEvent(req.params.calId, event)
+        }).then( (event) => {
+
+            return res.status(200).send(event)
+
+        }).catch( (err) => {
+            w.error('Unknown error in creating event')
+            w.error(err)
+            return res.status(500).send("Error in creating event")
 
         })
     })
     .put( (req,res) => {
         w.info('updating event data...')
+        var event = req.body
 
-        dbAdapter.updateEvent( req.params.calId, req.body).then( (event) => {
+        Promise.all([ 
+            dbAdapter.getEvent( req.params.calId, req.params.eventId),
+            dbAdapter.listEvents( req.params.calId, event.start.date ) 
+        ]).then( (values) => {
+            var [storedEvent, currentEvents] = values;
+            
+            if( moment(event.start.date).isBefore( moment(storedEvent.start.date) ) ){
+                // new date is earlier. event should be ranked last in it's new list'
+                event =  eventProcessing.rankLast(event, currentEvents)
+
+            } else if( moment(event.start.date).isAfter( moment(storedEvent.start.date)) ){
+                // new date is later. event should be ranked higher in it's new list'
+                event = eventProcessing.rankFirst(event, currentEvents)
+            } else {
+                // the event has the same date. no change to rank, but other data may have changed
+            }
+
+
+            // update the database with the information
+            return  dbAdapter.updateEvent( req.params.calId, event )
+
+        }).then( (event) => {
  
             res.status(200).send(event)
 
-        }, (err) => {
-                w.error(`Unknown error in updating event with id:${req.body.id} by overwriting with creation`)
-                w.error(err)
-                res.status(500).send("Error in updating event")
+        }).catch( (err) => {
+
+            w.error(`Unknown error in updating event with id:${req.body.id} by overwriting with creation`)
+            w.error(err)
+            res.status(500).send("Error in updating event")
 
         })
-    })
-    .patch( (req,res) => {
-        w.info('patching event data...')
-        res.send()
     })
     .delete( (req,res) => {
         w.info('deleting event data...')

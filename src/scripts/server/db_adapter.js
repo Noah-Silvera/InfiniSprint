@@ -33,8 +33,32 @@ function getEvent(calId,eventId){
                     resolve(event)
                 }
             }, (err) => {
-                reject(err)
+                reject(err) 
             })
+    });
+}
+
+
+exports.listEvents = listEvents
+
+function listEvents(calId,date){
+    return new Promise((resolve, reject) => {
+
+        events.find({
+            'start': {
+                'date': date
+            }
+        }).sort({ 'rank': 1}).toArray().then( (events) => {
+
+            events.forEach( (event, i, arr ) => {
+                arr[i] = removeBlackListedProps(event, forbiddenProps)
+            })
+            
+            resolve(events)
+        }, (err) => {
+            reject(err)
+        })
+
     });
 }
 
